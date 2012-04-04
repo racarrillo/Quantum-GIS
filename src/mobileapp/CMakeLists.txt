@@ -1,8 +1,8 @@
 SET(QGIS_MOBILEAPP_NAME ${QGIS_APP_NAME}_mobile)
 SET(QGIS_MOBILEAPP_SRCS
   main.cpp
-#  qgisapp.cpp
-#  qgisappinterface.cpp
+  qgismobileapp.cpp
+#  qgismobileappinterface.cpp
 #  qgsabout.cpp
 #  qgssponsors.cpp
 #  qgsaddattrdialog.cpp
@@ -152,8 +152,8 @@ ENDIF (ANDROID)
 
 
 SET (QGIS_MOBILEAPP_MOC_HDRS
-#  qgisapp.h
-#  qgisappinterface.h
+  qgismobileapp.h
+#  qgismobileappinterface.h
 #  qgsabout.h
 #  qgsaddattrdialog.h
 #  qgsaddjoindialog.h
@@ -382,7 +382,7 @@ QT4_WRAP_CPP(QGIS_MOBILEAPP_MOC_SRCS ${QGIS_MOBILEAPP_MOC_HDRS})
 #IF(PEDANTIC)
 #  # disable deprecation warnings
 #  IF(NOT MSVC)
-#    SET_SOURCE_FILES_PROPERTIES(qgisappinterface.cpp PROPERTIES COMPILE_FLAGS -Wno-deprecated)
+#    SET_SOURCE_FILES_PROPERTIES(qgismobileappinterface.cpp PROPERTIES COMPILE_FLAGS -Wno-deprecated)
 #  ENDIF(NOT MSVC)
 #ENDIF(PEDANTIC)
 
@@ -401,6 +401,16 @@ INCLUDE_DIRECTORIES(
 #  ../python
 #  gps
   )
+
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}
+  ${CMAKE_CURRENT_SOURCE_DIR}/../core
+  ${CMAKE_CURRENT_SOURCE_DIR}/../core/raster
+  ${CMAKE_CURRENT_SOURCE_DIR}/../gui
+  ${CMAKE_CURRENT_SOURCE_DIR}/../gui/attributetable
+  ${CMAKE_CURRENT_BINARY_DIR}/../ui
+  ${CMAKE_CURRENT_BINARY_DIR}
+  ${GDAL_INCLUDE_DIR} # remove once raster layer is cleaned up
+)
 
 IF (ANDROID)
     INCLUDE_DIRECTORIES(${ANDROID_NDK_TOOLCHAIN_ROOT}/sysroot/usr/include)
