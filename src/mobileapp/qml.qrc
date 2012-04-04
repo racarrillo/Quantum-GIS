@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file alias="main.qml">qml/main.qml</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="icon">images/qgis-icon.png</file>
+    </qresource>
+</RCC>
