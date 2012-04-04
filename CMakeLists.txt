@@ -41,6 +41,14 @@ ENDIF (WITH_GRASS)
 
 SET (WITH_DESKTOP TRUE CACHE BOOL "Determines whether QGIS desktop should be built")
 
+IF (ANDROID)
+    SET (DEFAULT_WITH_MOBILE TRUE)
+ELSE (ANDROID)
+    SET (DEFAULT_WITH_MOBILE FALSE)
+ENDIF (ANDROID)
+#Add a mobile gui if Qt has QTDECLARATIVE
+SET (WITH_MOBILE ${DEFAULT_WITH_MOBILE} CACHE BOOL "Determines if mobile gui should be build")
+
 # mapserver by us disabled default because it needs FastCGI (which is optional dependency)
 SET (WITH_MAPSERVER FALSE CACHE BOOL "Determines whether QGIS mapserver should be built")
 
@@ -227,6 +235,14 @@ IF(WITH_DESKTOP)
     MESSAGE(SEND_ERROR "Qt Webkit module required for QGIS Desktop!")
   ENDIF(NOT QT_QTWEBKIT_FOUND)
 ENDIF(WITH_DESKTOP)
+
+IF(WITH_MOBILE)
+  SET(QT_USE_QTDECLARATIVE 1)
+
+  IF(NOT QT_QTDECLARATIVE_FOUND)
+    MESSAGE(SEND_ERROR "Qt Declarative module required for QGIS Mobile GUI!")
+  ENDIF(NOT QT_QTDECLARATIVE_FOUND)
+ENDIF(WITH_MOBILE)
 
 IF (ENABLE_TESTS)
   SET( QT_USE_QTTEST  TRUE )
