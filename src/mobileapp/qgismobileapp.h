@@ -20,6 +20,7 @@
 
 #include <QMainWindow>
 #include <qgsapplication.h>
+#include <qgsmapcanvas.h>
 #include <QDeclarativeView>
 
 class QgisMobileapp : public QMainWindow
@@ -28,9 +29,11 @@ class QgisMobileapp : public QMainWindow
 public:
   QgisMobileapp( QgsApplication *app, QWidget *parent = 0, Qt::WFlags flags = 0 );
   ~QgisMobileapp();
+  void addLayer();
 
 private:
   QDeclarativeView mView;
+  QgsMapCanvas *mapCanvas;
 };
 
 #endif // QGISMOBILEAPP_H
