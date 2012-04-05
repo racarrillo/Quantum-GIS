@@ -36,6 +36,7 @@
 #include <qgsmapcanvas.h>
 #include <qgslogger.h>
 
+#include <QVBoxLayout>
 
 QgisMobileapp::QgisMobileapp( QgsApplication *app, QWidget *parent, Qt::WFlags flags )
     : QMainWindow( parent, flags )
@@ -43,20 +44,13 @@ QgisMobileapp::QgisMobileapp( QgsApplication *app, QWidget *parent, Qt::WFlags f
   // Create the Map Canvas
   mapCanvas = new QgsMapCanvas();
   mapCanvas->setObjectName(QString::fromUtf8("mapCanvas"));
-//  mapCanvas->setExtent(mypLayer->extent());
   mapCanvas->enableAntiAliasing(true);
   mapCanvas->setCanvasColor( Qt::white );
 
   addLayer();
 
   mapCanvas->freeze(false);
-  // Set the Map Canvas Layer Set
-//  mapCanvas->setLayerSet(myLayerSet);
   mapCanvas->setVisible(true);
-  mapCanvas->refresh();
-
-  mapCanvas->show();
-
 
   mView.setSource(QUrl("qrc:/qml/qgsmobileapp.qml"));
   mView.setResizeMode(QDeclarativeView::SizeRootObjectToView);
@@ -64,7 +58,8 @@ QgisMobileapp::QgisMobileapp( QgsApplication *app, QWidget *parent, Qt::WFlags f
   QObject::connect((QObject*)mView.engine(), SIGNAL(quit()), app, SLOT(quit()));
 
   mView.setGeometry(100,100, 800, 480);
-  mView.show();
+//  mView.show();
+  mapCanvas->scene()->addWidget(&mView);
 
 }
 
@@ -75,8 +70,8 @@ QgisMobileapp::~QgisMobileapp()
 
 void QgisMobileapp::addLayer()
 {
-  QString myLayerPath         = "/tmp";
-  QString myLayerBaseName     = "test";
+  QString myLayerPath         = "/home/marco/GIS/laax/data/shapes/";
+  QString myLayerBaseName     = "freeridepists.shp";
   QString myProviderName      = "ogr";
 
   QgsVectorLayer * mypLayer = new QgsVectorLayer(myLayerPath, myLayerBaseName, myProviderName);
