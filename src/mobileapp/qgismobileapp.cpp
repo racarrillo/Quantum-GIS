@@ -27,6 +27,7 @@
 #include <QString>
 #include <QApplication>
 #include <QWidget>
+#include <QFileDialog>
 
 #include <qgsapplication.h>
 #include <qgsproviderregistry.h>
@@ -78,9 +79,14 @@ QgisMobileapp::~QgisMobileapp()
 
 void QgisMobileapp::addLayer()
 {
-  QString myLayerPath         = "/home/marco/GIS/laax/data/shapes/";
-  QString myLayerBaseName     = "freeridepists.shp";
+  QString myLayerPath         =  QFileDialog::getOpenFileName( this, tr( "Load SHP" ), ".", tr( "SHP files (*.shp *.SHP)" ) );
+  QString myLayerBaseName     = "test";
   QString myProviderName      = "ogr";
+
+  if ( myLayerPath.isEmpty())
+  {
+    return;
+  }
 
   QgsVectorLayer * mypLayer = new QgsVectorLayer(myLayerPath, myLayerBaseName, myProviderName);
   QgsSingleSymbolRenderer *mypRenderer = new QgsSingleSymbolRenderer(mypLayer->geometryType());
