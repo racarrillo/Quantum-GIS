@@ -80,13 +80,9 @@ QgisMobileapp::~QgisMobileapp()
 void QgisMobileapp::addLayer()
 {
   QString myLayerPath         =  QFileDialog::getOpenFileName( this, tr( "Load SHP" ), ".", tr( "SHP files (*.shp *.SHP)" ) );
+//  QString myLayerPath         =  "/home/marco/GIS/swiss_grenzen/G3B09.shp";
   QString myLayerBaseName     = "test";
   QString myProviderName      = "ogr";
-
-  if ( myLayerPath.isEmpty())
-  {
-    return;
-  }
 
   QgsVectorLayer * mypLayer = new QgsVectorLayer(myLayerPath, myLayerBaseName, myProviderName);
   QgsSingleSymbolRenderer *mypRenderer = new QgsSingleSymbolRenderer(mypLayer->geometryType());
