@@ -171,6 +171,32 @@ class CORE_EXPORT QgsCoordinateReferenceSystem
      */
     bool createFromString( const QString theDefinition );
 
+    /*! Set up this srs from a various text formats.
+     *
+     * Valid formats: WKT string, "EPSG:n", "EPSGA:n", "AUTO:proj_id,unit_id,lon0,lat0",
+     * "urn:ogc:def:crs:EPSG::n", PROJ.4 string, filename (with WKT, XML or PROJ.4 string),
+     * well known name (such as NAD27, NAD83, WGS84 or WGS72),
+     * ESRI::[WKT string] (directly or in a file), "IGNF:xxx"
+     *
+     * For more details on supported formats see OGRSpatialReference::SetFromUserInput()
+     * ( http://www.gdal.org/ogr/classOGRSpatialReference.html#aec3c6a49533fe457ddc763d699ff8796 )
+     * @note this function generates a WKT string using OSRSetFromUserInput() and
+     * passes it to createFromWkt() function.
+     * @param theDefinition A String containing a coordinate reference system definition.
+     */
+    bool createFromUserInput( const QString theDefinition );
+
+    /*! Make sure that ESRI WKT import is done properly.
+     * This is required for proper shapefile CRS import when using gdal>= 1.9.
+     * @note This function is called by createFromUserInput() and QgsOgrProvider::crs(), there is usually
+     * no need to call it from elsewhere.
+     * @note This function sets CPL config option GDAL_FIX_ESRI_WKT to a proper value,
+     * unless it has been set by the user through the commandline or an environment variable.
+     * For more details refer to OGRSpatialReference::morphFromESRI() .
+     * @note added in 1.8
+     */
+    static void setupESRIWktFix();
+
     /*! Find out whether this CRS is correctly initialised and usable */
     bool isValid() const;
 
@@ -210,8 +236,9 @@ class CORE_EXPORT QgsCoordinateReferenceSystem
      *  Internally it will use OGR isSameCRS() or isSameGeoCRS() methods as appropriate.
      *  Additionally logic may also be applied if the result from the OGR methods
      *  is inconclusive.
+     * @deprecated in 1.8 as the same proj.4 string not necessarily means the same CRS
      */
-    bool equals( QString theProj4String );
+    Q_DECL_DEPRECATED bool equals( QString theProj4String );
 
     /*! Restores state from the given Dom node.
     * @param theNode The node from which state will be restored
@@ -358,7 +385,14 @@ class CORE_EXPORT QgsCoordinateReferenceSystem
      */
     void setDescription( QString theDescription );
     /* Set the Proj Proj4String.
-     * @param  QString theProj4String Proj4 format specifies (excluding proj and ellips) that define this srs.
+     * @param  QString theProj4String Proj4 format specifies
+     * (excluding proj and ellips) that define this srs.
+     * @note some content of the PROJ4 string may be stripped off by this
+     * method due to the parsing of the string by OSRNewSpatialReference .
+     * For example input:
+     * +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+     * Gets stored in the CRS as:
+     * +proj=longlat +datum=WGS84 +no_defs
      */
     void setProj4String( QString theProj4String );
     /*! Set this Geographic? flag

@@ -1,3 +1,17 @@
+/***************************************************************************
+    qgsbrowserdockwidget.cpp
+    ---------------------
+    begin                : July 2011
+    copyright            : (C) 2011 by Martin Dobias
+    email                : wonder.sk at gmail.com
+ ***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
 #include "qgsbrowserdockwidget.h"
 
 #include <QHeaderView>
@@ -135,6 +149,15 @@ void QgsBrowserDockWidget::showEvent( QShowEvent * e )
     mBrowserView->setTextElideMode( Qt::ElideNone );
     mBrowserView->header()->setResizeMode( 0, QHeaderView::ResizeToContents );
     mBrowserView->header()->setStretchLastSection( false );
+
+    // find root favourites item
+    for ( int i = 0; i < mModel->rowCount(); i++ )
+    {
+      QModelIndex index = mModel->index( i, 0 );
+      QgsDataItem* item = mModel->dataItem( index );
+      if ( item && item->type() == QgsDataItem::Favourites )
+        mBrowserView->expand( index );
+    }
   }
 
   QDockWidget::showEvent( e );
@@ -280,7 +303,7 @@ void QgsBrowserDockWidget::addLayer( QgsLayerItem *layerItem )
   QgsDebugMsg( providerKey + " : " + uri );
   if ( type == QgsMapLayer::VectorLayer )
   {
-    QgisApp::instance()->addVectorLayer( uri, layerItem->name(), providerKey );
+    QgisApp::instance()->addVectorLayer( uri, layerItem->layerName(), providerKey );
   }
   if ( type == QgsMapLayer::RasterLayer )
   {
@@ -310,7 +333,7 @@ void QgsBrowserDockWidget::addLayer( QgsLayerItem *layerItem )
     QgsDebugMsg( "rasterLayerPath = " + rasterLayerPath );
     QgsDebugMsg( "layers = " + layers.join( " " ) );
 
-    QgisApp::instance()->addRasterLayer( rasterLayerPath, layerItem->name(), providerKey, layers, styles, format, crs );
+    QgisApp::instance()->addRasterLayer( rasterLayerPath, layerItem->layerName(), providerKey, layers, styles, format, crs );
   }
 }
 

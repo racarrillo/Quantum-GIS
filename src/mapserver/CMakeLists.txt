@@ -62,6 +62,7 @@ SET (qgis_mapserv_MOC_HDRS
   qgsftptransaction.h
   qgscapabilitiescache.h
   qgsconfigcache.h
+  qgsmslayercache.h
 )
 
 SET (qgis_mapserv_RCCS 
@@ -100,7 +101,7 @@ INCLUDE_DIRECTORIES(
   ../analysis/interpolation
   ../plugins/diagram_overlay
   .
-  )
+)
 
 IF (WITH_INTERNAL_SPATIALITE)
   INCLUDE_DIRECTORIES(BEFORE ../core/spatialite/headers/spatialite)

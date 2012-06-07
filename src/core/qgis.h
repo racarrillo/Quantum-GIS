@@ -133,8 +133,10 @@ inline bool doubleNear( double a, double b, double epsilon = 4 * DBL_EPSILON )
   return diff > -epsilon && diff <= epsilon;
 }
 
-/** Wkt string that represents a geographic coord sys */
-const  QString GEOWkt =
+/** Wkt string that represents a geographic coord sys
+ * @note added in 1.8 to replace GEOWkt
+ */
+const QString GEOWKT =
   "GEOGCS[\"WGS 84\", "
   "  DATUM[\"WGS_1984\", "
   "    SPHEROID[\"WGS 84\",6378137,298.257223563, "
@@ -146,8 +148,16 @@ const  QString GEOWkt =
   "  AXIS[\"Lat\",NORTH], "
   "  AXIS[\"Long\",EAST], "
   "  AUTHORITY[\"EPSG\",4326]]";
+/** Wkt string that represents a geographic coord sys
+ * @note deprecated in 1.8 due to violation of coding conventions (globals
+ *  should be in all caps).
+*/
+#ifndef _MSC_VER
+Q_DECL_DEPRECATED
+#endif
+const QString GEOWkt = GEOWKT;
 /** PROJ4 string that represents a geographic coord sys */
-const QString GEOPROJ4 = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs";
+extern CORE_EXPORT const QString GEOPROJ4;
 /** Magic number for a geographic coord sys in POSTGIS SRID */
 const long GEOSRID = 4326;
 /** Magic number for a geographic coord sys in QGIS srs.db tbl_srs.srs_id */
@@ -175,6 +185,9 @@ const double MINIMUM_POINT_SIZE = 0.1;
 /** Magic number that determines the default point size for point symbols */
 const double DEFAULT_POINT_SIZE = 2.0;
 const double DEFAULT_LINE_WIDTH = 0.26;
+
+/** default snapping tolerance for segments (@note added in 1.8) */
+const double DEFAULT_SEGMENT_EPSILON = 1e-8;
 
 // FIXME: also in qgisinterface.h
 #ifndef QGISEXTERN

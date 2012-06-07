@@ -1,16 +1,17 @@
 /***************************************************************************
-
-qgsgraduatedsymbolrendererv2.cpp - Graduated Symbol Renderer Version 2
-
-***************************************************************************
-*                                                                         *
-*   This program is free software; you can redistribute it and/or modify  *
-*   it under the terms of the GNU General Public License as published by  *
-*   the Free Software Foundation; either version 2 of the License, or     *
-*   (at your option) any later version.                                   *
-*                                                                         *
-***************************************************************************/
-
+    qgsgraduatedsymbolrendererv2.cpp
+    ---------------------
+    begin                : November 2009
+    copyright            : (C) 2009 by Martin Dobias
+    email                : wonder.sk at gmail.com
+ ***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
 #include "qgsgraduatedsymbolrendererv2.h"
 
 #include "qgssymbolv2.h"
@@ -554,6 +555,9 @@ static QList<double> _calcPrettyBreaks( double minimum, double maximum, int clas
     breaks.append( minimumBreak + i * unit );
   }
 
+  if ( breaks.isEmpty() )
+    return breaks;
+
   if ( breaks.first() < minimum )
   {
     breaks[0] = minimum;
@@ -562,6 +566,7 @@ static QList<double> _calcPrettyBreaks( double minimum, double maximum, int clas
   {
     breaks[breaks.count()-1] = maximum;
   }
+
   return breaks;
 } // _calcPrettyBreaks
 

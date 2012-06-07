@@ -10,7 +10,7 @@ Build-Depends:
  grass-dev,
  libexpat1-dev,
  libfcgi-dev,
- libgdal1-dev,
+ libgdal-dev (>= 1.9.0) | libgdal1-dev (<< 1.9.0),
  libgeos-dev (>= 3.0.0),
  libgsl0-dev,
  libpq-dev,
@@ -32,7 +32,8 @@ Build-Depends:
  git-core,
  doxygen,
  graphviz,
- txt2tags
+ txt2tags,
+ xvfb, xauth, xfonts-base
 Build-Conflicts: libqgis-dev, qgis-dev
 Standards-Version: 3.8.4
 XS-Python-Version: current
@@ -79,7 +80,7 @@ Section: libdevel
 Depends:
  grass-dev,
  libexpat1-dev,
- libgdal1-dev,
+ libgdal-dev (>= 1.9.0) | libgdal1-dev (<< 1.9.0),
  libgeos-dev (>= 3.0.0),
  libgsl0-dev,
  libpq-dev,

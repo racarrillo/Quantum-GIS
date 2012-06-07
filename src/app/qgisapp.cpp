@@ -65,6 +65,7 @@
 #include <QToolButton>
 #include <QVBoxLayout>
 #include <QWhatsThis>
+#include <QThread>
 
 #include <qgsnetworkaccessmanager.h>
 
@@ -318,7 +319,10 @@ static void setTitleBarText_( QWidget & qgisApp )
 */
 static QgsMessageOutput *messageOutputViewer_()
 {
-  return new QgsMessageViewer( QgisApp::instance() );
+  if ( QThread::currentThread() == QApplication::instance()->thread() )
+    return new QgsMessageViewer( QgisApp::instance() );
+  else
+    return new QgsMessageOutputConsole();
 }
 
 static void customSrsValidation_( QgsCoordinateReferenceSystem* srs )
@@ -636,16 +640,20 @@ QgisApp::QgisApp( QSplashScreen *splash, bool restorePlugins, QWidget * parent, 
     QgsDebugMsg( "Tips are disabled" );
   }
 
+#ifdef HAVE_TOUCH
+  //add reacting to long click in android
+  grabGesture( Qt::TapAndHoldGesture );
+#else
+  //remove mActionTouch button
+  delete mActionTouch;
+  mActionTouch = 0;
+#endif
+
   // supposedly all actions have been added, now register them to the shortcut manager
   QgsShortcutsManager::instance()->registerAllChildrenActions( this );
 
   // request notification of FileOpen events (double clicking a file icon in Mac OS X Finder)
   QgsApplication::setFileOpenEventReceiver( this );
-
-#ifdef HAVE_TOUCH
-  //add reacting to long click in android
-  grabGesture( Qt::TapAndHoldGesture );
-#endif
 
   // update windows
   qApp->processEvents();
@@ -761,7 +769,7 @@ bool QgisApp::event( QEvent * event )
     done = true;
   }
 #ifdef HAVE_TOUCH
-  else if (event->type() == QEvent::Gesture )
+  else if ( event->type() == QEvent::Gesture )
   {
     done = gestureEvent( static_cast<QGestureEvent*>( event ) );
   }
@@ -820,6 +828,8 @@ void QgisApp::createActions()
   connect( mActionCutFeatures, SIGNAL( triggered() ), this, SLOT( editCut() ) );
   connect( mActionCopyFeatures, SIGNAL( triggered() ), this, SLOT( editCopy() ) );
   connect( mActionPasteFeatures, SIGNAL( triggered() ), this, SLOT( editPaste() ) );
+  connect( mActionCopyStyle, SIGNAL( triggered() ), this, SLOT( copyStyle() ) );
+  connect( mActionPasteStyle, SIGNAL( triggered() ), this, SLOT( pasteStyle() ) );
   connect( mActionAddFeature, SIGNAL( triggered() ), this, SLOT( addFeature() ) );
   connect( mActionMoveFeature, SIGNAL( triggered() ), this, SLOT( moveFeature() ) );
   connect( mActionReshapeFeatures, SIGNAL( triggered() ), this, SLOT( reshapeFeatures() ) );
@@ -1554,6 +1564,7 @@ void QgisApp::setTheme( QString theThemeName )
   mActionZoomOut->setIcon( getThemeIcon( "/mActionZoomOut.png" ) );
   mActionZoomFullExtent->setIcon( getThemeIcon( "/mActionZoomFullExtent.png" ) );
   mActionZoomToSelected->setIcon( getThemeIcon( "/mActionZoomToSelected.png" ) );
+  mActionShowRasterCalculator->setIcon( getThemeIcon( "/mActionShowRasterCalculator.png" ) );
 #ifdef HAVE_TOUCH
   mActionTouch->setIcon( getThemeIcon( "/mActionTouch.png" ) );
 #endif
@@ -1649,11 +1660,11 @@ void QgisApp::setupConnections()
            this, SLOT( markDirty() ) );
 
   // connect map layer registry
-  connect( QgsMapLayerRegistry::instance(), SIGNAL( layersAdded( QgsMapLayer * ) ),
-           this, SLOT( layersWereAdded( QgsMapLayer * ) ) );
+  connect( QgsMapLayerRegistry::instance(), SIGNAL( layersAdded( QList<QgsMapLayer *> ) ),
+           this, SLOT( layersWereAdded( QList<QgsMapLayer *> ) ) );
   connect( QgsMapLayerRegistry::instance(),
            SIGNAL( layersWillBeRemoved( QStringList ) ),
-           this, SLOT( removingLayer( QString ) ) );
+           this, SLOT( removingLayers( QStringList ) ) );
 
   // Connect warning dialog from project reading
   connect( QgsProject::instance(), SIGNAL( oldProjectVersionWarning( QString ) ),
@@ -2132,15 +2143,16 @@ void QgisApp::about()
     versionString += "</tr><tr>";
 
     versionString += "<td>" + tr( "Compiled against Qt" ) + "</td><td>" + QT_VERSION_STR + "</td>";
-    versionString += "<td>" + tr( "Running against Qt" ) + "</td><td>" + qVersion() + "</td>";
+    versionString += "<td>" + tr( "Running against Qt" )  + "</td><td>" + qVersion() + "</td>";
 
     versionString += "</tr><tr>";
 
-    versionString += "<td>" + tr( "GDAL/OGR Version" )  + "</td><td>" + GDAL_RELEASE_NAME + "</td>";
-    versionString += "<td>" + tr( "GEOS Version" )      + "</td><td>" + GEOS_VERSION + "</td>";
+    versionString += "<td>" + tr( "Compiled against GDAL/OGR" ) + "</td><td>" + GDAL_RELEASE_NAME + "</td>";
+    versionString += "<td>" + tr( "Running against GDAL/OGR" )  + "</td><td>" + GDALVersionInfo( "RELEASE_NAME" ) + "</td>";
 
     versionString += "</tr><tr>";
 
+    versionString += "<td>" + tr( "GEOS Version" ) + "</td><td>" + GEOS_VERSION + "</td>";
     versionString += "<td>" + tr( "PostgreSQL Client Version" ) + "</td><td>";
 #ifdef HAVE_POSTGRESQL
     versionString += PG_VERSION;
@@ -2148,6 +2160,8 @@ void QgisApp::about()
     versionString += tr( "No support." );
 #endif
     versionString += "</td>";
+
+    versionString += "</tr><tr>";
 
     versionString += "<td>" +  tr( "SpatiaLite Version" ) + "</td><td>";
 #ifdef HAVE_SPATIALITE
@@ -2157,12 +2171,11 @@ void QgisApp::about()
 #endif
     versionString += "</td>";
 
-    versionString += "</tr><tr>";
 
     versionString += "<td>" + tr( "QWT Version" ) + "</td><td>" + QWT_VERSION_STR + "</td>";
 
 #ifdef QGISDEBUG
-    versionString += "<td colspan=2>" + tr( "This copy of QGIS writes debugging output." ) + "</td>";
+    versionString += "</tr><tr><td colspan=4>" + tr( "This copy of QGIS writes debugging output." ) + "</td>";
 #endif
 
     versionString += "</tr></table></div></body></html>";
@@ -2286,12 +2299,16 @@ bool QgisApp::addVectorLayers( QStringList const & theLayerQStringList, const QS
 
       // since the layer is bad, stomp on it
       delete layer;
-
-      // XXX should we return false here, or just grind through
-      // XXX the remaining arguments?
     }
 
   }
+
+  // make sure at least one layer was succesfully added
+  if ( myList.count() == 0 )
+  {
+    return false;
+  }
+
   // Register this layer with the layers registry
   QgsMapLayerRegistry::instance()->addMapLayers( myList );
 
@@ -2317,8 +2334,10 @@ void QgisApp::askUserForGDALSublayers( QgsRasterLayer *layer )
     return;
 
   QStringList sublayers = layer->subLayers();
+  QgsDebugMsg( QString( "raster has %1 sublayers" ).arg( layer->subLayers().size() ) );
 
-  QgsDebugMsg( "sublayers:\n  " + sublayers.join( "  \n" ) + "\n" );
+  if ( sublayers.size() < 1 )
+    return;
 
   // if promptLayers=Load all, load all sublayers without prompting
   QSettings settings;
@@ -2393,6 +2412,7 @@ void QgisApp::loadGDALSublayers( QString uri, QStringList list )
       else
         delete subLayer;
     }
+
   }
 }
 
@@ -2587,11 +2607,11 @@ void QgisApp::addMssqlLayer()
     return;
   }
 
-  // show the MS SQL dialog
+  // show the MSSQL dialog
   QDialog *dbs = dynamic_cast<QDialog*>( QgsProviderRegistry::instance()->selectWidget( QString( "mssql" ), this ) );
   if ( !dbs )
   {
-    QMessageBox::warning( this, tr( "MSSQL" ), tr( "Cannot get MS SQL select dialog from provider." ) );
+    QMessageBox::warning( this, tr( "MSSQL" ), tr( "Cannot get MSSQL select dialog from provider." ) );
     return;
   }
   connect( dbs , SIGNAL( addDatabaseLayers( QStringList const &, QString const & ) ),
@@ -2785,6 +2805,7 @@ void QgisApp::fileNew( bool thePromptToSaveFlag )
   // set the initial map tool
   mMapCanvas->setMapTool( mMapTools.mPan );
   mNonEditMapTool = mMapTools.mPan;  // signals are not yet setup to catch this
+
 #ifdef HAVE_TOUCH
   mMapCanvas->setMapTool( mMapTools.mTouch );
   mNonEditMapTool = mMapTools.mTouch;  // signals are not yet setup to catch this
@@ -3622,12 +3643,14 @@ void QgisApp::saveAsVectorFileGeneral( bool saveOnlySelection )
 
     QgsVectorFileWriter::WriterError error;
     QString errorMessage;
+    QString newFilename;
     error = QgsVectorFileWriter::writeAsVectorFormat(
               vlayer, vectorFilename, encoding, &destCRS, format,
               saveOnlySelection,
               &errorMessage,
               datasourceOptions, dialog->layerOptions(),
-              dialog->skipAttributeCreation() );
+              dialog->skipAttributeCreation(),
+              &newFilename );
 
     QApplication::restoreOverrideCursor();
 
@@ -3635,7 +3658,7 @@ void QgisApp::saveAsVectorFileGeneral( bool saveOnlySelection )
     {
       if ( dialog->addToCanvas() )
       {
-        addVectorLayers( QStringList( vectorFilename ), encoding, "file" );
+        addVectorLayers( QStringList( newFilename ), encoding, "file" );
       }
       QMessageBox::information( 0, tr( "Saving done" ), tr( "Export to vector file has been completed" ) );
     }
@@ -4266,25 +4289,17 @@ void QgisApp::editCut( QgsMapLayer * layerContainingSelection )
     return;
   }
 
-  QgsMapLayer *selectionLayer = layerContainingSelection ? layerContainingSelection : activeLayer();
+  // Test for feature support in this layer
+  QgsVectorLayer* selectionVectorLayer = qobject_cast<QgsVectorLayer *>( layerContainingSelection ? layerContainingSelection : activeLayer() );
+  if ( !selectionVectorLayer )
+    return;
 
-  if ( selectionLayer )
-  {
-    // Test for feature support in this layer
-    QgsVectorLayer* selectionVectorLayer = qobject_cast<QgsVectorLayer *>( selectionLayer );
+  clipboard()->replaceWithCopyOf( selectionVectorLayer );
 
-    if ( selectionVectorLayer != 0 )
-    {
-      QgsFeatureList features = selectionVectorLayer->selectedFeatures();
-      clipboard()->replaceWithCopyOf( selectionVectorLayer->pendingFields(), features );
-      clipboard()->setCRS( selectionVectorLayer->crs() );
-      selectionVectorLayer->beginEditCommand( tr( "Features cut" ) );
-      selectionVectorLayer->deleteSelectedFeatures();
-      selectionVectorLayer->endEditCommand();
-    }
-  }
+  selectionVectorLayer->beginEditCommand( tr( "Features cut" ) );
+  selectionVectorLayer->deleteSelectedFeatures();
+  selectionVectorLayer->endEditCommand();
 }
-
 
 void QgisApp::editCopy( QgsMapLayer * layerContainingSelection )
 {
@@ -4293,20 +4308,12 @@ void QgisApp::editCopy( QgsMapLayer * layerContainingSelection )
     return;
   }
 
-  QgsMapLayer *selectionLayer = layerContainingSelection ? layerContainingSelection : activeLayer();
+  QgsVectorLayer* selectionVectorLayer = qobject_cast<QgsVectorLayer *>( layerContainingSelection ? layerContainingSelection : activeLayer() );
+  if ( !selectionVectorLayer )
+    return;
 
-  if ( selectionLayer )
-  {
-    // Test for feature support in this layer
-    QgsVectorLayer* selectionVectorLayer = qobject_cast<QgsVectorLayer *>( selectionLayer );
-
-    if ( selectionVectorLayer != 0 )
-    {
-      QgsFeatureList features = selectionVectorLayer->selectedFeatures();
-      clipboard()->replaceWithCopyOf( selectionVectorLayer->pendingFields(), features );
-      clipboard()->setCRS( selectionVectorLayer->crs() );
-    }
-  }
+  // Test for feature support in this layer
+  clipboard()->replaceWithCopyOf( selectionVectorLayer );
 }
 
 
@@ -4317,53 +4324,122 @@ void QgisApp::editPaste( QgsMapLayer *destinationLayer )
     return;
   }
 
-  QgsMapLayer *pasteLayer = destinationLayer ? destinationLayer : activeLayer();
+  QgsVectorLayer *pasteVectorLayer = qobject_cast<QgsVectorLayer *>( destinationLayer ? destinationLayer : activeLayer() );
+  if ( !pasteVectorLayer )
+    return;
 
-  if ( pasteLayer )
+  pasteVectorLayer->beginEditCommand( tr( "Features pasted" ) );
+  QgsFeatureList features;
+  if ( mMapCanvas->mapRenderer()->hasCrsTransformEnabled() )
   {
-    // Test for feature support in this layer
-    QgsVectorLayer* pasteVectorLayer = qobject_cast<QgsVectorLayer *>( pasteLayer );
+    features = clipboard()->transformedCopyOf( pasteVectorLayer->crs() );
+  }
+  else
+  {
+    features = clipboard()->copyOf();
+  }
 
-    if ( pasteVectorLayer != 0 )
+  QHash<int, int> remap;
+  const QgsFieldMap &fields = clipboard()->fields();
+  for ( QgsFieldMap::const_iterator it = fields.begin(); it != fields.end(); it++ )
+  {
+    int dst = pasteVectorLayer->fieldNameIndex( it->name() );
+    if ( dst < 0 )
     {
-      pasteVectorLayer->beginEditCommand( tr( "Features pasted" ) );
-      QgsFeatureList features;
-      if ( mMapCanvas->mapRenderer()->hasCrsTransformEnabled() )
-      {
-        features = clipboard()->transformedCopyOf( pasteVectorLayer->crs() );
-      }
-      else
-      {
-        features = clipboard()->copyOf();
-      }
-
-      QgsAttributeList dstAttr = pasteVectorLayer->pendingAllAttributesList();
-
-      for ( int i = 0; i < features.size(); i++ )
-      {
-        QgsFeature &f = features[i];
-        QgsAttributeMap srcMap = f.attributeMap();
-        QgsAttributeMap dstMap;
-
-        int j = 0;
-        foreach( int id, srcMap.keys() )
-        {
-          if ( j >= dstAttr.size() )
-            break;
-
-          dstMap[ dstAttr[j++] ] = srcMap[id];
-        }
-
-        f.setAttributeMap( dstMap );
-      }
-
-      pasteVectorLayer->addFeatures( features );
-      pasteVectorLayer->endEditCommand();
-      mMapCanvas->refresh();
+      continue;
     }
+    remap.insert( it.key(), dst );
+  }
+
+  for ( int i = 0; i < features.size(); i++ )
+  {
+    QgsFeature &f = features[i];
+    const QgsAttributeMap &srcMap = f.attributeMap();
+    QgsAttributeMap dstMap;
+
+    foreach( int src, srcMap.keys() )
+    {
+      int dst = remap.value( src, -1 );
+      if ( dst < 0 )
+        continue;
+
+      dstMap.insert( dst, srcMap[ src ] );
+    }
+
+    f.setAttributeMap( dstMap );
+  }
+
+  pasteVectorLayer->addFeatures( features );
+  pasteVectorLayer->endEditCommand();
+  mMapCanvas->refresh();
+}
+
+void QgisApp::copyStyle( QgsMapLayer * sourceLayer )
+{
+  QgsMapLayer *selectionLayer = sourceLayer ? sourceLayer : activeLayer();
+  if ( selectionLayer )
+  {
+    QDomImplementation DomImplementation;
+    QDomDocumentType documentType =
+      DomImplementation.createDocumentType(
+        "qgis", "http://mrcc.com/qgis.dtd", "SYSTEM" );
+    QDomDocument doc( documentType );
+    QDomElement rootNode = doc.createElement( "qgis" );
+    rootNode.setAttribute( "version", QString( "%1" ).arg( QGis::QGIS_VERSION ) );
+    doc.appendChild( rootNode );
+    QString errorMsg;
+    if ( !selectionLayer->writeSymbology( rootNode, doc, errorMsg ) )
+    {
+      QMessageBox::warning( this,
+                            tr( "Error" ),
+                            tr( "Cannot copy style: %1" )
+                            .arg( errorMsg ),
+                            QMessageBox::Ok );
+      return;
+    }
+    // Copies data in text form as well, so the XML can be pasted into a text editor
+    clipboard()->setData( QGSCLIPBOARD_STYLE_MIME, doc.toByteArray(), doc.toString() );
+    // Enables the paste menu element
+    mActionPasteStyle->setEnabled( true );
   }
 }
 
+void QgisApp::pasteStyle( QgsMapLayer * destinationLayer )
+{
+  QgsMapLayer *selectionLayer = destinationLayer ? destinationLayer : activeLayer();
+  if ( selectionLayer )
+  {
+    if ( clipboard()->hasFormat( QGSCLIPBOARD_STYLE_MIME ) )
+    {
+      QDomDocument doc( "qgis" );
+      QString errorMsg;
+      int errorLine, errorColumn;
+      if ( !doc.setContent( clipboard()->data( QGSCLIPBOARD_STYLE_MIME ), false, &errorMsg, &errorLine, &errorColumn ) )
+      {
+        QMessageBox::information( this,
+                                  tr( "Error" ),
+                                  tr( "Cannot parse style: %1:%2:%3" )
+                                  .arg( errorMsg )
+                                  .arg( errorLine )
+                                  .arg( errorColumn ),
+                                  QMessageBox::Ok );
+        return;
+      }
+      QDomElement rootNode = doc.firstChildElement( "qgis" );
+      if ( !selectionLayer->readSymbology( rootNode, errorMsg ) )
+      {
+        QMessageBox::information( this,
+                                  tr( "Error" ),
+                                  tr( "Cannot read style: %1" )
+                                  .arg( errorMsg ),
+                                  QMessageBox::Ok );
+        return;
+      }
+
+      mMapLegend->refreshLayerSymbology( selectionLayer->id(), false );
+    }
+  }
+}
 
 void QgisApp::pasteTransformations()
 {
@@ -4691,10 +4767,10 @@ void QgisApp::isInOverview()
 
 void QgisApp::removingLayers( QStringList theLayers )
 {
-  foreach (const QString &layerId, theLayers)
+  foreach( const QString &layerId, theLayers )
   {
     QgsVectorLayer *vlayer = qobject_cast<QgsVectorLayer*>(
-          QgsMapLayerRegistry::instance()->mapLayer( layerId ) );
+                               QgsMapLayerRegistry::instance()->mapLayer( layerId ) );
     if ( !vlayer || !vlayer->isEditable() )
       return;
 
@@ -6018,9 +6094,9 @@ void QgisApp::markDirty()
 //changed from layerWasAdded to layersWereAdded in 1.8
 void QgisApp::layersWereAdded( QList<QgsMapLayer *> theLayers )
 {
-  for (int i = 0; i < theLayers.size(); ++i)
+  for ( int i = 0; i < theLayers.size(); ++i )
   {
-    QgsMapLayer * layer = theLayers.at(i);
+    QgsMapLayer * layer = theLayers.at( i );
     QgsDataProvider *provider = 0;
 
     QgsVectorLayer *vlayer = qobject_cast<QgsVectorLayer *>( layer );
@@ -6100,10 +6176,9 @@ void QgisApp::showStatusMessage( QString theMessage )
   statusBar()->showMessage( theMessage );
 }
 
+// Show the maptip using tooltip
 void QgisApp::showMapTip()
-
 {
-  /* Show the maptip using tooltip */
   // Stop the timer while we look for a maptip
   mpMapTipsTimer->stop();
 
@@ -6113,7 +6188,6 @@ void QgisApp::showMapTip()
     QPoint myPointerPos = mMapCanvas->mouseLastXY();
 
     //  Make sure there is an active layer before proceeding
-
     QgsMapLayer* mypLayer = mMapCanvas->currentLayer();
     if ( mypLayer )
     {
@@ -6287,6 +6361,8 @@ void QgisApp::activateDeactivateLayerRelatedActions( QgsMapLayer* layer )
     mActionCutFeatures->setEnabled( false );
     mActionCopyFeatures->setEnabled( false );
     mActionPasteFeatures->setEnabled( false );
+    mActionCopyStyle->setEnabled( false );
+    mActionPasteStyle->setEnabled( false );
 
     mActionUndo->setEnabled( false );
     mActionRedo->setEnabled( false );
@@ -6316,6 +6392,9 @@ void QgisApp::activateDeactivateLayerRelatedActions( QgsMapLayer* layer )
   mActionLayerProperties->setEnabled( true );
   mActionAddToOverview->setEnabled( true );
   mActionZoomToLayer->setEnabled( true );
+
+  mActionCopyStyle->setEnabled( true );
+  mActionPasteStyle->setEnabled( clipboard()->hasFormat( QGSCLIPBOARD_STYLE_MIME ) );
 
   /***********Vector layers****************/
   if ( layer->type() == QgsMapLayer::VectorLayer )
@@ -6793,6 +6872,7 @@ QgsRasterLayer* QgisApp::addRasterLayer(
   // draw the map
   mMapCanvas->freeze( false );
   mMapCanvas->refresh();
+
   return layer;
 
 // Let render() do its own cursor management
@@ -6838,6 +6918,7 @@ bool QgisApp::addRasterLayers( QStringList const &theFileNameQStringList, bool g
       QFileInfo myFileInfo( *myIterator );
       // get the directory the .adf file was in
       QString myDirNameQString = myFileInfo.path();
+      //extract basename
       QString myBaseNameQString = myFileInfo.completeBaseName();
       //only allow one copy of a ai grid file to be loaded at a
       //time to prevent the user selecting all adfs in 1 dir which
@@ -7439,7 +7520,7 @@ QMenu* QgisApp::createPopupMenu()
 }
 
 #ifdef HAVE_TOUCH
-bool QgisApp::gestureEvent(QGestureEvent *event)
+bool QgisApp::gestureEvent( QGestureEvent *event )
 {
   if ( QGesture *tapAndHold = event->gesture( Qt::TapAndHoldGesture ) )
   {

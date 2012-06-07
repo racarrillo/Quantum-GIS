@@ -33,6 +33,7 @@
 #include "qgsrasterlayer.h"
 #include "qgsvectorlayer.h"
 #include "qgsgenericprojectionselector.h"
+#include "qgsclipboard.h"
 
 #include <QFont>
 #include <QDomDocument>
@@ -42,6 +43,7 @@
 #include <QMouseEvent>
 #include <QPixmap>
 #include <QTreeWidgetItem>
+#include <QClipboard>
 
 const int AUTOSCROLL_MARGIN = 16;
 
@@ -697,6 +699,16 @@ void QgsLegend::handleRightClickEvent( QTreeWidgetItem* item, const QPoint& posi
     // ends here
   }
 
+  if ( selectedLayers().length() == 1 )
+  {
+    QgisApp* app = QgisApp::instance();
+    theMenu.addAction( tr( "Copy Style" ), app, SLOT( copyStyle() ) );
+    if ( app->clipboard()->hasFormat( QGSCLIPBOARD_STYLE_MIME ) )
+    {
+      theMenu.addAction( tr( "Paste Style" ), app, SLOT( pasteStyle() ) );
+    }
+  }
+
   theMenu.addAction( QgisApp::getThemeIcon( "/folder_new.png" ), tr( "&Add New Group" ), this, SLOT( addGroupToCurrentItem() ) );
   theMenu.addAction( QgisApp::getThemeIcon( "/mActionExpandTree.png" ), tr( "&Expand All" ), this, SLOT( expandAll() ) );
   theMenu.addAction( QgisApp::getThemeIcon( "/mActionCollapseTree.png" ), tr( "&Collapse All" ), this, SLOT( collapseAll() ) );
@@ -872,7 +884,10 @@ void QgsLegend::addLayers( QList<QgsMapLayer *> theLayerList )
   //Note if the canvas was previously blank so we can
   //zoom to all layers at the end if neeeded
   bool myFirstLayerFlag = false;
-  if ( layers().count() > 0 ) myFirstLayerFlag = true;
+  if ( layers().count() < 1 )
+  {
+    myFirstLayerFlag = true;
+  }
 
   //iteratively add the layers to the canvas
   for ( int i = 0; i < theLayerList.size(); ++i )
@@ -934,7 +949,10 @@ void QgsLegend::addLayers( QList<QgsMapLayer *> theLayerList )
   {
     QgsMapLayer * myFirstLayer = theLayerList.at( 0 );
     if ( !mMapCanvas->mapRenderer()->hasCrsTransformEnabled() )
+    {
       mMapCanvas->mapRenderer()->setDestinationCrs( myFirstLayer->crs() );
+      mMapCanvas->mapRenderer()->setMapUnits( myFirstLayer->crs().mapUnits() );
+    }
     mMapCanvas->zoomToFullExtent();
     mMapCanvas->clearExtentHistory();
   }

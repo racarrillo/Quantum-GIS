@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.0" language="lv_LV">
 <context>
     <name>CharacterWidget</name>
     <message>
@@ -1191,6 +1191,386 @@ were reduced to %2 vertices after simplification</source>
         <source>Unable to compute extents aligned on selected raster layer</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Warning</source>
+        <translation type="unfinished">Brīdinājums</translation>
+    </message>
+    <message>
+        <source>Currently QGIS doesn&apos;t allow simultaneous access from 
+                                 different threads to the same datasource. Make sure your layer&apos;s 
+                                 attribute tables are closed. Continue?</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DlgAbout</name>
+    <message>
+        <source>Dialog</source>
+        <translation type="obsolete">Dialogs</translation>
+    </message>
+</context>
+<context>
+    <name>DlgAddGeometryColumn</name>
+    <message>
+        <source>Dialog</source>
+        <translation type="unfinished">Dialogs</translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">Nosaukums</translation>
+    </message>
+    <message>
+        <source>geom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished">Tips</translation>
+    </message>
+    <message>
+        <source>POINT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>LINESTRING</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>POLYGON</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MULTIPOINT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MULTILINESTRING</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MULTIPOLYGON</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GEOMETRYCOLLECTION</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dimensions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SRID</source>
+        <translation type="unfinished">SRID</translation>
+    </message>
+    <message>
+        <source>-1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DlgCreateConstraint</name>
+    <message>
+        <source>Add constraint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation type="unfinished">Kolonna</translation>
+    </message>
+    <message>
+        <source>Primary key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unique</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DlgCreateIndex</name>
+    <message>
+        <source>Create index</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Column</source>
+        <translation type="unfinished">Kolonna</translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">Nosaukums</translation>
+    </message>
+</context>
+<context>
+    <name>DlgCreateTable</name>
+    <message>
+        <source>Create Table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Schema</source>
+        <translation type="unfinished">Shēma</translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">Nosaukums</translation>
+    </message>
+    <message>
+        <source>Add field</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete field</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Primary key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create geometry column</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>POINT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>LINESTRING</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>POLYGON</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MULTIPOINT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MULTILINESTRING</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MULTIPOLYGON</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GEOMETRYCOLLECTION</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>geom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dimensions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SRID</source>
+        <translation type="unfinished">SRID</translation>
+    </message>
+    <message>
+        <source>-1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create spatial index</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DlgDbError</name>
+    <message>
+        <source>Database Error</source>
+        <translation type="unfinished">Datu bāzes kļūda</translation>
+    </message>
+    <message>
+        <source>An error occured:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>An error occured when executing a query:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Query:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DlgFieldProperties</name>
+    <message>
+        <source>Field properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">Nosaukums</translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished">Tips</translation>
+    </message>
+    <message>
+        <source>Can be NULL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Length</source>
+        <translation type="unfinished">Garums</translation>
+    </message>
+</context>
+<context>
+    <name>DlgImportVector</name>
+    <message>
+        <source>Import vector layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Schema:</source>
+        <translation type="unfinished">Shēma:</translation>
+    </message>
+    <message>
+        <source>Table:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Action</source>
+        <translation type="unfinished">Darbība</translation>
+    </message>
+    <message>
+        <source>Create new table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drop existing one</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Append data into table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Options</source>
+        <translation type="unfinished">Parametri</translation>
+    </message>
+    <message>
+        <source>Primary key:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Geometry column:</source>
+        <translation type="unfinished">Ģeometrijas kolonna:</translation>
+    </message>
+    <message>
+        <source>Source SRID:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Target SRID:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Encoding:</source>
+        <translation type="unfinished">Kodējums:</translation>
+    </message>
+    <message>
+        <source>Create single-part geometries instead of multi-part</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create spatial index</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DlgSqlWindow</name>
+    <message>
+        <source>SQL window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SQL query:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Execute (F5)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>F5</source>
+        <translation type="unfinished">F5</translation>
+    </message>
+    <message>
+        <source>&amp;Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Result:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load as new layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Column with unique 
+integer values</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Geometry column</source>
+        <translation type="unfinished">Ģeometrijas kolonna</translation>
+    </message>
+    <message>
+        <source>Retrieve 
+columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer name (prefix)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished">Tips</translation>
+    </message>
+    <message>
+        <source>Vector</source>
+        <translation type="unfinished">Vektors</translation>
+    </message>
+    <message>
+        <source>Raster</source>
+        <translation type="unfinished">Rastrs</translation>
+    </message>
+    <message>
+        <source>Load now!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sorry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You must fill the required fields: 
+geometry column - column with unique integer values</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DlgSymbolV2Properties</name>
@@ -1237,6 +1617,128 @@ were reduced to %2 vertices after simplification</source>
     <message>
         <source>Move down</source>
         <translation>Pārvietot uz leju</translation>
+    </message>
+</context>
+<context>
+    <name>DlgTableProperties</name>
+    <message>
+        <source>Table properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Columns</source>
+        <translation type="unfinished">Kolonnas</translation>
+    </message>
+    <message>
+        <source>Table columns:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add column</source>
+        <translation type="unfinished">Pievienot kolonnu</translation>
+    </message>
+    <message>
+        <source>Add geometry column</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit column</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete column</source>
+        <translation type="unfinished">Dzēst kolonnu</translation>
+    </message>
+    <message>
+        <source>Constraints</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Primary, foreign keys, unique and check constraints:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add primary key / unique</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete constraint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Indexes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Indexes defined for this table:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add index</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add spatial index</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete index</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DlgVersioning</name>
+    <message>
+        <source>Add versioning support to a table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Table is expected to be empty, with a primary key.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Schema</source>
+        <translation type="unfinished">Shēma</translation>
+    </message>
+    <message>
+        <source>Table</source>
+        <translation type="unfinished">Tabula</translation>
+    </message>
+    <message>
+        <source>create a view with current content (&lt;TABLE&gt;_current)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prim. key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>id_hist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Start time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>time_start</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>End time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>time_end</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SQL to be executed:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1417,11 +1919,11 @@ Spraudnis netiks ieslēgts.</translation>
     </message>
     <message>
         <source>About GdalTools</source>
-        <translation>Par GdalTools</translation>
+        <translation type="obsolete">Par GdalTools</translation>
     </message>
     <message>
         <source>Displays information about Gdal Tools</source>
-        <translation>Parāda informāciju par GdalTools</translation>
+        <translation type="obsolete">Parāda informāciju par GdalTools</translation>
     </message>
     <message>
         <source>Tile index</source>
@@ -1519,6 +2021,16 @@ Spraudnis netiks ieslēgts.</translation>
         <source>Miscellaneous</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Plugin error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to load %1 plugin. 
+The required &quot;%2&quot; module is missing. 
+Install it and try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GdalToolsAboutDialog</name>
@@ -1557,31 +2069,8 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>
 (using GDAL v. %1)</source>
-        <translation>
+        <translation type="obsolete">
 (lieto GDAL v. %1)</translation>
-    </message>
-    <message>
-        <source>GDAL Tools (AKA Raster Tools) is a plugin for QuantumGIS aiming at making life simpler for users of GDAL Utilities, providing a simplified graphical interface for most commonly used programs.
-
-The plugin is being developed by Faunalia (http://faunalia.it) with help from GIS-lab (http://gis-lab.info).
-Icons by Robert Szczepanek.
-Sponsorship by Silvio Grosso was much appreciated.
-
-Please help us by testing the tools, reporting eventual issues, improving the code, or providing financial support.
-
-DEVELOPERS:
-  Faunalia
-    Paolo Cavallini
-    Giuseppe Sucameli
-    Lorenzo Masini
-  GIS-lab
-    Maxim Dubinin
-    Alexander Bruy
-icons by Robert Szepanek
-
-HOMEPAGE:
-http://trac.faunalia.it/GdalTools-plugin</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3035,6 +3524,12 @@ Vai vēlaties pievienot jauno slāni TOC?</translation>
         <source>Layer &apos;%1&apos; updated</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Currently QGIS doesn&apos;t allow simultaneous access from 
+                                 different threads to the same datasource. Make sure your layer&apos;s 
+                                 attribute tables are closed. Continue?</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GeoprocessingDialog</name>
@@ -4261,6 +4756,14 @@ Vai vēlaties pievienot jauno slāni TOC?</translation>
         <source>Offset Curve</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Copy style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paste style</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>OgrConverterGuiBase</name>
@@ -5386,7 +5889,7 @@ Vai vēlaties norādīt ceļu līdz GRASS instalācijai (GISBASE)?</translation>
     </message>
     <message>
         <source> km2</source>
-        <translation> km2</translation>
+        <translation type="obsolete"> km2</translation>
     </message>
     <message>
         <source> ha</source>
@@ -5394,7 +5897,7 @@ Vai vēlaties norādīt ceļu līdz GRASS instalācijai (GISBASE)?</translation>
     </message>
     <message>
         <source> m2</source>
-        <translation> m2</translation>
+        <translation type="obsolete"> m2</translation>
     </message>
     <message>
         <source> m</source>
@@ -5985,6 +6488,8 @@ Vai vēlaties norādīt ceļu līdz GRASS instalācijai (GISBASE)?</translation>
         <translation type="obsolete">
             <numerusform>Atrasts %n ģeometrijas kļūdu.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -6001,7 +6506,7 @@ Vai vēlaties norādīt ceļu līdz GRASS instalācijai (GISBASE)?</translation>
     </message>
     <message>
         <source>ring %1 with less than three points</source>
-        <translation>caurums %1 ar mazāk kā trīs punktiem</translation>
+        <translation type="obsolete">caurums %1 ar mazāk kā trīs punktiem</translation>
     </message>
     <message>
         <source>ring %1 not closed</source>
@@ -6017,6 +6522,8 @@ Vai vēlaties norādīt ceļu līdz GRASS instalācijai (GISBASE)?</translation>
         <translation type="unfinished">
             <numerusform>līnija %1 satur %n dublētu mezglu %2
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -6686,10 +7193,6 @@ Error(%2): %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Creation error for features from #%1 to #%2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Vector import</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6862,11 +7365,69 @@ Error(%2): %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Loading of the mssql provider failed</source>
+        <source>MSSQL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message utf8="true">
+        <source> m²</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message utf8="true">
+        <source> km²</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>MSSQL</source>
+        <source> acres</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Creation error for features from #%1 to #%2. Provider errors was: 
+%3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to delete layer %1: 
+%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Loading of the MSSQL provider failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Exception: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GEOS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ring %1 with less than four points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GEOS error:could not produce geometry for GEOS (check log window)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Console</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ESRI FileGDB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GDAL/OGR VSIFileHandler</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Creating the data source %1 failed: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Creation of OGR data source %1 failed: %2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8316,6 +8877,8 @@ Kļūdas:  %2
         <translation type="unfinished">
             <numerusform>%1 slānī ir izvēlēts %n objektu.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -8356,6 +8919,8 @@ Ignorēt kļūdas?</translation>
         <translation type="unfinished">
             <numerusform>Dzēst %n objektu?
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -8527,6 +9092,8 @@ This copy of QGIS has been built with QWT %1.</source>
         <translation type="unfinished">
             <numerusform>
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -8636,10 +9203,6 @@ Always ignore these errors?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>GDAL/OGR Version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>GEOS Version</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8732,11 +9295,31 @@ Always ignore these errors?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot get MS SQL select dialog from provider.</source>
+        <source>QGis files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>QGis files</source>
+        <source>Cannot get MSSQL select dialog from provider.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compiled against GDAL/OGR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Running against GDAL/OGR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot copy style: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot parse style: %1:%2:%3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read style: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8856,15 +9439,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&lt;p&gt;The following have contributed to QGIS by translating the user interface or documentation&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Sekojošas personas ir palīdzējušas QGIS veicot tā grafiskās saskarnes vai dokumentācijas tulkošanu&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Sekojošas personas ir palīdzējušas QGIS veicot tā grafiskās saskarnes vai dokumentācijas tulkošanu&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Language</source>
-        <translation>Valoda</translation>
+        <translation type="obsolete">Valoda</translation>
     </message>
     <message>
         <source>Names</source>
-        <translation>Vārdi</translation>
+        <translation type="obsolete">Vārdi</translation>
     </message>
     <message>
         <source>Translators</source>
@@ -8877,6 +9460,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>&lt;p&gt;For a list of individuals and institutions who have contributed money to fund QGIS development and other project costs see &lt;a href=&quot;http://qgis.org/en/sponsorship/donors.html&quot;&gt;http://qgis.org/en/sponsorship/donors.html&lt;/a&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>about:blank</source>
+        <translation type="unfinished">about:blank</translation>
     </message>
 </context>
 <context>
@@ -9420,6 +10007,8 @@ User DB Path:	%8
         <translation type="unfinished">
             <numerusform>Atribūtu tabula - %1 (%n objektu)
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -9428,6 +10017,8 @@ User DB Path:	%8
         <translation type="unfinished">
             <numerusform>Atribūtu tabula - %1 (%n atbilstošu objektu)
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -9576,6 +10167,8 @@ User DB Path:	%8
         <translation type="unfinished">
             <numerusform>Atribūtu tabula - %1 :: %n / %2 objektu ir izvēlēts
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -10038,6 +10631,8 @@ Database:%2</source>
         <source>Are you sure you want to delete %n bookmark(s)?</source>
         <comment>number of rows</comment>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -15798,18 +16393,26 @@ Lūdzu izvēlēties derīgu.</translation>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {3C?} {4.0/?} {3.?} {40/?} {1&quot;?} {10p?} {400;?} {12p?} {12p?} {0p?} {0p?} {0;?} {0p?} {0p or 12p?} {0p or 12p?} {0p or 12p?} {0p or 12p?} {0p or 12p?} {0p or 12p?}</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Droid Sans&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>QgsGeorefPlugin</name>
     <message>
         <source>&amp;About</source>
-        <translation>&amp;Par</translation>
+        <translation type="obsolete">&amp;Par</translation>
     </message>
     <message>
         <source>&amp;Georeferencer</source>
@@ -16615,6 +17218,8 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished">
             <numerusform>Vai tiešām vēlaties dzēst %n izvēlēto slāņu?
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -18589,6 +19194,8 @@ rindā %2 kolonnā %3</translation>
         <translation type="unfinished">
             <numerusform>
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -18765,6 +19372,8 @@ This may be a problem in your network connection or at the WMS server.</source>
             <numerusform>Pēc %n sekunžu ilga aktivitātes trūkuma iestājās tīkla noildze.
 Tā varētu būt problēma ar jūsu tīkla savienojumu vai arī ar WMS serveri.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -19884,6 +20493,14 @@ Tā varētu būt problēma ar jūsu tīkla savienojumu vai arī ar WMS serveri.
     </message>
     <message>
         <source>&amp;Update Drawing Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paste Style</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -21369,10 +21986,6 @@ http://my.host.com/cgi-bin/mapserv.exe</source>
 <context>
     <name>QgsMssqlNewConnectionBase</name>
     <message>
-        <source>Create a New MS SQL connection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Connection Information</source>
         <translation type="unfinished">Savienojuma informācija</translation>
     </message>
@@ -21430,6 +22043,10 @@ http://my.host.com/cgi-bin/mapserv.exe</source>
     </message>
     <message>
         <source>Use estimated table parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create a New MSSQL connection</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -21512,10 +22129,6 @@ http://my.host.com/cgi-bin/mapserv.exe</source>
 </context>
 <context>
     <name>QgsMssqlSourceSelect</name>
-    <message>
-        <source>Add MS SQL Table(s)</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>&amp;Add</source>
         <translation type="unfinished">&amp;Pievienot</translation>
@@ -21603,6 +22216,10 @@ http://my.host.com/cgi-bin/mapserv.exe</source>
     <message>
         <source>Connect</source>
         <translation type="unfinished">Pieslēgties</translation>
+    </message>
+    <message>
+        <source>Add MSSQL Table(s)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -22601,6 +23218,10 @@ p, li { white-space: pre-wrap; }
         <source>Shapefiles without attribute are considered read-only.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Data source is invalid, no layer found (%1)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QgsOpenRasterDialog</name>
@@ -22885,6 +23506,46 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Bevel</source>
         <translation type="unfinished">Slīpums</translation>
+    </message>
+    <message>
+        <source>No Stretch</source>
+        <translation type="unfinished">Neizstiept</translation>
+    </message>
+    <message>
+        <source>Stretch To MinMax</source>
+        <translation type="unfinished">Izstiept līdz MinMaks</translation>
+    </message>
+    <message>
+        <source>Stretch And Clip To MinMax</source>
+        <translation type="unfinished">Izstiept un apcirst līdz MinMaks</translation>
+    </message>
+    <message>
+        <source>Clip To MinMax</source>
+        <translation type="unfinished">Apcirst līdz MinMaks</translation>
+    </message>
+    <message>
+        <source>Check file contents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check extension</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation type="unfinished">Nē</translation>
+    </message>
+    <message>
+        <source>Passthru</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Basic scan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Full scan</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -23501,6 +24162,42 @@ p, li { white-space: pre-wrap; }
         <source>Miter limit for curve offset</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Rasters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>RGB band selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Red band</source>
+        <translation type="unfinished">Sarkanais kanāls</translation>
+    </message>
+    <message>
+        <source>Green band</source>
+        <translation type="unfinished">Zaļais kanāls</translation>
+    </message>
+    <message>
+        <source>Blue band</source>
+        <translation type="unfinished">Zilais kanāls</translation>
+    </message>
+    <message>
+        <source>Use standard deviation</source>
+        <translation type="unfinished">lietot standarta novirzi</translation>
+    </message>
+    <message>
+        <source>Contrast enhancement</source>
+        <translation type="unfinished">Kontrasta uzlabošana</translation>
+    </message>
+    <message>
+        <source>Scan for valid items in the browser dock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scan for contents of compressed files (.zip) in browser dock</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QgsOraclePlugin</name>
@@ -23590,6 +24287,17 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Import was successful.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QgsPGLayerItem</name>
+    <message>
+        <source>Delete layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Layer deleted successfully.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -25518,15 +26226,23 @@ Database error: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Field %1 ignored, because of unsupported type type %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>No key field for view given.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>No key field for query given.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Primary key field &apos;%1&apos; for view not unique.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type &apos;%1&apos; of primary key field &apos;%2&apos; for view invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Key field &apos;%1&apos; for view not found.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -25906,6 +26622,14 @@ Proceed?</source>
         <source>Published</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Maximum width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Maximum height</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QgsProjectionSelector</name>
@@ -25990,7 +26714,7 @@ Because of this the projection selector will not work...</source>
     </message>
     <message>
         <source>Recently used coordinate references systems</source>
-        <translation>Nesen lietotās koordinātu sistēmas</translation>
+        <translation type="obsolete">Nesen lietotās koordinātu sistēmas</translation>
     </message>
     <message>
         <source>Filter</source>
@@ -25998,6 +26722,10 @@ Because of this the projection selector will not work...</source>
     </message>
     <message>
         <source>Coordinate reference systems of the world</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Recently used coordinate reference systems</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -26033,6 +26761,8 @@ Because of this the projection selector will not work...</source>
         <translation type="unfinished">
             <numerusform>WHERE klauzula deva %n rindu.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -27111,10 +27841,6 @@ p, li { white-space: pre-wrap; }
         <translation>Zilais kanāls</translation>
     </message>
     <message>
-        <source>Save current RGB composition as default. This setting will be persistent between QGIS sessions.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Custom min / max values</source>
         <translation>Pielāgotas min / maks vērtības</translation>
     </message>
@@ -27141,10 +27867,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Blue max</source>
         <translation>Zilais max</translation>
-    </message>
-    <message>
-        <source>Save current standard deviation value as default. This setting will be persistent between QGIS sessions.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Single band properties</source>
@@ -27196,11 +27918,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Save current contrast enhancement algorithm as default. This setting will be persistent between QGIS sessions.</source>
-        <translation>Saglabāt pašreizējo kontrasta uzlabošanas algoritmu kā noklusējumu. Šis parametrs tiks saglabāts starp QGIS darba sesijām.</translation>
+        <translation type="obsolete">Saglabāt pašreizējo kontrasta uzlabošanas algoritmu kā noklusējumu. Šis parametrs tiks saglabāts starp QGIS darba sesijām.</translation>
     </message>
     <message>
         <source>Saves current contrast enhancement algorithm as a default. This setting will be persistent between QGIS sessions.</source>
-        <translation>Saglabā pašreizējo kontrasta uzlabošanas algoritmu kā noklusējumu. Šis parametrs tiek saglabāts starp QGIS darba sesijām.</translation>
+        <translation type="obsolete">Saglabā pašreizējo kontrasta uzlabošanas algoritmu kā noklusējumu. Šis parametrs tiek saglabāts starp QGIS darba sesijām.</translation>
     </message>
     <message>
         <source>Default</source>
@@ -27482,6 +28204,7 @@ p, li { white-space: pre-wrap; }
 &lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;
 &lt;tr&gt;
 &lt;td style=&quot;border: none;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;;&quot;&gt;&lt;/p&gt;
@@ -27788,6 +28511,8 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished">
             <numerusform>Filtrs deva %n objektu
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -28466,6 +29191,8 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished">
             <numerusform>
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -28567,6 +29294,8 @@ p, li { white-space: pre-wrap; }
         <source>Validation finished (%n error(s) found).</source>
         <comment>number of geometry errors</comment>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -29015,6 +29744,8 @@ SQL: %1</source>
         <translation type="unfinished">
             <numerusform>
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -30936,6 +31667,8 @@ Vai dzēst esošās klases pirms klasificēšanas?</translation>
         <translation type="unfinished">
             <numerusform>Sekmīgi: %n atribūtu ir dzēsts.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -30944,6 +31677,8 @@ Vai dzēst esošās klases pirms klasificēšanas?</translation>
         <translation type="unfinished">
             <numerusform>Kļūda: %n atribūtu nav dzēsts.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -30952,6 +31687,8 @@ Vai dzēst esošās klases pirms klasificēšanas?</translation>
         <translation type="unfinished">
             <numerusform>Sekmīgi: %n atribūtu ir pievienots.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -30960,6 +31697,8 @@ Vai dzēst esošās klases pirms klasificēšanas?</translation>
         <translation type="unfinished">
             <numerusform>Kļūda: %n jaunu atribūtu nav pievienots
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -30968,6 +31707,8 @@ Vai dzēst esošās klases pirms klasificēšanas?</translation>
         <translation type="unfinished">
             <numerusform>Sekmīgi: %n atribūtu vērtība ir mainīta.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -30976,6 +31717,8 @@ Vai dzēst esošās klases pirms klasificēšanas?</translation>
         <translation type="unfinished">
             <numerusform>Kļūda: %n atribūtu vērtības izmaiņas nav veiktas.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -30984,6 +31727,8 @@ Vai dzēst esošās klases pirms klasificēšanas?</translation>
         <translation type="unfinished">
             <numerusform>Sekmīgi: %n objektu ir pievienots.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -30992,6 +31737,8 @@ Vai dzēst esošās klases pirms klasificēšanas?</translation>
         <translation type="unfinished">
             <numerusform>Kļūda: %n objektu nav pievienots.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -31000,6 +31747,8 @@ Vai dzēst esošās klases pirms klasificēšanas?</translation>
         <translation type="unfinished">
             <numerusform>Sekmīgi: %n ģeometriju ir mainīts.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -31008,6 +31757,8 @@ Vai dzēst esošās klases pirms klasificēšanas?</translation>
         <translation type="unfinished">
             <numerusform>Kļūda: %n ģeometriju nav mainīts.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -31016,6 +31767,8 @@ Vai dzēst esošās klases pirms klasificēšanas?</translation>
         <translation type="unfinished">
             <numerusform>Sekmīgi: %n objektu ir dzēsts.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -31024,6 +31777,8 @@ Vai dzēst esošās klases pirms klasificēšanas?</translation>
         <translation type="unfinished">
             <numerusform>Kļūda: %n objektu nav dzēsts.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -31038,6 +31793,8 @@ Vai dzēst esošās klases pirms klasificēšanas?</translation>
         <source>ERROR: %n feature(s) not added - provider doesn&apos;t support adding features.</source>
         <comment>not added features count</comment>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -31525,6 +32282,10 @@ Vai dzēst esošās klases pirms klasificēšanas?</translation>
     <message>
         <source>UI file</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mm</source>
+        <translation type="unfinished">mm</translation>
     </message>
 </context>
 <context>
@@ -32269,6 +33030,8 @@ Features</source>
         <comment>crs count</comment>
         <translation type="unfinished">
             <numerusform>Koordinātu atskaites sistēma (%n pieejamas)</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -32301,6 +33064,8 @@ Features</source>
         <translation type="unfinished">
             <numerusform>izvēlēti %n slāņi
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -32356,6 +33121,8 @@ Features</source>
         <source>Options (%n coordinate reference systems available)</source>
         <comment>crs count</comment>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -32783,6 +33550,8 @@ Features</source>
         <translation type="unfinished">
             <numerusform>
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -32791,6 +33560,8 @@ Features</source>
         <translation type="unfinished">
             <numerusform>
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -32799,6 +33570,8 @@ Features</source>
         <translation type="unfinished">
             <numerusform>
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -32807,6 +33580,8 @@ Features</source>
         <translation type="unfinished">
             <numerusform>
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -32869,6 +33644,8 @@ Tika mēģināts URL: %1</translation>
         <translation type="unfinished">
             <numerusform>(un vēl %n)
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -33328,7 +34105,7 @@ Reason phrase: %2</source>
     <name>RoadGraphPlugin</name>
     <message>
         <source>Road graph settings</source>
-        <translation>Ceļu grafa parametri</translation>
+        <translation type="obsolete">Ceļu grafa parametri</translation>
     </message>
     <message>
         <source>Show road&apos;s direction</source>
@@ -33336,7 +34113,7 @@ Reason phrase: %2</source>
     </message>
     <message>
         <source>About</source>
-        <translation>Par</translation>
+        <translation type="obsolete">Par</translation>
     </message>
     <message>
         <source>Road graph plugin settings</source>
@@ -33348,7 +34125,7 @@ Reason phrase: %2</source>
     </message>
     <message>
         <source>About Road graph plugin</source>
-        <translation>Par ceļu grafa spraudni</translation>
+        <translation type="obsolete">Par ceļu grafa spraudni</translation>
     </message>
     <message>
         <source>Road graph</source>
@@ -33356,23 +34133,27 @@ Reason phrase: %2</source>
     </message>
     <message>
         <source>About RoadGraph</source>
-        <translation>Par ceļu grafu</translation>
+        <translation type="obsolete">Par ceļu grafu</translation>
     </message>
     <message>
         <source>Find shortest path on road&apos;s graph</source>
-        <translation>Atrast īsāko ceļu uz ceļu grafa</translation>
+        <translation type="obsolete">Atrast īsāko ceļu uz ceļu grafa</translation>
     </message>
     <message>
         <source>&lt;b&gt;Developers:&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Izstrādātāji:&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Izstrādātāji:&lt;/b&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;Homepage:&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Mājaslapa:&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Mājaslapa:&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation>Aizvērt</translation>
+        <translation type="obsolete">Aizvērt</translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation type="unfinished">Parametri</translation>
     </message>
 </context>
 <context>
@@ -33562,55 +34343,53 @@ Apraksts: %2</translation>
     <name>SaQueryBuilder</name>
     <message>
         <source>&amp;Test</source>
-        <translation>&amp;Testēt</translation>
+        <translation type="obsolete">&amp;Testēt</translation>
     </message>
     <message>
         <source>&amp;Clear</source>
-        <translation>&amp;Attīrīt</translation>
+        <translation type="obsolete">&amp;Attīrīt</translation>
     </message>
     <message>
         <source>Invalid Query</source>
-        <translation>Nederīgs vaicājums</translation>
-    </message>
-    <message>
-        <source>Setting the query failed</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Nederīgs vaicājums</translation>
     </message>
     <message>
         <source>No Query</source>
-        <translation>Nav vaicājuma</translation>
+        <translation type="obsolete">Nav vaicājuma</translation>
     </message>
     <message>
         <source>You must create a query before you can test it</source>
-        <translation>Pirms pārbaudi, izveido vaicājumu</translation>
+        <translation type="obsolete">Pirms pārbaudi, izveido vaicājumu</translation>
     </message>
     <message>
         <source>Query Result</source>
-        <translation>Pieprasīt rezultātu</translation>
+        <translation type="obsolete">Pieprasīt rezultātu</translation>
     </message>
     <message numerus="yes">
         <source>The where clause returned %n row(s).</source>
         <comment>returned test rows</comment>
-        <translation type="unfinished">
+        <translation type="obsolete">
             <numerusform>WHERE klauzula deva %n rindu.
         </numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <source>Query Failed</source>
-        <translation>Pieprasījums neveiksmīgs</translation>
+        <translation type="obsolete">Pieprasījums neveiksmīgs</translation>
     </message>
     <message>
         <source>An error occurred when executing the query</source>
-        <translation>Kļūda izpildot vaicājumu</translation>
+        <translation type="obsolete">Kļūda izpildot vaicājumu</translation>
     </message>
     <message>
         <source>Error in Query</source>
-        <translation>Kļūda vaicājumā</translation>
+        <translation type="obsolete">Kļūda vaicājumā</translation>
     </message>
     <message>
         <source>The subset string could not be set</source>
-        <translation>Nebija iespējams iestatīt apakškopas vaicājumu</translation>
+        <translation type="obsolete">Nebija iespējams iestatīt apakškopas vaicājumu</translation>
     </message>
 </context>
 <context>

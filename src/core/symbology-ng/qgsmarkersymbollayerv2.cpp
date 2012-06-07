@@ -1,3 +1,17 @@
+/***************************************************************************
+    qgsmarkersymbollayerv2.cpp
+    ---------------------
+    begin                : November 2009
+    copyright            : (C) 2009 by Martin Dobias
+    email                : wonder.sk at gmail.com
+ ***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
 
 #include "qgsmarkersymbollayerv2.h"
 #include "qgssymbollayerv2utils.h"
@@ -36,8 +50,6 @@ static QPointF _rotatedOffset( const QPointF& offset, double angle )
 
 QgsSimpleMarkerSymbolLayerV2::QgsSimpleMarkerSymbolLayerV2( QString name, QColor color, QColor borderColor, double size, double angle )
 {
-  if ( name == "rectangle" )
-    name = "square";
   mName = name;
   mColor = color;
   mBorderColor = borderColor;
@@ -226,7 +238,7 @@ bool QgsSimpleMarkerSymbolLayerV2::prepareShape()
 {
   mPolygon.clear();
 
-  if ( mName == "square" )
+  if ( mName == "square" || mName == "rectangle" )
   {
     mPolygon = QPolygonF( QRectF( QPointF( -1, -1 ), QPointF( 1, 1 ) ) );
     return true;

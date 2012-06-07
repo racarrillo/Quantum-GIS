@@ -41,6 +41,13 @@
   TODO: Make it work
 */
 
+class QgsVectorLayer;
+
+/*
+ * Constants used to describe copy-paste MIME types
+ */
+#define QGSCLIPBOARD_STYLE_MIME "application/qgis.style"
+
 class QgsClipboard
 {
   public:
@@ -56,7 +63,7 @@ class QgsClipboard
      *  Place a copy of features on the internal clipboard,
      *  destroying the previous contents.
      */
-    void replaceWithCopyOf( const QgsFieldMap& fields, QgsFeatureList& features );
+    void replaceWithCopyOf( QgsVectorLayer *src );
 
     /*
      *  Returns a copy of features on the internal clipboard,
@@ -89,14 +96,41 @@ class QgsClipboard
     QgsFeatureList transformedCopyOf( QgsCoordinateReferenceSystem destCRS );
 
     /*
-     *  Set the clipboard CRS
-     */
-    void setCRS( QgsCoordinateReferenceSystem crs );
-
-    /*
      *  Get the clipboard CRS
      */
     QgsCoordinateReferenceSystem crs();
+
+    /*
+     * Stores a MimeData together with a text into the system clipboard
+     */
+    void setData( const QString& mimeType, const QByteArray& data, const QString* text = 0 );
+    /*
+     * Stores a MimeData together with a text into the system clipboard
+     */
+    void setData( const QString& mimeType, const QByteArray& data, const QString& text );
+    /*
+     * Stores a MimeData into the system clipboard
+     */
+    void setData( const QString& mimeType, const QByteArray& data );
+    /*
+     * Stores a text into the system clipboard
+     */
+    void setText( const QString& text );
+    /*
+     * Proxy to QMimeData::hasFormat
+     * Tests whether the system clipboard contains data of a given MIME type
+     */
+    bool hasFormat( const QString& mimeType );
+    /*
+     * Retrieve data from the system clipboard.
+     * No copy is involved, since the return QByteArray is implicitly shared
+     */
+    QByteArray data( const QString& mimeType );
+
+    /*
+     * source fields
+     */
+    const QgsFieldMap &fields() { return mFeatureFields; }
 
   private:
 
@@ -105,7 +139,7 @@ class QgsClipboard
         involves a deep copy anyway.
      */
     QgsFeatureList mFeatureClipboard;
-
+    QgsFieldMap mFeatureFields;
     QgsCoordinateReferenceSystem mCRS;
 };
 

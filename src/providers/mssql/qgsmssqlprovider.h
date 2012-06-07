@@ -67,6 +67,7 @@ class QgsMssqlGeometryParser
 
   protected:
     void CopyBytes( void* src, int len );
+    void CopyCoordinates( unsigned char* src );
     void CopyPoint( int iPoint );
     void ReadPoint( int iShape );
     void ReadMultiPoint( int iShape );
@@ -82,6 +83,8 @@ class QgsMssqlGeometryParser
     int GetSRSId() { return nSRSId; };
     int GetWkbLen() { return nWkbLen; };
     void DumpMemoryToLog( const char* pszMsg, unsigned char* pszInput, int nLen );
+    /* sql geo type */
+    bool IsGeography;
 };
 
 
@@ -182,6 +185,14 @@ class QgsMssqlProvider : public QgsVectorDataProvider
     /** Restart reading features from previous select operation */
     virtual void rewind();
 
+    /** Accessor for sql where clause used to limit dataset */
+    QString subsetString();
+
+    /** mutator for sql where clause used to limit dataset size */
+    bool setSubsetString( QString theSQL, bool updateFeatureCount = true );
+
+    virtual bool supportsSubsetString() { return true; }
+
     /** Returns a bitmask containing the supported capabilities
         Note, some capabilities may change depending on whether
         a spatial filter is active on this provider, so it may
@@ -267,6 +278,9 @@ class QgsMssqlProvider : public QgsVectorDataProvider
     /** convert a QgsField to work with MSSQL */
     static bool convertField( QgsField &field );
 
+    /**Returns the default value for field specified by @c fieldId */
+    QVariant defaultValue( int fieldId );
+
     /** Import a vector layer into the database */
     static QgsVectorLayerImport::ImportError createEmptyLayer(
       const QString& uri,
@@ -291,6 +305,7 @@ class QgsMssqlProvider : public QgsVectorDataProvider
 
     //! Fields
     QgsFieldMap mAttributeFields;
+    QMap<int, QVariant> mDefaultValues;
 
     QgsMssqlGeometryParser parser;
 
@@ -337,6 +352,9 @@ class QgsMssqlProvider : public QgsVectorDataProvider
     QString mTableName;
     // available tables
     QStringList mTables;
+
+    // SQL statement used to limit the features retrieved
+    QString mSqlWhereClause;
 
     // Sets the error messages
     void setLastError( QString error )

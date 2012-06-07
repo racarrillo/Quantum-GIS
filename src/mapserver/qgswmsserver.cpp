@@ -297,8 +297,26 @@ QImage* QgsWMSServer::getLegendGraphics()
     return 0;
   }
 
+  //scale
+  double scaleDenominator = -1;
+  QMap<QString, QString>::const_iterator scaleIt = mParameterMap.find( "SCALE" );
+  if ( scaleIt != mParameterMap.constEnd() )
+  {
+    bool conversionSuccess;
+    double scaleValue = scaleIt.value().toDouble( &conversionSuccess );
+    if ( conversionSuccess )
+    {
+      scaleDenominator = scaleValue;
+    }
+  }
+
   QgsCoordinateReferenceSystem dummyCRS;
-  QStringList layerIds = layerSet( layersList, stylesList, dummyCRS );
+  QStringList layerIds = layerSet( layersList, stylesList, dummyCRS, scaleDenominator );
+  if ( layerIds.size() < 1 )
+  {
+    return 0;
+  }
+
   QgsLegendModel legendModel;
   legendModel.setLayerSet( layerIds );
 
@@ -1244,7 +1262,16 @@ int QgsWMSServer::featureInfoFromVectorLayer( QgsVectorLayer* layer,
   //info point could be 0 in case there is only an attribute filter
   if ( infoPoint )
   {
-    double searchRadius = ( layerRect.xMaximum() - layerRect.xMinimum() ) / 100;
+    double searchRadius = 0;
+    if ( layer->geometryType() == QGis::Polygon )
+    {
+      searchRadius = layerRect.width() / 400;
+    }
+    else
+    {
+      searchRadius = layerRect.width() / 200;
+    }
+
     searchRect.set( infoPoint->x() - searchRadius, infoPoint->y() - searchRadius,
                     infoPoint->x() + searchRadius, infoPoint->y() + searchRadius );
   }
@@ -1317,7 +1344,11 @@ int QgsWMSServer::featureInfoFromVectorLayer( QgsVectorLayer* layer,
       QMap<int, QString>::const_iterator aliasIt = aliasMap.find( it.key() );
       if ( aliasIt != aliasMap.constEnd() )
       {
-        attributeName = aliasIt.value();
+        QString aliasName = aliasIt.value();
+        if ( !aliasName.isEmpty() )
+        {
+          attributeName = aliasName;
+        }
       }
 
       QDomElement attributeElement = infoDocument.createElement( "Attribute" );
@@ -1390,7 +1421,7 @@ int QgsWMSServer::featureInfoFromRasterLayer( QgsRasterLayer* layer,
 
 QStringList QgsWMSServer::layerSet( const QStringList &layersList,
                                     const QStringList &stylesList,
-                                    const QgsCoordinateReferenceSystem &destCRS ) const
+                                    const QgsCoordinateReferenceSystem &destCRS, double scaleDenominator ) const
 {
   Q_UNUSED( destCRS );
   QStringList layerKeys;
@@ -1426,9 +1457,15 @@ QStringList QgsWMSServer::layerSet( const QStringList &layersList,
       QgsDebugMsg( QString( "Checking layer: %1" ).arg( theMapLayer->name() ) );
       if ( theMapLayer )
       {
-        layerKeys.push_front( theMapLayer->id() );
-        QgsMapLayerRegistry::instance()->addMapLayers(
-          QList<QgsMapLayer *>() << theMapLayer, false );
+        //test if layer is visible in requested scale
+        bool useScaleConstraint = ( scaleDenominator > 0 && theMapLayer->hasScaleBasedVisibility() );
+        if ( !useScaleConstraint ||
+             ( theMapLayer->minimumScale() <= scaleDenominator && theMapLayer->maximumScale() >= scaleDenominator ) )
+        {
+          layerKeys.push_front( theMapLayer->id() );
+          QgsMapLayerRegistry::instance()->addMapLayers(
+            QList<QgsMapLayer *>() << theMapLayer, false );
+        }
       }
       else
       {

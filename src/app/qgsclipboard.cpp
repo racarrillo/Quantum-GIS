@@ -22,6 +22,7 @@
 #include <QStringList>
 #include <QClipboard>
 #include <QSettings>
+#include <QMimeData>
 
 #include "qgsclipboard.h"
 #include "qgsfeature.h"
@@ -29,9 +30,11 @@
 #include "qgsgeometry.h"
 #include "qgscoordinatereferencesystem.h"
 #include "qgslogger.h"
+#include "qgsvectorlayer.h"
 
 QgsClipboard::QgsClipboard()
     : mFeatureClipboard()
+    , mFeatureFields()
 {
 }
 
@@ -39,13 +42,19 @@ QgsClipboard::~QgsClipboard()
 {
 }
 
-void QgsClipboard::replaceWithCopyOf( const QgsFieldMap& fields, QgsFeatureList& features )
+void QgsClipboard::replaceWithCopyOf( QgsVectorLayer *src )
 {
+  if ( !src )
+    return;
+
   QSettings settings;
   bool copyWKT = settings.value( "qgis/copyGeometryAsWKT", true ).toBool();
 
   // Replace the QGis clipboard.
-  mFeatureClipboard = features;
+  mFeatureFields = src->pendingFields();
+  mFeatureClipboard = src->selectedFeatures();
+  mCRS = src->crs();
+
   QgsDebugMsg( "replaced QGis clipboard." );
 
   // Replace the system clipboard.
@@ -58,7 +67,7 @@ void QgsClipboard::replaceWithCopyOf( const QgsFieldMap& fields, QgsFeatureList&
     textFields += "wkt_geom";
   }
 
-  for ( QgsFieldMap::const_iterator fit = fields.begin(); fit != fields.end(); ++fit )
+  for ( QgsFieldMap::const_iterator fit = mFeatureFields.begin(); fit != mFeatureFields.end(); ++fit )
   {
     textFields += fit->name();
   }
@@ -66,7 +75,7 @@ void QgsClipboard::replaceWithCopyOf( const QgsFieldMap& fields, QgsFeatureList&
   textFields.clear();
 
   // then the field contents
-  for ( QgsFeatureList::iterator it = features.begin(); it != features.end(); ++it )
+  for ( QgsFeatureList::iterator it = mFeatureClipboard.begin(); it != mFeatureClipboard.end(); ++it )
   {
     QgsAttributeMap attributes = it->attributeMap();
 
@@ -104,9 +113,9 @@ void QgsClipboard::replaceWithCopyOf( const QgsFieldMap& fields, QgsFeatureList&
   // docs). With a Linux X server, ::Clipboard was required.
   // The simple solution was to put the text into both clipboards.
 
-  // The ::Selection setText() below one may need placing inside so
-  // #ifdef so that it doesn't get compiled under Windows.
+#ifndef Q_OS_WIN
   cb->setText( textCopy, QClipboard::Selection );
+#endif
   cb->setText( textCopy, QClipboard::Clipboard );
 
   QgsDebugMsg( QString( "replaced system clipboard with: %1." ).arg( textCopy ) );
@@ -154,12 +163,42 @@ QgsFeatureList QgsClipboard::transformedCopyOf( QgsCoordinateReferenceSystem des
   return featureList;
 }
 
-void QgsClipboard::setCRS( QgsCoordinateReferenceSystem crs )
-{
-  mCRS = crs;
-}
-
 QgsCoordinateReferenceSystem QgsClipboard::crs()
 {
   return mCRS;
+}
+
+void QgsClipboard::setData( const QString& mimeType, const QByteArray& data, const QString* text )
+{
+  QMimeData *mdata = new QMimeData();
+  mdata->setData( mimeType, data );
+  if ( text )
+  {
+    mdata->setText( *text );
+  }
+  // Transfers ownership to the clipboard object
+#ifndef Q_OS_WIN
+  QApplication::clipboard()->setMimeData( mdata, QClipboard::Selection );
+#endif
+  QApplication::clipboard()->setMimeData( mdata, QClipboard::Clipboard );
+}
+
+void QgsClipboard::setData( const QString& mimeType, const QByteArray& data, const QString& text )
+{
+  setData( mimeType, data, &text );
+}
+
+void QgsClipboard::setData( const QString& mimeType, const QByteArray& data )
+{
+  setData( mimeType, data, 0 );
+}
+
+bool QgsClipboard::hasFormat( const QString& mimeType )
+{
+  return QApplication::clipboard()->mimeData()->hasFormat( mimeType );
+}
+
+QByteArray QgsClipboard::data( const QString& mimeType )
+{
+  return QApplication::clipboard()->mimeData()->data( mimeType );
 }

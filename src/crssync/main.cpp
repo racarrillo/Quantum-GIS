@@ -40,14 +40,8 @@ int main( int argc, char ** argv )
 {
   QgsApplication a( argc, argv, false );
 
-#if defined(Q_WS_MACX)
-  // If we're on Mac, we have the resource library way above us...
-  a.setPkgDataPath( QgsApplication::prefixPath() + "/../../../../" + QString( QGIS_DATA_SUBDIR ) );
-#elif defined(Q_WS_WIN)
-  a.setPkgDataPath( QgsApplication::prefixPath() + "/" QGIS_DATA_SUBDIR );
-#else
-  a.setPkgDataPath( QgsApplication::prefixPath() + "/../" QGIS_DATA_SUBDIR );
-#endif
+  if ( !QgsApplication::isRunningFromBuildDir() )
+    a.setPrefixPath( CMAKE_INSTALL_PREFIX, true );
 
   std::cout << "Synchronizing CRS database with PROJ definitions." << std::endl;
 
@@ -74,5 +68,5 @@ int main( int argc, char ** argv )
     std::cout << -res << " CRSs could not be updated." << std::endl;
   }
 
-  return 0;
+  exit( 0 );
 }

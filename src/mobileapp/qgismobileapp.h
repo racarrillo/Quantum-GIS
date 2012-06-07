@@ -32,7 +32,7 @@ public:
   void addLayer();
 
 private:
-  QDeclarativeView mView;
+  QDeclarativeView *mView;
   QgsMapCanvas *mapCanvas;
 };
 

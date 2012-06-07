@@ -241,6 +241,11 @@ int main( int argc, char *argv[] )
   int mySnapshotHeight = 600;
 
   bool myHideSplash = false;
+#if defined(ANDROID)
+  QgsDebugMsg( QString( "Android: Splash hidden" ) );
+  myHideSplash = true;
+#endif
+
   bool myRestorePlugins = true;
   bool myCustomization = true;
 
@@ -315,7 +320,6 @@ int main( int argc, char *argv[] )
     else if ( i + 1 < argc && ( arg == "--configpath" || arg == "-c" ) )
     {
       configpath = argv[++i];
-      QSettings::setPath( QSettings::IniFormat, QSettings::UserScope, configpath );
     }
     else
     {

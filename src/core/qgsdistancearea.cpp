@@ -99,7 +99,7 @@ bool QgsDistanceArea::setEllipsoid( const QString& ellipsoid )
   }
 
   //check the db is available
-  myResult = sqlite3_open( QgsApplication::srsDbFilePath().toUtf8().data(), &myDatabase );
+  myResult = sqlite3_open_v2( QgsApplication::srsDbFilePath().toUtf8().data(), &myDatabase, SQLITE_OPEN_READONLY, NULL );
   if ( myResult )
   {
     QgsMessageLog::logMessage( QObject::tr( "Can't open database: %1" ).arg( sqlite3_errmsg( myDatabase ) ) );
@@ -150,7 +150,7 @@ bool QgsDistanceArea::setEllipsoid( const QString& ellipsoid )
   else if ( parameter2.left( 3 ) == "rf=" )
   {
     mInvFlattening = parameter2.mid( 3 ).toDouble();
-    mSemiMinor = mSemiMajor - ( mInvFlattening / mSemiMajor );
+    mSemiMinor = mSemiMajor - ( mSemiMajor / mInvFlattening );
   }
   else
   {

@@ -49,7 +49,7 @@
 #include "qgsmssqldataitems.h"
 
 static const QString TEXT_PROVIDER_KEY = "mssql";
-static const QString TEXT_PROVIDER_DESCRIPTION = "MS SQL spatial data provider";
+static const QString TEXT_PROVIDER_DESCRIPTION = "MSSQL spatial data provider";
 
 QgsMssqlProvider::QgsMssqlProvider( QString uri )
     : QgsVectorDataProvider( uri )
@@ -72,6 +72,8 @@ QgsMssqlProvider::QgsMssqlProvider( QString uri )
   mSkipFailures = false;
 
   mUseEstimatedMetadata = anUri.useEstimatedMetadata();
+
+  mSqlWhereClause = anUri.sql();
 
   mDatabase = GetDatabase( anUri.service(), anUri.host(), anUri.database(), anUri.username(), anUri.password() );
 
@@ -321,6 +323,7 @@ void QgsMssqlProvider::loadMetadata()
 void QgsMssqlProvider::loadFields()
 {
   mAttributeFields.clear();
+  mDefaultValues.clear();
   // get field spec
   mQuery = QSqlQuery( mDatabase );
   mQuery.setForwardOnly( true );
@@ -341,6 +344,7 @@ void QgsMssqlProvider::loadFields()
       {
         mGeometryColName = mQuery.value( 3 ).toString();
         mGeometryColType = sqlTypeName;
+        parser.IsGeography = sqlTypeName == "geography";
       }
       else
       {
@@ -357,6 +361,11 @@ void QgsMssqlProvider::loadFields()
             sqlTypeName,
             mQuery.value( 7 ).toInt(),
             mQuery.value( 6 ).toInt() ) );
+
+        if ( !mQuery.value( 12 ).isNull() )
+        {
+          mDefaultValues.insert( i, mQuery.value( 12 ) );
+        }
         ++i;
       }
     }
@@ -406,10 +415,17 @@ void QgsMssqlProvider::loadFields()
   }
 }
 
+QVariant QgsMssqlProvider::defaultValue( int fieldId )
+{
+  if ( mDefaultValues.contains( fieldId ) )
+    return mDefaultValues[fieldId];
+  else
+    return QVariant( QString::null );
+}
 
 QString QgsMssqlProvider::storageType() const
 {
-  return "MS SQL spatial database";
+  return "MSSQL spatial database";
 }
 
 bool QgsMssqlProvider::featureAtId( QgsFeatureId featureId,
@@ -456,6 +472,11 @@ bool QgsMssqlProvider::featureAtId( QgsFeatureId featureId,
   // set attribute filter
   query += QString( " where [%1] = %2" ).arg( mFidColName, QString::number( featureId ) );
 
+  if ( !mSqlWhereClause.isEmpty() )
+  {
+    query += " and (" + mSqlWhereClause + ")";
+  }
+
   mFetchGeom = fetchGeometry;
   mAttributesToFetch = fetchAttributes;
   // issue the sql query
@@ -476,7 +497,7 @@ bool QgsMssqlProvider::nextFeature( QgsFeature& feature )
   feature.setValid( false );
   if ( !mValid )
   {
-    QgsDebugMsg( "Read attempt on an invalid mssql data source" );
+    QgsDebugMsg( "Read attempt on an invalid MSSQL data source" );
     return false;
   }
 
@@ -565,9 +586,27 @@ void QgsMssqlProvider::select( QgsAttributeList fetchAttributes,
   // set spatial filter
   if ( !rect.isEmpty() )
   {
+    // polygons should be CCW for SqlGeography
+    QString r;
+    QTextStream foo( &r );
+
+    foo.setRealNumberPrecision( 8 );
+    foo.setRealNumberNotation( QTextStream::FixedNotation );
+    foo <<  rect.xMinimum() << " " <<  rect.yMinimum() << ", "
+    <<  rect.xMaximum() << " " <<  rect.yMinimum() << ", "
+    <<  rect.xMaximum() << " " <<  rect.yMaximum() << ", "
+    <<  rect.xMinimum() << " " <<  rect.yMaximum() << ", "
+    <<  rect.xMinimum() << " " <<  rect.yMinimum();
+
     mStatement += QString( " where [%1].STIntersects([%2]::STGeomFromText('POLYGON((%3))',%4)) = 1" ).arg(
-                    mGeometryColName, mGeometryColType, rect.asPolygon(), QString::number( mSRId ) );
+                    mGeometryColName, mGeometryColType, r, QString::number( mSRId ) );
   }
+
+  if ( !mSqlWhereClause.isEmpty() )
+  {
+    mStatement += " and (" + mSqlWhereClause + ")";
+  }
+
   mFetchGeom = fetchGeometry;
   mAttributesToFetch = fetchAttributes;
   // issue the sql query
@@ -593,19 +632,34 @@ void QgsMssqlProvider::UpdateStatistics( bool estimate )
   mNumberFeatures = 0;
   // get features to calculate the statistics
   QString statement;
+  bool readAll = false;
   if ( estimate )
   {
-    statement = QString( "select min([%1].STPointN(1).STX), min([%1].STPointN(1).STY), max([%1].STPointN(1).STX), max([%1].STPointN(1).STY), COUNT([%1])" ).arg( mGeometryColName );
+    if ( mGeometryColType == "geometry" )
+      statement = QString( "select min([%1].STPointN(1).STX), min([%1].STPointN(1).STY), max([%1].STPointN(1).STX), max([%1].STPointN(1).STY), COUNT([%1])" ).arg( mGeometryColName );
+    else
+      statement = QString( "select min([%1].STPointN(1).Long), min([%1].STPointN(1).Lat), max([%1].STPointN(1).Long), max([%1].STPointN(1).Lat), COUNT([%1])" ).arg( mGeometryColName );
   }
   else
   {
-    statement = QString( "select min([%1].STEnvelope().STPointN(1).STX), min([%1].STEnvelope().STPointN(1).STY), max([%1].STEnvelope().STPointN(2).STX), max([%1].STEnvelope().STPointN(2).STY), count([%1])" ).arg( mGeometryColName );
+    if ( mGeometryColType == "geometry" )
+      statement = QString( "select min([%1].STEnvelope().STPointN(1).STX), min([%1].STEnvelope().STPointN(1).STY), max([%1].STEnvelope().STPointN(3).STX), max([%1].STEnvelope().STPointN(3).STY), count([%1])" ).arg( mGeometryColName );
+    else
+    {
+      statement = QString( "select [%1]" ).arg( mGeometryColName );
+      readAll = true;
+    }
   }
 
   if ( mSchemaName.isEmpty() )
     statement += QString( " from [%1]" ).arg( mTableName );
   else
     statement += QString( " from [%1].[%2]" ).arg( mSchemaName, mTableName );
+
+  if ( !mSqlWhereClause.isEmpty() )
+  {
+    statement += " where (" + mSqlWhereClause + ")";
+  }
 
   mQuery = QSqlQuery( mDatabase );
   mQuery.setForwardOnly( true );
@@ -619,13 +673,49 @@ void QgsMssqlProvider::UpdateStatistics( bool estimate )
   if ( mQuery.isActive() )
   {
     QgsGeometry geom;
-    if ( mQuery.next() )
+    if ( !readAll )
     {
-      mExtent.setXMinimum( mQuery.value( 0 ).toDouble() );
-      mExtent.setYMinimum( mQuery.value( 1 ).toDouble() );
-      mExtent.setXMaximum( mQuery.value( 2 ).toDouble() );
-      mExtent.setYMaximum( mQuery.value( 3 ).toDouble() );
-      mNumberFeatures = mQuery.value( 4 ).toInt();
+      if ( mQuery.next() )
+      {
+        mExtent.setXMinimum( mQuery.value( 0 ).toDouble() );
+        mExtent.setYMinimum( mQuery.value( 1 ).toDouble() );
+        mExtent.setXMaximum( mQuery.value( 2 ).toDouble() );
+        mExtent.setYMaximum( mQuery.value( 3 ).toDouble() );
+        mNumberFeatures = mQuery.value( 4 ).toInt();
+      }
+    }
+    else
+    {
+      // read all features
+      while ( mQuery.next() )
+      {
+        QByteArray ar = mQuery.value( 0 ).toByteArray();
+        unsigned char* wkb = parser.ParseSqlGeometry(( unsigned char* )ar.data(), ar.size() );
+        if ( wkb )
+        {
+          geom.fromWkb( wkb, parser.GetWkbLen() );
+          QgsRectangle rect = geom.boundingBox();
+
+          if ( mNumberFeatures > 0 )
+          {
+            if ( rect.xMinimum() < mExtent.xMinimum() )
+              mExtent.setXMinimum( rect.xMinimum() );
+            if ( rect.yMinimum() < mExtent.yMinimum() )
+              mExtent.setYMinimum( rect.yMinimum() );
+            if ( rect.xMaximum() > mExtent.xMaximum() )
+              mExtent.setXMaximum( rect.xMaximum() );
+            if ( rect.yMaximum() > mExtent.yMaximum() )
+              mExtent.setYMaximum( rect.yMaximum() );
+          }
+          else
+          {
+            mExtent = rect;
+            mWkbType = geom.wkbType();
+            mSRId = parser.GetSRSId();
+          }
+          ++mNumberFeatures;
+        }
+      }
     }
   }
 }
@@ -711,6 +801,9 @@ bool QgsMssqlProvider::addFeatures( QgsFeatureList & flist )
       if ( fld.name().isEmpty() )
         continue; // invalid
 
+      if ( mDefaultValues.contains( it2.key() ) && mDefaultValues[it2.key()] == *it2 )
+        continue; // skip fields having default values
+
       if ( !first )
       {
         statement += ",";
@@ -761,7 +854,12 @@ bool QgsMssqlProvider::addFeatures( QgsFeatureList & flist )
       QString msg = mQuery.lastError().text();
       QgsDebugMsg( msg );
       if ( !mSkipFailures )
+      {
+        QString msg = mQuery.lastError().text();
+        QgsDebugMsg( msg );
+        pushError( msg );
         return false;
+      }
       else
         continue;
     }
@@ -775,6 +873,9 @@ bool QgsMssqlProvider::addFeatures( QgsFeatureList & flist )
 
       if ( fld.name().isEmpty() )
         continue; // invalid
+
+      if ( mDefaultValues.contains( it2.key() ) && mDefaultValues[it2.key()] == *it2 )
+        continue; // skip fields having default values
 
       QVariant::Type type = fld.type();
       if ( it2->isNull() || !it2->isValid() )
@@ -826,7 +927,10 @@ bool QgsMssqlProvider::addFeatures( QgsFeatureList & flist )
       QString msg = mQuery.lastError().text();
       QgsDebugMsg( msg );
       if ( !mSkipFailures )
+      {
+        pushError( msg );
         return false;
+      }
     }
   }
 
@@ -1201,13 +1305,58 @@ QgsCoordinateReferenceSystem QgsMssqlProvider::crs()
   return mCrs;
 }
 
+QString QgsMssqlProvider::subsetString()
+{
+  return mSqlWhereClause;
+}
 
 QString  QgsMssqlProvider::name() const
 {
   return TEXT_PROVIDER_KEY;
 } // ::name()
 
+bool QgsMssqlProvider::setSubsetString( QString theSQL, bool )
+{
+  QString prevWhere = mSqlWhereClause;
 
+  mSqlWhereClause = theSQL.trimmed();
+
+  QString sql = QString( "select count(*) from " );
+
+  if ( !mSchemaName.isEmpty() )
+    mStatement += "[" + mSchemaName + "].";
+
+  sql += "[" + mTableName + "]";
+
+  if ( !mSqlWhereClause.isEmpty() )
+  {
+    sql += QString( " where %1" ).arg( mSqlWhereClause );
+  }
+
+  QSqlQuery query = QSqlQuery( mDatabase );
+  query.setForwardOnly( true );
+  if ( !query.exec( sql ) )
+  {
+    pushError( query.lastError().text() );
+    mSqlWhereClause = prevWhere;
+    return false;
+  }
+
+  if ( query.isActive() )
+  {
+    if ( query.next() )
+      mNumberFeatures = query.value( 0 ).toInt();
+  }
+
+  QgsDataSourceURI anUri = QgsDataSourceURI( dataSourceUri() );
+  anUri.setSql( mSqlWhereClause );
+
+  setDataSourceUri( anUri.uri() );
+
+  mExtent.setMinimal();
+
+  return true;
+}
 
 QString  QgsMssqlProvider::description() const
 {
@@ -1539,7 +1688,7 @@ QgsVectorLayerImport::ImportError QgsMssqlProvider::createEmptyLayer(
   if ( !provider->isValid() )
   {
     if ( errorMessage )
-      *errorMessage = QObject::tr( "Loading of the mssql provider failed" );
+      *errorMessage = QObject::tr( "Loading of the MSSQL provider failed" );
 
     delete provider;
     return QgsVectorLayerImport::ErrInvalidLayer;

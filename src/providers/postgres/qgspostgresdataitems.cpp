@@ -1,3 +1,17 @@
+/***************************************************************************
+    qgspostgresdataitems.cpp
+    ---------------------
+    begin                : October 2011
+    copyright            : (C) 2011 by Martin Dobias
+    email                : wonder.sk at gmail.com
+ ***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
 #include "qgspostgresdataitems.h"
 
 #include "qgspostgresconn.h"
@@ -7,6 +21,8 @@
 #include "qgsdatasourceuri.h"
 
 #include <QMessageBox>
+
+QGISEXTERN bool deleteLayer( const QString& uri, QString& errCause );
 
 // ---------------------------------------------------------------------------
 QgsPGConnectionItem::QgsPGConnectionItem( QgsDataItem* parent, QString name, QString path )
@@ -235,6 +251,32 @@ QgsPGLayerItem::QgsPGLayerItem( QgsDataItem* parent, QString name, QString path,
 
 QgsPGLayerItem::~QgsPGLayerItem()
 {
+}
+
+QList<QAction*> QgsPGLayerItem::actions()
+{
+  QList<QAction*> lst;
+
+  QAction* actionDeleteLayer = new QAction( tr( "Delete layer" ), this );
+  connect( actionDeleteLayer, SIGNAL( triggered() ), this, SLOT( deleteLayer() ) );
+  lst.append( actionDeleteLayer );
+
+  return lst;
+}
+
+void QgsPGLayerItem::deleteLayer()
+{
+  QString errCause;
+  bool res = ::deleteLayer( mUri, errCause );
+  if ( !res )
+  {
+    QMessageBox::warning( 0, tr( "Delete layer" ), errCause );
+  }
+  else
+  {
+    QMessageBox::information( 0, tr( "Delete layer" ), tr( "Layer deleted successfully." ) );
+    mParent->refresh();
+  }
 }
 
 QString QgsPGLayerItem::createUri()

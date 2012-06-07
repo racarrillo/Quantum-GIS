@@ -125,7 +125,7 @@ QgsVectorLayer::QgsVectorLayer( QString vectorLayerPath,
 #else
     bool use_symbology_ng_default = true;
 #endif
-        if ( settings.value( "/qgis/use_symbology_ng", use_symbology_ng_default ).toBool() && hasGeometryType() )
+    if ( settings.value( "/qgis/use_symbology_ng", use_symbology_ng_default ).toBool() && hasGeometryType() )
     {
       // using symbology-ng!
       setUsingRendererV2( true );
@@ -1828,6 +1828,11 @@ bool QgsVectorLayer::nextFeature( QgsFeature &f )
     {
       updateFeatureAttributes( f ); //check joined attributes / changed attributes
     }
+    if ( mEditable && mFetchGeometry )
+    {
+      updateFeatureGeometry( f );
+    }
+
     return true;
   }
 
@@ -2403,7 +2408,23 @@ int QgsVectorLayer::splitFeatures( const QList<QgsPoint>& splitLine, bool topolo
         newGeometry = newGeometries.at( i );
         QgsFeature newFeature;
         newFeature.setGeometry( newGeometry );
-        newFeature.setAttributeMap( select_it->attributeMap() );
+
+        //use default value where possible (primary key issue), otherwise the value from the original (splitted) feature
+        QgsAttributeMap newAttributes = select_it->attributeMap();
+        QVariant defaultValue;
+        for ( int j = 0; j < newAttributes.size(); ++j )
+        {
+          if ( mDataProvider )
+          {
+            defaultValue = mDataProvider->defaultValue( j );
+            if ( !defaultValue.isNull() )
+            {
+              newAttributes.insert( j, defaultValue );
+            }
+          }
+        }
+
+        newFeature.setAttributeMap( newAttributes );
         newFeatures.append( newFeature );
       }
 
@@ -2843,6 +2864,13 @@ bool QgsVectorLayer::setDataProvider( QString const & provider )
       {
         // make sure that the "observer" has been removed from URI to avoid crashes
         mDataSource = mDataProvider->dataSourceUri();
+      }
+      else if ( provider == "ogr" )
+      {
+        // make sure that the /vsigzip or /vsizip is added to uri, if applicable
+        mDataSource = mDataProvider->dataSourceUri();
+        if ( mDataSource.right( 10 ) == "|layerid=0" )
+          mDataSource.chop( 10 );
       }
 
       // label
@@ -4018,7 +4046,7 @@ QgsFeatureList QgsVectorLayer::selectedFeatures()
   foreach( QgsFeatureId fid, mSelectedFeatureIds )
   {
     features.push_back( QgsFeature() );
-    featureAtId( fid, features.back(), true, true );
+    featureAtId( fid, features.back(), geometryType() != QGis::NoGeometry, true );
   }
 
   return features;
@@ -4257,7 +4285,7 @@ void QgsVectorLayer::snapToGeometry( const QgsPoint& startPoint,
   {
     if ( geometryType() != QGis::Point ) // cannot snap to segment for points/multipoints
     {
-      sqrDistSegmentSnap = geom->closestSegmentWithContext( startPoint, snappedPoint, afterVertex );
+      sqrDistSegmentSnap = geom->closestSegmentWithContext( startPoint, snappedPoint, afterVertex, NULL, crs().geographicFlag() ? 1e-12 : 1e-8 );
 
       if ( sqrDistSegmentSnap < sqrSnappingTolerance )
       {
@@ -4273,7 +4301,6 @@ void QgsVectorLayer::snapToGeometry( const QgsPoint& startPoint,
       }
     }
   }
-
 }
 
 int QgsVectorLayer::insertSegmentVerticesForSnap( const QList<QgsSnappingResult>& snapResults )

@@ -27,6 +27,7 @@
 #include <QString>
 #include <QApplication>
 #include <QWidget>
+#include <QFileDialog>
 
 #include <qgsapplication.h>
 #include <qgsproviderregistry.h>
@@ -41,6 +42,10 @@
 QgisMobileapp::QgisMobileapp( QgsApplication *app, QWidget *parent, Qt::WFlags flags )
     : QMainWindow( parent, flags )
 {
+
+  QGraphicsScene scene;
+  QGraphicsView view(&scene);
+
   // Create the Map Canvas
   mapCanvas = new QgsMapCanvas();
   mapCanvas->setObjectName(QString::fromUtf8("mapCanvas"));
@@ -52,15 +57,19 @@ QgisMobileapp::QgisMobileapp( QgsApplication *app, QWidget *parent, Qt::WFlags f
   mapCanvas->freeze(false);
   mapCanvas->setVisible(true);
 
-  mView.setSource(QUrl("qrc:/qml/qgsmobileapp.qml"));
-  mView.setResizeMode(QDeclarativeView::SizeRootObjectToView);
+  mView = new QDeclarativeView();
+  mView->setSource(QUrl("qrc:/qml/qgsmobileapp.qml"));
+  mView->setResizeMode(QDeclarativeView::SizeRootObjectToView);
 
-  QObject::connect((QObject*)mView.engine(), SIGNAL(quit()), app, SLOT(quit()));
+  QObject::connect((QObject*)mView->engine(), SIGNAL(quit()), app, SLOT(quit()));
 
-  mView.setGeometry(100,100, 800, 480);
-//  mView.show();
-  mapCanvas->scene()->addWidget(&mView);
+  mView->setGeometry(100,100, 800, 480);
+  mView->show();
+  //mapCanvas->scene()->addWidget(&mView);
 
+  scene.addWidget(mapCanvas);
+  scene.addWidget(mView);
+  view.show();
 }
 
 QgisMobileapp::~QgisMobileapp()
@@ -70,8 +79,9 @@ QgisMobileapp::~QgisMobileapp()
 
 void QgisMobileapp::addLayer()
 {
-  QString myLayerPath         = "/home/marco/GIS/laax/data/shapes/";
-  QString myLayerBaseName     = "freeridepists.shp";
+  QString myLayerPath         =  QFileDialog::getOpenFileName( this, tr( "Load SHP" ), ".", tr( "SHP files (*.shp *.SHP)" ) );
+//  QString myLayerPath         =  "/home/marco/GIS/swiss_grenzen/G3B09.shp";
+  QString myLayerBaseName     = "test";
   QString myProviderName      = "ogr";
 
   QgsVectorLayer * mypLayer = new QgsVectorLayer(myLayerPath, myLayerBaseName, myProviderName);

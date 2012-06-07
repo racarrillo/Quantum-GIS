@@ -36,7 +36,6 @@ typedef int dataCapabilities_t();
 typedef QgsDataItem * dataItem_t( QString, QgsDataItem* );
 
 
-
 /** base class for all items in the model */
 class CORE_EXPORT QgsDataItem : public QObject
 {
@@ -48,6 +47,7 @@ class CORE_EXPORT QgsDataItem : public QObject
       Directory,
       Layer,
       Error,
+      Favourites
     };
 
     QgsDataItem( QgsDataItem::Type type, QgsDataItem* parent, QString name, QString path );
@@ -194,6 +194,8 @@ class CORE_EXPORT QgsLayerItem : public QgsDataItem
     static const QIcon &iconTable();
     static const QIcon &iconRaster();
     static const QIcon &iconDefault();
+
+    virtual QString layerName() const { return name(); }
 };
 
 
@@ -236,7 +238,7 @@ class CORE_EXPORT QgsDirectoryItem : public QgsDataCollectionItem
 
     virtual QWidget * paramWidget();
 
-    static QVector<QgsDataProvider*> mProviders;
+    /* static QVector<QgsDataProvider*> mProviders; */
     static QVector<QLibrary*> mLibraries;
 };
 
@@ -277,11 +279,38 @@ class CORE_EXPORT QgsFavouritesItem : public QgsDataCollectionItem
 {
     Q_OBJECT
   public:
-    QgsFavouritesItem( QgsDataItem* parent, QString name, QString path );
+    QgsFavouritesItem( QgsDataItem* parent, QString name, QString path = QString() );
     ~QgsFavouritesItem();
 
     QVector<QgsDataItem*> createChildren();
+
     static const QIcon &iconFavourites();
+};
+
+/** A zip file: contains layers, using GDAL/OGR VSIFILE mechanism */
+class CORE_EXPORT QgsZipItem : public QgsDataCollectionItem
+{
+    Q_OBJECT
+
+  protected:
+    QStringList mZipFileList;
+
+  public:
+    QgsZipItem( QgsDataItem* parent, QString name, QString path );
+    ~QgsZipItem();
+
+    QVector<QgsDataItem*> createChildren();
+    QStringList getFiles();
+
+    static QVector<dataItem_t *> mDataItemPtr;
+    static QStringList mProviderNames;
+
+    static QgsDataItem* itemFromPath( QgsDataItem* parent, QString path, QString name );
+
+    static const QIcon &iconZip();
+
+    const QStringList & getZipFileList() const { return mZipFileList; }
+
 };
 
 #endif // QGSDATAITEM_H

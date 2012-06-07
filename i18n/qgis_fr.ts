@@ -86,7 +86,7 @@
         <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="177"/>
         <location filename="../python/plugins/fTools/tools/frmSumLines.ui" line="77"/>
         <location filename="../python/plugins/fTools/tools/frmVectorGrid.ui" line="331"/>
-        <location filename="../python/plugins/fTools/tools/frmVectorSplit.ui" line="61"/>
+        <location filename="../python/plugins/fTools/tools/frmVectorSplit.ui" line="35"/>
         <source>Browse</source>
         <translation>Parcourir</translation>
     </message>
@@ -194,12 +194,12 @@
     <message>
         <location filename="../python/plugins/fTools/tools/frmGeometry.ui" line="195"/>
         <source>Calculate extent for each feature separately</source>
-        <translation type="unfinished"></translation>
+        <translation>Calculer l&apos;emprise distincte de chaque entité</translation>
     </message>
     <message>
         <location filename="../python/plugins/fTools/tools/frmGeometry.ui" line="44"/>
         <location filename="../python/plugins/fTools/tools/frmMeanCoords.ui" line="55"/>
-        <location filename="../python/plugins/fTools/tools/frmVectorSplit.ui" line="35"/>
+        <location filename="../python/plugins/fTools/tools/frmVectorSplit.ui" line="44"/>
         <source>Unique ID field</source>
         <translation>Champ d&apos;identifiant unique</translation>
     </message>
@@ -217,7 +217,7 @@
         <location filename="../python/plugins/fTools/tools/frmGeoprocessing.ui" line="28"/>
         <location filename="../python/plugins/fTools/tools/frmMeanCoords.ui" line="27"/>
         <location filename="../python/plugins/fTools/tools/frmReProject.ui" line="25"/>
-        <location filename="../python/plugins/fTools/tools/frmVectorSplit.ui" line="25"/>
+        <location filename="../python/plugins/fTools/tools/frmVectorSplit.ui" line="64"/>
         <source>Input vector layer</source>
         <translation>Couche vectorielle de saisie</translation>
     </message>
@@ -704,37 +704,37 @@
         <translation>Résumé de l&apos;attribut</translation>
     </message>
     <message>
-        <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="60"/>
+        <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="146"/>
         <source>Take attributes of first located feature</source>
         <translation>Prendre les attributs de la première entitée localisée</translation>
     </message>
     <message>
-        <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="70"/>
+        <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="99"/>
         <source>Take summary of intersecting features</source>
         <translation>Prendre un résumé des entités intersectées</translation>
     </message>
     <message>
-        <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="93"/>
+        <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="89"/>
         <source>Mean</source>
         <translation>Moyenne</translation>
     </message>
     <message>
-        <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="106"/>
+        <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="109"/>
         <source>Min</source>
         <translation>Min</translation>
     </message>
     <message>
-        <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="116"/>
+        <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="139"/>
         <source>Max</source>
         <translation>Max</translation>
     </message>
     <message>
-        <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="126"/>
+        <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="119"/>
         <source>Sum</source>
         <translation>Somme</translation>
     </message>
     <message>
-        <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="149"/>
+        <location filename="../python/plugins/fTools/tools/frmSpatialJoin.ui" line="129"/>
         <source>Median</source>
         <translation>Médianne</translation>
     </message>
@@ -790,7 +790,7 @@
     <message>
         <location filename="../python/plugins/fTools/tools/frmVectorGrid.ui" line="169"/>
         <source>Align extents and resolution to selected raster layer</source>
-        <translation type="unfinished"></translation>
+        <translation>AJuster l&apos;emprise et la résolution à la couche raster sélectionnée</translation>
     </message>
     <message>
         <location filename="../python/plugins/fTools/tools/frmVectorGrid.ui" line="179"/>
@@ -823,12 +823,12 @@
         <translation>Exporter la grille en tant que lignes</translation>
     </message>
     <message>
-        <location filename="../python/plugins/fTools/tools/frmVectorSplit.ui" line="16"/>
+        <location filename="../python/plugins/fTools/tools/frmVectorSplit.ui" line="17"/>
         <source>Vector Split</source>
         <translation>Division de vecteurs</translation>
     </message>
     <message>
-        <location filename="../python/plugins/fTools/tools/frmVectorSplit.ui" line="45"/>
+        <location filename="../python/plugins/fTools/tools/frmVectorSplit.ui" line="57"/>
         <source>Output folder</source>
         <translation>Dossier de sortie</translation>
     </message>
@@ -1202,7 +1202,7 @@ Cela peut provoquer des effets inattendus.</translation>
     </message>
     <message>
         <source>Missing or invalid CRS</source>
-        <translation type="unfinished"></translation>
+        <translation>SCR manquant ou invalide</translation>
     </message>
     <message>
         <source>Count Points In Polygon</source>
@@ -1222,11 +1222,11 @@ Cela peut provoquer des effets inattendus.</translation>
     </message>
     <message>
         <source>Please select a raster layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Veulliez sélectionner une couche raster</translation>
     </message>
     <message>
         <source>Unable to compute extents aligned on selected raster layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de calculer l&apos;emprise du raster sélectionné</translation>
     </message>
     <message>
         <source>Densify geometries</source>
@@ -1235,6 +1235,18 @@ Cela peut provoquer des effets inattendus.</translation>
     <message>
         <source>Vertices to add</source>
         <translation>Sommets à ajouter</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Attention</translation>
+    </message>
+    <message>
+        <source>Currently QGIS doesn&apos;t allow simultaneous access from 
+                                 different threads to the same datasource. Make sure your layer&apos;s 
+                                 attribute tables are closed. Continue?</source>
+        <translation>Actuellement QGIS ne permet pas les accès simultanés depuis 
+                                 différents threads vers la même source de données. Assurez-vous que la table attributaire 
+                                 de votre couche est fermée. Continuer ?</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1429,6 +1441,470 @@ Are you sure you want to proceed?</source>
     </message>
 </context>
 <context>
+    <name>DlgAbout</name>
+    <message>
+        <source>Dialog</source>
+        <translation type="obsolete">Dialogue</translation>
+    </message>
+    <message>
+        <source>$PLUGIN_NAME$</source>
+        <translation type="obsolete">$PLUGIN_NAME$</translation>
+    </message>
+    <message>
+        <source>$PLUGIN_DESCRIPTION$</source>
+        <translation type="obsolete">$PLUGIN_DESCRIPTION$</translation>
+    </message>
+</context>
+<context>
+    <name>DlgAddGeometryColumn</name>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgAddGeometryColumn.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>Dialogue</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgAddGeometryColumn.ui" line="20"/>
+        <source>Name</source>
+        <translation>Nom</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgAddGeometryColumn.ui" line="30"/>
+        <source>geom</source>
+        <translation>geom</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgAddGeometryColumn.ui" line="37"/>
+        <source>Type</source>
+        <translation>Type</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgAddGeometryColumn.ui" line="48"/>
+        <source>POINT</source>
+        <translation>POINT</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgAddGeometryColumn.ui" line="53"/>
+        <source>LINESTRING</source>
+        <translation>LIGNE</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgAddGeometryColumn.ui" line="58"/>
+        <source>POLYGON</source>
+        <translation>POLYGONE</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgAddGeometryColumn.ui" line="63"/>
+        <source>MULTIPOINT</source>
+        <translation>MULTIPOINT</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgAddGeometryColumn.ui" line="68"/>
+        <source>MULTILINESTRING</source>
+        <translation>MULTILIGNE</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgAddGeometryColumn.ui" line="73"/>
+        <source>MULTIPOLYGON</source>
+        <translation>MULTIPOLYGONE</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgAddGeometryColumn.ui" line="78"/>
+        <source>GEOMETRYCOLLECTION</source>
+        <translation>GEOMETRYCOLLECTION</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgAddGeometryColumn.ui" line="86"/>
+        <source>Dimensions</source>
+        <translation>Dimensions</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgAddGeometryColumn.ui" line="119"/>
+        <source>SRID</source>
+        <translation>SRID</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgAddGeometryColumn.ui" line="129"/>
+        <source>-1</source>
+        <translation>-1</translation>
+    </message>
+</context>
+<context>
+    <name>DlgCreateConstraint</name>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateConstraint.ui" line="14"/>
+        <source>Add constraint</source>
+        <translation>Ajouter une contrainte</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateConstraint.ui" line="20"/>
+        <source>Column</source>
+        <translation>ColonneColonne</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateConstraint.ui" line="37"/>
+        <source>Primary key</source>
+        <translation>Clé primaire</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateConstraint.ui" line="47"/>
+        <source>Unique</source>
+        <translation>Unique</translation>
+    </message>
+</context>
+<context>
+    <name>DlgCreateIndex</name>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateIndex.ui" line="14"/>
+        <source>Create index</source>
+        <translation>Créer un index</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateIndex.ui" line="20"/>
+        <source>Column</source>
+        <translation>Colonne</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateIndex.ui" line="30"/>
+        <source>Name</source>
+        <translation>Nom</translation>
+    </message>
+</context>
+<context>
+    <name>DlgCreateTable</name>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="14"/>
+        <source>Create Table</source>
+        <translation>Créer une table</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="22"/>
+        <source>Schema</source>
+        <translation>Schéma</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="35"/>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="167"/>
+        <source>Name</source>
+        <translation>Nom</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="52"/>
+        <source>Add field</source>
+        <translation>Ajouter un champ</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="59"/>
+        <source>Delete field</source>
+        <translation>Effacer un champ</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="79"/>
+        <source>Up</source>
+        <translation>Monter</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="86"/>
+        <source>Down</source>
+        <translation>Descendre</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="100"/>
+        <source>Primary key</source>
+        <translation>Clé primaire</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="121"/>
+        <source>Create geometry column</source>
+        <translation>Créer une colonne géométrique</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="129"/>
+        <source>POINT</source>
+        <translation>POINT</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="134"/>
+        <source>LINESTRING</source>
+        <translation>LIGNE</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="139"/>
+        <source>POLYGON</source>
+        <translation>POLYGONE</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="144"/>
+        <source>MULTIPOINT</source>
+        <translation>MULTIPOINT</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="149"/>
+        <source>MULTILINESTRING</source>
+        <translation>MULTILIGNE</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="154"/>
+        <source>MULTIPOLYGON</source>
+        <translation>MULTIPOLYGONE</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="159"/>
+        <source>GEOMETRYCOLLECTION</source>
+        <translation>GEOMETRYCOLLECTION</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="177"/>
+        <source>geom</source>
+        <translation>geom</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="184"/>
+        <source>Dimensions</source>
+        <translation>Dimensions</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="217"/>
+        <source>SRID</source>
+        <translation>SRID</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="227"/>
+        <source>-1</source>
+        <translation>-1</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgCreateTable.ui" line="234"/>
+        <source>Create spatial index</source>
+        <translation>Créer un index spatial</translation>
+    </message>
+</context>
+<context>
+    <name>DlgDbError</name>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgDbError.ui" line="14"/>
+        <source>Database Error</source>
+        <translation>Erreur dans la base de données</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgDbError.ui" line="30"/>
+        <source>An error occured:</source>
+        <translation>Une erreur est survenue :</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgDbError.ui" line="54"/>
+        <source>An error occured when executing a query:</source>
+        <translation>Une erreur a été rencontrée lors de l&apos;exécution de la requête :</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgDbError.ui" line="71"/>
+        <source>Query:</source>
+        <translation>Requête :</translation>
+    </message>
+</context>
+<context>
+    <name>DlgFieldProperties</name>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgFieldProperties.ui" line="14"/>
+        <source>Field properties</source>
+        <translation>Propriétés du champ</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgFieldProperties.ui" line="22"/>
+        <source>Name</source>
+        <translation>Nom</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgFieldProperties.ui" line="32"/>
+        <source>Type</source>
+        <translation>Type</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgFieldProperties.ui" line="46"/>
+        <source>Can be NULL</source>
+        <translation>Peut être NULL</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgFieldProperties.ui" line="63"/>
+        <source>Default value</source>
+        <translation>Valeur par défaut</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgFieldProperties.ui" line="73"/>
+        <source>Length</source>
+        <translation>Longueur</translation>
+    </message>
+</context>
+<context>
+    <name>DlgImportVector</name>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="14"/>
+        <source>Import vector layer</source>
+        <translation>Importer une couche vecteur</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="22"/>
+        <source>Schema:</source>
+        <translation>Schéma:</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="32"/>
+        <source>Table:</source>
+        <translation>Table :</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="48"/>
+        <source>Action</source>
+        <translation>Action</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="54"/>
+        <source>Create new table</source>
+        <translation>Créer une table</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="82"/>
+        <source>Drop existing one</source>
+        <translation>Ecraser l&apos;existante</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="94"/>
+        <source>Append data into table</source>
+        <translation>Ajouter des données à une table</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="104"/>
+        <source>Options</source>
+        <translation>Options</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="110"/>
+        <source>Primary key:</source>
+        <translation>Clé primaire :</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="120"/>
+        <source>Geometry column:</source>
+        <translation>Colonne géométrie:</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="132"/>
+        <source>Source SRID:</source>
+        <translation>SCR source :</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="142"/>
+        <source>Target SRID:</source>
+        <translation>SCR cible :</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="154"/>
+        <source>Encoding:</source>
+        <translation>Codage:</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="171"/>
+        <source>Create single-part geometries instead of multi-part</source>
+        <translation>Créer des géométries simples au lieu de multiparties</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgImportVector.ui" line="178"/>
+        <source>Create spatial index</source>
+        <translation>Créer un index spatial</translation>
+    </message>
+</context>
+<context>
+    <name>DlgSqlWindow</name>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="14"/>
+        <source>SQL window</source>
+        <translation>Fenêtre SQL</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="27"/>
+        <source>SQL query:</source>
+        <translation>Requête SQL</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="46"/>
+        <source>&amp;Execute (F5)</source>
+        <translation>&amp;Exécuter (F5)</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="49"/>
+        <source>F5</source>
+        <translation>F5</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="76"/>
+        <source>&amp;Clear</source>
+        <translation>&amp;Effacer</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="89"/>
+        <source>Result:</source>
+        <translation>Résultat :</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="119"/>
+        <source>Load as new layer</source>
+        <translation>Charger en tant que nouvelle couche</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="139"/>
+        <source>Column with unique 
+integer values</source>
+        <translation>Colonne avec des valeurs
+entières et uniques</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="160"/>
+        <source>Geometry column</source>
+        <translation>Colonne géométrique</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="199"/>
+        <source>Retrieve 
+columns</source>
+        <translation>Récupérer
+Colonnes</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="211"/>
+        <source>Layer name (prefix)</source>
+        <translation>Nom de la couche</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="234"/>
+        <source>Type</source>
+        <translation>Type</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="244"/>
+        <source>Vector</source>
+        <translation>Vecteur</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="254"/>
+        <source>Raster</source>
+        <translation>Raster</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgSqlWindow.ui" line="280"/>
+        <source>Load now!</source>
+        <translation>Charger !</translation>
+    </message>
+    <message>
+        <source>Sorry</source>
+        <translation>Désolé</translation>
+    </message>
+    <message>
+        <source>You must fill the required fields: 
+geometry column - column with unique integer values</source>
+        <translation>Vous devez remplir les champs requis:
+colonne géométrique - colonne avec des entiers uniques</translation>
+    </message>
+</context>
+<context>
     <name>DlgSymbolV2Properties</name>
     <message>
         <location filename="../src/ui/qgssymbolv2propertiesdialogbase.ui" line="14"/>
@@ -1484,6 +1960,157 @@ Are you sure you want to proceed?</source>
         <location filename="../src/ui/qgssymbolv2propertiesdialogbase.ui" line="189"/>
         <source>Move down</source>
         <translation>Descendre</translation>
+    </message>
+</context>
+<context>
+    <name>DlgTableProperties</name>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="13"/>
+        <source>Table properties</source>
+        <translation>Propriétés de la table</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="23"/>
+        <source>Columns</source>
+        <translation>Colonnes</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="29"/>
+        <source>Table columns:</source>
+        <translation>Colonnes de la table</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="45"/>
+        <source>Add column</source>
+        <translation>Ajouter une colonne</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="52"/>
+        <source>Add geometry column</source>
+        <translation>Ajouter une colonne géométrique</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="59"/>
+        <source>Edit column</source>
+        <translation>Editer une colonne</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="79"/>
+        <source>Delete column</source>
+        <translation>Effacer une colonne</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="89"/>
+        <source>Constraints</source>
+        <translation>Contraintes</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="95"/>
+        <source>Primary, foreign keys, unique and check constraints:</source>
+        <translation>Clés primaires, étrangères, uniques, etc.</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="111"/>
+        <source>Add primary key / unique</source>
+        <translation>Ajouter une clé primaire/unique</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="131"/>
+        <source>Delete constraint</source>
+        <translation>Supprimer une contrainte</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="141"/>
+        <source>Indexes</source>
+        <translation>Index</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="147"/>
+        <source>Indexes defined for this table:</source>
+        <translation>Index de la table</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="163"/>
+        <source>Add index</source>
+        <translation>AJouter un index</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="170"/>
+        <source>Add spatial index</source>
+        <translation>Ajouter un index spatial</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/ui/DlgTableProperties.ui" line="190"/>
+        <source>Delete index</source>
+        <translation>Supprimer un index</translation>
+    </message>
+</context>
+<context>
+    <name>DlgVersioning</name>
+    <message>
+        <location filename="../python/plugins/db_manager/db_plugins/postgis/plugins/versioning/DlgVersioning.ui" line="14"/>
+        <source>Add versioning support to a table</source>
+        <translation>Ajouter le support du versionnement pour une table</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/db_plugins/postgis/plugins/versioning/DlgVersioning.ui" line="22"/>
+        <source>Table is expected to be empty, with a primary key.</source>
+        <translation>La table doit être vide et avec une clé primaire</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/db_plugins/postgis/plugins/versioning/DlgVersioning.ui" line="31"/>
+        <source>Schema</source>
+        <translation>Schéma</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/db_plugins/postgis/plugins/versioning/DlgVersioning.ui" line="44"/>
+        <source>Table</source>
+        <translation>Table</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/db_plugins/postgis/plugins/versioning/DlgVersioning.ui" line="75"/>
+        <source>create a view with current content (&lt;TABLE&gt;_current)</source>
+        <translation>Créer une vue avec le contenu (&lt;TABLE&gt;_current)</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/db_plugins/postgis/plugins/versioning/DlgVersioning.ui" line="85"/>
+        <source>New columns</source>
+        <translation>Nouvelles colonnes</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/db_plugins/postgis/plugins/versioning/DlgVersioning.ui" line="91"/>
+        <source>Prim. key</source>
+        <translation>Clé prim.</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/db_plugins/postgis/plugins/versioning/DlgVersioning.ui" line="101"/>
+        <source>id_hist</source>
+        <translation>id_hist</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/db_plugins/postgis/plugins/versioning/DlgVersioning.ui" line="108"/>
+        <source>Start time</source>
+        <translation>Heure de début</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/db_plugins/postgis/plugins/versioning/DlgVersioning.ui" line="118"/>
+        <source>time_start</source>
+        <translation>temps_debut</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/db_plugins/postgis/plugins/versioning/DlgVersioning.ui" line="125"/>
+        <source>End time</source>
+        <translation>Heure de fin</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/db_plugins/postgis/plugins/versioning/DlgVersioning.ui" line="135"/>
+        <source>time_end</source>
+        <translation>temps_fin</translation>
+    </message>
+    <message>
+        <location filename="../python/plugins/db_manager/db_plugins/postgis/plugins/versioning/DlgVersioning.ui" line="160"/>
+        <source>SQL to be executed:</source>
+        <translation>SQL à exécuter :</translation>
     </message>
 </context>
 <context>
@@ -1659,6 +2286,17 @@ Cette extension ne sera pas activée.</translation>
         <translation>Découper</translation>
     </message>
     <message>
+        <source>Plugin error</source>
+        <translation>Erreur d&apos;extension</translation>
+    </message>
+    <message>
+        <source>Unable to load %1 plugin. 
+The required &quot;%2&quot; module is missing. 
+Install it and try again.</source>
+        <translation>Impossible de charger l&apos;extension %1.
+Le module &quot;%2&quot; est manquant.</translation>
+    </message>
+    <message>
         <source>Projections</source>
         <translation>Projections</translation>
     </message>
@@ -1736,11 +2374,11 @@ Cette extension ne sera pas activée.</translation>
     </message>
     <message>
         <source>About GdalTools</source>
-        <translation>À propos de GdalTools</translation>
+        <translation type="obsolete">À propos de GdalTools</translation>
     </message>
     <message>
         <source>Displays information about Gdal Tools</source>
-        <translation>Afficher les informations sur Gdal Tools</translation>
+        <translation type="obsolete">Afficher les informations sur Gdal Tools</translation>
     </message>
     <message>
         <source>&amp;Input directory:</source>
@@ -1806,7 +2444,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>
 (using GDAL v. %1)</source>
-        <translation>
+        <translation type="obsolete">
 (utilisation de GDAL v. %1)</translation>
     </message>
     <message>
@@ -1830,7 +2468,7 @@ icons by Robert Szepanek
 
 HOMEPAGE:
 http://trac.faunalia.it/GdalTools-plugin</source>
-        <translation>GDAL Tools est une extension pour QuantumGIS visant à simplifier la vie des utilisateurs des utilaires gdal grâçe à une interface simplifiée pour les fonctions les plus courantes.
+        <translation type="obsolete">GDAL Tools est une extension pour QuantumGIS visant à simplifier la vie des utilisateurs des utilaires gdal grâçe à une interface simplifiée pour les fonctions les plus courantes.
 
 Cette extension est maintenue par Faunalia (http://faunalia.it) avec l&apos;aide de GIS-lab (http://gis-lab.info).
 Icônes par Robert Szczepanek.
@@ -2031,7 +2669,7 @@ Voulez-vous quand même la stopper ?</translation>
     </message>
     <message>
         <source>Select the input directory with files to Merge</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner le répertoire contenant les fichiers à fusionner</translation>
     </message>
     <message>
         <source>Finished</source>
@@ -2389,7 +3027,7 @@ when pressing on the tool dialog&apos;s Help button.</source>
     <message>
         <location filename="../python/plugins/GdalTools/tools/widgetBuildVRT.ui" line="31"/>
         <source>Use visible raster layers for input</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser les rasters visibles comme entrée</translation>
     </message>
     <message>
         <location filename="../python/plugins/GdalTools/tools/widgetBuildVRT.ui" line="38"/>
@@ -2452,7 +3090,7 @@ when pressing on the tool dialog&apos;s Help button.</source>
     <message>
         <location filename="../python/plugins/GdalTools/tools/widgetBuildVRT.ui" line="137"/>
         <source>Allow projection difference</source>
-        <translation type="unfinished"></translation>
+        <translation>Permettre des projections différentes</translation>
     </message>
     <message>
         <source>&amp;Resolution:</source>
@@ -3787,6 +4425,14 @@ Veulliez essayer un autre champ...</translation>
         <translation>Impossible d&apos;effacer le fichier shapefile existant.</translation>
     </message>
     <message>
+        <source>Currently QGIS doesn&apos;t allow simultaneous access from 
+                                 different threads to the same datasource. Make sure your layer&apos;s 
+                                 attribute tables are closed. Continue?</source>
+        <translation>Actuellement QGIS ne permet pas les accès simultanés depuis 
+                                 différents threads vers la même source de données. Assurez-vous que la table attributaire 
+                                 de votre couche est fermée. Continuer ?</translation>
+    </message>
+    <message>
         <source>Unable to delete incomplete shapefile.</source>
         <translation>Impossible d&apos;effacer le fichier incomplet.</translation>
     </message>
@@ -4015,33 +4661,33 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
 <context>
     <name>GlobePlugin</name>
     <message>
-        <location filename="../src/plugins/globe/globe_plugin.cpp" line="90"/>
+        <location filename="../src/plugins/globe/globe_plugin.cpp" line="98"/>
         <source>Globe</source>
         <translation>Globe</translation>
     </message>
     <message>
-        <location filename="../src/plugins/globe/globe_plugin.cpp" line="180"/>
+        <location filename="../src/plugins/globe/globe_plugin.cpp" line="188"/>
         <source>Launch Globe</source>
         <translation>Démarrer le globe</translation>
     </message>
     <message>
-        <location filename="../src/plugins/globe/globe_plugin.cpp" line="181"/>
+        <location filename="../src/plugins/globe/globe_plugin.cpp" line="189"/>
         <source>Globe Settings</source>
         <translation>Paramètres du globe</translation>
     </message>
     <message>
-        <location filename="../src/plugins/globe/globe_plugin.cpp" line="183"/>
+        <location filename="../src/plugins/globe/globe_plugin.cpp" line="191"/>
         <source>Overlay data on a 3D globe</source>
         <translation>Superposer des données sur le globe 3D</translation>
     </message>
     <message>
-        <location filename="../src/plugins/globe/globe_plugin.cpp" line="184"/>
+        <location filename="../src/plugins/globe/globe_plugin.cpp" line="192"/>
         <source>Settings for 3D globe</source>
         <translation>Paramètres du globe 3D</translation>
     </message>
     <message>
-        <location filename="../src/plugins/globe/globe_plugin.cpp" line="192"/>
-        <location filename="../src/plugins/globe/globe_plugin.cpp" line="193"/>
+        <location filename="../src/plugins/globe/globe_plugin.cpp" line="200"/>
+        <location filename="../src/plugins/globe/globe_plugin.cpp" line="201"/>
         <source>&amp;Globe</source>
         <translation>&amp;Globe</translation>
     </message>
@@ -4051,58 +4697,58 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
     <message>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="78"/>
         <source>Heatmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Carte de chaleur</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="80"/>
         <source>Creates a heatmap raster for the input point vector.</source>
-        <translation type="unfinished"></translation>
+        <translation>Crée une carte de chaleur (heatmap) raster à partir des points vectoriels en entrée</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="85"/>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="319"/>
         <source>&amp;Heatmap</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Carte de chaleur</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="122"/>
         <source>GDAL driver error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur du pilote GDAL</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="122"/>
         <source>Cannot open the driver for the specified format</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;ouvrir le pilote pour le format spécifié</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="152"/>
         <source>Raster update error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de mise à jour du raster</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="152"/>
         <source>Could not open the created raster for updating. The heatmap was not generated.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;ouvrir le raster pour le mettre à jour. La carte de chaleur n&apos;a pas été générée.</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="161"/>
         <source>Point layer error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de la couche de point</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="161"/>
         <source>Could not identify the vector data provider.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;identifier la source de données vecteurs</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="196"/>
         <source>Heatmap generation aborted</source>
-        <translation type="unfinished"></translation>
+        <translation>Annulation de la génération de la carte de chaleur</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="196"/>
         <source>QGIS will now load the partially-computed raster.</source>
-        <translation type="unfinished"></translation>
+        <translation>QGIS va charger la carte partiellement générée</translation>
     </message>
 </context>
 <context>
@@ -4110,37 +4756,37 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
     <message>
         <location filename="../src/plugins/heatmap/heatmapgui.cpp" line="114"/>
         <source>Save Heatmap as:</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer la carte de chaleur en tant que :</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapgui.cpp" line="141"/>
         <source>No valid layers found!</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas de couches valides trouvées !</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapgui.cpp" line="141"/>
         <source>Advanced options cannot be enabled.</source>
-        <translation type="unfinished"></translation>
+        <translation>Les options avancées ne peuvent être activées.</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapgui.cpp" line="408"/>
         <source>Invalid output filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Le nom de fichier en entrée est invalide</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapgui.cpp" line="408"/>
         <source>Please enter a valid output file path and name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Veulliez entrer un chemin et un nom valides</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapgui.cpp" line="446"/>
         <source>Layer not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Couche non-trouvée</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapgui.cpp" line="446"/>
         <source>Layer %1 not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Couche %1 non trouvée.</translation>
     </message>
 </context>
 <context>
@@ -4148,94 +4794,94 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="20"/>
         <source>Heatmap Plugin</source>
-        <translation type="unfinished"></translation>
+        <translation>Extension Carte de Chaleur</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="29"/>
         <source>Input Point Vector</source>
-        <translation type="unfinished"></translation>
+        <translation>Points en entrée</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="39"/>
         <source>Output Raster</source>
-        <translation type="unfinished"></translation>
+        <translation>Raster en sortie</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="52"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="62"/>
         <source>Output Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Format</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="79"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Rayon</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="86"/>
         <source>10</source>
-        <translation type="unfinished">10</translation>
+        <translation>10</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="94"/>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="233"/>
         <source>meters</source>
-        <translation type="unfinished">mètres</translation>
+        <translation>mètres</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="99"/>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="238"/>
         <source>map units</source>
-        <translation type="unfinished"></translation>
+        <translation>unités de carte</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="107"/>
         <source>Decay Ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Ratio de corruption</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="114"/>
         <source>0.1</source>
-        <translation type="unfinished">0.1</translation>
+        <translation>0.1</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="127"/>
         <source>Advanced</source>
-        <translation type="unfinished">Avancé</translation>
+        <translation>Avancé</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="151"/>
         <source>Row</source>
-        <translation type="unfinished"></translation>
+        <translation>Cellule</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="161"/>
         <source>Cell Size X</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille en X</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="171"/>
         <source>Column</source>
-        <translation type="unfinished">Colonne</translation>
+        <translation>Colonne</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="181"/>
         <source>Cell Size Y</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille en Y</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="215"/>
         <source>Use Radius from field</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser le rayon depuis </translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmapguibase.ui" line="246"/>
         <source>Use Weight from field</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser le poid depuis </translation>
     </message>
 </context>
 <context>
@@ -4290,12 +4936,12 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation>Nouveau</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="203"/>
+        <location filename="../src/ui/qgisapp.ui" line="206"/>
         <source>&amp;Settings</source>
         <translation>&amp;Préférences</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="176"/>
+        <location filename="../src/ui/qgisapp.ui" line="179"/>
         <source>&amp;Plugins</source>
         <translation>E&amp;xtension</translation>
     </message>
@@ -4305,297 +4951,307 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation>&amp;Décorations</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="184"/>
+        <location filename="../src/ui/qgisapp.ui" line="187"/>
         <source>&amp;Raster</source>
         <translation>&amp;Raster</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="190"/>
+        <location filename="../src/ui/qgisapp.ui" line="193"/>
         <source>&amp;Help</source>
         <translation>&amp;Aide</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="225"/>
+        <location filename="../src/ui/qgisapp.ui" line="228"/>
         <source>File</source>
         <translation>Fichier</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="242"/>
+        <location filename="../src/ui/qgisapp.ui" line="245"/>
         <source>Manage Layers</source>
         <translation>Contrôle des couches</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="262"/>
+        <location filename="../src/ui/qgisapp.ui" line="265"/>
         <source>Digitizing</source>
         <translation>Numérisation</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="282"/>
+        <location filename="../src/ui/qgisapp.ui" line="285"/>
         <source>Advanced Digitizing</source>
         <translation>Numérisation avancée</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="306"/>
+        <location filename="../src/ui/qgisapp.ui" line="309"/>
         <source>Map Navigation</source>
         <translation>Navigateur de carte</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="329"/>
+        <location filename="../src/ui/qgisapp.ui" line="332"/>
         <source>Attributes</source>
         <translation>Attributs</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="346"/>
+        <location filename="../src/ui/qgisapp.ui" line="349"/>
         <source>Plugins</source>
         <translation>Extensions</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="357"/>
+        <location filename="../src/ui/qgisapp.ui" line="360"/>
         <source>Help</source>
         <translation>Aide</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="369"/>
+        <location filename="../src/ui/qgisapp.ui" line="372"/>
         <source>Raster</source>
         <translation>Raster</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="382"/>
+        <location filename="../src/ui/qgisapp.ui" line="385"/>
         <source>Label</source>
         <translation>Étiquette</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="397"/>
+        <location filename="../src/ui/qgisapp.ui" line="400"/>
         <source>Vector</source>
         <translation>Vecteur</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="408"/>
+        <location filename="../src/ui/qgisapp.ui" line="411"/>
         <source>Database</source>
         <translation>Base de données</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="419"/>
+        <location filename="../src/ui/qgisapp.ui" line="422"/>
         <source>Web</source>
         <translation>SIte internet</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="434"/>
+        <location filename="../src/ui/qgisapp.ui" line="437"/>
         <source>&amp;New Project</source>
         <translation>&amp;Nouveau projet</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="437"/>
+        <location filename="../src/ui/qgisapp.ui" line="440"/>
         <source>Ctrl+N</source>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="446"/>
+        <location filename="../src/ui/qgisapp.ui" line="449"/>
         <source>&amp;Open Project...</source>
         <translation>&amp;Ouvrir un projet...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="449"/>
+        <location filename="../src/ui/qgisapp.ui" line="452"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="458"/>
+        <location filename="../src/ui/qgisapp.ui" line="461"/>
         <source>&amp;Save Project</source>
         <translation>&amp;Sauvegarder le projet</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="461"/>
+        <location filename="../src/ui/qgisapp.ui" line="464"/>
         <source>Ctrl+S</source>
         <translation>Ctrl+S</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="470"/>
+        <location filename="../src/ui/qgisapp.ui" line="473"/>
         <source>Save Project &amp;As...</source>
         <translation>S&amp;auvegarder le projet sous...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="473"/>
+        <location filename="../src/ui/qgisapp.ui" line="476"/>
         <source>Ctrl+Shift+S</source>
         <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="482"/>
+        <location filename="../src/ui/qgisapp.ui" line="485"/>
         <source>Save as Image...</source>
         <translation>Sauvegarder comme image...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="491"/>
+        <location filename="../src/ui/qgisapp.ui" line="494"/>
         <source>&amp;New Print Composer</source>
         <translation>&amp;Nouveau composeur d&apos;impression</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="494"/>
+        <location filename="../src/ui/qgisapp.ui" line="497"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="503"/>
+        <location filename="../src/ui/qgisapp.ui" line="506"/>
         <source>Composer Manager...</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionnaire de composition</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="590"/>
+        <location filename="../src/ui/qgisapp.ui" line="593"/>
         <source>Add Feature</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter une entité</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="707"/>
+        <location filename="../src/ui/qgisapp.ui" line="710"/>
         <source>Merge Selected Features</source>
-        <translation type="unfinished"></translation>
+        <translation>Fusionner les entités sélectionnées</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="716"/>
+        <location filename="../src/ui/qgisapp.ui" line="719"/>
         <source>Merge Attributes of Selected Features</source>
-        <translation type="unfinished"></translation>
+        <translation>Fusionner les attributs des entités sélectionnées</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="799"/>
+        <location filename="../src/ui/qgisapp.ui" line="802"/>
         <source>Select Single Feature</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner une seule entité</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="811"/>
+        <location filename="../src/ui/qgisapp.ui" line="814"/>
         <source>Select Features by Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner des entités avec un rectangle</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="823"/>
+        <location filename="../src/ui/qgisapp.ui" line="826"/>
         <source>Select Features by Polygon</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner des entités avec un polygone</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="835"/>
+        <location filename="../src/ui/qgisapp.ui" line="838"/>
         <source>Select Features by Freehand</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner des entités à main levée</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="847"/>
+        <location filename="../src/ui/qgisapp.ui" line="850"/>
         <source>Select Features by Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner des entités selon un rayon</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="856"/>
+        <location filename="../src/ui/qgisapp.ui" line="859"/>
         <source>Deselect Features from All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Désélectionner toutes les entités</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1051"/>
+        <location filename="../src/ui/qgisapp.ui" line="1054"/>
         <source>Form Annotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Formulaire d&apos;annotation</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1134"/>
+        <location filename="../src/ui/qgisapp.ui" line="1141"/>
         <source>Add PostGIS Layers...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter une couche PostGIS...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1194"/>
+        <location filename="../src/ui/qgisapp.ui" line="1201"/>
         <source>Toggle Editing</source>
-        <translation type="unfinished"></translation>
+        <translation>Basculer en mode édition</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1206"/>
+        <location filename="../src/ui/qgisapp.ui" line="1213"/>
         <source>Save Edits</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarder les modifications</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1214"/>
+        <location filename="../src/ui/qgisapp.ui" line="1221"/>
         <source>Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarder sous...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1219"/>
+        <location filename="../src/ui/qgisapp.ui" line="1226"/>
         <source>Save Selection as Vector File...</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer la sélection en tant que fichier vectoriel</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1244"/>
+        <location filename="../src/ui/qgisapp.ui" line="1251"/>
         <source>Set Project CRS from Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Définir le SCR du projet depuis cette couche</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1609"/>
+        <location filename="../src/ui/qgisapp.ui" line="1616"/>
         <source>Run Feature Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Exécuter l&apos;action de l&apos;entité</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1633"/>
-        <location filename="../src/ui/qgisapp.ui" line="1636"/>
+        <location filename="../src/ui/qgisapp.ui" line="1640"/>
+        <location filename="../src/ui/qgisapp.ui" line="1643"/>
         <source>Touch zoom and pan</source>
-        <translation type="unfinished"></translation>
+        <translation>Panoramique et zoom</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1648"/>
+        <location filename="../src/ui/qgisapp.ui" line="1655"/>
         <source>Offset Curve</source>
-        <translation type="unfinished"></translation>
+        <translation>Décalage X,Y</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgisapp.ui" line="1664"/>
+        <source>Copy style</source>
+        <translation>Copier le style</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgisapp.ui" line="1673"/>
+        <source>Paste style</source>
+        <translation>Coller le style</translation>
     </message>
     <message>
         <source>Composer manager...</source>
         <translation type="obsolete">Gestionnaire de composeur...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="512"/>
+        <location filename="../src/ui/qgisapp.ui" line="515"/>
         <source>Exit</source>
         <translation>Quitter</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="515"/>
+        <location filename="../src/ui/qgisapp.ui" line="518"/>
         <source>Ctrl+Q</source>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="527"/>
+        <location filename="../src/ui/qgisapp.ui" line="530"/>
         <source>&amp;Undo</source>
         <translation>&amp;Annuler</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="530"/>
+        <location filename="../src/ui/qgisapp.ui" line="533"/>
         <source>Ctrl+Z</source>
         <translation>Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="539"/>
+        <location filename="../src/ui/qgisapp.ui" line="542"/>
         <source>&amp;Redo</source>
         <translation>&amp;Refaire</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="542"/>
+        <location filename="../src/ui/qgisapp.ui" line="545"/>
         <source>Ctrl+Shift+Z</source>
         <translation>Ctrl+Shift+Z</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="551"/>
+        <location filename="../src/ui/qgisapp.ui" line="554"/>
         <source>Cut Features</source>
         <translation>Couper les entités</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="554"/>
+        <location filename="../src/ui/qgisapp.ui" line="557"/>
         <source>Ctrl+X</source>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="563"/>
+        <location filename="../src/ui/qgisapp.ui" line="566"/>
         <source>Copy Features</source>
         <translation>Copier les entités</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="566"/>
+        <location filename="../src/ui/qgisapp.ui" line="569"/>
         <source>Ctrl+C</source>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="575"/>
+        <location filename="../src/ui/qgisapp.ui" line="578"/>
         <source>Paste Features</source>
         <translation>Coller les entités</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="578"/>
+        <location filename="../src/ui/qgisapp.ui" line="581"/>
         <source>Ctrl+V</source>
         <translation>Ctrl+V</translation>
     </message>
@@ -4604,7 +5260,7 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Créer un point</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="593"/>
+        <location filename="../src/ui/qgisapp.ui" line="596"/>
         <source>Ctrl+.</source>
         <translation>Ctrl+.</translation>
     </message>
@@ -4629,47 +5285,47 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Ajouter une entité</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="605"/>
+        <location filename="../src/ui/qgisapp.ui" line="608"/>
         <source>Move Feature(s)</source>
         <translation>Déplacer l&apos;entité</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="617"/>
+        <location filename="../src/ui/qgisapp.ui" line="620"/>
         <source>Reshape Features</source>
         <translation>Remodeler les entités</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="629"/>
+        <location filename="../src/ui/qgisapp.ui" line="632"/>
         <source>Split Features</source>
         <translation>Séparer les entités</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="638"/>
+        <location filename="../src/ui/qgisapp.ui" line="641"/>
         <source>Delete Selected</source>
         <translation>Supprimer les entités sélectionnées</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="650"/>
+        <location filename="../src/ui/qgisapp.ui" line="653"/>
         <source>Add Ring</source>
         <translation>Ajouter un anneau</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="662"/>
+        <location filename="../src/ui/qgisapp.ui" line="665"/>
         <source>Add Part</source>
         <translation>Ajouter une partie</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="674"/>
+        <location filename="../src/ui/qgisapp.ui" line="677"/>
         <source>Simplify Feature</source>
         <translation>Simplifier l&apos;entité</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="686"/>
+        <location filename="../src/ui/qgisapp.ui" line="689"/>
         <source>Delete Ring</source>
         <translation>Effacer un anneau</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="698"/>
+        <location filename="../src/ui/qgisapp.ui" line="701"/>
         <source>Delete Part</source>
         <translation>Effacer une partie</translation>
     </message>
@@ -4682,42 +5338,42 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Fusionner les attributs des entités sélectionnées</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="728"/>
+        <location filename="../src/ui/qgisapp.ui" line="731"/>
         <source>Node Tool</source>
         <translation>Outil de nœud</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="740"/>
+        <location filename="../src/ui/qgisapp.ui" line="743"/>
         <source>Rotate Point Symbols</source>
         <translation>Rotation des symboles de points</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="745"/>
+        <location filename="../src/ui/qgisapp.ui" line="748"/>
         <source>Snapping Options...</source>
         <translation>Options d&apos;accrochage</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="757"/>
+        <location filename="../src/ui/qgisapp.ui" line="760"/>
         <source>Pan Map</source>
         <translation>Se déplacer dans la carte</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="769"/>
+        <location filename="../src/ui/qgisapp.ui" line="772"/>
         <source>Zoom In</source>
         <translation>Zoom +</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="772"/>
+        <location filename="../src/ui/qgisapp.ui" line="775"/>
         <source>Ctrl++</source>
         <translation>Zoom +</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="784"/>
+        <location filename="../src/ui/qgisapp.ui" line="787"/>
         <source>Zoom Out</source>
         <translation>Zoom -</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="787"/>
+        <location filename="../src/ui/qgisapp.ui" line="790"/>
         <source>Ctrl+-</source>
         <translation>Zoom -</translation>
     </message>
@@ -4746,128 +5402,128 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Désélectionner toutes les entités</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="868"/>
+        <location filename="../src/ui/qgisapp.ui" line="871"/>
         <source>Identify Features</source>
         <translation>Identifier les entités</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="871"/>
+        <location filename="../src/ui/qgisapp.ui" line="874"/>
         <source>Ctrl+Shift+I</source>
         <translation>Ctrl+Shift+I</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="883"/>
+        <location filename="../src/ui/qgisapp.ui" line="886"/>
         <source>Measure Line</source>
         <translation>Mesurer une longueur</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="886"/>
-        <location filename="../src/ui/qgisapp.ui" line="1161"/>
+        <location filename="../src/ui/qgisapp.ui" line="889"/>
+        <location filename="../src/ui/qgisapp.ui" line="1168"/>
         <source>Ctrl+Shift+M</source>
         <translation>Ctrl+Shift+M</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="898"/>
+        <location filename="../src/ui/qgisapp.ui" line="901"/>
         <source>Measure Area</source>
         <translation>Mesurer une aire</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="901"/>
+        <location filename="../src/ui/qgisapp.ui" line="904"/>
         <source>Ctrl+Shift+J</source>
         <translation>Ctrl+Shift+J</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="913"/>
+        <location filename="../src/ui/qgisapp.ui" line="916"/>
         <source>Measure Angle</source>
         <translation>Mesurer un angle</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="922"/>
+        <location filename="../src/ui/qgisapp.ui" line="925"/>
         <source>Zoom Full</source>
         <translation>Zoom sur l&apos;étendue</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="925"/>
+        <location filename="../src/ui/qgisapp.ui" line="928"/>
         <source>Ctrl+Shift+F</source>
         <translation>Ctrl+Shift+F</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="934"/>
+        <location filename="../src/ui/qgisapp.ui" line="937"/>
         <source>Zoom to Layer</source>
         <translation>Zoom sur la couche</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="943"/>
+        <location filename="../src/ui/qgisapp.ui" line="946"/>
         <source>Zoom to Selection</source>
         <translation>Zoom sur la sélection</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="946"/>
+        <location filename="../src/ui/qgisapp.ui" line="949"/>
         <source>Ctrl+J</source>
         <translation>Mesurer une aire</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="955"/>
+        <location filename="../src/ui/qgisapp.ui" line="958"/>
         <source>Zoom Last</source>
         <translation>Zoom précédent</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="964"/>
+        <location filename="../src/ui/qgisapp.ui" line="967"/>
         <source>Zoom Next</source>
         <translation>Zoom suivant</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="973"/>
+        <location filename="../src/ui/qgisapp.ui" line="976"/>
         <source>Zoom Actual Size</source>
         <translation>Zoom à la taille réelle</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="976"/>
+        <location filename="../src/ui/qgisapp.ui" line="979"/>
         <source>Zoom to Native Pixel Resolution</source>
         <translation>Zoom à la résolution native des pixels</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="988"/>
+        <location filename="../src/ui/qgisapp.ui" line="991"/>
         <source>Map Tips</source>
         <translation>Infobulles</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="991"/>
+        <location filename="../src/ui/qgisapp.ui" line="994"/>
         <source>Show information about a feature when the mouse is hovered over it</source>
         <translation>Affiche une information sur un objet quand le pointeur de la souris le survol</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1000"/>
+        <location filename="../src/ui/qgisapp.ui" line="1003"/>
         <source>New Bookmark...</source>
         <translation>Nouveau signet...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1003"/>
+        <location filename="../src/ui/qgisapp.ui" line="1006"/>
         <source>Ctrl+B</source>
         <translation>Ctrl+B</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1012"/>
+        <location filename="../src/ui/qgisapp.ui" line="1015"/>
         <source>Show Bookmarks</source>
         <translation>Montrer les signets</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1015"/>
+        <location filename="../src/ui/qgisapp.ui" line="1018"/>
         <source>Ctrl+Shift+B</source>
         <translation>Ctrl+Shift+B</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1024"/>
+        <location filename="../src/ui/qgisapp.ui" line="1027"/>
         <source>Refresh</source>
         <translation>Rafraîchir</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1027"/>
+        <location filename="../src/ui/qgisapp.ui" line="1030"/>
         <source>Ctrl+R</source>
         <translation>Ctrl+R</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1039"/>
+        <location filename="../src/ui/qgisapp.ui" line="1042"/>
         <source>Text Annotation</source>
         <translation>Annotation de texte</translation>
     </message>
@@ -4876,57 +5532,57 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Formulaire d&apos;annotation</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1063"/>
+        <location filename="../src/ui/qgisapp.ui" line="1066"/>
         <source>Move Annotation</source>
         <translation>Déplacer une annotation</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1072"/>
+        <location filename="../src/ui/qgisapp.ui" line="1075"/>
         <source>Labeling</source>
         <translation>Étiquetage</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1081"/>
+        <location filename="../src/ui/qgisapp.ui" line="1084"/>
         <source>New Shapefile Layer...</source>
         <translation>Nouvelle couche shapefile...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1084"/>
+        <location filename="../src/ui/qgisapp.ui" line="1087"/>
         <source>Ctrl+Shift+N</source>
         <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1093"/>
+        <location filename="../src/ui/qgisapp.ui" line="1096"/>
         <source>New SpatiaLite Layer ...</source>
         <translation>Nouvelle couche SpatiaLite...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1096"/>
+        <location filename="../src/ui/qgisapp.ui" line="1099"/>
         <source>Ctrl+Shift+A</source>
         <translation>Ctrl+Shift+A</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1101"/>
+        <location filename="../src/ui/qgisapp.ui" line="1108"/>
         <source>Raster calculator ...</source>
         <translation>Calculatrice Raster</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1110"/>
+        <location filename="../src/ui/qgisapp.ui" line="1117"/>
         <source>Add Vector Layer...</source>
         <translation>Ajouter une couche vecteur...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1113"/>
+        <location filename="../src/ui/qgisapp.ui" line="1120"/>
         <source>Ctrl+Shift+V</source>
         <translation>Ctrl+Shift+V</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1122"/>
+        <location filename="../src/ui/qgisapp.ui" line="1129"/>
         <source>Add Raster Layer...</source>
         <translation>Ajouter une couche raster...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1125"/>
+        <location filename="../src/ui/qgisapp.ui" line="1132"/>
         <source>Ctrl+Shift+R</source>
         <translation>Ctrl+Shift+R</translation>
     </message>
@@ -4935,37 +5591,37 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Ajouter une couche PostGIS...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1137"/>
+        <location filename="../src/ui/qgisapp.ui" line="1144"/>
         <source>Ctrl+Shift+D</source>
         <translation>Ctrl+Shift+D</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1146"/>
+        <location filename="../src/ui/qgisapp.ui" line="1153"/>
         <source>Add SpatiaLite Layer...</source>
         <translation>Ajouter une couche Spatialite...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1149"/>
+        <location filename="../src/ui/qgisapp.ui" line="1156"/>
         <source>Ctrl+Shift+L</source>
         <translation>Ctrl+Shift+L</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1158"/>
+        <location filename="../src/ui/qgisapp.ui" line="1165"/>
         <source>Add MSSQL Spatial Layer...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter une couche MSSQL...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1170"/>
+        <location filename="../src/ui/qgisapp.ui" line="1177"/>
         <source>Add WMS Layer...</source>
         <translation>Ajouter une couche WMS...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1173"/>
+        <location filename="../src/ui/qgisapp.ui" line="1180"/>
         <source>Ctrl+Shift+W</source>
         <translation>Ctrl+Shift+W</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1182"/>
+        <location filename="../src/ui/qgisapp.ui" line="1189"/>
         <source>Open Attribute Table</source>
         <translation>Ouvrir la table d&apos;attributs</translation>
     </message>
@@ -4974,7 +5630,7 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Basculer en mode édition</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1197"/>
+        <location filename="../src/ui/qgisapp.ui" line="1204"/>
         <source>Toggles the editing state of the current layer</source>
         <translation>Bascule le mode d&apos;édition de la couche courante</translation>
     </message>
@@ -4983,7 +5639,7 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Sauvegarder les modifications</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1209"/>
+        <location filename="../src/ui/qgisapp.ui" line="1216"/>
         <source>Save edits to current layer, but continue editing</source>
         <translation>Enregistrer les modifications de la couche courante tout en continuant l&apos;édition</translation>
     </message>
@@ -4996,22 +5652,22 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Enregistrer la sélection en tant que fichier vectoriel</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1228"/>
+        <location filename="../src/ui/qgisapp.ui" line="1235"/>
         <source>Remove Layer(s)</source>
         <translation>Supprimer une couche</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1231"/>
+        <location filename="../src/ui/qgisapp.ui" line="1238"/>
         <source>Ctrl+D</source>
         <translation>Ctrl+D</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1236"/>
+        <location filename="../src/ui/qgisapp.ui" line="1243"/>
         <source>Set CRS of Layer(s)</source>
         <translation>Définir le SCR des couches</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1239"/>
+        <location filename="../src/ui/qgisapp.ui" line="1246"/>
         <source>Ctrl+Shift+C</source>
         <translation>Ctrl+Shift+C</translation>
     </message>
@@ -5020,72 +5676,72 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Définir le SCR du projet depuis cette couche</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1249"/>
+        <location filename="../src/ui/qgisapp.ui" line="1256"/>
         <source>Tile scale slider</source>
         <translation>Barre d&apos;échelle des tuiles</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1289"/>
+        <location filename="../src/ui/qgisapp.ui" line="1296"/>
         <source>Remove All from Overview</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlever tout de l&apos;aperçu</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1487"/>
+        <location filename="../src/ui/qgisapp.ui" line="1494"/>
         <source>Style Manager...</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionnaire de style...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1504"/>
+        <location filename="../src/ui/qgisapp.ui" line="1511"/>
         <source>Stretch Histogram to Full Dataset</source>
-        <translation type="unfinished"></translation>
+        <translation>Étendre l&apos;histogramme à tout le jeu de données</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1543"/>
+        <location filename="../src/ui/qgisapp.ui" line="1550"/>
         <source>Embed Layers and Groups...</source>
-        <translation type="unfinished"></translation>
+        <translation>Intégrer des couches et des groupes</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1555"/>
+        <location filename="../src/ui/qgisapp.ui" line="1562"/>
         <source>&amp;Copyright Label</source>
         <translation>Étiquette de Copyright</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1558"/>
+        <location filename="../src/ui/qgisapp.ui" line="1565"/>
         <source>Creates a copyright label that is displayed on the map canvas.</source>
         <translation>Ajoute un copyright qui sera disposé dans la carte.</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1567"/>
+        <location filename="../src/ui/qgisapp.ui" line="1574"/>
         <source>&amp;North Arrow</source>
         <translation>&amp;Flèche Nord</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1570"/>
+        <location filename="../src/ui/qgisapp.ui" line="1577"/>
         <source>&quot;Creates a north arrow that is displayed on the map canvas&quot;</source>
         <translation>&quot;Ajoute sur la carte une flèche qui indique le Nord cartographique&quot;</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1579"/>
+        <location filename="../src/ui/qgisapp.ui" line="1586"/>
         <source>&amp;Scale Bar</source>
         <translation>&amp;Échelle graphique</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1582"/>
+        <location filename="../src/ui/qgisapp.ui" line="1589"/>
         <source>Creates a scale bar that is displayed on the map canvas</source>
         <translation>Crée une échelle graphique qui est montrée sur la carte</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1591"/>
+        <location filename="../src/ui/qgisapp.ui" line="1598"/>
         <source>Add WFS Layer...</source>
         <translation>Ajouter une couche WFS...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1594"/>
+        <location filename="../src/ui/qgisapp.ui" line="1601"/>
         <source>Add WFS Layer</source>
         <translation>Ajouter une couche WFS</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1606"/>
+        <location filename="../src/ui/qgisapp.ui" line="1613"/>
         <source>Feature Action</source>
         <translation>Action de l&apos;entité</translation>
     </message>
@@ -5094,8 +5750,8 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Exécuter l&apos;action de l&apos;entité</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1618"/>
-        <location filename="../src/ui/qgisapp.ui" line="1621"/>
+        <location filename="../src/ui/qgisapp.ui" line="1625"/>
+        <location filename="../src/ui/qgisapp.ui" line="1628"/>
         <source>Pan Map to Selection</source>
         <translation>Déplacer la carte jusqu&apos;à la sélection</translation>
     </message>
@@ -5104,27 +5760,27 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Suivi GPS en direct</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1254"/>
+        <location filename="../src/ui/qgisapp.ui" line="1261"/>
         <source>Properties...</source>
         <translation>Propriétés...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1259"/>
+        <location filename="../src/ui/qgisapp.ui" line="1266"/>
         <source>Query...</source>
         <translation>Requête...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1268"/>
+        <location filename="../src/ui/qgisapp.ui" line="1275"/>
         <source>Add to Overview</source>
         <translation>Ajouter dans l&apos;aperçu</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1271"/>
+        <location filename="../src/ui/qgisapp.ui" line="1278"/>
         <source>Ctrl+Shift+O</source>
         <translation>Ctrl+Shift+O</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1280"/>
+        <location filename="../src/ui/qgisapp.ui" line="1287"/>
         <source>Add All to Overview</source>
         <translation>Tout ajouter dans l&apos;aperçu</translation>
     </message>
@@ -5133,132 +5789,132 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Enlever tout de l&apos;aperçu</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1298"/>
+        <location filename="../src/ui/qgisapp.ui" line="1305"/>
         <source>Show All Layers</source>
         <translation>Afficher toutes les couches</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1301"/>
+        <location filename="../src/ui/qgisapp.ui" line="1308"/>
         <source>Ctrl+Shift+U</source>
         <translation>Ctrl+Shift+U</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1310"/>
+        <location filename="../src/ui/qgisapp.ui" line="1317"/>
         <source>Hide All Layers</source>
         <translation>Cacher toutes les couches</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1313"/>
+        <location filename="../src/ui/qgisapp.ui" line="1320"/>
         <source>Ctrl+Shift+H</source>
         <translation>Ctrl+Shift+H</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1322"/>
+        <location filename="../src/ui/qgisapp.ui" line="1329"/>
         <source>Manage Plugins...</source>
         <translation>Gestionnaire d&apos;extensions</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1327"/>
+        <location filename="../src/ui/qgisapp.ui" line="1334"/>
         <source>Toggle Full Screen Mode</source>
         <translation>Basculer en mode plein écran</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1330"/>
+        <location filename="../src/ui/qgisapp.ui" line="1337"/>
         <source>Ctrl+F</source>
         <translation>Ctrl+F</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1339"/>
+        <location filename="../src/ui/qgisapp.ui" line="1346"/>
         <source>Project Properties...</source>
         <translation>Propriétés du projet...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1342"/>
+        <location filename="../src/ui/qgisapp.ui" line="1349"/>
         <source>Ctrl+Shift+P</source>
         <translation>Ctrl+Shift+P</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1351"/>
+        <location filename="../src/ui/qgisapp.ui" line="1358"/>
         <source>Options...</source>
         <translation>Options...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1363"/>
+        <location filename="../src/ui/qgisapp.ui" line="1370"/>
         <source>Custom CRS...</source>
         <translation>Projection personnalisée...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1372"/>
+        <location filename="../src/ui/qgisapp.ui" line="1379"/>
         <source>Configure shortcuts...</source>
         <translation>Configurer les raccourcis...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1381"/>
+        <location filename="../src/ui/qgisapp.ui" line="1388"/>
         <source>Local Histogram Stretch</source>
         <translation>Histogramme de l&apos;étendue locale</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1384"/>
+        <location filename="../src/ui/qgisapp.ui" line="1391"/>
         <source>Stretch histogram of active raster to view extents</source>
         <translation>Étend l&apos;histogramme du raster actif à l&apos;emprise de la vue</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1393"/>
+        <location filename="../src/ui/qgisapp.ui" line="1400"/>
         <source>Help Contents</source>
         <translation>Table des matières de l&apos;Aide </translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1396"/>
+        <location filename="../src/ui/qgisapp.ui" line="1403"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1401"/>
+        <location filename="../src/ui/qgisapp.ui" line="1408"/>
         <source>API documentation</source>
         <translation>Documentation de l&apos;API</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1410"/>
+        <location filename="../src/ui/qgisapp.ui" line="1417"/>
         <source>QGIS Home Page</source>
         <translation>Site officiel de QGIS</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1413"/>
+        <location filename="../src/ui/qgisapp.ui" line="1420"/>
         <source>Ctrl+H</source>
         <translation>Ctrl+H</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1422"/>
+        <location filename="../src/ui/qgisapp.ui" line="1429"/>
         <source>Check QGIS Version</source>
         <translation>Vérifier la version de QGIS</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1425"/>
+        <location filename="../src/ui/qgisapp.ui" line="1432"/>
         <source>Check if your QGIS version is up to date (requires internet access)</source>
         <translation>Vérifiez si votre version de QGIS est à jour (exige l&apos;accès à Internet) </translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1434"/>
+        <location filename="../src/ui/qgisapp.ui" line="1441"/>
         <source>About</source>
         <translation>À propos</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1446"/>
+        <location filename="../src/ui/qgisapp.ui" line="1453"/>
         <source>QGIS Sponsors</source>
         <translation>Sponsors de QGIS</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1458"/>
+        <location filename="../src/ui/qgisapp.ui" line="1465"/>
         <source>Move Label</source>
         <translation>Déplacer l&apos;étiquette</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1470"/>
+        <location filename="../src/ui/qgisapp.ui" line="1477"/>
         <source>Rotate Label</source>
         <translation>Rotation de l&apos;étiquette</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1482"/>
+        <location filename="../src/ui/qgisapp.ui" line="1489"/>
         <source>Change Label</source>
         <translation>Modifier l&apos;étiquette</translation>
     </message>
@@ -5267,12 +5923,12 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Gestionnaire de style...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1492"/>
+        <location filename="../src/ui/qgisapp.ui" line="1499"/>
         <source>Python Console</source>
         <translation>Console Python</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1501"/>
+        <location filename="../src/ui/qgisapp.ui" line="1508"/>
         <source>Full histogram stretch</source>
         <translation>Histogramme complet</translation>
     </message>
@@ -5281,22 +5937,22 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Étendre l&apos;histogramme à tout le jeu de données</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1527"/>
+        <location filename="../src/ui/qgisapp.ui" line="1534"/>
         <source>Customization...</source>
         <translation>Personnalisation</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1532"/>
+        <location filename="../src/ui/qgisapp.ui" line="1539"/>
         <source>mActionCatchForCustomization</source>
         <translation>mActionCatchForCustomization</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1535"/>
+        <location filename="../src/ui/qgisapp.ui" line="1542"/>
         <source>This is here just to avoid shortcut conflicts, the shortcut is caught in QgsCustomization</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1538"/>
+        <location filename="../src/ui/qgisapp.ui" line="1545"/>
         <source>Ctrl+M</source>
         <translation>Ctrl+M</translation>
     </message>
@@ -5305,7 +5961,7 @@ GEOS geoprocessing error: One or more input features have invalid geometry.</sou
         <translation type="obsolete">Intégrer des couches et des groupes</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgisapp.ui" line="1546"/>
+        <location filename="../src/ui/qgisapp.ui" line="1553"/>
         <source>Embed layers and groups from other project files</source>
         <translation>Intégrer des couches et des groupes depuis d&apos;autres projets</translation>
     </message>
@@ -6605,7 +7261,7 @@ Voulez-vous renseigner le chemin (GISBASE) vers votre installation de GRASS ?</t
     <message>
         <location filename="../src/plugins/coordinate_capture/coordinatecapture.cpp" line="54"/>
         <location filename="../src/plugins/dxf2shp_converter/dxf2shpconverter.cpp" line="39"/>
-        <location filename="../src/plugins/globe/globe_plugin.cpp" line="66"/>
+        <location filename="../src/plugins/globe/globe_plugin.cpp" line="67"/>
         <location filename="../src/plugins/gps_importer/qgsgpsplugin.cpp" line="53"/>
         <location filename="../src/plugins/grass/qgsgrassplugin.cpp" line="51"/>
         <location filename="../src/plugins/offline_editing/offline_editing_plugin.cpp" line="34"/>
@@ -6697,15 +7353,14 @@ Voulez-vous renseigner le chemin (GISBASE) vers votre installation de GRASS ?</t
         <translation type="obsolete">Ajouter une couche WFS au canevas QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgspluginregistry.cpp" line="496"/>
+        <location filename="../src/app/qgspluginregistry.cpp" line="500"/>
         <location filename="../src/python/qgspythonutilsimpl.cpp" line="201"/>
         <source>Python error</source>
         <translation>Erreur Python</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdistancearea.cpp" line="768"/>
         <source> km2</source>
-        <translation> km2</translation>
+        <translation type="obsolete"> km2</translation>
     </message>
     <message>
         <location filename="../src/core/qgsdistancearea.cpp" line="773"/>
@@ -6713,10 +7368,8 @@ Voulez-vous renseigner le chemin (GISBASE) vers votre installation de GRASS ?</t
         <translation> ha</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdistancearea.cpp" line="764"/>
-        <location filename="../src/core/qgsdistancearea.cpp" line="778"/>
         <source> m2</source>
-        <translation> m2</translation>
+        <translation type="obsolete"> m2</translation>
     </message>
     <message>
         <location filename="../src/core/qgsdistancearea.cpp" line="105"/>
@@ -6727,6 +7380,17 @@ Voulez-vous renseigner le chemin (GISBASE) vers votre installation de GRASS ?</t
         <location filename="../src/core/qgsdistancearea.cpp" line="480"/>
         <source>Caught a coordinate system exception while trying to transform a point. Unable to calculate polygon area or perimeter.</source>
         <translation>Impossible de calculer la surface ou le périmètre du fait d&apos;une erreur de système de coordonnée lors de la transformation d&apos;un point.</translation>
+    </message>
+    <message utf8="true">
+        <location filename="../src/core/qgsdistancearea.cpp" line="764"/>
+        <location filename="../src/core/qgsdistancearea.cpp" line="778"/>
+        <source> m²</source>
+        <translation> m²</translation>
+    </message>
+    <message utf8="true">
+        <location filename="../src/core/qgsdistancearea.cpp" line="768"/>
+        <source> km²</source>
+        <translation> km²</translation>
     </message>
     <message>
         <location filename="../src/core/qgsdistancearea.cpp" line="785"/>
@@ -6750,47 +7414,52 @@ Voulez-vous renseigner le chemin (GISBASE) vers votre installation de GRASS ?</t
         <translation> cm</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdistancearea.cpp" line="817"/>
+        <location filename="../src/core/qgsdistancearea.cpp" line="819"/>
+        <source> acres</source>
+        <translation>.acres</translation>
+    </message>
+    <message>
+        <location filename="../src/core/qgsdistancearea.cpp" line="825"/>
         <source> sq mile</source>
         <translation> mille carré</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdistancearea.cpp" line="813"/>
+        <location filename="../src/core/qgsdistancearea.cpp" line="814"/>
         <source> sq ft</source>
         <translation> pied carré</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdistancearea.cpp" line="836"/>
+        <location filename="../src/core/qgsdistancearea.cpp" line="844"/>
         <source> mile</source>
         <translation> mille</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdistancearea.cpp" line="827"/>
+        <location filename="../src/core/qgsdistancearea.cpp" line="835"/>
         <source> foot</source>
         <translation> pied</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdistancearea.cpp" line="831"/>
+        <location filename="../src/core/qgsdistancearea.cpp" line="839"/>
         <source> feet</source>
         <translation> pieds</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdistancearea.cpp" line="844"/>
+        <location filename="../src/core/qgsdistancearea.cpp" line="852"/>
         <source> sq.deg.</source>
         <translation> degré carré.</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdistancearea.cpp" line="849"/>
+        <location filename="../src/core/qgsdistancearea.cpp" line="857"/>
         <source> degree</source>
         <translation>  degrés</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdistancearea.cpp" line="851"/>
+        <location filename="../src/core/qgsdistancearea.cpp" line="859"/>
         <source> degrees</source>
         <translation> degrés</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdistancearea.cpp" line="855"/>
+        <location filename="../src/core/qgsdistancearea.cpp" line="863"/>
         <source> unknown</source>
         <translation> inconnu</translation>
     </message>
@@ -7089,11 +7758,11 @@ Voulez-vous renseigner le chemin (GISBASE) vers votre installation de GRASS ?</t
     <message>
         <location filename="../src/plugins/evis/idtool/eviseventidtool.cpp" line="75"/>
         <location filename="../src/plugins/evis/idtool/eviseventidtool.cpp" line="80"/>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="181"/>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="752"/>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="819"/>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="850"/>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="861"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="200"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="772"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="839"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="870"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="881"/>
         <location filename="../src/providers/grass/qgsgrass.cpp" line="803"/>
         <location filename="../src/providers/grass/qgsgrass.cpp" line="815"/>
         <location filename="../src/providers/grass/qgsgrass.cpp" line="1090"/>
@@ -7274,10 +7943,10 @@ Voulez-vous renseigner le chemin (GISBASE) vers votre installation de GRASS ?</t
         <location filename="../src/app/qgspluginregistry.cpp" line="319"/>
         <location filename="../src/app/qgspluginregistry.cpp" line="359"/>
         <location filename="../src/app/qgspluginregistry.cpp" line="366"/>
-        <location filename="../src/app/qgspluginregistry.cpp" line="457"/>
+        <location filename="../src/app/qgspluginregistry.cpp" line="461"/>
         <location filename="../src/plugins/compass/qgscompassplugin.cpp" line="37"/>
         <location filename="../src/plugins/diagram_overlay/qgsdiagramoverlayplugin.cpp" line="37"/>
-        <location filename="../src/plugins/globe/globe_plugin.cpp" line="65"/>
+        <location filename="../src/plugins/globe/globe_plugin.cpp" line="66"/>
         <location filename="../src/plugins/grass/qgsgrassplugin.cpp" line="940"/>
         <source>Plugins</source>
         <translation>Extensions</translation>
@@ -7295,7 +7964,7 @@ Voulez-vous renseigner le chemin (GISBASE) vers votre installation de GRASS ?</t
     </message>
     <message>
         <location filename="../src/app/qgspluginregistry.cpp" line="292"/>
-        <location filename="../src/app/qgspluginregistry.cpp" line="457"/>
+        <location filename="../src/app/qgspluginregistry.cpp" line="461"/>
         <source>Failed to load %1 (Reason: %2)</source>
         <translation>Échec du chargement de %1 (%2)</translation>
     </message>
@@ -7326,7 +7995,7 @@ Voulez-vous renseigner le chemin (GISBASE) vers votre installation de GRASS ?</t
     <message>
         <location filename="../src/app/qgspluginregistry.cpp" line="359"/>
         <source>Unable to find the class factory for %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de trouver le constructeur de classe pour %1</translation>
     </message>
     <message>
         <location filename="../src/app/qgspluginregistry.cpp" line="366"/>
@@ -7334,12 +8003,12 @@ Voulez-vous renseigner le chemin (GISBASE) vers votre installation de GRASS ?</t
         <translation>L&apos;extension %1 n&apos;a pas retournée un type valide and ne peut être chargée</translation>
     </message>
     <message>
-        <location filename="../src/gui/qgsprojectbadlayerguihandler.cpp" line="214"/>
+        <location filename="../src/gui/qgsprojectbadlayerguihandler.cpp" line="229"/>
         <source>Where is &apos;%1&apos; (original location: %2)?</source>
         <translation>Où est &apos;%1&apos; (position originelle : %2) ?</translation>
     </message>
     <message>
-        <location filename="../src/app/qgspluginregistry.cpp" line="497"/>
+        <location filename="../src/app/qgspluginregistry.cpp" line="501"/>
         <source>Error when reading metadata of plugin %1</source>
         <translation>Erreur lors de la lecture des métadonnées de l&apos;extension %1</translation>
     </message>
@@ -7468,17 +8137,17 @@ Voulez-vous renseigner le chemin (GISBASE) vers votre installation de GRASS ?</t
         <translation>Impossible d&apos;interroger le raster </translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="63"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="62"/>
         <source>Georeferencer GDAL</source>
         <translation>Géoréférenceur GDAL</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="64"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="63"/>
         <source>Georeferencing rasters using GDAL</source>
         <translation>Géoréférencement de raster via GDAL</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="65"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="64"/>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="49"/>
         <location filename="../src/plugins/interpolation/qgsinterpolationplugin.cpp" line="27"/>
         <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="41"/>
@@ -7487,7 +8156,7 @@ Voulez-vous renseigner le chemin (GISBASE) vers votre installation de GRASS ?</t
         <translation>Raster</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="66"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="65"/>
         <source>Version 3.1.9</source>
         <translation>Version 3.1.9</translation>
     </message>
@@ -7541,26 +8210,26 @@ Voulez-vous renseigner le chemin (GISBASE) vers votre installation de GRASS ?</t
         <translation type="obsolete">Impossible d&apos;ouvrir la base des SCRs %1&lt;br&gt;Erreur(%2): %3</translation>
     </message>
     <message>
-        <location filename="../src/core/qgscoordinatereferencesystem.cpp" line="1258"/>
+        <location filename="../src/core/qgscoordinatereferencesystem.cpp" line="1286"/>
         <source>Could not open CRS database %1
 Error(%2): %3</source>
         <translation>Impossible d&apos;ouvrir la base des SCRs %1
 Erreur(%2): %3</translation>
     </message>
     <message>
-        <location filename="../src/core/qgscoordinatereferencesystem.cpp" line="1261"/>
-        <location filename="../src/core/qgscoordinatereferencesystem.cpp" line="1364"/>
+        <location filename="../src/core/qgscoordinatereferencesystem.cpp" line="1289"/>
+        <location filename="../src/core/qgscoordinatereferencesystem.cpp" line="1392"/>
         <source>CRS</source>
         <translation>SCR</translation>
     </message>
     <message>
-        <location filename="../src/core/qgscoordinatereferencesystem.cpp" line="1321"/>
+        <location filename="../src/core/qgscoordinatereferencesystem.cpp" line="1349"/>
         <source>Generated CRS</source>
         <comment>A CRS automatically generated from layer info get this prefix for description</comment>
         <translation>SCR généré</translation>
     </message>
     <message>
-        <location filename="../src/core/qgscoordinatereferencesystem.cpp" line="1364"/>
+        <location filename="../src/core/qgscoordinatereferencesystem.cpp" line="1392"/>
         <source>Saved user CRS [%1]</source>
         <translation>SCR utilisateur enregistré [%1]</translation>
     </message>
@@ -7616,27 +8285,27 @@ Erreur(%2): %3</translation>
         <translation>Version 0.0.1</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgsrendererv2registry.cpp" line="16"/>
+        <location filename="../src/core/symbology-ng/qgsrendererv2registry.cpp" line="30"/>
         <source>Single Symbol</source>
         <translation>Symbole Unique</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgsrendererv2registry.cpp" line="21"/>
+        <location filename="../src/core/symbology-ng/qgsrendererv2registry.cpp" line="35"/>
         <source>Categorized</source>
         <translation>Catégorisé</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgsrendererv2registry.cpp" line="24"/>
+        <location filename="../src/core/symbology-ng/qgsrendererv2registry.cpp" line="38"/>
         <source>Graduated</source>
         <translation>Gradué</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgsrendererv2registry.cpp" line="28"/>
+        <location filename="../src/core/symbology-ng/qgsrendererv2registry.cpp" line="42"/>
         <source>Rule-based</source>
         <translation>Ensemble de règles</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgsrendererv2registry.cpp" line="33"/>
+        <location filename="../src/core/symbology-ng/qgsrendererv2registry.cpp" line="47"/>
         <source>Point displacement</source>
         <translation>Déplacement de point</translation>
     </message>
@@ -7649,7 +8318,7 @@ Erreur(%2): %3</translation>
         </translation>
     </message>
     <message>
-        <location filename="../src/core/qgsgeometryvalidator.cpp" line="346"/>
+        <location filename="../src/core/qgsgeometryvalidator.cpp" line="355"/>
         <source>invalid line</source>
         <translation>Ligne non valide</translation>
     </message>
@@ -7663,9 +8332,13 @@ Erreur(%2): %3</translation>
         <translation type="obsolete">Arrêt de la validation après 100 erreurs</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsgeometryvalidator.cpp" line="87"/>
         <source>ring %1 with less than three points</source>
-        <translation>Anneau %1 avec moins de trois points</translation>
+        <translation type="obsolete">Anneau %1 avec moins de trois points</translation>
+    </message>
+    <message>
+        <location filename="../src/core/qgsgeometryvalidator.cpp" line="87"/>
+        <source>ring %1 with less than four points</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/qgsgeometryvalidator.cpp" line="96"/>
@@ -7697,154 +8370,165 @@ Erreur(%2): %3</translation>
         <translation>L&apos;anneau %1 du polygone %2 n&apos;est pas un anneau externe</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsgeometryvalidator.cpp" line="218"/>
-        <location filename="../src/core/qgsgeometryvalidator.cpp" line="226"/>
+        <location filename="../src/core/qgsgeometryvalidator.cpp" line="206"/>
+        <source>GEOS error:could not produce geometry for GEOS (check log window)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/qgsgeometryvalidator.cpp" line="223"/>
+        <location filename="../src/core/qgsgeometryvalidator.cpp" line="231"/>
         <source>GEOS error:%1</source>
         <translation>Erreur GEOS : %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsgeometryvalidator.cpp" line="281"/>
-        <location filename="../src/core/qgsgeometryvalidator.cpp" line="286"/>
+        <location filename="../src/core/qgsgeometryvalidator.cpp" line="289"/>
+        <location filename="../src/core/qgsgeometryvalidator.cpp" line="294"/>
         <source>polygon %1 inside polygon %2</source>
         <translation>Le polygone %1 est à l&apos;intérieur du polygone %2</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsgeometryvalidator.cpp" line="300"/>
+        <location filename="../src/core/qgsgeometryvalidator.cpp" line="308"/>
         <source>Unknown geometry type</source>
         <translation>Type de géometrie inconnu</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsgeometryvalidator.cpp" line="301"/>
+        <location filename="../src/core/qgsgeometryvalidator.cpp" line="309"/>
         <source>Unknown geometry type %1</source>
         <translation>Type inconnu de géometrie %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsgeometryvalidator.cpp" line="310"/>
+        <location filename="../src/core/qgsgeometryvalidator.cpp" line="318"/>
         <source>Geometry validation was aborted.</source>
         <translation>La validation de la géométrie a été annulée.</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsgeometryvalidator.cpp" line="314"/>
+        <location filename="../src/core/qgsgeometryvalidator.cpp" line="327"/>
         <source>Geometry is valid.</source>
         <translation>la géométrie est valide.</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsgeometryvalidator.cpp" line="318"/>
+        <location filename="../src/core/qgsgeometryvalidator.cpp" line="322"/>
         <source>Geometry has %1 errors.</source>
         <translation>La géométrie a %1 erreurs.</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="79"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="81"/>
         <source>OGR driver for &apos;%1&apos; not found (OGR error: %2)</source>
         <translation>Le pilote OGR pour &apos;%1&apos; n&apos;a pas été trouvé (Erreur OGR : %2)</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="103"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="105"/>
         <source>trimming attribute name &apos;%1&apos; to ten significant characters produces duplicate column name.</source>
         <translation>La réduction du nom de l&apos;attribut &apos;%1&apos; à dix caractères significatifs provoque un nom de colonne en double.</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="182"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="184"/>
         <source>creation of data source failed (OGR error:%1)</source>
         <translation>La création de la source de données a échoué (Erreur OGR :%1)</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="262"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="264"/>
         <source>creation of layer failed (OGR error:%1)</source>
         <translation>La création de la couche a échoué (Erreur OGR :%1)</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="312"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="314"/>
         <location filename="../src/providers/spatialite/qgsspatialiteprovider.cpp" line="367"/>
         <source>unsupported type for field %1</source>
         <translation>Type no-supporté pour le champ %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="338"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="340"/>
         <source>creation of field %1 failed (OGR error: %2)</source>
         <translation>La création du champ %1 a échoué (Erreur OGR :%2)</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="371"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="373"/>
         <source>created field %1 not found (OGR error: %2)</source>
         <translation>le champ créé %1 n&apos;a pas été trouvé (Erreur OGR %2)</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="462"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="467"/>
         <source>Invalid variant type for field %1[%2]: received %3 with type %4</source>
         <translation>Type invalide pour le champ %1[%2]: réception de %3 avec le type %4</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="838"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1565"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="845"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1600"/>
         <source>Arc/Info ASCII Coverage</source>
         <translation>Arc/Info ASCII Coverage</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="845"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1570"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="852"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1605"/>
         <source>Atlas BNA</source>
         <translation>Atlas BNA</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="852"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1575"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="859"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1610"/>
         <source>Comma Separated Value</source>
         <translation>Valeurs séparées par une virgule</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="859"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="866"/>
         <source>ESRI Shapefile</source>
         <translation>ESRI Shapefile</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="866"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1599"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1601"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="873"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1638"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1640"/>
         <source>FMEObjects Gateway</source>
         <translation>FMEObjects Gateway</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="873"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1607"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="880"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1646"/>
         <source>GeoJSON</source>
         <translation>GeoJSON</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="880"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1612"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="887"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1651"/>
         <source>GeoRSS</source>
         <translation>GeoRSS</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="887"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1617"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="894"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1656"/>
         <source>Geography Markup Language [GML]</source>
         <translation>Geography Markup Language [GML]</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="894"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1622"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="901"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1661"/>
         <source>Generic Mapping Tools [GMT]</source>
         <translation>Generic Mapping Tools [GMT]</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="901"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1627"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="908"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1666"/>
         <source>GPS eXchange Format [GPX]</source>
         <translation>GPS eXchange Format [GPX]</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="922"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1654"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="929"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1693"/>
         <source>Keyhole Markup Language [KML]</source>
         <translation>Keyhole Markup Language [KML]</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="950"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1699"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="957"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1738"/>
         <source>Spatial Data Transfer Standard [SDTS]</source>
         <translation>Spatial Data Transfer Standard [SDTS]</translation>
+    </message>
+    <message>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="985"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1619"/>
+        <source>ESRI FileGDB</source>
+        <translation>ESRI FileGDB</translation>
     </message>
     <message>
         <source>Geography Markup Language (GML)</source>
@@ -7859,14 +8543,14 @@ Erreur(%2): %3</translation>
         <translation type="obsolete">GPS eXchange Format</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="908"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1640"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="915"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1679"/>
         <source>INTERLIS 1</source>
         <translation>INTERLIS 1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="915"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1645"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="922"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1684"/>
         <source>INTERLIS 2</source>
         <translation>INTERLIS 2</translation>
     </message>
@@ -7875,20 +8559,20 @@ Erreur(%2): %3</translation>
         <translation type="obsolete">Keyhole Markup Language (KML)</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="929"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1659"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="936"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1698"/>
         <source>Mapinfo File</source>
         <translation>Mapinfo</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="936"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1664"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="943"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1703"/>
         <source>Microstation DGN</source>
         <translation>Microstation DGN</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="943"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1693"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="950"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1732"/>
         <source>S-57 Base file</source>
         <translation>S-57 Base file</translation>
     </message>
@@ -7897,20 +8581,20 @@ Erreur(%2): %3</translation>
         <translation type="obsolete">Spatial Data Transfer Standard (SDTS)</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="957"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1705"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="964"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1744"/>
         <source>SQLite</source>
         <translation>SQLite</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="964"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1735"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="971"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1774"/>
         <source>AutoCAD DXF</source>
         <translation>AutoCAD DXF</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="971"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1730"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="978"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1769"/>
         <source>Geoconcept</source>
         <translation>Geoconcept</translation>
     </message>
@@ -7919,37 +8603,37 @@ Erreur(%2): %3</translation>
         <translation type="obsolete">Entité géométrique invalide</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="493"/>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="504"/>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="520"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="497"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="508"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="524"/>
         <source>Feature geometry not imported (OGR error: %1)</source>
         <translation>Entité géométrique non importée (Erreur OGR : %1)</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="535"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="540"/>
         <source>Feature creation error (OGR error: %1)</source>
         <translation>Erreur lors la création de l&apos;entité (Erreur OGR : %1)</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="668"/>
-        <location filename="../src/core/qgsvectorlayerimport.cpp" line="277"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="675"/>
+        <location filename="../src/core/qgsvectorlayerimport.cpp" line="297"/>
         <source>Failed to transform a point while drawing a feature of type &apos;%1&apos;. Writing stopped. (Exception: %2)</source>
         <translation>Impossible de transformer un point pendant le dessin d&apos;une entité ou d&apos;un type &apos;%1&apos;. L&apos;écriture est stoppé. (Exception: %2)</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="688"/>
-        <location filename="../src/core/qgsvectorlayerimport.cpp" line="254"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="695"/>
+        <location filename="../src/core/qgsvectorlayerimport.cpp" line="265"/>
         <source>Feature write errors:</source>
         <translation>Erreurs d&apos;écriture d&apos;entité :</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="698"/>
-        <location filename="../src/core/qgsvectorlayerimport.cpp" line="301"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="705"/>
+        <location filename="../src/core/qgsvectorlayerimport.cpp" line="275"/>
         <source>Stopping after %1 errors</source>
         <translation>Arrêt après %1 erreurs</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorfilewriter.cpp" line="717"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="724"/>
         <source>
 Only %1 of %2 features written.</source>
         <translation>
@@ -7990,12 +8674,12 @@ Seulement %1 sur %2 entités ont été écrites.</translation>
         <translation>&lt;html&gt;QGIS déchire!&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="381"/>
+        <location filename="../src/app/qgisapp.cpp" line="385"/>
         <source>CRS undefined - defaulting to project CRS</source>
         <translation>SCR non définie - le SCR du projet sera utilisé par défaut</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="388"/>
+        <location filename="../src/app/qgisapp.cpp" line="392"/>
         <source>CRS undefined - defaulting to default CRS: %1</source>
         <translation>SCR non-défini - utilisation du SCR par défaut : %1</translation>
     </message>
@@ -8077,7 +8761,7 @@ Seulement %1 sur %2 entités ont été écrites.</translation>
         <translation type="obsolete">SQLite (*.sqlite *.db );;Tous les fichiers (*,*)</translation>
     </message>
     <message>
-        <location filename="../src/app/main.cpp" line="467"/>
+        <location filename="../src/app/main.cpp" line="471"/>
         <source>QGIS starting in non-interactive mode not supported.
 You are seeing this message most likely because you have no DISPLAY environment variable set.
 </source>
@@ -8086,67 +8770,67 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
 </translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="15"/>
+        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="29"/>
         <source>Simple line</source>
         <translation>Ligne simple</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="17"/>
+        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="31"/>
         <source>Marker line</source>
         <translation>Ligne de symboles</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="19"/>
+        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="33"/>
         <source>Line decoration</source>
         <translation>Décoration de ligne</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="22"/>
+        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="36"/>
         <source>Simple marker</source>
         <translation>Symbole simple</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="24"/>
+        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="38"/>
         <source>SVG marker</source>
         <translation>Symbole SVG</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="26"/>
+        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="40"/>
         <source>Font marker</source>
         <translation>Symbole de police</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="28"/>
+        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="42"/>
         <source>Ellipse marker</source>
         <translation>Symbole d&apos;ellipse</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="30"/>
+        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="44"/>
         <source>Vector Field marker</source>
         <translation>Symbole de champ vectoriel</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="33"/>
+        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="47"/>
         <source>Simple fill</source>
         <translation>Remplissage simple</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="35"/>
+        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="49"/>
         <source>SVG fill</source>
         <translation>Remplissage SVG</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="37"/>
+        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="51"/>
         <source>Centroid fill</source>
         <translation>Remplissage de centroïde</translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="39"/>
+        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="53"/>
         <source>Line pattern fill</source>
         <translation>Motif de ligne </translation>
     </message>
     <message>
-        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="41"/>
+        <location filename="../src/core/symbology-ng/qgssymbollayerv2registry.cpp" line="55"/>
         <source>Point pattern fill</source>
         <translation>Motif de point</translation>
     </message>
@@ -8171,17 +8855,17 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
         <translation>La sélection s&apos;étend au-delà du système de coordonnée de la couche</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1898"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1899"/>
         <source>Raster Histogram</source>
         <translation>Histogramme raster</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1901"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1902"/>
         <source>Pixel Value</source>
         <translation>Valeur de pixel</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1902"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1903"/>
         <source>Frequency</source>
         <translation>Fréquence</translation>
     </message>
@@ -8220,28 +8904,28 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
         <translation>Résout le problème du chemin le plus court.</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1561"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1596"/>
         <source>Arc/Info Binary Coverage</source>
         <translation>Arc/Info Binary Coverage</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1578"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1613"/>
         <source>DODS</source>
         <translation>DODS</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1584"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1586"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1623"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1625"/>
         <source>ESRI Personal GeoDatabase</source>
         <translation>ESRI GeoDatabase Personnelle</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1592"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1631"/>
         <source>ESRI ArcSDE</source>
         <translation>ESRI ArcSDE</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1596"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1635"/>
         <source>ESRI Shapefiles</source>
         <translation>ESRI Shapefiles</translation>
     </message>
@@ -8254,92 +8938,109 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
         <translation type="obsolete">GPX</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="63"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="64"/>
         <source>OGR[%1] error %2: %3</source>
         <translation>OGR [%1] erreur %2: %3 </translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="63"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1553"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1911"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1975"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="2045"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="2063"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="472"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="500"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="511"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="527"/>
+        <location filename="../src/core/qgsvectorfilewriter.cpp" line="543"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="64"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1588"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1967"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1984"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="2032"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="2042"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="2102"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="2120"/>
         <source>OGR</source>
         <translation>OGR</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="159"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="160"/>
         <source>Unable to create the datasource. %1 exists and overwrite flag is false.</source>
         <translation>Impossible de créer le source de données. %1 existe.</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1553"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1588"/>
         <source>Unable to get driver %1</source>
         <translation>Impossible de charger le pilote %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1632"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1671"/>
         <source>Grass Vector</source>
         <translation>Grass Vecteur</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1636"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1675"/>
         <source>Informix DataBlade</source>
         <translation>Informix DataBlade</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1650"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1689"/>
         <source>INGRES</source>
         <translation>INGRES</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1669"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1708"/>
         <source>MySQL</source>
         <translation>MySQL</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1673"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1712"/>
         <source>MSSQL</source>
         <translation>MSSQL</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1677"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1716"/>
         <source>Oracle Spatial</source>
         <translation>Oracle Spatial</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1681"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1720"/>
         <source>ODBC</source>
         <translation>ODBC</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1685"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1724"/>
         <source>OGDI Vectors</source>
         <translation>OGDI Vectors</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1689"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1728"/>
         <source>PostgreSQL</source>
         <translation>PostgreSQL</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1911"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1967"/>
         <source>Duplicate field (10 significant characters): %1</source>
         <translation>Champ dupliqié (10 caractères significatifs) : %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1975"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1984"/>
+        <source>Creating the data source %1 failed: %2</source>
+        <translation>La création de la source de données %1 a échoué : %2</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="2032"/>
         <source>Unknown vector type of %1</source>
         <translation>Type vectoriel inconnu : %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="2045"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="2042"/>
+        <source>Creation of OGR data source %1 failed: %2</source>
+        <translation>La création de la source de données OGR %1 a échoué : %2</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="2102"/>
         <source>creation of field %1 failed</source>
         <translation>échec de la création du champ %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="2063"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="2120"/>
         <source>Couldn&apos;t create file %1.qpj</source>
         <translation>Ne peut créer le fichier %1.qjp</translation>
     </message>
@@ -8348,73 +9049,79 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
         <translation type="obsolete">Spatial Data Transfer Standard</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1710"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1749"/>
         <source>UK. NTF2</source>
         <translation>UK. NTF2</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1714"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1753"/>
         <source>U.S. Census TIGER/Line</source>
         <translation>U.S. Census TIGER/Line</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1718"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1757"/>
         <source>VRT - Virtual Datasource</source>
         <translation>VRT - Source virtuelle de données</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1724"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1763"/>
         <source>X-Plane/Flightgear</source>
         <translation>X-Plane/Flightgear</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1749"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1804"/>
         <source>All files</source>
         <translation>Tous les fichiers</translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="182"/>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="194"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="201"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="213"/>
         <source>Cannot get GDAL raster band: %1</source>
         <translation>Impossible d&apos;obtenir la bande du raster GDAL : %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="753"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="773"/>
         <source>Cannot open GDAL MEM dataset %1: %2</source>
         <translation>Impossible d&apos;ouvrir le jeu de données GDAL MEM %1 : %2</translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="820"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="840"/>
         <source>Cannot GDALCreateGenImgProjTransformer: </source>
         <translation>Impossible GDALCreateGenImgProjTransformer : </translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="851"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="871"/>
         <source>Cannot inittialize GDALWarpOperation : </source>
         <translation>Impossible d&apos;initialiser GDALWarpOperation :</translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="862"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="882"/>
         <source>Cannot ChunkAndWarpImage: %1</source>
         <translation>Impossible de ChunkAndWarpImage: %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="1667"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="1687"/>
         <source>[GDAL] All files (*)</source>
         <translation>[GDAL] Tous les fichiers (*)</translation>
     </message>
     <message>
         <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="1851"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1797"/>
+        <source>GDAL/OGR VSIFileHandler</source>
+        <translation>GDAL/OGR VSIFileHandler</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="1904"/>
         <source>This raster file has no bands and is invalid as a raster layer.</source>
         <translation>Ce fichier raster n&apos;a pas de bandes, il ne peut être une couche raster valide.</translation>
     </message>
     <message>
-        <location filename="../src/plugins/globe/globe_plugin.cpp" line="63"/>
+        <location filename="../src/plugins/globe/globe_plugin.cpp" line="64"/>
         <source>Globe</source>
         <translation>Globe</translation>
     </message>
     <message>
-        <location filename="../src/plugins/globe/globe_plugin.cpp" line="64"/>
+        <location filename="../src/plugins/globe/globe_plugin.cpp" line="65"/>
         <source>Overlay data on a 3D globe</source>
         <translation>Superposer des données sur le globe 3D</translation>
     </message>
@@ -8450,83 +9157,83 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
         <translation>Expression régulière invalide &apos;%1&apos; : %2</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsexpression.cpp" line="354"/>
+        <location filename="../src/core/qgsexpression.cpp" line="368"/>
         <source>Index is out of range</source>
         <translation>L&apos;index est hors de portée</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsexpression.cpp" line="404"/>
-        <location filename="../src/core/qgsexpression.cpp" line="405"/>
-        <location filename="../src/core/qgsexpression.cpp" line="406"/>
-        <location filename="../src/core/qgsexpression.cpp" line="407"/>
-        <location filename="../src/core/qgsexpression.cpp" line="408"/>
-        <location filename="../src/core/qgsexpression.cpp" line="409"/>
-        <location filename="../src/core/qgsexpression.cpp" line="410"/>
-        <location filename="../src/core/qgsexpression.cpp" line="411"/>
-        <location filename="../src/core/qgsexpression.cpp" line="412"/>
-        <location filename="../src/core/qgsexpression.cpp" line="413"/>
-        <location filename="../src/core/qgsexpression.cpp" line="414"/>
-        <location filename="../src/core/qgsexpression.cpp" line="415"/>
-        <source>Math</source>
-        <translation>Math</translation>
-    </message>
-    <message>
-        <location filename="../src/core/qgsexpression.cpp" line="417"/>
         <location filename="../src/core/qgsexpression.cpp" line="418"/>
         <location filename="../src/core/qgsexpression.cpp" line="419"/>
-        <source>Conversions</source>
-        <translation>Conversions</translation>
-    </message>
-    <message>
+        <location filename="../src/core/qgsexpression.cpp" line="420"/>
         <location filename="../src/core/qgsexpression.cpp" line="421"/>
         <location filename="../src/core/qgsexpression.cpp" line="422"/>
         <location filename="../src/core/qgsexpression.cpp" line="423"/>
         <location filename="../src/core/qgsexpression.cpp" line="424"/>
         <location filename="../src/core/qgsexpression.cpp" line="425"/>
         <location filename="../src/core/qgsexpression.cpp" line="426"/>
+        <location filename="../src/core/qgsexpression.cpp" line="427"/>
+        <location filename="../src/core/qgsexpression.cpp" line="428"/>
+        <location filename="../src/core/qgsexpression.cpp" line="429"/>
+        <source>Math</source>
+        <translation>Math</translation>
+    </message>
+    <message>
+        <location filename="../src/core/qgsexpression.cpp" line="431"/>
+        <location filename="../src/core/qgsexpression.cpp" line="432"/>
+        <location filename="../src/core/qgsexpression.cpp" line="433"/>
+        <source>Conversions</source>
+        <translation>Conversions</translation>
+    </message>
+    <message>
+        <location filename="../src/core/qgsexpression.cpp" line="435"/>
+        <location filename="../src/core/qgsexpression.cpp" line="436"/>
+        <location filename="../src/core/qgsexpression.cpp" line="437"/>
+        <location filename="../src/core/qgsexpression.cpp" line="438"/>
+        <location filename="../src/core/qgsexpression.cpp" line="439"/>
+        <location filename="../src/core/qgsexpression.cpp" line="440"/>
         <source>String</source>
         <translation>Chaîne</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsexpression.cpp" line="428"/>
-        <location filename="../src/core/qgsexpression.cpp" line="429"/>
-        <location filename="../src/core/qgsexpression.cpp" line="430"/>
-        <location filename="../src/core/qgsexpression.cpp" line="431"/>
-        <location filename="../src/core/qgsexpression.cpp" line="432"/>
-        <location filename="../src/core/qgsexpression.cpp" line="433"/>
-        <location filename="../src/core/qgsexpression.cpp" line="434"/>
+        <location filename="../src/core/qgsexpression.cpp" line="442"/>
+        <location filename="../src/core/qgsexpression.cpp" line="443"/>
+        <location filename="../src/core/qgsexpression.cpp" line="444"/>
+        <location filename="../src/core/qgsexpression.cpp" line="445"/>
+        <location filename="../src/core/qgsexpression.cpp" line="446"/>
+        <location filename="../src/core/qgsexpression.cpp" line="447"/>
+        <location filename="../src/core/qgsexpression.cpp" line="448"/>
         <source>Geometry</source>
         <translation>Géométrie</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsexpression.cpp" line="436"/>
-        <location filename="../src/core/qgsexpression.cpp" line="437"/>
+        <location filename="../src/core/qgsexpression.cpp" line="450"/>
+        <location filename="../src/core/qgsexpression.cpp" line="451"/>
         <source>Record</source>
         <translation>Enregistrement</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsexpression.cpp" line="528"/>
-        <location filename="../src/core/qgsexpression.cpp" line="540"/>
+        <location filename="../src/core/qgsexpression.cpp" line="542"/>
+        <location filename="../src/core/qgsexpression.cpp" line="554"/>
         <source>No root node! Parsing failed?</source>
         <translation>Pas de nœud racine !</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsexpression.cpp" line="561"/>
+        <location filename="../src/core/qgsexpression.cpp" line="575"/>
         <source>(no root)</source>
         <translation>(pas de racine)</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsexpression.cpp" line="770"/>
+        <location filename="../src/core/qgsexpression.cpp" line="784"/>
         <source>Unary minus only for numeric values.</source>
         <translation>Le signe &apos;moins&apos; ne fonctionne que pour les valeurs numériques.</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsexpression.cpp" line="1433"/>
+        <location filename="../src/core/qgsexpression.cpp" line="1447"/>
         <source>[unsupported type;%1; value:%2]</source>
         <translation>[type non-supporté %1, valeur %2]</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsexpression.cpp" line="1540"/>
+        <location filename="../src/core/qgsexpression.cpp" line="1554"/>
         <source>Column &apos;%1&apos;&apos; not found</source>
         <translation>La colonne &apos;%1&apos; n&apos;a pas été trouvée</translation>
     </message>
@@ -8546,53 +9253,68 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
         <translation>Échec du chargement de la couche</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayerimport.cpp" line="156"/>
-        <source>Creation error for features from #%1 to #%2</source>
-        <translation>Erreur de création des entités de #%1 vers#%2</translation>
+        <location filename="../src/core/qgsvectorlayerimport.cpp" line="159"/>
+        <source>Creation error for features from #%1 to #%2. Provider errors was: 
+%3</source>
+        <translation>Erreur de création des entités de #%1 vers#%2. Les erreurs sont :
+%3</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayerimport.cpp" line="279"/>
+        <source>Creation error for features from #%1 to #%2</source>
+        <translation type="obsolete">Erreur de création des entités de #%1 vers#%2</translation>
+    </message>
+    <message>
+        <location filename="../src/core/qgsvectorlayerimport.cpp" line="299"/>
         <source>Vector import</source>
         <translation>Importer un vecteur</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayerimport.cpp" line="332"/>
+        <location filename="../src/core/qgsvectorlayerimport.cpp" line="341"/>
         <source>Only %1 of %2 features written.</source>
         <translation>Seulement %1 sur %2 entités ont été créées.</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2947"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2966"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="3290"/>
         <location filename="../src/providers/spatialite/qgsspatialiteprovider.cpp" line="136"/>
         <location filename="../src/providers/spatialite/qgsspatialiteprovider.cpp" line="5027"/>
         <source>Connection to database failed</source>
         <translation>Erreur durant la connexion à la base de donnée</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="3070"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="3089"/>
         <source>Creation of data source %1 failed: 
 %2</source>
         <translation>La création de la source de données %1 a échoué :
 %2</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="3088"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="3107"/>
         <source>Loading of the layer %1 failed</source>
         <translation>Échec du chargement de la couche %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="1478"/>
-        <source>Loading of the mssql provider failed</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="3305"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="3333"/>
+        <source>Unable to delete layer %1: 
+%2</source>
+        <translation>Impossible de supprimer la couche %1 : 
+%2.</translation>
     </message>
     <message>
-        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="1512"/>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="3124"/>
+        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="1691"/>
+        <source>Loading of the MSSQL provider failed</source>
+        <translation>Échec du chargement de la couche MSSQL %1</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="1725"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="3143"/>
         <source>Unsupported type for field %1</source>
         <translation>Type non-supporté pour le champ %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="1526"/>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="3144"/>
+        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="1739"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="3163"/>
         <source>Creation of fields failed</source>
         <translation>Échec de la création des champs</translation>
     </message>
@@ -8641,12 +9363,12 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
     <message>
         <location filename="../src/providers/postgres/qgspostgresconn.cpp" line="65"/>
         <source>no result buffer</source>
-        <translation type="unfinished"></translation>
+        <translation>pas de tampon de réulstat</translation>
     </message>
     <message>
         <location filename="../src/plugins/compass/qgscompassplugin.cpp" line="35"/>
         <source>Internal Compass</source>
-        <translation type="unfinished"></translation>
+        <translation>Boussole interne</translation>
     </message>
     <message>
         <location filename="../src/plugins/compass/qgscompassplugin.cpp" line="36"/>
@@ -8656,16 +9378,73 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
     <message>
         <location filename="../src/plugins/compass/qgscompassplugin.cpp" line="38"/>
         <source>Version 0.9</source>
-        <translation type="unfinished">Version 0.9</translation>
+        <translation>Version 0.9</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="47"/>
         <source>Heatmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Carte de chaleur</translation>
     </message>
     <message>
         <location filename="../src/plugins/heatmap/heatmap.cpp" line="48"/>
         <source>Creates a Heatmap raster for the input point vector</source>
+        <translation>Crée une carte de chaleur (heatmap) raster à partir des points vectoriels en entrée</translation>
+    </message>
+    <message>
+        <location filename="../src/core/qgsgeometry.cpp" line="40"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="169"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="264"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="288"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="307"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="340"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="392"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="424"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="459"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="481"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="506"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="2400"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="2712"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="2746"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="2784"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="2933"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="2957"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="3849"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="5468"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="5579"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="6734"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="6757"/>
+        <source>Exception: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/qgsgeometry.cpp" line="40"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="169"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="264"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="288"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="307"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="340"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="392"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="424"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="459"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="481"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="506"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="2400"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="2712"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="2746"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="2784"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="2933"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="2957"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="3849"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="5468"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="5579"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="6734"/>
+        <location filename="../src/core/qgsgeometry.cpp" line="6757"/>
+        <source>GEOS</source>
+        <translation type="unfinished">GEOS</translation>
+    </message>
+    <message>
+        <location filename="../src/core/qgsmessageoutput.cpp" line="72"/>
+        <source>Console</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9031,180 +9810,195 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
         <translation type="obsolete">Possibilité d&apos;annuler/refaire dans le compositeur</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2277"/>
-        <location filename="../src/app/qgisapp.cpp" line="2284"/>
-        <location filename="../src/app/qgisapp.cpp" line="6678"/>
+        <location filename="../src/app/qgisapp.cpp" line="2291"/>
+        <location filename="../src/app/qgisapp.cpp" line="2298"/>
+        <location filename="../src/app/qgisapp.cpp" line="6777"/>
         <source>Invalid Data Source</source>
         <translation>Source de données non valide</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2612"/>
+        <location filename="../src/app/qgisapp.cpp" line="2638"/>
         <source>WMS</source>
         <translation>WMS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2612"/>
+        <location filename="../src/app/qgisapp.cpp" line="2638"/>
         <source>Cannot get WMS select dialog from provider.</source>
         <translation>Impossible d&apos;obtenir la liste de sélection WMS depuis le prestataire.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3672"/>
-        <location filename="../src/app/qgisapp.cpp" line="5055"/>
-        <location filename="../src/app/qgisapp.cpp" line="5102"/>
+        <location filename="../src/app/qgisapp.cpp" line="3701"/>
+        <location filename="../src/app/qgisapp.cpp" line="5141"/>
+        <location filename="../src/app/qgisapp.cpp" line="5188"/>
         <source>No Layer Selected</source>
         <translation>Aucune couche sélectionnée</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4944"/>
+        <location filename="../src/app/qgisapp.cpp" line="5030"/>
         <source>There is a new version of QGIS available</source>
         <translation>Une nouvelle version de QGIS est disponible</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4948"/>
+        <location filename="../src/app/qgisapp.cpp" line="5034"/>
         <source>You are running a development version of QGIS</source>
         <translation>Vous utilisez une version de développement de QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4952"/>
+        <location filename="../src/app/qgisapp.cpp" line="5038"/>
         <source>You are running the current version of QGIS</source>
         <translation>Vous utilisez la version courante de QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4957"/>
+        <location filename="../src/app/qgisapp.cpp" line="5043"/>
         <source>Would you like more information?</source>
         <translation>Voulez-vous plus d&apos;information ?</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4960"/>
-        <location filename="../src/app/qgisapp.cpp" line="4973"/>
-        <location filename="../src/app/qgisapp.cpp" line="4978"/>
-        <location filename="../src/app/qgisapp.cpp" line="4999"/>
+        <location filename="../src/app/qgisapp.cpp" line="5046"/>
+        <location filename="../src/app/qgisapp.cpp" line="5059"/>
+        <location filename="../src/app/qgisapp.cpp" line="5064"/>
+        <location filename="../src/app/qgisapp.cpp" line="5085"/>
         <source>QGIS Version Information</source>
         <translation>Information de version de QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4966"/>
+        <location filename="../src/app/qgisapp.cpp" line="5052"/>
         <source>QGIS - Changes since last release</source>
         <translation>QGIS - Changements depuis la version précédente</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4978"/>
+        <location filename="../src/app/qgisapp.cpp" line="5064"/>
         <source>Unable to get current version information from server</source>
         <translation>Impossible de récupérer la version courante depuis le serveur</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4988"/>
+        <location filename="../src/app/qgisapp.cpp" line="5074"/>
         <source>Connection refused - server may be down</source>
         <translation>Connexion refusée - le serveur est peut-être indisponible</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4991"/>
+        <location filename="../src/app/qgisapp.cpp" line="5077"/>
         <source>QGIS server was not found</source>
         <translation>Le serveur QGIS n&apos;a pas été trouvé</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2530"/>
+        <location filename="../src/app/qgisapp.cpp" line="2555"/>
         <source>Invalid Layer</source>
         <translation>Couche non valide</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2530"/>
+        <location filename="../src/app/qgisapp.cpp" line="2555"/>
         <source>%1 is an invalid layer and cannot be loaded.</source>
         <translation>%1 est une couche non valide et ne peut être chargée.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3710"/>
+        <location filename="../src/app/qgisapp.cpp" line="3739"/>
         <source>Problem deleting features</source>
         <translation>Problème lors de l&apos;effacement des données</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3711"/>
+        <location filename="../src/app/qgisapp.cpp" line="3740"/>
         <source>A problem occured during deletion of features</source>
         <translation>Un problème est apparu lors de l&apos;effacement des données</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3681"/>
+        <location filename="../src/app/qgisapp.cpp" line="3710"/>
         <source>No Vector Layer Selected</source>
         <translation>Aucune couche vecteur sélectionnée</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3682"/>
+        <location filename="../src/app/qgisapp.cpp" line="3711"/>
         <source>Deleting features only works on vector layers</source>
         <translation>L&apos;effacement des données ne peut s&apos;appliquer qu&apos;à des couches vectorielles</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3673"/>
+        <location filename="../src/app/qgisapp.cpp" line="3702"/>
         <source>To delete features, you must select a vector layer in the legend</source>
         <translation>Pour effacer des données, vous devez sélectionner une couche vecteur dans la légende</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1839"/>
+        <location filename="../src/app/qgisapp.cpp" line="1851"/>
         <source>Map legend that displays all the layers currently on the map canvas. Click on the check box to turn a layer on or off. Double click on a layer in the legend to customize its appearance and set other properties.</source>
         <translation>Carte des légendes affichant toutes les couches actuellement posées sur le canevas. Cochez la case pour activer ou non une couche. Double-cliquez sur une couche dans la légende afin de modifier son apparence et ses propriétés.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1769"/>
+        <location filename="../src/app/qgisapp.cpp" line="1781"/>
         <source>Map overview canvas. This canvas can be used to display a locator map that shows the current extent of the map canvas. The current extent is shown as a red rectangle. Any layer on the map can be added to the overview canvas.</source>
         <translation>Canevas de prévisualisation des cartes. Il peut être utilisé afin d&apos;afficher une représentation de l&apos;agrandissement courant du canevas des cartes. La zone agrandie est signalée par un rectangle rouge. Toutes les couches de la carte peuvent être ajoutées au canevas de prévisualisation.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="446"/>
+        <location filename="../src/app/qgisapp.cpp" line="450"/>
         <source>Map canvas. This is where raster and vector layers are displayed when added to the map</source>
         <translation>Canevas des cartes. Cette zone sert à l&apos;affichage des couches rasters et vectorielles ajoutées à la carte</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="501"/>
+        <location filename="../src/app/qgisapp.cpp" line="505"/>
         <source>Log Messages</source>
         <translation>Journal des messages</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="524"/>
+        <location filename="../src/app/qgisapp.cpp" line="528"/>
         <source>QGIS starting...</source>
         <translation>Démarrage de QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1168"/>
+        <location filename="../src/app/qgisapp.cpp" line="1178"/>
         <source>Vect&amp;or</source>
         <translation>&amp;Vecteur</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1171"/>
+        <location filename="../src/app/qgisapp.cpp" line="1181"/>
         <source>&amp;Web</source>
         <translation>&amp;Internet</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1308"/>
+        <location filename="../src/app/qgisapp.cpp" line="1318"/>
         <source>Progress bar that displays the status of rendering layers and other time-intensive operations</source>
         <translation>Barre de progression affichant l&apos;état d&apos;avancement du rendu des couches et d&apos;autres opérations gourmandes en temps de CPU</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1388"/>
+        <location filename="../src/app/qgisapp.cpp" line="1398"/>
         <source>Displays the current map scale</source>
         <translation>Affiche l&apos;échelle courante de la carte</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1404"/>
+        <location filename="../src/app/qgisapp.cpp" line="1414"/>
         <source>Render</source>
         <translation>Rendu</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1408"/>
+        <location filename="../src/app/qgisapp.cpp" line="1418"/>
         <source>When checked, the map layers are rendered in response to map navigation commands and other events. When not checked, no rendering is done. This allows you to add a large number of layers and symbolize them before rendering.</source>
         <translation>Si elle est cochée, les couches de la carte sont actualisées (opérations de calcul et d&apos;affichage) à chaque commande de navigation sur la carte et à d&apos;autres évènements. Sinon, aucune actualisation n&apos;est faite. Cela vous permet d&apos;ajouter un grand nombre de couche et de les identifier avant le rendu à l&apos;écran.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1844"/>
-        <location filename="../src/app/qgisapp.cpp" line="1847"/>
+        <location filename="../src/app/qgisapp.cpp" line="1856"/>
+        <location filename="../src/app/qgisapp.cpp" line="1859"/>
         <source>Control rendering order</source>
         <translation>Contrôle de l&apos;ordre de rendu des couches</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1868"/>
+        <location filename="../src/app/qgisapp.cpp" line="1880"/>
         <source>Layer order</source>
         <translation>Ordre des couches</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2999"/>
+        <location filename="../src/app/qgisapp.cpp" line="2150"/>
+        <source>Compiled against GDAL/OGR</source>
+        <translation>Compilé avec GDAL/OGR</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgisapp.cpp" line="2151"/>
+        <source>Running against GDAL/OGR</source>
+        <translation>Utilisé avec GDAL/OGR</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgisapp.cpp" line="2614"/>
+        <source>Cannot get MSSQL select dialog from provider.</source>
+        <translation>Impossible d&apos;obtenir le dialogue de sélection MSSQL depuis le prestataire.</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgisapp.cpp" line="3026"/>
         <source>Choose a QGIS project file</source>
         <translation>Choisissez un fichier projet QGIS</translation>
     </message>
@@ -9213,7 +10007,7 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
         <translation type="obsolete">E&amp;xtension</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1412"/>
+        <location filename="../src/app/qgisapp.cpp" line="1422"/>
         <source>Toggle map rendering</source>
         <translation>Activer le rendu de carte </translation>
     </message>
@@ -9222,53 +10016,53 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
         <translation type="obsolete">Sauvegarder sous</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2856"/>
+        <location filename="../src/app/qgisapp.cpp" line="2883"/>
         <source>Choose a QGIS project file to open</source>
         <translation>Choisissez un fichier projet QGIS à ouvrir</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2883"/>
+        <location filename="../src/app/qgisapp.cpp" line="2910"/>
         <source>QGIS Project Read Error</source>
         <translation>Erreur de lecture du Projet QGIS </translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="6581"/>
+        <location filename="../src/app/qgisapp.cpp" line="6678"/>
         <source>Open a GDAL Supported Raster Data Source</source>
         <translation>Ouvrez des données raster gérées par GDAL</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="435"/>
+        <location filename="../src/app/qgisapp.cpp" line="439"/>
         <source>Reading settings</source>
         <translation>Options de lecture </translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="438"/>
+        <location filename="../src/app/qgisapp.cpp" line="442"/>
         <source>Setting up the GUI</source>
         <translation>Installation de l&apos;interface graphique</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="430"/>
+        <location filename="../src/app/qgisapp.cpp" line="434"/>
         <source>Checking database</source>
         <translation>Vérification de la base de données </translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="551"/>
+        <location filename="../src/app/qgisapp.cpp" line="555"/>
         <source>Restoring loaded plugins</source>
         <translation>Reconstitution des extensions chargées </translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="569"/>
+        <location filename="../src/app/qgisapp.cpp" line="573"/>
         <source>Initializing file filters</source>
         <translation>Initialisation des fichiers de filtre </translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="598"/>
+        <location filename="../src/app/qgisapp.cpp" line="602"/>
         <source>Restoring window state</source>
         <translation>Reconstitution de l&apos;état des fenêtres</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="605"/>
         <location filename="../src/app/qgisapp.cpp" line="609"/>
+        <location filename="../src/app/qgisapp.cpp" line="613"/>
         <source>QGIS Ready!</source>
         <translation>QGIS prêt!</translation>
     </message>
@@ -9597,193 +10391,187 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
         <translation type="obsolete">Extensions</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1444"/>
+        <location filename="../src/app/qgisapp.cpp" line="1454"/>
         <source>Ready</source>
         <translation>Prêt</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1867"/>
+        <location filename="../src/app/qgisapp.cpp" line="1879"/>
         <source>Map layer list that displays all layers in drawing order.</source>
         <translation>Liste affichant les couches dans l&apos;ordre dde rendu.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1908"/>
+        <location filename="../src/app/qgisapp.cpp" line="1920"/>
         <source>[ERROR] Can not make qgis.db private copy</source>
         <translation>Errur : impossible de faire une copie de qgis.db</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2128"/>
+        <location filename="../src/app/qgisapp.cpp" line="2140"/>
         <source>QGIS version</source>
         <translation>Version de QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2129"/>
+        <location filename="../src/app/qgisapp.cpp" line="2141"/>
         <source>QGIS code revision</source>
         <translation>Révision du code</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2133"/>
+        <location filename="../src/app/qgisapp.cpp" line="2145"/>
         <source>Compiled against Qt</source>
         <translation>Compilé avec Qt</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2134"/>
+        <location filename="../src/app/qgisapp.cpp" line="2146"/>
         <source>Running against Qt</source>
         <translation>Utilisant Qt</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2138"/>
         <source>GDAL/OGR Version</source>
-        <translation>Version de GDAL/OGR</translation>
+        <translation type="obsolete">Version de GDAL/OGR</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2139"/>
+        <location filename="../src/app/qgisapp.cpp" line="2155"/>
         <source>GEOS Version</source>
         <translation>Version de GEOS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2143"/>
+        <location filename="../src/app/qgisapp.cpp" line="2156"/>
         <source>PostgreSQL Client Version</source>
         <translation>Version du client PostgreSQL</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2147"/>
-        <location filename="../src/app/qgisapp.cpp" line="2155"/>
+        <location filename="../src/app/qgisapp.cpp" line="2160"/>
+        <location filename="../src/app/qgisapp.cpp" line="2170"/>
         <source>No support.</source>
         <translation>Pas de support</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2151"/>
+        <location filename="../src/app/qgisapp.cpp" line="2166"/>
         <source>SpatiaLite Version</source>
         <translation>Version de SpatiaLite</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2161"/>
+        <location filename="../src/app/qgisapp.cpp" line="2175"/>
         <source>QWT Version</source>
         <translation>Version de QWT</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2164"/>
+        <location filename="../src/app/qgisapp.cpp" line="2178"/>
         <source>This copy of QGIS writes debugging output.</source>
         <translation>Cette copie de QGIS dispose d&apos;une sortie de débogage.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2475"/>
+        <location filename="../src/app/qgisapp.cpp" line="2498"/>
         <source>PostgreSQL</source>
         <translation>PostgreSQL</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2475"/>
+        <location filename="../src/app/qgisapp.cpp" line="2498"/>
         <source>Cannot get PostgreSQL select dialog from provider.</source>
         <translation>Impossible d&apos;obtenir le dialogue de sélection PostgreSQL depuis le prestataire.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2529"/>
+        <location filename="../src/app/qgisapp.cpp" line="2554"/>
         <source>%1 is an invalid layer - not loaded</source>
         <translation>%1 est une couche non valide et ne peut être chargée.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2563"/>
+        <location filename="../src/app/qgisapp.cpp" line="2589"/>
         <source>SpatiaLite</source>
         <translation>SpatiaLite</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2563"/>
+        <location filename="../src/app/qgisapp.cpp" line="2589"/>
         <source>Cannot get SpatiaLite select dialog from provider.</source>
         <translation>Impossible d&apos;obtenir le dialogue de sélection SpatiaLite depuis le prestataire.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2588"/>
+        <location filename="../src/app/qgisapp.cpp" line="2614"/>
         <source>MSSQL</source>
-        <translation type="unfinished">MSSQL</translation>
+        <translation>MSSQL</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2588"/>
-        <source>Cannot get MS SQL select dialog from provider.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/app/qgisapp.cpp" line="2641"/>
+        <location filename="../src/app/qgisapp.cpp" line="2667"/>
         <source>WFS</source>
         <translation>WFS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2641"/>
+        <location filename="../src/app/qgisapp.cpp" line="2667"/>
         <source>Cannot get WFS select dialog from provider.</source>
         <translation>Impossible d&apos;obtenir la liste de sélection WFS depuis le prestataire.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2858"/>
-        <location filename="../src/app/qgisapp.cpp" line="3001"/>
-        <location filename="../src/app/qgisapp.cpp" line="3053"/>
+        <location filename="../src/app/qgisapp.cpp" line="2885"/>
+        <location filename="../src/app/qgisapp.cpp" line="3028"/>
+        <location filename="../src/app/qgisapp.cpp" line="3080"/>
         <source>QGis files</source>
         <translation>Fichiers QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2924"/>
+        <location filename="../src/app/qgisapp.cpp" line="2951"/>
         <source>Unable to open project</source>
         <translation>Impossible d&apos;ouvrir le projet</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3163"/>
+        <location filename="../src/app/qgisapp.cpp" line="3190"/>
         <source>Unable to load %1</source>
         <translation>Impossobme de charger %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4870"/>
+        <location filename="../src/app/qgisapp.cpp" line="4956"/>
         <source>Couldn&apos;t load Python support library: %1</source>
         <translation>Impossible de charger la bibliothèque Python %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4881"/>
+        <location filename="../src/app/qgisapp.cpp" line="4967"/>
         <source>Couldn&apos;t resolve python support library&apos;s instance() symbol.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4896"/>
+        <location filename="../src/app/qgisapp.cpp" line="4982"/>
         <source>Python support ENABLED :-) </source>
         <translation>Support de Python opérationnel !</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4994"/>
+        <location filename="../src/app/qgisapp.cpp" line="5080"/>
         <source>Unknown network socket error: %1</source>
         <translation>Erreur interface réseau (socket) inconnue : %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="5244"/>
-        <location filename="../src/app/qgisapp.cpp" line="5286"/>
-        <location filename="../src/app/qgisapp.cpp" line="6767"/>
+        <location filename="../src/app/qgisapp.cpp" line="5332"/>
+        <location filename="../src/app/qgisapp.cpp" line="5376"/>
+        <location filename="../src/app/qgisapp.cpp" line="6866"/>
         <source>Layer is not valid</source>
         <translation>La couche n&apos;est pas valide</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="5287"/>
-        <location filename="../src/app/qgisapp.cpp" line="6768"/>
+        <location filename="../src/app/qgisapp.cpp" line="5377"/>
+        <location filename="../src/app/qgisapp.cpp" line="6867"/>
         <source>The layer is not a valid layer and can not be added to the map</source>
         <translation>La couche n&apos;est pas une couche valide et ne peut pas être ajoutée à la carte </translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="5365"/>
+        <location filename="../src/app/qgisapp.cpp" line="5455"/>
         <source>Save?</source>
         <translation>Sauvegarder ?</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="5366"/>
+        <location filename="../src/app/qgisapp.cpp" line="5456"/>
         <source>Do you want to save the current project?</source>
         <translation>Voulez-vous sauvegarder le projet courant ?</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="5925"/>
+        <location filename="../src/app/qgisapp.cpp" line="6015"/>
         <source>Current CRS: %1 (OTFR enabled)</source>
         <translation>SCR actuel : %1 (reproj. à la volée activée)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="5932"/>
+        <location filename="../src/app/qgisapp.cpp" line="6022"/>
         <source>Current CRS: %1 (OTFR disabled)</source>
         <translation>SCR actuel : %1 (reproj. à la volée désactivée)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="6864"/>
+        <location filename="../src/app/qgisapp.cpp" line="6965"/>
         <source>Unsupported Data Source</source>
         <translation>Source de données non gérée</translation>
     </message>
@@ -9792,10 +10580,13 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
         <translation type="obsolete">Entrer un nom pour le nouveau signet:</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1019"/>
-        <location filename="../src/app/qgisapp.cpp" line="4429"/>
-        <location filename="../src/app/qgisapp.cpp" line="4523"/>
-        <location filename="../src/app/qgisapp.cpp" line="4539"/>
+        <location filename="../src/app/qgisapp.cpp" line="1029"/>
+        <location filename="../src/app/qgisapp.cpp" line="4394"/>
+        <location filename="../src/app/qgisapp.cpp" line="4420"/>
+        <location filename="../src/app/qgisapp.cpp" line="4432"/>
+        <location filename="../src/app/qgisapp.cpp" line="4511"/>
+        <location filename="../src/app/qgisapp.cpp" line="4605"/>
+        <location filename="../src/app/qgisapp.cpp" line="4621"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>
@@ -9892,29 +10683,29 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
         <translation type="obsolete">Coller les entités sélectionnées</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="541"/>
+        <location filename="../src/app/qgisapp.cpp" line="545"/>
         <source>Checking provider plugins</source>
         <translation>Vérification des extension fournisseuses</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="545"/>
+        <location filename="../src/app/qgisapp.cpp" line="549"/>
         <source>Starting Python</source>
         <translation>Démarrage de Python</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3688"/>
+        <location filename="../src/app/qgisapp.cpp" line="3717"/>
         <source>Provider does not support deletion</source>
         <translation>Le service prestataire ne supporte pas l&apos;effacement</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3689"/>
+        <location filename="../src/app/qgisapp.cpp" line="3718"/>
         <source>Data provider does not support deleting features</source>
         <translation>Le prestataire de données ne supporte pas l&apos;effacement des objets</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3695"/>
-        <location filename="../src/app/qgisapp.cpp" line="3989"/>
-        <location filename="../src/app/qgisapp.cpp" line="4048"/>
+        <location filename="../src/app/qgisapp.cpp" line="3724"/>
+        <location filename="../src/app/qgisapp.cpp" line="4018"/>
+        <location filename="../src/app/qgisapp.cpp" line="4077"/>
         <source>Layer not editable</source>
         <translation>Couche non éditable</translation>
     </message>
@@ -9931,27 +10722,27 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
         <translation type="obsolete">Ajouter un anneau</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1370"/>
+        <location filename="../src/app/qgisapp.cpp" line="1380"/>
         <source>Scale </source>
         <translation>Échelle </translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1389"/>
+        <location filename="../src/app/qgisapp.cpp" line="1399"/>
         <source>Current map scale (formatted as x:y)</source>
         <translation>L&apos;échelle actuelle de la carte (formatée x:y)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="5993"/>
+        <location filename="../src/app/qgisapp.cpp" line="6083"/>
         <source>Map coordinates at mouse cursor position</source>
         <translation>Coordonnées de la carte sous le curseur de la souris</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3696"/>
+        <location filename="../src/app/qgisapp.cpp" line="3725"/>
         <source>The current layer is not editable. Choose &apos;Start editing&apos; in the digitizing toolbar.</source>
         <translation>La couche courante n&apos;est pas éditable. Choisir &apos;Début édition&apos; dans dans la barre d&apos;outils digitalisation.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4613"/>
+        <location filename="../src/app/qgisapp.cpp" line="4695"/>
         <source>Invalid scale</source>
         <translation>Échelle non valide</translation>
     </message>
@@ -9976,28 +10767,28 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
         <translation type="obsolete">Affiche une information sur un objet quand le pointeur de la souris le survol</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1371"/>
+        <location filename="../src/app/qgisapp.cpp" line="1381"/>
         <source>Current map scale</source>
         <translation>Échelle actuelle de la carte</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="6041"/>
+        <location filename="../src/app/qgisapp.cpp" line="6135"/>
         <source>Extents:</source>
         <translation>Emprise :</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="6997"/>
+        <location filename="../src/app/qgisapp.cpp" line="7098"/>
         <source>Project file is older</source>
         <translation>Le fichier projet est plus vieux</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="6995"/>
+        <location filename="../src/app/qgisapp.cpp" line="7096"/>
         <source>&lt;tt&gt;Settings:Options:General&lt;/tt&gt;</source>
         <comment>Menu path to setting options</comment>
         <translation>&lt;tt&gt;Configuration:Options:Général&lt;/tt&gt;</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="6996"/>
+        <location filename="../src/app/qgisapp.cpp" line="7097"/>
         <source>Warn me when opening a project file saved with an older version of QGIS</source>
         <translation>M&apos;avertir lors de l&apos;ouverture d&apos;un fichier projet sauvegardé avec une version précédente de QGIS</translation>
     </message>
@@ -10018,7 +10809,7 @@ Vous visualisez ce message car vous n&apos;avez aucun affichage (DISPLAY) param�
 Abandon...</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1778"/>
+        <location filename="../src/app/qgisapp.cpp" line="1790"/>
         <source>Overview</source>
         <translation>Aperçu</translation>
     </message>
@@ -10032,17 +10823,17 @@ This binary was compiled against Qt %1,and is currently running against Qt %2</s
         <translation type="obsolete">Cet exécutable a été compilé avec Qt %1, et est actuellement exécuté par Qt %2</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1401"/>
+        <location filename="../src/app/qgisapp.cpp" line="1411"/>
         <source>Stop map rendering</source>
         <translation>Abandon du rendu de la carte</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="416"/>
+        <location filename="../src/app/qgisapp.cpp" line="420"/>
         <source>Multiple Instances of QgisApp</source>
         <translation>Instances multiples de QgisApp</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="417"/>
+        <location filename="../src/app/qgisapp.cpp" line="421"/>
         <source>Multiple instances of Quantum GIS application object detected.
 Please contact the developers.
 </source>
@@ -10072,7 +10863,7 @@ Veuillez contacter les développeurs.
         <translation type="obsolete">&amp;Couper</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="284"/>
+        <location filename="../src/app/qgisapp.cpp" line="285"/>
         <source>Quantum GIS </source>
         <translation>Quantum GIS </translation>
     </message>
@@ -10186,7 +10977,7 @@ Veuillez contacter les développeurs.
         <translation type="obsolete">Déplacer une annotation</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3520"/>
+        <location filename="../src/app/qgisapp.cpp" line="3547"/>
         <source>Labeling</source>
         <translation>Étiquetage</translation>
     </message>
@@ -10318,38 +11109,38 @@ Veuillez contacter les développeurs.
         <translation type="obsolete">Gérer les systèmes de coordonnées de référence personnalisés</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="923"/>
+        <location filename="../src/app/qgisapp.cpp" line="933"/>
         <source>Minimize</source>
         <translation>Minimiser</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="924"/>
+        <location filename="../src/app/qgisapp.cpp" line="934"/>
         <source>Ctrl+M</source>
         <comment>Minimize Window</comment>
         <translation>Ctrl+M</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="925"/>
+        <location filename="../src/app/qgisapp.cpp" line="935"/>
         <source>Minimizes the active window to the dock</source>
         <translation>Minimise la fenêtre active</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="928"/>
+        <location filename="../src/app/qgisapp.cpp" line="938"/>
         <source>Zoom</source>
         <translation>Zoom</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="929"/>
+        <location filename="../src/app/qgisapp.cpp" line="939"/>
         <source>Toggles between a predefined size and the window size set by the user</source>
         <translation>Bascule entre une taille prédéfinie et la taille de fenêtre ajustée par l&apos;utilisateur</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="932"/>
+        <location filename="../src/app/qgisapp.cpp" line="942"/>
         <source>Bring All to Front</source>
         <translation>Déplacer tout vers l&apos;avant</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="933"/>
+        <location filename="../src/app/qgisapp.cpp" line="943"/>
         <source>Bring forward all open windows</source>
         <translation>Déplacer vers l&apos;avant toutes les fenêtres actives</translation>
     </message>
@@ -10406,12 +11197,12 @@ Veuillez contacter les développeurs.
         <translation type="obsolete">&amp;Éditer</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1108"/>
+        <location filename="../src/app/qgisapp.cpp" line="1118"/>
         <source>Panels</source>
         <translation>Panneaux</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1110"/>
+        <location filename="../src/app/qgisapp.cpp" line="1120"/>
         <source>Toolbars</source>
         <translation>Barres d&apos;outils</translation>
     </message>
@@ -10428,12 +11219,12 @@ Veuillez contacter les développeurs.
         <translation type="obsolete">Nouveau</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1153"/>
+        <location filename="../src/app/qgisapp.cpp" line="1163"/>
         <source>&amp;Window</source>
         <translation>&amp;Fenêtre</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1165"/>
+        <location filename="../src/app/qgisapp.cpp" line="1175"/>
         <source>&amp;Database</source>
         <translation>&amp;Base de donnée</translation>
     </message>
@@ -10442,17 +11233,17 @@ Veuillez contacter les développeurs.
         <translation type="obsolete">Étiquette</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1323"/>
+        <location filename="../src/app/qgisapp.cpp" line="1333"/>
         <source>Toggle extents and mouse position display</source>
         <translation>Basculer les limites et l&apos;affichage de la position du curseur</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1435"/>
+        <location filename="../src/app/qgisapp.cpp" line="1445"/>
         <source>This icon shows whether on the fly coordinate reference system transformation is enabled or not. Click the icon to bring up the project properties dialog to alter this behaviour.</source>
         <translation>Cette icône montre si la transformation à la volée du système de référence de coordonnées est activée ou pas. Cliquez sur l&apos;icône pour faire apparaître le dialogue de propriétés pour modifier ce comportement.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1439"/>
+        <location filename="../src/app/qgisapp.cpp" line="1449"/>
         <source>CRS status - Click to open coordinate reference system dialog</source>
         <translation>Statut de la projection - cliquez pour ouvrir la boîte de dialogue de projection </translation>
     </message>
@@ -10481,7 +11272,7 @@ This copy of QGIS has been built with QWT %1.</source>
 Cette copie de QGIS a été compilée avec le support de QWR %1.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="7249"/>
+        <location filename="../src/app/qgisapp.cpp" line="7350"/>
         <source>
 
 Always ignore these errors?</source>
@@ -10490,7 +11281,7 @@ Always ignore these errors?</source>
 Toujours ignorer ces erreurs ?</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/app/qgisapp.cpp" line="7253"/>
+        <location filename="../src/app/qgisapp.cpp" line="7354"/>
         <source>%n SSL errors occured</source>
         <comment>number of errors</comment>
         <translation>
@@ -10503,69 +11294,69 @@ Toujours ignorer ces erreurs ?</translation>
         <translation type="obsolete">Utilisation de QNetworkAccessManager au lieu de QgsHttpTransaction (ce qui inclut la mise en cache et l&apos;identification proxy)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2276"/>
+        <location filename="../src/app/qgisapp.cpp" line="2290"/>
         <source>%1 doesn&apos;t have any layers</source>
         <translation>%1 ne possède aucune couche</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3051"/>
+        <location filename="../src/app/qgisapp.cpp" line="3078"/>
         <source>Choose a file name to save the QGIS project file as</source>
         <translation>Choisissez un nom de fichier pour sauvegarder le projet QGIS sous</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3206"/>
+        <location filename="../src/app/qgisapp.cpp" line="3233"/>
         <source>Choose a file name to save the map image as</source>
         <translation>Choisissez un nom de fichier et sauvegarder l&apos;image de la carte sous</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3634"/>
+        <location filename="../src/app/qgisapp.cpp" line="3663"/>
         <source>Saving done</source>
         <translation>Sauvegarde effectuée</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3634"/>
+        <location filename="../src/app/qgisapp.cpp" line="3663"/>
         <source>Export to vector file has been completed</source>
         <translation>L&apos;export du fichier vectoriel est terminé</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3639"/>
+        <location filename="../src/app/qgisapp.cpp" line="3668"/>
         <source>Save error</source>
         <translation>Sauvegarder l&apos;erreur</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3640"/>
+        <location filename="../src/app/qgisapp.cpp" line="3669"/>
         <source>Export to vector file failed.
 Error: %1</source>
         <translation>L&apos;export du fichier vectoriel a échoué.
 Erreur : %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4487"/>
+        <location filename="../src/app/qgisapp.cpp" line="4569"/>
         <source>Start editing failed</source>
         <translation>Echec du lancement de l&apos;édition</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4487"/>
+        <location filename="../src/app/qgisapp.cpp" line="4569"/>
         <source>Provider cannot be opened for editing</source>
         <translation>Le prestataire de données ne peut être ouvert pour l&apos;édition</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4511"/>
+        <location filename="../src/app/qgisapp.cpp" line="4593"/>
         <source>Stop editing</source>
         <translation>Arrêter l&apos;édition</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4512"/>
+        <location filename="../src/app/qgisapp.cpp" line="4594"/>
         <source>Do you want to save the changes to layer %1?</source>
         <translation>Voulez-vous sauvegarder les modifications pour la couche %1 ?</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4539"/>
+        <location filename="../src/app/qgisapp.cpp" line="4621"/>
         <source>Problems during roll back</source>
         <translation>Problèmes pendant le retour en arrière</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4781"/>
+        <location filename="../src/app/qgisapp.cpp" line="4867"/>
         <source>Tile scale</source>
         <translation>Échelle de tuile</translation>
     </message>
@@ -10574,22 +11365,22 @@ Erreur : %1</translation>
         <translation type="obsolete">Console Python</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="5245"/>
+        <location filename="../src/app/qgisapp.cpp" line="5333"/>
         <source>The layer %1 is not a valid layer and can not be added to the map</source>
         <translation>La couche n&apos;est pas une couche valide et ne peut pas être ajoutée à la carte </translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="5985"/>
+        <location filename="../src/app/qgisapp.cpp" line="6075"/>
         <source>Map coordinates for the current view extents</source>
         <translation>Afficher les coordonnées des limites de la vue courante</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="6115"/>
+        <location filename="../src/app/qgisapp.cpp" line="6207"/>
         <source>Maptips require an active layer</source>
         <translation>Une couche active est requise pour les infobulles</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="7236"/>
+        <location filename="../src/app/qgisapp.cpp" line="7337"/>
         <source>SSL errors occured accessing URL %1:</source>
         <translation>Une erreur SSL a été rencontrée lors de l&apos;accès à l&apos;adresse %1 :</translation>
     </message>
@@ -10606,7 +11397,7 @@ Ignorer l&apos;erreur ?</translation>
         <translation type="obsolete">Erreur SSL rencontrée</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="521"/>
+        <location filename="../src/app/qgisapp.cpp" line="525"/>
         <source>Quantum GIS - %1 (&apos;%2&apos;)</source>
         <translation>Quantum GIS - %1 (&apos;%2&apos;)</translation>
     </message>
@@ -10721,7 +11512,7 @@ Ignorer l&apos;erreur ?</translation>
         <translation type="obsolete">Afficher le gestionnaire de style V2</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1019"/>
+        <location filename="../src/app/qgisapp.cpp" line="1029"/>
         <source>Failed to open Python console:</source>
         <translation>Impossible d&apos;ouvrir une console python :</translation>
     </message>
@@ -10730,39 +11521,39 @@ Ignorer l&apos;erreur ?</translation>
         <translation type="obsolete">Outils de sélection</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1337"/>
-        <location filename="../src/app/qgisapp.cpp" line="5995"/>
+        <location filename="../src/app/qgisapp.cpp" line="1347"/>
+        <location filename="../src/app/qgisapp.cpp" line="6085"/>
         <source>Coordinate:</source>
         <translation>Coordonnée :</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1338"/>
+        <location filename="../src/app/qgisapp.cpp" line="1348"/>
         <source>Current map coordinate</source>
         <translation>Coordonnées actuelles de la carte</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1353"/>
+        <location filename="../src/app/qgisapp.cpp" line="1363"/>
         <source>Shows the map coordinates at the current cursor position. The display is continuously updated as the mouse is moved. It also allows editing to set the canvas center to a given position.</source>
         <translation>Montre les coordonnées de la carte à l&apos;emplacement du curseur. L&apos;affichage est mis à jour suivant les déplacements de la souris, il est aussi possible de saisir un point précis afin d&apos;y centrer le canevas de la carte.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1357"/>
+        <location filename="../src/app/qgisapp.cpp" line="1367"/>
         <source>Current map coordinate (formatted as x,y)</source>
         <translation>Coordonnées actuelles de la carte (formatée x:y)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1918"/>
-        <location filename="../src/app/qgisapp.cpp" line="1960"/>
+        <location filename="../src/app/qgisapp.cpp" line="1930"/>
+        <location filename="../src/app/qgisapp.cpp" line="1972"/>
         <source>Private qgis.db</source>
         <translation>qgis.db privé</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1918"/>
+        <location filename="../src/app/qgisapp.cpp" line="1930"/>
         <source>Could not open qgis.db</source>
         <translation>Impossible d&apos;ouvrir qgis.db</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1960"/>
+        <location filename="../src/app/qgisapp.cpp" line="1972"/>
         <source>Migration of private qgis.db failed.
 %1</source>
         <translation>La migration du fichier qgis.db privé a échoué.
@@ -11001,39 +11792,39 @@ Ignorer l&apos;erreur ?</translation>
         <translation type="obsolete">Support de nouveaux opérateurs GEOS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2330"/>
+        <location filename="../src/app/qgisapp.cpp" line="2352"/>
         <source>Select raster layers to add...</source>
         <translation>Sélection des couches raster à ajouter</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2335"/>
+        <location filename="../src/app/qgisapp.cpp" line="2357"/>
         <source>Raster</source>
         <translation>Raster</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2412"/>
+        <location filename="../src/app/qgisapp.cpp" line="2435"/>
         <source>Select vector layers to add...</source>
         <translation>Sélection des couches vectorielles à ajouter</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3520"/>
+        <location filename="../src/app/qgisapp.cpp" line="3547"/>
         <source>Please select a vector layer first.</source>
         <translation>Veuillez sélectionner une couche vectorielle avant tout.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3997"/>
-        <location filename="../src/app/qgisapp.cpp" line="4063"/>
-        <location filename="../src/app/qgisapp.cpp" line="4100"/>
+        <location filename="../src/app/qgisapp.cpp" line="4026"/>
+        <location filename="../src/app/qgisapp.cpp" line="4092"/>
+        <location filename="../src/app/qgisapp.cpp" line="4129"/>
         <source>Not enough features selected</source>
         <translation>Pas assez d&apos;entités sélectionnées</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4083"/>
+        <location filename="../src/app/qgisapp.cpp" line="4112"/>
         <source>Union operation canceled</source>
         <translation>Opération d&apos;union annulée</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/app/qgisapp.cpp" line="6200"/>
+        <location filename="../src/app/qgisapp.cpp" line="6292"/>
         <source>%n feature(s) selected on layer %1.</source>
         <comment>number of selected features</comment>
         <translation>
@@ -11042,32 +11833,32 @@ Ignorer l&apos;erreur ?</translation>
         </translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="7001"/>
+        <location filename="../src/app/qgisapp.cpp" line="7102"/>
         <source>This project file was saved by an older version of QGIS</source>
         <translation>Ce fichier de projet a été enregistré dans une ancienne version de QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="7178"/>
+        <location filename="../src/app/qgisapp.cpp" line="7279"/>
         <source>Warning</source>
         <translation>Attention</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="7178"/>
+        <location filename="../src/app/qgisapp.cpp" line="7279"/>
         <source>This layer doesn&apos;t have a properties dialog.</source>
         <translation>Cette couche n&apos;a pas de fenêtre de propriétés.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="7209"/>
+        <location filename="../src/app/qgisapp.cpp" line="7310"/>
         <source>Authentication required</source>
         <translation>Identification requise</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="7225"/>
+        <location filename="../src/app/qgisapp.cpp" line="7326"/>
         <source>Proxy authentication required</source>
         <translation>Identification proxy requise</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2283"/>
+        <location filename="../src/app/qgisapp.cpp" line="2297"/>
         <source>%1 is not a valid or recognized data source</source>
         <translation>%1 n&apos;est pas une source de données valide ou reconnue</translation>
     </message>
@@ -11258,12 +12049,12 @@ Version de QWT : %1.</translation>
         <translation type="obsolete">Tri de la table attribut de la composition.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2830"/>
+        <location filename="../src/app/qgisapp.cpp" line="2857"/>
         <source>Calculating...</source>
         <translation>Calcul...</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="2830"/>
+        <location filename="../src/app/qgisapp.cpp" line="2857"/>
         <source>Abort...</source>
         <translation>Annuler...</translation>
     </message>
@@ -11272,121 +12063,136 @@ Version de QWT : %1.</translation>
         <translation type="obsolete">Fichiers QGIS (*.qgs)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3020"/>
-        <location filename="../src/app/qgisapp.cpp" line="3072"/>
+        <location filename="../src/app/qgisapp.cpp" line="3047"/>
+        <location filename="../src/app/qgisapp.cpp" line="3099"/>
         <source>Saved project to: %1</source>
         <translation>Projet sauvegardé sous : %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3032"/>
-        <location filename="../src/app/qgisapp.cpp" line="3079"/>
+        <location filename="../src/app/qgisapp.cpp" line="3059"/>
+        <location filename="../src/app/qgisapp.cpp" line="3106"/>
         <source>Unable to save project %1</source>
         <translation>Impossible de sauvegarder le projet %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3211"/>
+        <location filename="../src/app/qgisapp.cpp" line="3238"/>
         <source>Saved map image to %1</source>
         <translation>Carte sauvegardée sous %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3707"/>
+        <location filename="../src/app/qgisapp.cpp" line="3736"/>
         <source>Features deleted</source>
         <translation>Entités effacées</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3757"/>
+        <location filename="../src/app/qgisapp.cpp" line="3786"/>
         <source>Merging features...</source>
         <translation>Fusion d&apos;entités...</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3757"/>
+        <location filename="../src/app/qgisapp.cpp" line="3786"/>
         <source>Abort</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3810"/>
-        <location filename="../src/app/qgisapp.cpp" line="3845"/>
+        <location filename="../src/app/qgisapp.cpp" line="3839"/>
+        <location filename="../src/app/qgisapp.cpp" line="3874"/>
         <source>Composer %1</source>
         <translation>Composeur %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3976"/>
-        <location filename="../src/app/qgisapp.cpp" line="4037"/>
+        <location filename="../src/app/qgisapp.cpp" line="4005"/>
+        <location filename="../src/app/qgisapp.cpp" line="4066"/>
         <source>No active layer</source>
         <translation>Aucune couche active</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3976"/>
-        <location filename="../src/app/qgisapp.cpp" line="4037"/>
+        <location filename="../src/app/qgisapp.cpp" line="4005"/>
+        <location filename="../src/app/qgisapp.cpp" line="4066"/>
         <source>No active layer found. Please select a layer in the layer list</source>
         <translation>Aucune couche active trouvée. Veuillez sélectionner une couche dans la liste</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3983"/>
-        <location filename="../src/app/qgisapp.cpp" line="4043"/>
+        <location filename="../src/app/qgisapp.cpp" line="4012"/>
+        <location filename="../src/app/qgisapp.cpp" line="4072"/>
         <source>Active layer is not vector</source>
         <translation>La couche active n&apos;est pas un vecteur</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3983"/>
-        <location filename="../src/app/qgisapp.cpp" line="4043"/>
+        <location filename="../src/app/qgisapp.cpp" line="4012"/>
+        <location filename="../src/app/qgisapp.cpp" line="4072"/>
         <source>The merge features tool only works on vector layers. Please select a vector layer from the layer list</source>
         <translation>L&apos;outil de fusion d&apos;entités ne marche que sur les couches vecteurs. Veuillez sélectionner une couche vecteur dans la liste</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3989"/>
-        <location filename="../src/app/qgisapp.cpp" line="4048"/>
+        <location filename="../src/app/qgisapp.cpp" line="4018"/>
+        <location filename="../src/app/qgisapp.cpp" line="4077"/>
         <source>Merging features can only be done for layers in editing mode. To use the merge tool, go to  Layer-&gt;Toggle editing</source>
         <translation>La fusion d&apos;entités ne peut se faire que lors d&apos;une session d&apos;édition. Pour l&apos;utiliser, basculez en mode d&apos;édition avec un clic-droit sur la couche voulue</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3997"/>
-        <location filename="../src/app/qgisapp.cpp" line="4063"/>
-        <location filename="../src/app/qgisapp.cpp" line="4100"/>
+        <location filename="../src/app/qgisapp.cpp" line="4026"/>
+        <location filename="../src/app/qgisapp.cpp" line="4092"/>
+        <location filename="../src/app/qgisapp.cpp" line="4129"/>
         <source>The merge tool requires at least two selected features</source>
         <translation>La fusion nécessite au moins deux entités sélectionnées</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4011"/>
+        <location filename="../src/app/qgisapp.cpp" line="4040"/>
         <source>Merged feature attributes</source>
         <translation>Attributs d&apos;entités fusionnées</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4075"/>
-        <location filename="../src/app/qgisapp.cpp" line="4115"/>
+        <location filename="../src/app/qgisapp.cpp" line="4104"/>
+        <location filename="../src/app/qgisapp.cpp" line="4144"/>
         <source>Merge failed</source>
         <translation>Echec de la fusion</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4075"/>
-        <location filename="../src/app/qgisapp.cpp" line="4115"/>
+        <location filename="../src/app/qgisapp.cpp" line="4104"/>
+        <location filename="../src/app/qgisapp.cpp" line="4144"/>
         <source>An error occured during the merge operation</source>
         <translation>Une erreur est survenue lors de l&apos;opération de fusion</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4083"/>
-        <location filename="../src/app/qgisapp.cpp" line="4122"/>
+        <location filename="../src/app/qgisapp.cpp" line="4112"/>
+        <location filename="../src/app/qgisapp.cpp" line="4151"/>
         <source>The union operation would result in a geometry type that is not compatible with the current layer and therefore is canceled</source>
         <translation>L&apos;opération d&apos;union résulte d&apos;un type de géométrie qui n&apos;est pas compatible avec la couche actuelle, elle est donc annulée</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4128"/>
+        <location filename="../src/app/qgisapp.cpp" line="4157"/>
         <source>Merged features</source>
         <translation>Entités fusionnées</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4275"/>
+        <location filename="../src/app/qgisapp.cpp" line="4299"/>
         <source>Features cut</source>
         <translation>Entités découpés</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4323"/>
+        <location filename="../src/app/qgisapp.cpp" line="4331"/>
         <source>Features pasted</source>
         <translation>Entités collées</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4430"/>
-        <location filename="../src/app/qgisapp.cpp" line="4524"/>
+        <location filename="../src/app/qgisapp.cpp" line="4395"/>
+        <source>Cannot copy style: %1</source>
+        <translation>Ne peut copier le style : %1</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgisapp.cpp" line="4421"/>
+        <source>Cannot parse style: %1:%2:%3</source>
+        <translation>Ne peut parser le style : %1:%2:%3</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgisapp.cpp" line="4433"/>
+        <source>Cannot read style: %1</source>
+        <translation>Ne peut lire le style : %1</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgisapp.cpp" line="4512"/>
+        <location filename="../src/app/qgisapp.cpp" line="4606"/>
         <source>Could not commit changes to layer %1
 
 Errors: %2
@@ -11397,7 +12203,7 @@ Erreurs : %2
 </translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="490"/>
+        <location filename="../src/app/qgisapp.cpp" line="494"/>
         <source>GPS Information</source>
         <translation>Information GPS</translation>
     </message>
@@ -11406,38 +12212,38 @@ Erreurs : %2
         <translation type="obsolete">QGIS - Changement de SVN depuis la dernière sortie</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="4999"/>
+        <location filename="../src/app/qgisapp.cpp" line="5085"/>
         <source>Unable to communicate with QGIS Version server
 %1</source>
         <translation>Impossible de communiquer avec le serveur de version de QGIS %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="5056"/>
-        <location filename="../src/app/qgisapp.cpp" line="5065"/>
+        <location filename="../src/app/qgisapp.cpp" line="5142"/>
+        <location filename="../src/app/qgisapp.cpp" line="5151"/>
         <source>To perform a full histogram stretch, you need to have a raster layer selected.</source>
         <translation>Pour réaliser un histogramme complet, vous devez sélectionner une couche raster.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="5088"/>
-        <location filename="../src/app/qgisapp.cpp" line="5131"/>
+        <location filename="../src/app/qgisapp.cpp" line="5174"/>
+        <location filename="../src/app/qgisapp.cpp" line="5217"/>
         <source>To perform a local histogram stretch, you need to have a grayscale or multiband (multiband single layer, singleband grayscale or multiband color)  raster layer selected.</source>
         <translation>Pour réaliser un histogramme local, vous devez avoir un raster en niveaux de gris ou à bandes multiples sélectionné.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="5103"/>
-        <location filename="../src/app/qgisapp.cpp" line="5112"/>
+        <location filename="../src/app/qgisapp.cpp" line="5189"/>
+        <location filename="../src/app/qgisapp.cpp" line="5198"/>
         <source>To perform a local histogram stretch, you need to have a raster layer selected.</source>
         <translation>Pour réaliser un histogramme local, vous avez besoin de sélectionner une couche raster.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="5064"/>
-        <location filename="../src/app/qgisapp.cpp" line="5111"/>
+        <location filename="../src/app/qgisapp.cpp" line="5150"/>
+        <location filename="../src/app/qgisapp.cpp" line="5197"/>
         <source>No Raster Layer Selected</source>
         <translation>Pas de couche raster sélectionnée</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="5087"/>
-        <location filename="../src/app/qgisapp.cpp" line="5130"/>
+        <location filename="../src/app/qgisapp.cpp" line="5173"/>
+        <location filename="../src/app/qgisapp.cpp" line="5216"/>
         <source>No Valid Raster Layer Selected</source>
         <translation>Pas de couche valide sélectionnée</translation>
     </message>
@@ -11446,17 +12252,17 @@ Erreurs : %2
         <translation type="obsolete">Pour réaliser un histogramme, vous devez avoir un raster en niveaux de gris sélectionné.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="6677"/>
+        <location filename="../src/app/qgisapp.cpp" line="6776"/>
         <source>%1 is not a valid or recognized raster data source</source>
         <translation>%1 n&apos;est pas une source raster valide ou identifiée  </translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="6859"/>
+        <location filename="../src/app/qgisapp.cpp" line="6960"/>
         <source>%1 is not a supported raster data source</source>
         <translation>%1 n&apos;est pas une source de données raster gérées</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="6979"/>
+        <location filename="../src/app/qgisapp.cpp" line="7080"/>
         <source>&lt;p&gt;This project file was saved by an older version of QGIS. When saving this project file, QGIS will update it to the latest version, possibly rendering it useless for older versions of QGIS.&lt;p&gt;Even though QGIS developers try to maintain backwards compatibility, some of the information from the old project file might be lost. To improve the quality of QGIS, we appreciate if you file a bug report at %3. Be sure to include the old project file, and state the version of QGIS you used to discover the error.&lt;p&gt;To remove this warning when opening an older project file, uncheck the box &apos;%5&apos; in the %4 menu.&lt;p&gt;Version of the project file: %1&lt;br&gt;Current version of QGIS: %2</source>
         <translation>&lt;p&gt;Ce projet a été enregistré dans une ancienne version de QGIS. Si vous enregistrerez maintenant ce projet, QGIS le mettra à jour à la dernière version, le rendant peut être inutilisable sous les anciennes versions.&lt;p&gt;Même si les développeurs essayent de maintenir une compatibilité descendante, certaines des informations peuvent être perdues. Pour améliorer la qualité de QGIS nous apprécierions si vous remplissiez un rapport de bug à %3. Soyez sûr d&apos;inclure le vieux fichier de projet et de signaler le numéro de version de QGIS sur laquelle vous avez découvert l&apos;erreur.&lt;p&gt;Pour désactiver cet avertissement, décochez la case &apos;%5&apos; dans le menu &apos;%4&apos;.&lt;p&gt;Version du fichier de projet : %1&lt;br&gt;Version actuelle de QGIS : %2</translation>
     </message>
@@ -11469,7 +12275,7 @@ Erreurs : %2
         <translation type="obsolete">Ajouter une couche Spatialite</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="1840"/>
+        <location filename="../src/app/qgisapp.cpp" line="1852"/>
         <source>Layers</source>
         <translation>Couches</translation>
     </message>
@@ -11502,12 +12308,12 @@ This copy of QGIS writes debugging output.</source>
 Cette copie de QGIS fournit des informations de débogage</translation>
     </message>
     <message>
-        <location filename="../src/app/qgisapp.cpp" line="3702"/>
+        <location filename="../src/app/qgisapp.cpp" line="3731"/>
         <source>Delete features</source>
         <translation>Effacer les entités</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/app/qgisapp.cpp" line="3702"/>
+        <location filename="../src/app/qgisapp.cpp" line="3731"/>
         <source>Delete %n feature(s)?</source>
         <comment>number of features to delete</comment>
         <translation>
@@ -11584,12 +12390,17 @@ Cette copie de QGIS fournit des informations de débogage</translation>
         <translation>À propos de Quantum GIS</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsabout.ui" line="197"/>
+        <location filename="../src/ui/qgsabout.ui" line="213"/>
         <source>Contributors</source>
         <translation>Contributeurs</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsabout.ui" line="221"/>
+        <location filename="../src/ui/qgsabout.ui" line="234"/>
+        <source>about:blank</source>
+        <translation>about:blank</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgsabout.ui" line="243"/>
         <source>Donors</source>
         <translation>Donateurs</translation>
     </message>
@@ -11653,22 +12464,22 @@ Cette copie de QGIS fournit des informations de débogage</translation>
         <translation>&lt;p&gt;Pour une liste des individus et institutions qui ont contribués au développement de QGIS, veuillez lire  &lt;a href=&quot;http://qgis.org/en/sponsorship/donors.html&quot;&gt;http://qgis.org/en/sponsorship/donors.html&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsabout.cpp" line="241"/>
+        <location filename="../src/app/qgsabout.cpp" line="212"/>
         <source>Available QGIS Data Provider Plugins</source>
         <translation>Extensions de services prestataires de données disponibles pour QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsabout.cpp" line="244"/>
+        <location filename="../src/app/qgsabout.cpp" line="215"/>
         <source>Available Qt Database Plugins</source>
         <translation>Extensions de base de données disponibles pour QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsabout.cpp" line="250"/>
+        <location filename="../src/app/qgsabout.cpp" line="221"/>
         <source>Available Qt Image Plugins</source>
         <translation>Extensions d&apos;images disponibles via Qt pour QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsabout.cpp" line="251"/>
+        <location filename="../src/app/qgsabout.cpp" line="222"/>
         <source>Qt Image Plugin Search Paths &lt;br&gt;</source>
         <translation>Chemins vers l&apos;extension Qt Image &lt;br&gt;</translation>
     </message>
@@ -11691,22 +12502,19 @@ p, li { white-space: pre-wrap; }
         <translation>Rejoignez notre liste de courrier d&apos;utilisateurs</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsabout.cpp" line="179"/>
         <source>&lt;p&gt;The following have contributed to QGIS by translating the user interface or documentation&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Les personnes suivantes ont contribué à QGIS en traduisant l&apos;interface ou la documentation&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Les personnes suivantes ont contribué à QGIS en traduisant l&apos;interface ou la documentation&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsabout.cpp" line="183"/>
         <source>Language</source>
-        <translation>Langage</translation>
+        <translation type="obsolete">Langage</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsabout.cpp" line="184"/>
         <source>Names</source>
-        <translation>Noms</translation>
+        <translation type="obsolete">Noms</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsabout.ui" line="211"/>
+        <location filename="../src/ui/qgsabout.ui" line="227"/>
         <source>Translators</source>
         <translation>Traducteurs</translation>
     </message>
@@ -11838,19 +12646,19 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsApplication</name>
     <message>
-        <location filename="../src/core/qgsapplication.cpp" line="199"/>
-        <location filename="../src/core/qgsapplication.cpp" line="203"/>
-        <location filename="../src/core/qgsapplication.cpp" line="207"/>
+        <location filename="../src/core/qgsapplication.cpp" line="218"/>
+        <location filename="../src/core/qgsapplication.cpp" line="222"/>
+        <location filename="../src/core/qgsapplication.cpp" line="226"/>
         <source>Exception</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/core/qgsapplication.cpp" line="207"/>
+        <location filename="../src/core/qgsapplication.cpp" line="226"/>
         <source>unknown exception</source>
         <translation>Erreur inconnue</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsapplication.cpp" line="514"/>
+        <location filename="../src/core/qgsapplication.cpp" line="551"/>
         <source>Application state:
 Prefix:		%1
 Plugin Path:		%2
@@ -11872,7 +12680,7 @@ Chemin SVG:		%7
 Chemin vers la base utilisateur :	%8</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsapplication.cpp" line="529"/>
+        <location filename="../src/core/qgsapplication.cpp" line="566"/>
         <source>
 		</source>
         <comment>match indentation of application state</comment>
@@ -11906,37 +12714,37 @@ Chemin vers la base utilisateur :	%8</translation>
     <message>
         <location filename="../src/app/qgsattributeactiondialog.cpp" line="327"/>
         <source>Echo attribute&apos;s value</source>
-        <translation type="unfinished"></translation>
+        <translation>Affiche la valeur de l&apos;attribut</translation>
     </message>
     <message>
         <location filename="../src/app/qgsattributeactiondialog.cpp" line="328"/>
         <source>Run an application</source>
-        <translation type="unfinished"></translation>
+        <translation>Lancer une application</translation>
     </message>
     <message>
         <location filename="../src/app/qgsattributeactiondialog.cpp" line="329"/>
         <source>Get feature id</source>
-        <translation type="unfinished"></translation>
+        <translation>Récupère l&apos;id de l&apos;entité</translation>
     </message>
     <message>
         <location filename="../src/app/qgsattributeactiondialog.cpp" line="330"/>
         <source>Selected field&apos;s value (Identify features tool)</source>
-        <translation type="unfinished"></translation>
+        <translation>Valeur du champ sélectionné (Outil d&apos;identification des entités) </translation>
     </message>
     <message>
         <location filename="../src/app/qgsattributeactiondialog.cpp" line="331"/>
         <source>Clicked coordinates (Run feature actions tool)</source>
-        <translation type="unfinished"></translation>
+        <translation>Coordonées du clic (outil d&apos;exécution d&apos;action sur entité) </translation>
     </message>
     <message>
         <location filename="../src/app/qgsattributeactiondialog.cpp" line="332"/>
         <source>Open file</source>
-        <translation type="unfinished">Ouvrir fichier</translation>
+        <translation>Ouvrir fichier</translation>
     </message>
     <message>
         <location filename="../src/app/qgsattributeactiondialog.cpp" line="333"/>
         <source>Search on web based on attribute&apos;s value</source>
-        <translation type="unfinished"></translation>
+        <translation>Recherche web basée sur la valeur de l&apos;attribut</translation>
     </message>
 </context>
 <context>
@@ -12089,17 +12897,17 @@ Chemin vers la base utilisateur :	%8</translation>
     <message>
         <location filename="../src/ui/qgsattributeactiondialogbase.ui" line="104"/>
         <source>Add default actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter les actions par défaut</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsattributeactiondialogbase.ui" line="164"/>
         <source>Open</source>
-        <translation type="unfinished">Ouvrir</translation>
+        <translation>Ouvrir</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsattributeactiondialogbase.ui" line="250"/>
         <source>Enter the action here. This can be any program, script or command that is available on your system. When the action is invoked any set of characters within [% and %] will be evaluated as expression and replaced by its result. Double quote marks group text into single arguments to the program, script or command. Double quotes will be ignored if prefixed with a backslash</source>
-        <translation type="unfinished"></translation>
+        <translation>Entrer l&apos;action ici. Ce peut être un prgramme, un script ou une commande disponible sur le système. Quand cette action est invoquée, les chaines de caractères placées entre [% et %] seront évaluées comme des expressions et remplacées par leur résultat. Les doubles quotes délimitent les arguments passés au programme, au script ou à la commande invoqués. Les doubles quotes sont ignorées quand elles sont précédées d&apos;un antislash  </translation>
     </message>
     <message>
         <location filename="../src/ui/qgsattributeactiondialogbase.ui" line="257"/>
@@ -12504,7 +13312,7 @@ Chemin vers la base utilisateur :	%8</translation>
     <message>
         <location filename="../src/ui/qgsattributetabledialog.ui" line="104"/>
         <source>Close</source>
-        <translation type="unfinished">Fermer</translation>
+        <translation>Fermer</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsattributetabledialog.ui" line="121"/>
@@ -12538,12 +13346,12 @@ Chemin vers la base utilisateur :	%8</translation>
     <message>
         <location filename="../src/ui/qgsattributetabledialog.ui" line="242"/>
         <source>Pan map to the selected rows (Ctrl+P)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoomer la carte sur les lignes sélectionnées (Ctrl+P)</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsattributetabledialog.ui" line="261"/>
         <source>Ctrl+P</source>
-        <translation type="unfinished">Ctrl+P</translation>
+        <translation>Ctrl+P</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsattributetabledialog.ui" line="268"/>
@@ -13200,22 +14008,22 @@ Database:%2</translation>
 <context>
     <name>QgsBrowser</name>
     <message>
-        <location filename="../src/browser/qgsbrowser.cpp" line="311"/>
+        <location filename="../src/browser/qgsbrowser.cpp" line="312"/>
         <source>WMS</source>
         <translation>WMS</translation>
     </message>
     <message>
-        <location filename="../src/browser/qgsbrowser.cpp" line="311"/>
+        <location filename="../src/browser/qgsbrowser.cpp" line="312"/>
         <source>Cannot get WMS select dialog from provider.</source>
         <translation>Impossible d&apos;obtenir la liste de sélection WMS depuis le prestataire.</translation>
     </message>
     <message>
-        <location filename="../src/browser/qgsbrowser.cpp" line="345"/>
+        <location filename="../src/browser/qgsbrowser.cpp" line="346"/>
         <source>CRS</source>
         <translation>SCR</translation>
     </message>
     <message>
-        <location filename="../src/browser/qgsbrowser.cpp" line="345"/>
+        <location filename="../src/browser/qgsbrowser.cpp" line="346"/>
         <source>Cannot set layer CRS</source>
         <translation>Impossible de définir le SCR de la couche</translation>
     </message>
@@ -13302,61 +14110,61 @@ Database:%2</translation>
 <context>
     <name>QgsBrowserDockWidget</name>
     <message>
-        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="72"/>
+        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="86"/>
         <source>Browser</source>
         <translation>Parcourir</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="80"/>
-        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="81"/>
+        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="94"/>
+        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="95"/>
         <source>Refresh</source>
         <translation>Rafraîchir</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="89"/>
+        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="103"/>
         <source>Add Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter la sélection</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="90"/>
-        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="173"/>
+        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="104"/>
+        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="196"/>
         <source>Add Selected Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter les couches sélectionnées</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="96"/>
+        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="110"/>
         <source>Collapse All</source>
-        <translation type="unfinished">Réduire tout</translation>
+        <translation>Réduire tout</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="161"/>
+        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="184"/>
         <source>Add as a favourite</source>
         <translation>Ajouter en favori</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="166"/>
+        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="189"/>
         <source>Remove favourite</source>
         <translation>Supprimer le favori</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="172"/>
+        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="195"/>
         <source>Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter la couche</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="174"/>
+        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="197"/>
         <source>Properties</source>
-        <translation type="unfinished">Propriétés</translation>
+        <translation>Propriétés</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="373"/>
+        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="396"/>
         <source>Error</source>
-        <translation type="unfinished">Erreur</translation>
+        <translation>Erreur</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="424"/>
+        <location filename="../src/app/qgsbrowserdockwidget.cpp" line="447"/>
         <source>Layer Properties</source>
-        <translation type="unfinished">Propriétés de la Couche</translation>
+        <translation>Propriétés de la couche</translation>
     </message>
 </context>
 <context>
@@ -13364,116 +14172,116 @@ Database:%2</translation>
     <message>
         <location filename="../src/ui/qgsbrowserlayerpropertiesbase.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished">Dialogue</translation>
+        <translation>Dialogue</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsbrowserlayerpropertiesbase.ui" line="25"/>
         <source>Display Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher le nom</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsbrowserlayerpropertiesbase.ui" line="32"/>
         <source>Layer Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Couche source</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsbrowserlayerpropertiesbase.ui" line="59"/>
         <source>Provider</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilote</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsbrowserlayerpropertiesbase.ui" line="85"/>
         <source>Metadata</source>
-        <translation type="unfinished">Métadonnées</translation>
+        <translation>Métadonnées</translation>
     </message>
 </context>
 <context>
     <name>QgsBrowserModel</name>
     <message>
-        <location filename="../src/core/qgsbrowsermodel.cpp" line="30"/>
+        <location filename="../src/core/qgsbrowsermodel.cpp" line="44"/>
         <source>Home</source>
         <translation>Accueil</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsbrowsermodel.cpp" line="44"/>
+        <location filename="../src/core/qgsbrowsermodel.cpp" line="52"/>
         <source>Favourites</source>
-        <translation type="unfinished"></translation>
+        <translation>Favoris</translation>
     </message>
 </context>
 <context>
     <name>QgsBrushStyleComboBox</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="15"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="29"/>
         <source>Solid</source>
         <translation>Continue</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="17"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="31"/>
         <source>Horizontal</source>
         <translation>Horizontal</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="18"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="32"/>
         <source>Vertical</source>
         <translation>Vertical</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="19"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="33"/>
         <source>Cross</source>
         <translation>Croix</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="20"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="34"/>
         <source>BDiagonal</source>
         <translation>BDiagonale</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="21"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="35"/>
         <source>FDiagonal</source>
         <translation>FDiagonale</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="22"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="36"/>
         <source>Diagonal X</source>
         <translation>Diagonale X</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="23"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="37"/>
         <source>Dense 1</source>
         <translation>Densité 1</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="24"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="38"/>
         <source>Dense 2</source>
         <translation>2</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="25"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="39"/>
         <source>Dense 3</source>
         <translation>Densité 3</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="26"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="40"/>
         <source>Dense 4</source>
         <translation>Densité 4</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="27"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="41"/>
         <source>Dense 5</source>
         <translation>Densité 5</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="28"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="42"/>
         <source>Dense 6</source>
         <translation>Densité 6</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="29"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="43"/>
         <source>Dense 7</source>
         <translation>Densité 7</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="16"/>
+        <location filename="../src/gui/symbology-ng/qgsbrushstylecombobox.cpp" line="30"/>
         <source>No Brush</source>
         <translation>Pas de brosse</translation>
     </message>
@@ -13481,45 +14289,45 @@ Database:%2</translation>
 <context>
     <name>QgsCategorizedSymbolRendererV2Widget</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="54"/>
-        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="148"/>
+        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="68"/>
+        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="162"/>
         <source>Value</source>
         <translation>Valeur</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="54"/>
-        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="148"/>
+        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="68"/>
+        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="162"/>
         <source>Label</source>
         <translation>Étiquette</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="78"/>
+        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="92"/>
         <source>Symbol levels...</source>
         <translation>Niveaux de symbole</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="275"/>
-        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="277"/>
+        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="289"/>
+        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="291"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="275"/>
+        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="289"/>
         <source>There are no available color ramps. You can add them in Style Manager.</source>
         <translation>Il n&apos;y a pas de palette de couleur disponible. Vous pouvez en ajouter via le Gestionnaire de Style.</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="277"/>
+        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="291"/>
         <source>The selected color ramp is not available.</source>
         <translation>La palette de couleur sélectionnée n&apos;est pas disponible.</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="291"/>
+        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="305"/>
         <source>Confirm Delete</source>
         <translation>Confirmer l&apos;effacement</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="292"/>
+        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="306"/>
         <source>The classification field was changed from &apos;%1&apos; to &apos;%2&apos;.
 Should the existing classes be deleted before classification?</source>
         <translation>Le champ de classification a été modifié de &apos;%1&apos; à &apos;%2&apos;.
@@ -13537,8 +14345,8 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
     </message>
     <message>
         <location filename="../src/ui/qgscategorizedsymbolrendererv2widget.ui" line="56"/>
-        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="54"/>
-        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="148"/>
+        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="68"/>
+        <location filename="../src/gui/symbology-ng/qgscategorizedsymbolrendererv2widget.cpp" line="162"/>
         <source>Symbol</source>
         <translation>Symbole</translation>
     </message>
@@ -13581,7 +14389,7 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
 <context>
     <name>QgsColorRampComboBox</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgscolorrampcombobox.cpp" line="40"/>
+        <location filename="../src/gui/symbology-ng/qgscolorrampcombobox.cpp" line="54"/>
         <source>New color ramp...</source>
         <translation>Nouvelle palette de couleur</translation>
     </message>
@@ -13591,12 +14399,12 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
     <message>
         <location filename="../src/plugins/compass/qgscompassplugin.cpp" line="102"/>
         <source>Show compass</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher la boussole</translation>
     </message>
     <message>
         <location filename="../src/plugins/compass/qgscompassplugin.cpp" line="105"/>
         <source>&amp;About</source>
-        <translation type="unfinished">&amp;À propos</translation>
+        <translation>&amp;À propos</translation>
     </message>
 </context>
 <context>
@@ -13604,7 +14412,7 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
     <message>
         <location filename="../src/plugins/compass/qgscompassplugingui.cpp" line="133"/>
         <source>Pixmap not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Image non trouvée</translation>
     </message>
 </context>
 <context>
@@ -13612,18 +14420,18 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
     <message>
         <location filename="../src/plugins/compass/qgscompasspluginguibase.ui" line="14"/>
         <source>Internal Compass</source>
-        <translation type="unfinished"></translation>
+        <translation>Boussole interne</translation>
     </message>
     <message>
         <location filename="../src/plugins/compass/qgscompasspluginguibase.ui" line="22"/>
         <source>Azimut</source>
-        <translation type="unfinished"></translation>
+        <translation>Azimuth</translation>
     </message>
 </context>
 <context>
     <name>QgsComposer</name>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="699"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="702"/>
         <source>Big image</source>
         <translation>Grande image</translation>
     </message>
@@ -13632,28 +14440,28 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         <translation type="obsolete">Carte 1</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="721"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="724"/>
         <source>Image too big</source>
         <translation>Image trop grande</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="722"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="725"/>
         <source>Creation of image with %1x%2 pixels failed.  Export aborted.</source>
         <translation>La création de l&apos;image comportant %1x%2 pixels a échoué. L&apos;exportation est annulée.</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="759"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="762"/>
         <source>SVG warning</source>
         <translation>avertissement SVG</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="760"/>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="1482"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="763"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="1485"/>
         <source>Don&apos;t show this message again</source>
         <translation>Ne plus montrer ce message</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="784"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="787"/>
         <source>SVG Format</source>
         <translation>Format SVG</translation>
     </message>
@@ -13688,63 +14496,63 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         <translation>Propriétés de l&apos;objet</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="563"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="566"/>
         <source>PDF Format</source>
         <translation>Format PDF</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="651"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="654"/>
         <source>Image too large</source>
         <translation>Image trop large</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="652"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="655"/>
         <source>Creation of image with %1x%2 pixels failed.  Retry without &apos;Print As Raster&apos;?</source>
         <translation>La création de l&apos;image comportant %1x%2 pixels a échoué. Voulez-vous réessayer sans &quot;Imprimer en tant que Raster&quot; ?</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="700"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="703"/>
         <source>To create image %1x%2 requires about %3 MB of memory. Proceed?</source>
         <translation>La création de cette image %1x%2 requiert environ %3Mo de mémoire. Voulez-vous continuez ?</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="709"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="712"/>
         <source>Choose a file name to save the map image as</source>
         <translation>Choisissez un nom de fichier et sauvegarder l&apos;image de la carte sous</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="561"/>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="782"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="564"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="785"/>
         <source>Choose a file name to save the map as</source>
         <translation>Choisissez un nom de fichier pour sauvegarder la carte sous</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="917"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="920"/>
         <source>Save template</source>
         <translation>Sauvegarder le modèle</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="919"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="922"/>
         <source>Composer templates</source>
         <translation>Modèles de composition</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="1249"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="1252"/>
         <source>Composer</source>
         <translation>Composeur</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="1480"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="1483"/>
         <source>Project contains WMS layers</source>
         <translation>Ce projet contient des couches WMS</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="1481"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="1484"/>
         <source>Some WMS servers (e.g. UMN mapserver) have a limit for the WIDTH and HEIGHT parameter. Printing layers from such servers may exceed this limit. If this is the case, the WMS layer will not be printed</source>
         <translation>Certains serveurs WMS (e.g. UMN mapserver) ont une limite pour les paramètres de largeur et de hauteur. Imprimer ces couches à partir de ces serveurs peut dépasser ces limites. Si c&apos;est le cas, la couche WMS ne sera pas imprimée</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="764"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="767"/>
         <source>&lt;p&gt;The SVG export function in Qgis has several problems due to bugs and deficiencies in the </source>
         <translation>&lt;p&gt; La fonction d&apos;export SVG de Qgis a plusieurs problèmes dus à des déficiences de</translation>
     </message>
@@ -13758,12 +14566,12 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         <translation type="obsolete">format %1 (*.%2.*%3)</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="766"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="769"/>
         <source>Qt4 svg code. In particular, there are problems with layers not being clipped to the map bounding box.&lt;/p&gt;</source>
         <translation> code svg de Qt4.  En particulier, il y a des problèmes avec les couches qui ne sont par incluses dans l&apos;emprise de la carte.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="769"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="772"/>
         <source>If you require a vector-based output file from Qgis it is suggested that you try printing to PostScript if the SVG output is not satisfactory.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Si vous avez besoin d&apos;une sortie vectorielle depuis QGIS, il est conseillé d&apos;imprimer en PostScript si le rendu SVG ne vous satisfait pas.&lt;/p&gt;</translation>
     </message>
@@ -13772,33 +14580,33 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         <translation type="obsolete">S&amp;auvegarder le modèle</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="943"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="946"/>
         <source>Save error</source>
         <translation>Sauvegarder l&apos;erreur</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="943"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="946"/>
         <source>Error, could not save file</source>
         <translation>Erreur, impossible d&apos;enregistrer le fichier</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="951"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="954"/>
         <source>Load template</source>
         <translation>Charger un modèle</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="964"/>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="973"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="967"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="976"/>
         <source>Read error</source>
         <translation>Lire l&apos;erreur</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="964"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="967"/>
         <source>Error, could not read file</source>
         <translation>Erreur, impossible de lire le fichier</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposer.cpp" line="973"/>
+        <location filename="../src/app/composer/qgscomposer.cpp" line="976"/>
         <source>Content of template file is not valid</source>
         <translation>Contenu du fichier  modèle invalide</translation>
     </message>
@@ -13990,12 +14798,12 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
     <message>
         <location filename="../src/ui/qgscomposerbase.ui" line="155"/>
         <source>Add Legend</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter une légende</translation>
     </message>
     <message>
         <location filename="../src/ui/qgscomposerbase.ui" line="158"/>
         <source>Add new legend</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter une nouvelle légende</translation>
     </message>
     <message>
         <location filename="../src/ui/qgscomposerbase.ui" line="230"/>
@@ -14556,7 +15364,7 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
     <message>
         <location filename="../src/app/composer/qgscomposerlegendwidget.cpp" line="161"/>
         <source>Legend group space</source>
-        <translation type="unfinished"></translation>
+        <translation>Espace des groupes de la légende</translation>
     </message>
     <message>
         <location filename="../src/app/composer/qgscomposerlegendwidget.cpp" line="173"/>
@@ -14716,12 +15524,12 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
     <message>
         <location filename="../src/ui/qgscomposerlegendwidgetbase.ui" line="195"/>
         <source>Group Space </source>
-        <translation type="unfinished"></translation>
+        <translation>Espace entre les groupes </translation>
     </message>
     <message>
         <location filename="../src/ui/qgscomposerlegendwidgetbase.ui" line="205"/>
         <source>Wrap text on</source>
-        <translation type="unfinished"></translation>
+        <translation>Retour à la ligne activé</translation>
     </message>
     <message>
         <location filename="../src/ui/qgscomposerlegendwidgetbase.ui" line="240"/>
@@ -15330,135 +16138,135 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
 <context>
     <name>QgsComposerScaleBarWidget</name>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="31"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="35"/>
         <source>General options</source>
         <translation>Options globales</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="36"/>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="325"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="40"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="331"/>
         <source>Single Box</source>
         <translation>Boîte unique</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="37"/>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="329"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="41"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="335"/>
         <source>Double Box</source>
         <translation>Boîte double</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="38"/>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="333"/>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="337"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="42"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="339"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="343"/>
         <source>Line Ticks Middle</source>
         <translation>Repères au milieu de la ligne</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="39"/>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="341"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="43"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="347"/>
         <source>Line Ticks Down</source>
         <translation>Repères en-dessous de la ligne</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="40"/>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="345"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="44"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="351"/>
         <source>Line Ticks Up</source>
         <translation>Repères au-dessus de la ligne</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="41"/>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="349"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="45"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="355"/>
         <source>Numeric</source>
         <translation>Numérique</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="43"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="47"/>
         <source>Left</source>
         <translation>Gauche</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="44"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="48"/>
         <source>Middle</source>
         <translation>Milieu</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="45"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="49"/>
         <source>Right</source>
         <translation>Droite</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="73"/>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="160"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="77"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="165"/>
         <source>Map %1</source>
         <translation>Carte %1</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="134"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="138"/>
         <source>Scalebar map changed</source>
         <translation>Barre d&apos;échelle modifiée</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="185"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="191"/>
         <source>Scalebar line width</source>
         <translation>Line de la barre d&apos;échelle modifiée</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="200"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="206"/>
         <source>Scalebar segment size</source>
         <translation>Taille de sgement de la barre d&apos;échelle modifié</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="213"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="219"/>
         <source>Scalebar segments left</source>
         <translation>Segments restants de la barre d&apos;échelle</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="226"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="232"/>
         <source>Scalebar n segments</source>
         <translation>n segments</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="238"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="244"/>
         <source>Scalebar height changed</source>
         <translation>Hauteur de la barre d&apos;échelle modifiée</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="261"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="267"/>
         <source>Scalebar font changed</source>
         <translation>Police de la barre d&apos;échelle modifiée</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="283"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="289"/>
         <source>Scalebar color changed</source>
         <translation>Couleur de la barre d&apos;échelle modifiée</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="297"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="303"/>
         <source>Scalebar unit text</source>
         <translation>Texte de l&apos;unité de la barre d&apos;échelle</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="310"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="316"/>
         <source>Scalebar map units per segment</source>
         <translation>Unités de la carte par segment</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="323"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="329"/>
         <source>Scalebar style changed</source>
         <translation>Style de la barre d&apos;échelle modifiée</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="365"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="371"/>
         <source>Scalebar label bar space</source>
         <translation>Espace entre les étiquettes de la barre d&apos;échelle</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="378"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="384"/>
         <source>Scalebar box content space</source>
         <translation>Espace entre la barre d&apos;échelle et la boîte</translation>
     </message>
     <message>
-        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="391"/>
+        <location filename="../src/app/composer/qgscomposerscalebarwidget.cpp" line="397"/>
         <source>Scalebar alignment</source>
         <translation>Alignement de l&apos;échelle</translation>
     </message>
@@ -16505,12 +17313,12 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
     <message>
         <location filename="../src/core/qgscoordinatetransform.cpp" line="512"/>
         <source>The source spatial reference system (CRS) is not valid. The coordinates can not be reprojected. The CRS is: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Le Système de Coordonnées de Référence n&apos;est pas valide. les coordonnées ne peuvent être reprojetées. Le SCR est : %1</translation>
     </message>
     <message>
         <location filename="../src/core/qgscoordinatetransform.cpp" line="519"/>
         <source>The destination spatial reference system (CRS) is not valid. The coordinates can not be reprojected. The CRS is: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Le Système de Coordonnées de Référence de destination n&apos;est pas valide. les coordonnées ne peuvent être reprojetées. Le SCR est : %1</translation>
     </message>
     <message>
         <location filename="../src/core/qgscoordinatetransform.cpp" line="549"/>
@@ -16527,7 +17335,9 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         <source>%1 of
 %2PROJ.4: %3 +to %4
 Error: %5</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 de
+%2PROJ.4: %3 +to %4
+Erreur: %5</translation>
     </message>
     <message>
         <source>%1 of
@@ -16998,7 +17808,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ui/qgsdbsourceselectbase.ui" line="14"/>
         <source>Add PostGIS layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter des couches PostGIS</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsdbsourceselectbase.ui" line="31"/>
@@ -17580,17 +18390,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/plugins/delimited_text/qgsdelimitedtextplugingui.cpp" line="453"/>
         <source>Text files</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichiers textes</translation>
     </message>
     <message>
         <location filename="../src/plugins/delimited_text/qgsdelimitedtextplugingui.cpp" line="454"/>
         <source>Well Known Text files</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichichier Well Known Text (WKT)</translation>
     </message>
     <message>
         <location filename="../src/plugins/delimited_text/qgsdelimitedtextplugingui.cpp" line="455"/>
         <source>All files</source>
-        <translation type="unfinished">Tous les fichiers</translation>
+        <translation>Tous les fichiers</translation>
     </message>
     <message>
         <source>No delimiter</source>
@@ -17916,59 +18726,59 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsDirectoryParamWidget</name>
     <message>
-        <location filename="../src/core/qgsdataitem.cpp" line="504"/>
-        <location filename="../src/core/qgsdataitem.cpp" line="596"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="541"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="633"/>
         <source>Name</source>
         <translation>Nom</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdataitem.cpp" line="504"/>
-        <location filename="../src/core/qgsdataitem.cpp" line="596"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="541"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="633"/>
         <source>Size</source>
         <translation>Taille</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdataitem.cpp" line="504"/>
-        <location filename="../src/core/qgsdataitem.cpp" line="596"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="541"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="633"/>
         <source>Date</source>
         <translation>Date</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdataitem.cpp" line="504"/>
-        <location filename="../src/core/qgsdataitem.cpp" line="596"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="541"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="633"/>
         <source>Permissions</source>
         <translation>Permissions</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdataitem.cpp" line="504"/>
-        <location filename="../src/core/qgsdataitem.cpp" line="596"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="541"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="633"/>
         <source>Owner</source>
         <translation>Propriétaire</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdataitem.cpp" line="504"/>
-        <location filename="../src/core/qgsdataitem.cpp" line="596"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="541"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="633"/>
         <source>Group</source>
         <translation>Groupe</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdataitem.cpp" line="504"/>
-        <location filename="../src/core/qgsdataitem.cpp" line="596"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="541"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="633"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdataitem.cpp" line="556"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="593"/>
         <source>folder</source>
         <translation>Dossier</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdataitem.cpp" line="561"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="598"/>
         <source>file</source>
         <translation>Fichier</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsdataitem.cpp" line="566"/>
+        <location filename="../src/core/qgsdataitem.cpp" line="603"/>
         <source>link</source>
         <translation>lien</translation>
     </message>
@@ -18062,7 +18872,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsEmbedLayerDialog</name>
     <message>
-        <location filename="../src/app/qgsembedlayerdialog.cpp" line="66"/>
+        <location filename="../src/app/qgsembedlayerdialog.cpp" line="80"/>
         <source>Select project file</source>
         <translation>Sélectionner le fichier de projet</translation>
     </message>
@@ -18071,17 +18881,17 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Fichiers projet de QGIS (*.qgs)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsembedlayerdialog.cpp" line="68"/>
+        <location filename="../src/app/qgsembedlayerdialog.cpp" line="82"/>
         <source>QGis files</source>
-        <translation type="unfinished">Fichiers QGIS</translation>
+        <translation>Fichiers QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsembedlayerdialog.cpp" line="99"/>
+        <location filename="../src/app/qgsembedlayerdialog.cpp" line="113"/>
         <source>Recursive embeding not possible</source>
         <translation>Intégration récursive n&apos;est pas possible</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsembedlayerdialog.cpp" line="99"/>
+        <location filename="../src/app/qgsembedlayerdialog.cpp" line="113"/>
         <source>It is not possible to embed layers / groups from the current project</source>
         <translation>Il n&apos;est pas possible d&apos;intégrer des couches / groupes depuis le projet courant</translation>
     </message>
@@ -18249,7 +19059,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/gui/qgsexpressionbuilderwidget.cpp" line="162"/>
         <source>Fields and Values</source>
-        <translation type="unfinished"></translation>
+        <translation>Champs et valeurs</translation>
     </message>
     <message>
         <location filename="../src/gui/qgsexpressionbuilderwidget.cpp" line="277"/>
@@ -18284,22 +19094,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/gui/qgsexpressionbuilderwidget.cpp" line="416"/>
         <source>&lt;h3&gt;Oops! QGIS can&apos;t find help for this function.&lt;/h3&gt;The help file for %1 was not found.&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h3&gt;Oops! QGIS ne peut trouver l&apos;aide pour cette fonction.&lt;/h3&gt;Le fichier d&apos;aide pour  %1 n&apos;a pas été trouvé.&lt;br&gt;</translation>
     </message>
     <message>
         <location filename="../src/gui/qgsexpressionbuilderwidget.cpp" line="425"/>
         <source>(Showing English version as there was no help available in your language (%1). If you would like to create it, contact the QGIS translation team).&lt;br&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Ceci est la version anglaise car l&apos;aide n&apos;est pas disponible dans votre langue(%1). Si vous souhaitez la créer, contactez l&apos;équipe de traduction de QGis).&lt;br&gt; </translation>
     </message>
     <message>
         <location filename="../src/gui/qgsexpressionbuilderwidget.cpp" line="427"/>
         <source>It was neither available in your language (%1) nor English.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ce n&apos;était dispnible ni dans votre language (%1) ni en anglais.</translation>
     </message>
     <message>
         <location filename="../src/gui/qgsexpressionbuilderwidget.cpp" line="435"/>
         <source>&lt;br&gt;If you would like to create it, contact the QGIS development team.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si vous souhaitez la créer, contactez l&apos;équipe de traduction de QGis.</translation>
     </message>
     <message>
         <source>This help file is not available in your language %1. If you would like to translate it, please contact the QGIS development team.</source>
@@ -18614,12 +19424,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsFormAnnotationDialog</name>
     <message>
-        <location filename="../src/app/qgsformannotationdialog.cpp" line="23"/>
+        <location filename="../src/app/qgsformannotationdialog.cpp" line="37"/>
         <source>Delete</source>
         <translation>Effacer</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsformannotationdialog.cpp" line="62"/>
+        <location filename="../src/app/qgsformannotationdialog.cpp" line="76"/>
         <source>Qt designer file</source>
         <translation>Fichier Qt Designer</translation>
     </message>
@@ -18670,7 +19480,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/core/gps/qgsgpsdetector.cpp" line="39"/>
         <source>internal GPS</source>
-        <translation type="unfinished"></translation>
+        <translation>GPS interne</translation>
     </message>
     <message>
         <location filename="../src/core/gps/qgsgpsdetector.cpp" line="42"/>
@@ -19060,22 +19870,22 @@ Erreurs : %2
         <translation type="obsolete">Fichier NMEA (*.nmea)</translation>
     </message>
     <message>
-        <location filename="../src/app/gps/qgsgpsinformationwidget.cpp" line="1087"/>
+        <location filename="../src/app/gps/qgsgpsinformationwidget.cpp" line="1091"/>
         <source>&amp;Add feature</source>
         <translation>&amp;Ajouter des entités</translation>
     </message>
     <message>
-        <location filename="../src/app/gps/qgsgpsinformationwidget.cpp" line="1106"/>
+        <location filename="../src/app/gps/qgsgpsinformationwidget.cpp" line="1110"/>
         <source>&amp;Add Point</source>
         <translation>Ajouter un &amp;point</translation>
     </message>
     <message>
-        <location filename="../src/app/gps/qgsgpsinformationwidget.cpp" line="1109"/>
+        <location filename="../src/app/gps/qgsgpsinformationwidget.cpp" line="1113"/>
         <source>&amp;Add Line</source>
         <translation>Ajouter une &amp;ligne</translation>
     </message>
     <message>
-        <location filename="../src/app/gps/qgsgpsinformationwidget.cpp" line="1112"/>
+        <location filename="../src/app/gps/qgsgpsinformationwidget.cpp" line="1116"/>
         <source>&amp;Add Polygon</source>
         <translation>Ajouter un pol&amp;ygone</translation>
     </message>
@@ -19433,12 +20243,12 @@ La 2D/3D dépend de la disponibilité de l&apos;information</translation>
     <message>
         <location filename="../src/ui/qgsgpsinformationwidgetbase.ui" line="619"/>
         <source>H accurancy</source>
-        <translation type="unfinished"></translation>
+        <translation>Précision H.</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsgpsinformationwidgetbase.ui" line="626"/>
         <source>V accurancy</source>
-        <translation type="unfinished"></translation>
+        <translation>Précision Vert.</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsgpsinformationwidgetbase.ui" line="672"/>
@@ -19468,7 +20278,7 @@ La 2D/3D dépend de la disponibilité de l&apos;information</translation>
     <message>
         <location filename="../src/ui/qgsgpsinformationwidgetbase.ui" line="830"/>
         <source>Internal</source>
-        <translation type="unfinished"></translation>
+        <translation>interne</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsgpsinformationwidgetbase.ui" line="840"/>
@@ -19970,52 +20780,52 @@ Veuillez sélectionner un fichier valide.</translation>
 <context>
     <name>QgsGdalProvider</name>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="381"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="401"/>
         <source>Dataset Description</source>
         <translation>Description du jeu de données</translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="402"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="422"/>
         <source>Band %1</source>
         <translation>Bande %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="433"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="453"/>
         <source>Dimensions:</source>
         <translation>Dimensions:</translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="436"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="456"/>
         <source>X: %1 Y: %2 Bands: %3</source>
         <translation>X: %1 Y: %2 Bandes: %3</translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="468"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="488"/>
         <source>Origin:</source>
         <translation>Origine:</translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="477"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="497"/>
         <source>Pixel Size:</source>
         <translation>Taille du Pixel:</translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="1045"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="1065"/>
         <source>out of extent</source>
         <translation>En dehors de l&apos;emprise</translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="1082"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="1102"/>
         <source>null (no data)</source>
         <translation>null (pas de données)</translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="1455"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="1475"/>
         <source>Average Magphase</source>
         <translation>Magphase moyenne</translation>
     </message>
     <message>
-        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="1460"/>
+        <location filename="../src/providers/gdal/qgsgdalprovider.cpp" line="1480"/>
         <source>Average</source>
         <translation>Moyenne</translation>
     </message>
@@ -20255,9 +21065,21 @@ Veuillez sélectionner un fichier valide.</translation>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Droid Sans&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Droid Sans&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -20267,16 +21089,13 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsGeorefPlugin</name>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="104"/>
         <source>&amp;About</source>
-        <translation>&amp;À propos</translation>
+        <translation type="obsolete">&amp;À propos</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="99"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="113"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="114"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="130"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="131"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="98"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="109"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugin.cpp" line="124"/>
         <source>&amp;Georeferencer</source>
         <translation>&amp;Géoréférencer</translation>
     </message>
@@ -20284,322 +21103,322 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsGeorefPluginGui</name>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="214"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="211"/>
         <source>All other files (*)</source>
         <translation>Tous les autres fichiers (*)</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="221"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="218"/>
         <source>Open raster</source>
         <translation>Ouvrir un raster</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="230"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="227"/>
         <source>%1 is not a supported raster data source</source>
         <translation>%1 n&apos;est pas une source de données raster gérées</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="235"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="232"/>
         <source>Unsupported Data Source</source>
         <translation>Source de données non gérée</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="244"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="241"/>
         <source>Raster loaded: %1</source>
         <translation>Raster chargé : %1</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="245"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="242"/>
         <source>Georeferencer - %1</source>
         <translation>Géoréférenceur - %1</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="315"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1003"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1655"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="311"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="999"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1694"/>
         <source>Transform: </source>
         <translation>Transformation :</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="369"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="576"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="603"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1146"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1194"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1242"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1786"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1795"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1805"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1814"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1828"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="365"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="572"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="599"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1187"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1235"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1283"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1825"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1834"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1844"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1853"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1867"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="369"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="365"/>
         <source>GDAL scripting is not supported for %1 transformation</source>
         <translation>Le scriptage de GDAL n&apos;est pas supporté pour la transformation %1</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="564"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="560"/>
         <source>Load GCP points</source>
         <translation>Charger les points de contrôle</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="576"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="572"/>
         <source>No GCP points to save</source>
         <translation>Pas de points de contrôle à enregistrer</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="581"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="577"/>
         <source>Save GCP points</source>
         <translation>Enregistrer les points de contrôle</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="603"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1786"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="599"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1825"/>
         <source>Please load raster to be georeferenced</source>
         <translation>Veuillez charger le raster devant être géoréférencé</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="848"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="968"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="844"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="964"/>
         <source>Help</source>
         <translation>Aide</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="945"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="941"/>
         <source>Panels</source>
         <translation>Panneaux</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="949"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="945"/>
         <source>Toolbars</source>
         <translation>Barres d&apos;outils</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1015"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1011"/>
         <source>Coordinate: </source>
         <translation>Coordonnée : </translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1016"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1012"/>
         <source>Current map coordinate</source>
         <translation>Coordonnées actuelles de la carte</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1004"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1000"/>
         <source>Current transform parametrisation</source>
         <translation>Paramètre actuel de transformation</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1146"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1187"/>
         <source>Unable to open GCP points file %1</source>
         <translation>Impossible d&apos;ouvrir le fichier de points de contrôle %1</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1275"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1316"/>
         <source>Could not write to %1</source>
         <translation>Impossible d&apos;écrire vers %1</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1160"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1201"/>
         <source>Save GCPs</source>
         <translation>Enregistrer GCPs</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="136"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="128"/>
         <source>Georeferencer</source>
         <translation>Géoréférencer</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1161"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1202"/>
         <source>Save GCP points?</source>
         <translation>Enregistrer les points de contrôle ?</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1195"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1236"/>
         <source>Failed to get linear transform parameters</source>
         <translation>Échec de l&apos;obtention des paramètres de transformation linéaire</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1206"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1247"/>
         <source>&lt;p&gt;The selected file already seems to have a world file! Do you want to replace it with the new world file?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Le fichier sélectionné semble déjà avoir un fichier de géoréférencement (world file). Voulez-vous le remplacer ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1242"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1828"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1283"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1867"/>
         <source>Failed to compute GCP transform: Transform is not solvable</source>
         <translation>Échec lors du calcul de la transformation des points de contrôle. La transformation ne peut être résolue</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1274"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1315"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1545"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1584"/>
         <source>Transformation parameters</source>
         <translation>Paramètres de transformation</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1562"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1601"/>
         <source>Translation x</source>
         <translation>Translation x</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1562"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1601"/>
         <source>Translation y</source>
         <translation>Translation y</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1562"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1601"/>
         <source>Scale x</source>
         <translation>Échelle  x</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1562"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1601"/>
         <source>Scale y</source>
         <translation>Échelle  y</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1562"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1601"/>
         <source>Rotation [degrees]</source>
         <translation>Rotation [degrés]</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1581"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1620"/>
         <source>Residuals</source>
         <translation>Résidus</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1422"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1435"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1536"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1594"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1463"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1476"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1575"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1633"/>
         <source>map units</source>
         <translation>unités de carte</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="565"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="583"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="561"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="579"/>
         <source>GCP file</source>
         <translation>Fichier GCP</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1426"/>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1540"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1467"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1579"/>
         <source>pixels</source>
         <translation>pixels</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1562"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1601"/>
         <source>Mean error [%1]</source>
         <translation>Erreur moyenne [%1]</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1613"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1652"/>
         <source>yes</source>
         <translation>oui</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1617"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1656"/>
         <source>no</source>
         <translation>non</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1662"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1701"/>
         <source>Translation (%1, %2)</source>
         <translation>Translation (%1, %2)</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1663"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1702"/>
         <source>Scale (%1, %2)</source>
         <translation>Échelle (%1, %2)</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1664"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1703"/>
         <source>Rotation: %1</source>
         <translation>Rotation: %1</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1671"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1710"/>
         <source>Mean error: %1</source>
         <translation>Erreur moyenne %1</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1692"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1731"/>
         <source>Copy in clipboard</source>
         <translation>Copier vers le presse-papier</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1698"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1737"/>
         <source>%1</source>
         <translation>%1</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1705"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1744"/>
         <source>GDAL script</source>
         <translation>Script GDAL</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1795"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1834"/>
         <source>Please set transformation type</source>
         <translation>Veuillez sélectionnez le type de transformation</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1805"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1844"/>
         <source>Please set output raster name</source>
         <translation>Veuillez spécifier le nom du raster qui sera exporté</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1814"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1853"/>
         <source>%1 requires at least %2 GCPs. Please define more</source>
         <translation>%1 nécessite au moins %2 points de contrôle. Veuillez en définir plus.</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1907"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1946"/>
         <source>Linear</source>
         <translation>Linéaire</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1909"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1948"/>
         <source>Helmert</source>
         <translation>Helmert</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1911"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1950"/>
         <source>Polynomial 1</source>
         <translation>Polynomiale 1</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1913"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1952"/>
         <source>Polynomial 2</source>
         <translation>Polynomiale 2</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1915"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1954"/>
         <source>Polynomial 3</source>
         <translation>Polynomiale 3</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1917"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1956"/>
         <source>Thin plate spline (TPS)</source>
         <translation>Thin plate spline (TPS)</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1919"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1958"/>
         <source>Projective</source>
         <translation>Projective</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1921"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1960"/>
         <source>Not set</source>
         <translation>Non renseigné</translation>
     </message>
     <message>
-        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1205"/>
+        <location filename="../src/plugins/georeferencer/qgsgeorefplugingui.cpp" line="1246"/>
         <source>World file exists</source>
         <translation>Le fichier &quot;world&quot; existe</translation>
     </message>
@@ -21073,41 +21892,41 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsGraduatedSymbolRendererV2Widget</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="52"/>
-        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="236"/>
+        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="66"/>
+        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="250"/>
         <source>Range</source>
         <translation>Plage</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="52"/>
-        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="236"/>
+        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="66"/>
+        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="250"/>
         <source>Label</source>
         <translation>Étiquette</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="78"/>
+        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="92"/>
         <source>Symbol levels...</source>
         <translation>Niveaux de symbole</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="165"/>
-        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="167"/>
-        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="190"/>
+        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="179"/>
+        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="181"/>
+        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="204"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="165"/>
+        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="179"/>
         <source>There are no available color ramps. You can add them in Style Manager.</source>
         <translation>Il n&apos;y a pas de palette de couleur disponible. Vous pouvez en ajouter via le Gestionnaire de Style.</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="167"/>
+        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="181"/>
         <source>The selected color ramp is not available.</source>
         <translation>La palette de couleur sélectionnée n&apos;est pas disponible.</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="190"/>
+        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="204"/>
         <source>Renderer creation has failed.</source>
         <translation>La création du rendu a échouée</translation>
     </message>
@@ -21123,7 +21942,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../src/ui/qgsgraduatedsymbolrendererv2widget.ui" line="32"/>
-        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="236"/>
+        <location filename="../src/gui/symbology-ng/qgsgraduatedsymbolrendererv2widget.cpp" line="250"/>
         <source>Symbol</source>
         <translation>Symbole</translation>
     </message>
@@ -22584,7 +23403,7 @@ at line %2 column %3</source>
     <message>
         <location filename="../src/plugins/grass/qgsgrassmodule.cpp" line="2924"/>
         <source>Password</source>
-        <translation type="unfinished">Mot de Passe</translation>
+        <translation>Mot de Passe</translation>
     </message>
     <message>
         <location filename="../src/plugins/grass/qgsgrassmodule.cpp" line="2968"/>
@@ -22770,196 +23589,196 @@ at line %2 column %3</source>
 <context>
     <name>QgsGrassNewMapset</name>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="118"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="120"/>
         <source>Database</source>
         <translation>Géodatabase</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="130"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="132"/>
         <source>Location 2</source>
         <translation>Secteur 2</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="125"/>
         <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="127"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="134"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="129"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="136"/>
         <source>User&apos;s mapset</source>
         <translation>Jeu de donnée (mapset) utilisateur</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="123"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="132"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="125"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="134"/>
         <source>System mapset</source>
         <translation>Jeu de donnée (mapset) système</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="121"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="123"/>
         <source>Location 1</source>
         <translation>Secteur 1</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="180"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="188"/>
         <source>Enter path to GRASS database</source>
         <translation>Entrez le chemin vers la géodatabase GRASS</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="188"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="196"/>
         <source>The directory doesn&apos;t exist!</source>
         <translation>Le répertoire n&apos;existe pas !</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="335"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="343"/>
         <source>Enter location name!</source>
         <translation>Entrez le nom du secteur (location) !</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="342"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="350"/>
         <source>The location exists!</source>
         <translation>Le secteur (location) existe !</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="469"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="477"/>
         <source>Selected projection is not supported by GRASS!</source>
         <translation>La projection sélectionnée n&apos;est pas prise en charge par GRASS !</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="504"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="552"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="728"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="734"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="748"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="847"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="857"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="884"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="978"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1067"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1076"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="512"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="560"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="736"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="742"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="756"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="855"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="865"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="892"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="986"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1075"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1084"/>
         <source>Warning</source>
         <translation>Attention</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="504"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="512"/>
         <source>Cannot create projection.</source>
         <translation>Impossible de créer la projection.</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="552"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="560"/>
         <source>Cannot reproject previously set region, default region set.</source>
         <translation>Impossible de reprojeter à la valeur précédente, valeur par défaut utilisée.</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="679"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="687"/>
         <source>North must be greater than south</source>
         <translation>Nord doit être plus grand que sud</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="684"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="692"/>
         <source>East must be greater than west</source>
         <translation>Est doit être plus grand que ouest</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="885"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="893"/>
         <source>Cannot reproject selected region.</source>
         <translation>Impossible de reprojeter la région choisie.</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="978"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="986"/>
         <source>Cannot reproject region</source>
         <translation>Impossible de reprojeter la région</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1199"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1207"/>
         <source>Enter mapset name.</source>
         <translation>Entrez le nom du jeu de donnée (mapset).</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1209"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1217"/>
         <source>The mapset already exists</source>
         <translation>Le jeu de donnée existe déjà</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1227"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1235"/>
         <source>Database: </source>
         <translation>Géodatabase : </translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1238"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1246"/>
         <source>Location: </source>
         <translation>Secteur (location): </translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1240"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1248"/>
         <source>Mapset: </source>
         <translation>Jeu de donnée : </translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1279"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1287"/>
         <source>Create location</source>
         <translation>Créer un secteur</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1306"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1316"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1323"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1314"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1324"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1331"/>
         <source>Create mapset</source>
         <translation>Créer un jeu de donnée</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1316"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1324"/>
         <source>Cannot open DEFAULT_WIND</source>
         <translation>Impossible d&apos;ouvrir DEFAULT_WIND</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1323"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1331"/>
         <source>Cannot open WIND</source>
         <translation>Impossible d&apos;ouvrir WIND</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1345"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1350"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1353"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1358"/>
         <source>New mapset</source>
         <translation>Nouveau jeu de donnée (mapset)</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1351"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1359"/>
         <source>New mapset successfully created and set as current working mapset.</source>
         <translation>Le nouveau jeu de donnée (mapset) a été créé et est configuré comme le jeu de données courant.</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1307"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1315"/>
         <source>Cannot create new mapset directory</source>
         <translation>Impossible de créer le répertoire du nouveau jeu de donnée (mapset)</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="848"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="858"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1068"/>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1077"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="856"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="866"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1076"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1085"/>
         <source>Cannot create QgsCoordinateReferenceSystem</source>
         <translation>Impossible de créer  QgsCoordinateReferenceSystem</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="218"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="226"/>
         <source>No writable locations, the database is not writable!</source>
         <translation>Pas d&apos;emplacement inscriptible, la base de données n&apos;est pas ouverte à l&apos;écriture !</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="729"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="737"/>
         <source>Regions file (%1) not found.</source>
         <translation>Fichiers de régions (%1) non trouvés.</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="735"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="743"/>
         <source>Cannot open locations file (%1)</source>
         <translation>Impossible d&apos;ouvrir le fichier secteur (%1)</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="745"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="753"/>
         <source>Cannot read locations file (%1):</source>
         <translation>Impossible de lire le fichier secteur (%1) :</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="746"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="754"/>
         <source>
 %1
 at line %2 column %3</source>
@@ -22968,12 +23787,12 @@ at line %2 column %3</source>
 à la ligne %2 colonne %3</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1280"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1288"/>
         <source>Cannot create new location: %1</source>
         <translation>Impossible de créer un nouveau secteur : %1</translation>
     </message>
     <message>
-        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1346"/>
+        <location filename="../src/plugins/grass/qgsgrassnewmapset.cpp" line="1354"/>
         <source>New mapset successfully created, but cannot be opened: %1</source>
         <translation>Le nouveau jeu de donnée a été créé avec succès, mais ne peut être ouvert : %1</translation>
     </message>
@@ -23419,7 +24238,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsGrassProvider</name>
     <message>
-        <location filename="../src/providers/grass/qgsgrassprovider.cpp" line="1090"/>
+        <location filename="../src/providers/grass/qgsgrassprovider.cpp" line="1083"/>
         <source>GRASS vector map %1 does not have topology. Build topology?</source>
         <translation>La carte vecteur GRASS %1 ne dispose pas de topologie ? Voulez-vous la construire ?</translation>
     </message>
@@ -23943,7 +24762,7 @@ at line %2 column %3</source>
     <message>
         <location filename="../src/helpviewer/qgshelpviewer.cpp" line="131"/>
         <source>&lt;h3&gt;Oops! QGIS can&apos;t find help for this form.&lt;/h3&gt;The help file for %1 was not found for your language&lt;br&gt;If you would like to create it, contact the QGIS development team</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h3&gt;Oops! QGISn&apos;arrive pas à trouver l&apos;aide pour ce formulaiore.&lt;/h3&gt;L&apos;aide pour %1 n&apos;a pas été trouvée pour votre langue&lt;br&gt;Si vous voulez la créer, contactez l&apos;équipe de traduction de QGis</translation>
     </message>
     <message>
         <location filename="../src/helpviewer/qgshelpviewer.cpp" line="202"/>
@@ -24422,8 +25241,8 @@ Ceci est peut-être dûà votre connexion ou celle du serveru WMS.
     <name>QgsInterpolationPlugin</name>
     <message>
         <location filename="../src/plugins/interpolation/qgsinterpolationplugin.cpp" line="45"/>
-        <location filename="../src/plugins/interpolation/qgsinterpolationplugin.cpp" line="49"/>
-        <location filename="../src/plugins/interpolation/qgsinterpolationplugin.cpp" line="57"/>
+        <location filename="../src/plugins/interpolation/qgsinterpolationplugin.cpp" line="48"/>
+        <location filename="../src/plugins/interpolation/qgsinterpolationplugin.cpp" line="54"/>
         <source>&amp;Interpolation</source>
         <translation>&amp;Interpolation</translation>
     </message>
@@ -25303,70 +26122,80 @@ Ceci est peut-être dûà votre connexion ou celle du serveru WMS.
 <context>
     <name>QgsLegend</name>
     <message>
-        <location filename="../src/app/legend/qgslegend.cpp" line="200"/>
-        <location filename="../src/app/legend/qgslegend.cpp" line="2486"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="204"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="2554"/>
         <source>sub-group</source>
-        <translation type="unfinished"></translation>
+        <translation>sous-groupe</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegend.cpp" line="206"/>
-        <location filename="../src/app/legend/qgslegend.cpp" line="2491"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="210"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="2559"/>
         <source>group</source>
         <translation>groupe</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegend.cpp" line="647"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="672"/>
         <source>&amp;Make to Toplevel Item</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegend.cpp" line="653"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="678"/>
         <source>Zoom to Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom sur le groupe</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegend.cpp" line="656"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="681"/>
         <source>&amp;Remove</source>
         <translation>&amp;Supprimer</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegend.cpp" line="659"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="684"/>
         <source>&amp;Set Group CRS</source>
-        <translation type="unfinished"></translation>
+        <translation>Définir le &amp;SCR d&apos;un groupe</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegend.cpp" line="672"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="697"/>
         <source>&amp;Group Selected</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Groupe sélectionné</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegend.cpp" line="677"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="705"/>
+        <source>Copy Style</source>
+        <translation>Copier le style</translation>
+    </message>
+    <message>
+        <location filename="../src/app/legend/qgslegend.cpp" line="708"/>
+        <source>Paste Style</source>
+        <translation>Coller le style</translation>
+    </message>
+    <message>
+        <location filename="../src/app/legend/qgslegend.cpp" line="712"/>
         <source>&amp;Add New Group</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ajouter un nouveau groupe</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegend.cpp" line="678"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="713"/>
         <source>&amp;Expand All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Etendre tout</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegend.cpp" line="679"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="714"/>
         <source>&amp;Collapse All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Réduire tout</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegend.cpp" line="681"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="716"/>
         <source>&amp;Update Drawing Order</source>
-        <translation type="unfinished"></translation>
+        <translation>Mettre à jour l&apos;ordre de rend&amp;u</translation>
     </message>
     <message>
         <source>&amp;Make to toplevel item</source>
         <translation type="obsolete">&amp;Mettre l&apos;objet au-dessus</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegend.cpp" line="636"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="661"/>
         <source>Legend context</source>
-        <translation type="unfinished"></translation>
+        <translation>Contexte de la légende</translation>
     </message>
     <message>
         <source>Zoom to group</source>
@@ -25377,7 +26206,7 @@ Ceci est peut-être dûà votre connexion ou celle du serveru WMS.
         <translation type="obsolete">Définir le &amp;SCR d&apos;un groupe</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegend.cpp" line="664"/>
+        <location filename="../src/app/legend/qgslegend.cpp" line="689"/>
         <source>Re&amp;name</source>
         <translation>Re&amp;nommer</translation>
     </message>
@@ -25417,7 +26246,7 @@ Ceci est peut-être dûà votre connexion ou celle du serveru WMS.
         <translation type="obsolete">&amp;Montrer dans l&apos;aperçu</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="439"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="433"/>
         <source>&amp;Remove</source>
         <translation>&amp;Supprimer</translation>
     </message>
@@ -25442,7 +26271,7 @@ Ceci est peut-être dûà votre connexion ou celle du serveru WMS.
         <translation type="obsolete">Sauvegarder la sélection sous...</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="479"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="473"/>
         <source>&amp;Query...</source>
         <translation>&amp;Requête...</translation>
     </message>
@@ -25451,63 +26280,63 @@ Ceci est peut-être dûà votre connexion ou celle du serveru WMS.
         <translation type="obsolete">Montrer le décompte des entités</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="419"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="413"/>
         <source>&amp;Zoom to Layer Extent</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zoomer sur l&apos;emprise de la couche</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="422"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="416"/>
         <source>&amp;Zoom to Best Scale (100%)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zoomer à la meilleure échelle (100%)</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="427"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="421"/>
         <source>&amp;Stretch Using Current Extent</source>
-        <translation type="unfinished"></translation>
+        <translation>Étirer jsur l&apos;empri&amp;se actuelle</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="432"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="426"/>
         <source>&amp;Show in Overview</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Montrer dans l&apos;aperçu</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="442"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="436"/>
         <source>&amp;Set Layer CRS</source>
-        <translation type="unfinished"></translation>
+        <translation>Définir le &amp;SCR d&apos;une couche</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="445"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="439"/>
         <source>Set &amp;Project CRS from Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Définir le SCR du &amp;projet depuis cette couche</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="454"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="448"/>
         <source>&amp;Open Attribute Table</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ouvrir la table d&apos;attributs</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="469"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="463"/>
         <source>Save As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarder sous...</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="472"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="466"/>
         <source>Save Selection As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarder la sélection sous...</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="482"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="476"/>
         <source>Show Feature Count</source>
-        <translation type="unfinished"></translation>
+        <translation>Montrer le décompte des entités</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="492"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="486"/>
         <source>&amp;Properties</source>
         <translation>&amp;Propriétés</translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="601"/>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="663"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="595"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="657"/>
         <source>Updating feature count for layer %1</source>
         <translation>Mise à jour du décompte des entités pour la couche %1</translation>
     </message>
@@ -25516,8 +26345,8 @@ Ceci est peut-être dûà votre connexion ou celle du serveru WMS.
         <translation type="obsolete">Mettre à jour le décompte des entités pour la couche </translation>
     </message>
     <message>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="601"/>
-        <location filename="../src/app/legend/qgslegendlayer.cpp" line="663"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="595"/>
+        <location filename="../src/app/legend/qgslegendlayer.cpp" line="657"/>
         <source>Abort</source>
         <translation>Abandon</translation>
     </message>
@@ -25707,7 +26536,7 @@ Ceci est peut-être dûà votre connexion ou celle du serveru WMS.
     <message>
         <location filename="../src/gui/qgsmanageconnectionsdialog.cpp" line="273"/>
         <source>The file is not an MSSQL connections exchange file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le fichier n&apos;est pas un fichier d&apos;échange de connexions WMS.</translation>
     </message>
     <message>
         <location filename="../src/gui/qgsmanageconnectionsdialog.cpp" line="458"/>
@@ -25800,59 +26629,59 @@ Ceci est peut-être dûà votre connexion ou celle du serveru WMS.
 <context>
     <name>QgsMapLayer</name>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="627"/>
-        <location filename="../src/core/qgsmaplayer.cpp" line="643"/>
-        <location filename="../src/core/qgsmaplayer.cpp" line="958"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="662"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="678"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="993"/>
         <source>%1 at line %2 column %3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="662"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="697"/>
         <source>Error: qgis element could not be found in %1</source>
         <translation>Erreur : l&apos;élément n&apos;a pu être trouvé dans %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="790"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="825"/>
         <source>User database could not be opened.</source>
         <translation>La base de données de l&apos;utilisateur n&apos;a pu être ouverte.</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="805"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="840"/>
         <source>The style table could not be created.</source>
         <translation>La table de style n&apos;a pu être crée.</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="820"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="855"/>
         <source>The style %1 was saved to database</source>
         <translation>Le style %1 a été sauvegardé dans la base de données</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="837"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="872"/>
         <source>The style %1 was updated in the database.</source>
         <translation>Le style %1 a été mis à jour dans la base de données</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="842"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="877"/>
         <source>The style %1 could not be updated in the database.</source>
         <translation>Le style %1 n&apos;a pas été mis à jour dans la base de données</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="848"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="883"/>
         <source>The style %1 could not be inserted into database.</source>
         <translation>Le style %1 n&apos;a pas été inséré dans la base de données</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="937"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="972"/>
         <source>ERROR: Failed to created SLD style file as %1. Check file permissions and retry.</source>
-        <translation type="unfinished"></translation>
+        <translation>ERREUR: Impossible de créer le fichier de style SLD comme étant %1 Vérifiez les permissions et ré-essayez.</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="963"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="998"/>
         <source>Unable to open file %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;ouvrir %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="648"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="683"/>
         <source>style not found in database</source>
         <translation>Style non trouvé dans la base de données</translation>
     </message>
@@ -25863,36 +26692,36 @@ Ceci est peut-être dûà votre connexion ou celle du serveru WMS.
         <translation>Spécifier le SCR pour la couche %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="686"/>
-        <location filename="../src/core/qgsmaplayer.cpp" line="994"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="721"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="1029"/>
         <source>Loading style file %1 failed because:
 %2</source>
         <translation>Echec du chargement du fichier de style %1 à cause de :
 %2</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="726"/>
-        <location filename="../src/core/qgsmaplayer.cpp" line="886"/>
-        <location filename="../src/core/qgsmaplayer.cpp" line="892"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="761"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="921"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="927"/>
         <source>Could not save symbology because:
 %1</source>
         <translation>La symbologie n&apos;a pas pu être enregistrée à cause de :
 %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="755"/>
-        <location filename="../src/core/qgsmaplayer.cpp" line="918"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="790"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="953"/>
         <source>The directory containing your dataset needs to be writable!</source>
         <translation>Le répertoire contenant vos jeux de données doit être inscriptible !</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="769"/>
-        <location filename="../src/core/qgsmaplayer.cpp" line="932"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="804"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="967"/>
         <source>Created default style file as %1</source>
         <translation>Fichier de style par défaut créé sous %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsmaplayer.cpp" line="774"/>
+        <location filename="../src/core/qgsmaplayer.cpp" line="809"/>
         <source>ERROR: Failed to created default style file as %1. Check file permissions and retry.</source>
         <translation>ERREUR: Impossible de créer le fichier de style par défaut comme étant %1 Vérifiez les permissions et ré-essayez.</translation>
     </message>
@@ -26478,22 +27307,22 @@ Ceci est peut-être dûà votre connexion ou celle du serveru WMS.
     <message>
         <location filename="../src/app/qgsmaptooloffsetcurve.cpp" line="106"/>
         <source>Offset curve</source>
-        <translation type="unfinished"></translation>
+        <translation>Décalage de la coubre</translation>
     </message>
     <message>
         <location filename="../src/app/qgsmaptooloffsetcurve.cpp" line="295"/>
         <source>Offset: </source>
-        <translation type="unfinished"></translation>
+        <translation>Décalage :</translation>
     </message>
     <message>
         <location filename="../src/app/qgsmaptooloffsetcurve.cpp" line="367"/>
         <source>Geometry error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreurs de géométrie</translation>
     </message>
     <message>
         <location filename="../src/app/qgsmaptooloffsetcurve.cpp" line="367"/>
         <source>Creating offset geometry failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Échec de la création de la géométrie décalée</translation>
     </message>
 </context>
 <context>
@@ -27111,28 +27940,28 @@ http://my.host.com/cgi-bin/mapserv.exe</translation>
         <translation>Pas de messages.</translation>
     </message>
     <message>
-        <location filename="../src/gui/qgsmessagelogviewer.cpp" line="105"/>
-        <location filename="../src/gui/qgsmessagelogviewer.cpp" line="158"/>
+        <location filename="../src/gui/qgsmessagelogviewer.cpp" line="111"/>
+        <location filename="../src/gui/qgsmessagelogviewer.cpp" line="165"/>
         <source>%1 message(s) logged.</source>
         <translation>%1 message(s).</translation>
     </message>
     <message>
-        <location filename="../src/gui/qgsmessagelogviewer.cpp" line="114"/>
+        <location filename="../src/gui/qgsmessagelogviewer.cpp" line="120"/>
         <source>General</source>
         <translation>Général</translation>
     </message>
     <message>
-        <location filename="../src/gui/qgsmessagelogviewer.cpp" line="134"/>
+        <location filename="../src/gui/qgsmessagelogviewer.cpp" line="140"/>
         <source>Timestamp</source>
         <translation>Horodatage</translation>
     </message>
     <message>
-        <location filename="../src/gui/qgsmessagelogviewer.cpp" line="134"/>
+        <location filename="../src/gui/qgsmessagelogviewer.cpp" line="140"/>
         <source>Message</source>
         <translation>Message</translation>
     </message>
     <message>
-        <location filename="../src/gui/qgsmessagelogviewer.cpp" line="134"/>
+        <location filename="../src/gui/qgsmessagelogviewer.cpp" line="140"/>
         <source>Level</source>
         <translation>Niveau</translation>
     </message>
@@ -27153,44 +27982,44 @@ http://my.host.com/cgi-bin/mapserv.exe</translation>
 <context>
     <name>QgsMssqlConnectionItem</name>
     <message>
-        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="295"/>
+        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="304"/>
         <source>Edit...</source>
-        <translation type="unfinished">Editer...</translation>
+        <translation>Editer...</translation>
     </message>
     <message>
-        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="299"/>
+        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="308"/>
         <source>Delete</source>
-        <translation type="unfinished">Effacer</translation>
+        <translation>Effacer</translation>
     </message>
     <message>
-        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="339"/>
+        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="348"/>
         <source>%1: Not a vector layer!</source>
-        <translation type="unfinished">%1 : N&apos;est pas une couche vecteur !</translation>
+        <translation>%1 : N&apos;est pas une couche vecteur !</translation>
     </message>
     <message>
-        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="355"/>
         <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="364"/>
+        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="373"/>
         <source>%1: OK!</source>
-        <translation type="unfinished">%1: OK!</translation>
+        <translation>%1: OK!</translation>
     </message>
     <message>
-        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="375"/>
-        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="379"/>
+        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="384"/>
+        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="388"/>
         <source>Import to MSSQL database</source>
-        <translation type="unfinished"></translation>
+        <translation>Importer dans une base MSSQL</translation>
     </message>
     <message>
-        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="375"/>
+        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="384"/>
         <source>Failed to import some layers!
 
 </source>
-        <translation type="unfinished">Échec du chargement des couches !
+        <translation>Échec du chargement des couches !
 </translation>
     </message>
     <message>
-        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="379"/>
+        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="388"/>
         <source>Import was successful.</source>
-        <translation type="unfinished">Importation réussie.</translation>
+        <translation>Importation réussie.</translation>
     </message>
 </context>
 <context>
@@ -27198,23 +28027,23 @@ http://my.host.com/cgi-bin/mapserv.exe</translation>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlnewconnection.cpp" line="84"/>
         <source>Saving passwords</source>
-        <translation type="unfinished">Sauvegarder les mots de passe</translation>
+        <translation>Sauvegarder les mots de passe</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlnewconnection.cpp" line="85"/>
         <source>WARNING: You have opted to save your password. It will be stored in plain text in your project files and in your home directory on Unix-like systems, or in your user profile on Windows. If you do not want this to happen, please press the Cancel button.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>ATTENTION : Vous avez choisi de sauvegarder votre mot de passe. Il sera stocké &quot;en clair&quot; dans le fichier de votre projet, et dans votre dossier utilisateur sur un système Unix/Linux, ou dans votre profile utilisateur (Windows). Si vous ne voulez pas que ça arrive, appuyez sur le bouton Annuler.</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlnewconnection.cpp" line="96"/>
         <source>Save connection</source>
-        <translation type="unfinished">Sauvegarder la connexion</translation>
+        <translation>Sauvegarder la connexion</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlnewconnection.cpp" line="97"/>
         <source>Should the existing connection %1 be overwritten?</source>
-        <translation type="unfinished">La connexion existante %1 doit-elle être écrasée ?</translation>
+        <translation>La connexion existante %1 doit-elle être écrasée ?</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlnewconnection.cpp" line="143"/>
@@ -27222,316 +28051,318 @@ http://my.host.com/cgi-bin/mapserv.exe</translation>
         <location filename="../src/providers/mssql/qgsmssqlnewconnection.cpp" line="167"/>
         <location filename="../src/providers/mssql/qgsmssqlnewconnection.cpp" line="173"/>
         <source>Test connection</source>
-        <translation type="unfinished">Test de connexion</translation>
+        <translation>Test de connexion</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlnewconnection.cpp" line="144"/>
         <source>Connection failed - Host name hasn&apos;t been specified.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>La connexion a échouée - Le nom d&apos;hôte n&apos;a pas été indiqué.
+</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlnewconnection.cpp" line="152"/>
         <source>Connection failed - Database name hasn&apos;t been specified.
 
 </source>
-        <translation type="unfinished"></translation>
+        <translation>La connexion a échouée - Le nom de la base n&apos;a pas été indiqué.
+</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlnewconnection.cpp" line="174"/>
         <source>Connection to %1 was successful</source>
-        <translation type="unfinished">Connection à %1 réussie</translation>
+        <translation>Connection à %1 réussie</translation>
     </message>
 </context>
 <context>
     <name>QgsMssqlNewConnectionBase</name>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="20"/>
-        <source>Create a New MS SQL connection</source>
-        <translation type="unfinished"></translation>
+        <source>Create a New MSSQL connection</source>
+        <translation>Créer une nouvelle connexion MSSQL</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="38"/>
         <source>Connection Information</source>
-        <translation type="unfinished">Information de connexion</translation>
+        <translation>Information de connexion</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="66"/>
         <source>Name</source>
-        <translation type="unfinished">Nom</translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="76"/>
         <source>Provider/DSN</source>
-        <translation type="unfinished"></translation>
+        <translation>Prestataire/DSN</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="86"/>
         <source>Host</source>
-        <translation type="unfinished">Hôte</translation>
+        <translation>Hôte</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="96"/>
         <source>Database</source>
-        <translation type="unfinished"></translation>
+        <translation>Base de donnée</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="113"/>
         <source>Username</source>
-        <translation type="unfinished">Nom d&apos;utilisateur</translation>
+        <translation>Nom d&apos;utilisateur</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="123"/>
         <source>Password</source>
-        <translation type="unfinished">Mot de Passe</translation>
+        <translation>Mot de Passe</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="143"/>
         <source>Name of the new connection</source>
-        <translation type="unfinished">Nom de la nouvelle connexion</translation>
+        <translation>Nom de la nouvelle connexion</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="159"/>
         <source>Trusted Connection</source>
-        <translation type="unfinished"></translation>
+        <translation>Connexion sécurisée</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="188"/>
         <source>Save Username</source>
-        <translation type="unfinished">Enregistrer le nom d&apos;utilisateur</translation>
+        <translation>Enregistrer le nom d&apos;utilisateur</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="195"/>
         <source>&amp;Test Connect</source>
-        <translation type="unfinished">&amp;Tester la connexion</translation>
+        <translation>&amp;Tester la connexion</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="202"/>
         <source>Save Password</source>
-        <translation type="unfinished">Sauvegarder le mot de passe</translation>
+        <translation>Sauvegarder le mot de passe</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="211"/>
         <source>Only look in the geometry_columns metadata table</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne regarder que dans la table geometry_columns  </translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="221"/>
         <source>Also list tables with no geometry</source>
-        <translation type="unfinished">Lister les tables sans géométries</translation>
+        <translation>Lister les tables sans géométries</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsmssqlnewconnectionbase.ui" line="228"/>
         <source>Use estimated table parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser les paramètres estimés</translation>
     </message>
 </context>
 <context>
     <name>QgsMssqlProvider</name>
     <message>
-        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="129"/>
-        <source>8 Bytes integer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="130"/>
-        <source>4 Bytes integer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="131"/>
-        <source>2 Bytes integer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="132"/>
-        <source>1 Bytes integer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="133"/>
-        <source>Decimal number (numeric)</source>
-        <translation type="unfinished">Nombre décimal (numérique)</translation>
-    </message>
-    <message>
-        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="134"/>
-        <source>Decimal number (decimal)</source>
-        <translation type="unfinished">Nombre décimal (décimal)</translation>
-    </message>
-    <message>
-        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="137"/>
-        <source>Decimal number (real)</source>
-        <translation type="unfinished">Nombre décimal (réel)</translation>
-    </message>
-    <message>
-        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="138"/>
-        <source>Decimal number (double)</source>
-        <translation type="unfinished">Nombre décimal (double)</translation>
-    </message>
-    <message>
         <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="141"/>
-        <source>Text, fixed length (char)</source>
-        <translation type="unfinished">Texte, longueur fixe (char)</translation>
+        <source>8 Bytes integer</source>
+        <translation>Entier de 8 Bytes</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="142"/>
-        <source>Text, limited variable length (varchar)</source>
-        <translation type="unfinished">Texte, longueur variable limitée (varchar)</translation>
+        <source>4 Bytes integer</source>
+        <translation>Entier de 4 Bytes</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="143"/>
-        <source>Text, fixed length unicode (nchar)</source>
-        <translation type="unfinished"></translation>
+        <source>2 Bytes integer</source>
+        <translation>Entier de 2 Bytes</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="144"/>
-        <source>Text, limited variable length unicode (nvarchar)</source>
-        <translation type="unfinished"></translation>
+        <source>1 Bytes integer</source>
+        <translation>Entier de 1 Bytes</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="145"/>
-        <source>Text, unlimited length (text)</source>
-        <translation type="unfinished">Texte, longueur illimitée (text)</translation>
+        <source>Decimal number (numeric)</source>
+        <translation>Nombre décimal (numérique)</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="146"/>
+        <source>Decimal number (decimal)</source>
+        <translation>Nombre décimal (décimal)</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="149"/>
+        <source>Decimal number (real)</source>
+        <translation>Nombre décimal (réel)</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="150"/>
+        <source>Decimal number (double)</source>
+        <translation>Nombre décimal (double)</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="153"/>
+        <source>Text, fixed length (char)</source>
+        <translation>Texte, longueur fixe (char)</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="154"/>
+        <source>Text, limited variable length (varchar)</source>
+        <translation>Texte, variable de longueur limitée (varchar)</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="155"/>
+        <source>Text, fixed length unicode (nchar)</source>
+        <translation>Texte, longueur fixe, unicode (nchar)</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="156"/>
+        <source>Text, limited variable length unicode (nvarchar)</source>
+        <translation>Texte, variable de longueur limitée, unicode (nvarchar)</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="157"/>
+        <source>Text, unlimited length (text)</source>
+        <translation>Texte, longueur illimitée (text)</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/mssql/qgsmssqlprovider.cpp" line="158"/>
         <source>Text, unlimited length unicode (ntext)</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte, longueur illimitée, unicode (ntext)</translation>
     </message>
 </context>
 <context>
     <name>QgsMssqlRootItem</name>
     <message>
-        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="536"/>
+        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="545"/>
         <source>New Connection...</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle connexion</translation>
     </message>
 </context>
 <context>
     <name>QgsMssqlSchemaItem</name>
     <message>
-        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="463"/>
+        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="472"/>
         <source>%1 as %2 in %3</source>
-        <translation type="unfinished">%1 comme %2 dans %3</translation>
+        <translation>%1 comme %2 dans %3</translation>
     </message>
     <message>
-        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="490"/>
+        <location filename="../src/providers/mssql/qgsmssqldataitems.cpp" line="499"/>
         <source>as geometryless table</source>
-        <translation type="unfinished">en tant que table sans géométrie</translation>
+        <translation>en tant que table sans géométrie</translation>
     </message>
 </context>
 <context>
     <name>QgsMssqlSourceSelect</name>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="128"/>
-        <source>Add MS SQL Table(s)</source>
-        <translation type="unfinished"></translation>
+        <source>Add MSSQL Table(s)</source>
+        <translation>Ajouter une table MSSQL</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="135"/>
         <source>&amp;Add</source>
-        <translation type="unfinished">&amp;Ajouter</translation>
+        <translation>&amp;Ajouter</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="138"/>
         <source>&amp;Build query</source>
-        <translation type="unfinished">Constr&amp;uire une requête</translation>
+        <translation>Constr&amp;uire une requête</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="139"/>
         <source>Build query</source>
-        <translation type="unfinished">Construire une requête</translation>
+        <translation>Construire une requête</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="153"/>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="323"/>
         <source>Wildcard</source>
-        <translation type="unfinished">Joker</translation>
+        <translation>Joker</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="154"/>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="327"/>
         <source>RegExp</source>
-        <translation type="unfinished">Expression rationelle</translation>
+        <translation>Expression rationelle</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="156"/>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="335"/>
         <source>All</source>
-        <translation type="unfinished">Tout</translation>
+        <translation>Tout</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="157"/>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="339"/>
         <source>Schema</source>
-        <translation type="unfinished">Schéma</translation>
+        <translation>Schéma</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="158"/>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="343"/>
         <source>Table</source>
-        <translation type="unfinished">Table</translation>
+        <translation>Table</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="159"/>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="347"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="160"/>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="351"/>
         <source>Geometry column</source>
-        <translation type="unfinished">Colonne géométrique</translation>
+        <translation>Colonne géométrique</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="161"/>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="355"/>
         <source>Primary key column</source>
-        <translation type="unfinished"></translation>
+        <translation>Colonne de la clé primaire</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="162"/>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="359"/>
         <source>SRID</source>
-        <translation type="unfinished">SRID</translation>
+        <translation>SRID</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="163"/>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="363"/>
         <source>Sql</source>
-        <translation type="unfinished"></translation>
+        <translation>Sql</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="219"/>
         <source>Are you sure you want to remove the %1 connection and all associated settings?</source>
-        <translation type="unfinished">Êtes-vous sûr de vouloir effacer la connexion %1 et tous les paramètres associés ?</translation>
+        <translation>Êtes-vous sûr de vouloir effacer la connexion %1 et tous les paramètres associés ?</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="221"/>
         <source>Confirm Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmer l&apos;effacement</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="255"/>
         <source>Load connections</source>
-        <translation type="unfinished"></translation>
+        <translation>Charger une connexion</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="256"/>
         <source>XML files (*.xml *XML)</source>
-        <translation type="unfinished">Fichiers XML (*.xml)</translation>
+        <translation>Fichiers XML (*.xml)</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="438"/>
         <source>Select Table</source>
-        <translation type="unfinished">Sélectionner une Table</translation>
+        <translation>Sélectionner une Table</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="438"/>
         <source>You must select a table in order to add a layer.</source>
-        <translation type="unfinished">Vous devez sélectionner une table afin de pouvoir ajouter une couche.</translation>
+        <translation>Vous devez sélectionner une table afin de pouvoir ajouter une couche.</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="493"/>
@@ -27539,17 +28370,17 @@ http://my.host.com/cgi-bin/mapserv.exe</translation>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="510"/>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="596"/>
         <source>MSSQL Provider</source>
-        <translation type="unfinished"></translation>
+        <translation>Prestataire MSSQL</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="575"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Stopper</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="621"/>
         <source>Connect</source>
-        <translation type="unfinished">Connecter</translation>
+        <translation>Connecter</translation>
     </message>
 </context>
 <context>
@@ -27557,7 +28388,7 @@ http://my.host.com/cgi-bin/mapserv.exe</translation>
     <message>
         <location filename="../src/providers/mssql/qgsmssqlsourceselect.cpp" line="105"/>
         <source>Select...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélection...</translation>
     </message>
 </context>
 <context>
@@ -27565,47 +28396,47 @@ http://my.host.com/cgi-bin/mapserv.exe</translation>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="28"/>
         <source>Schema</source>
-        <translation type="unfinished">Schéma</translation>
+        <translation>Schéma</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="29"/>
         <source>Table</source>
-        <translation type="unfinished">Table</translation>
+        <translation>Table</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="30"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="31"/>
         <source>Geometry column</source>
-        <translation type="unfinished">Colonne géométrique</translation>
+        <translation>Colonne géométrique</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="32"/>
         <source>SRID</source>
-        <translation type="unfinished">SRID</translation>
+        <translation>SRID</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="33"/>
         <source>Primary key column</source>
-        <translation type="unfinished"></translation>
+        <translation>Colonne de la clé primaire</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="34"/>
         <source>Select at id</source>
-        <translation type="unfinished">Sélectionner par identifiant</translation>
+        <translation>Sélectionner par identifiant</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="35"/>
         <source>Sql</source>
-        <translation type="unfinished"></translation>
+        <translation>Sql</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="86"/>
         <source>Detecting...</source>
-        <translation type="unfinished">Détecter</translation>
+        <translation>Détecter</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="101"/>
@@ -27613,57 +28444,57 @@ http://my.host.com/cgi-bin/mapserv.exe</translation>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="130"/>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="248"/>
         <source>Select...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélection...</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="114"/>
         <source>Disable &apos;Fast Access to Features at ID&apos; capability to force keeping the attribute table in memory (e.g. in case of expensive views).</source>
-        <translation type="unfinished">Désactiver le paramètre &quot;Accès rapide aux entités via l&apos;ID&quot; pour forcer la conservation de la table attributaire en mémoire (utile pour les vues coûteuses).</translation>
+        <translation>Désactiver le paramètre &quot;Accès rapide aux entités via l&apos;ID&quot; pour forcer la conservation de la table attributaire en mémoire (utile pour les vues coûteuses).</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="251"/>
         <source>Enter...</source>
-        <translation type="unfinished"></translation>
+        <translation>Saisir</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="464"/>
         <source>Point</source>
-        <translation type="unfinished">Point</translation>
+        <translation>Point</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="468"/>
         <source>Multipoint</source>
-        <translation type="unfinished">Multipoint</translation>
+        <translation>Multipoint</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="472"/>
         <source>Line</source>
-        <translation type="unfinished">Ligne</translation>
+        <translation>Ligne</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="476"/>
         <source>Multiline</source>
-        <translation type="unfinished">Multiligne</translation>
+        <translation>Multiligne</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="480"/>
         <source>Polygon</source>
-        <translation type="unfinished">Polygone</translation>
+        <translation>Polygone</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="484"/>
         <source>Multipolygon</source>
-        <translation type="unfinished">Multipolygone</translation>
+        <translation>Multipolygone</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="487"/>
         <source>No Geometry</source>
-        <translation type="unfinished">Pas de géométrie</translation>
+        <translation>Pas de géométrie</translation>
     </message>
     <message>
         <location filename="../src/providers/mssql/qgsmssqltablemodel.cpp" line="490"/>
         <source>Unknown Geometry</source>
-        <translation type="unfinished">Géométrie inconnue</translation>
+        <translation>Géométrie inconnue</translation>
     </message>
 </context>
 <context>
@@ -27961,12 +28792,12 @@ Complément d&apos;information sur l&apos;erreur :
 %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsnewspatialitelayerdialog.cpp" line="438"/>
+        <location filename="../src/app/qgsnewspatialitelayerdialog.cpp" line="442"/>
         <source>Invalid Layer</source>
         <translation>Couche non valide</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsnewspatialitelayerdialog.cpp" line="438"/>
+        <location filename="../src/app/qgsnewspatialitelayerdialog.cpp" line="442"/>
         <source>%1 is an invalid layer and cannot be loaded.</source>
         <translation>%1 est une couche non valide et ne peut être chargée.</translation>
     </message>
@@ -28012,7 +28843,8 @@ Complément d&apos;information sur l&apos;erreur :
     <message>
         <location filename="../src/ui/qgsnewspatialitelayerdialogbase.ui" line="144"/>
         <source>geometry</source>
-        <translation>géométrie</translation>
+        <translatorcomment>ne pas traduire</translatorcomment>
+        <translation>geometry</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsnewspatialitelayerdialogbase.ui" line="159"/>
@@ -28114,7 +28946,7 @@ Complément d&apos;information sur l&apos;erreur :
     <message>
         <location filename="../src/ui/qgsnewspatialitelayerdialogbase.ui" line="234"/>
         <source>Specify CRS</source>
-        <translation type="unfinished">Spécifier le SCR</translation>
+        <translation>Spécifier le SCR</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsnewspatialitelayerdialogbase.ui" line="326"/>
@@ -28432,7 +29264,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Impossible de copier la base à cette destination</translation>
     </message>
     <message>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="423"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="425"/>
         <source>Unknown data type %1</source>
         <translation>Type de données inconnu %1</translation>
     </message>
@@ -28441,72 +29273,72 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Type de géometrie QGIS inconnu %1</translation>
     </message>
     <message>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="288"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="290"/>
         <source>Unable to initialize SpatialMetadata:
 </source>
         <translation>Impossible d&apos;initialiser SpatialMetadata :
 </translation>
     </message>
     <message>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="323"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="325"/>
         <source>Could not create a new database
 </source>
         <translation>Impossible de créer une nouvelle base de données
 </translation>
     </message>
     <message>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="333"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="335"/>
         <source>Unable to activate FOREIGN_KEY constraints</source>
         <translation>Impossible d&apos;activer les contraintes FOREIGN_KEY</translation>
     </message>
     <message>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="454"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="456"/>
         <source>QGIS wkbType %1 not supported</source>
         <translation>QGIS wkbType %1 n&apos;est pas pris en charge</translation>
     </message>
     <message>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="517"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="520"/>
         <source>%v / %m features copied</source>
         <translation>%v / %m entités copiées</translation>
     </message>
     <message>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="542"/>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="715"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="545"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="719"/>
         <source>%v / %m features processed</source>
         <translation>%v / %m entités procédées</translation>
     </message>
     <message>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="591"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="595"/>
         <source>%v / %m fields added</source>
         <translation>%v / %m champs ajoutés</translation>
     </message>
     <message>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="629"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="633"/>
         <source>%v / %m features added</source>
         <translation>%v / %m entités ajoutées</translation>
     </message>
     <message>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="658"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="662"/>
         <source>%v / %m features removed</source>
         <translation>%v / %m entités supprimées</translation>
     </message>
     <message>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="675"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="679"/>
         <source>%v / %m feature updates</source>
         <translation>%v / %m entités mises à jour</translation>
     </message>
     <message>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="694"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="698"/>
         <source>%v / %m feature geometry updates</source>
         <translation>%v / %m géométries d&apos;entités mises à jour</translation>
     </message>
     <message>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="786"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="790"/>
         <source>Offline Editing Plugin</source>
         <translation>Extension d&apos;édition hors connexion</translation>
     </message>
     <message>
-        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="798"/>
+        <location filename="../src/plugins/offline_editing/offline_editing.cpp" line="802"/>
         <source>Could not open the spatialite logging database</source>
         <translation>Impossible d&apos;ouvrir le journal de la base spatialite</translation>
     </message>
@@ -28631,18 +29463,18 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsOgrLayerItem</name>
     <message>
-        <location filename="../src/providers/ogr/qgsogrdataitems.cpp" line="97"/>
+        <location filename="../src/providers/ogr/qgsogrdataitems.cpp" line="98"/>
         <source>Couldn&apos;t open file %1.prj</source>
         <translation>Ne peut ouvrir le fichier %1.prj</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrdataitems.cpp" line="97"/>
-        <location filename="../src/providers/ogr/qgsogrdataitems.cpp" line="113"/>
+        <location filename="../src/providers/ogr/qgsogrdataitems.cpp" line="98"/>
+        <location filename="../src/providers/ogr/qgsogrdataitems.cpp" line="114"/>
         <source>OGR</source>
         <translation>OGR</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrdataitems.cpp" line="113"/>
+        <location filename="../src/providers/ogr/qgsogrdataitems.cpp" line="114"/>
         <source>Couldn&apos;t open file %1.qpj</source>
         <translation>Ne peut ouvrir le fichier %1.qjp</translation>
     </message>
@@ -28650,108 +29482,114 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsOgrProvider</name>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="306"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="341"/>
         <source>Data source is invalid (%1)</source>
         <translation>Source de données invalide (%1)</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="306"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="652"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1024"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1459"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="336"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="341"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="687"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1059"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1494"/>
         <source>OGR</source>
         <translation>OGR</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="311"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="336"/>
+        <source>Data source is invalid, no layer found (%1)</source>
+        <translation>%1 n&apos;est pas une source de données valide ou reconnue</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="346"/>
         <source>Whole number (integer)</source>
         <translation>Nombre entier (entier)</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="312"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="347"/>
         <source>Decimal number (real)</source>
         <translation>Nombre décimal (réel)</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="313"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="348"/>
         <source>Text (string)</source>
         <translation>Texte (chaîne de caractères)</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="361"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="396"/>
         <source>OGR[%1] error %2: %3</source>
         <translation>OGR [%1] erreur %2: %3 </translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="652"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="687"/>
         <source>Read attempt on an invalid OGR data source</source>
         <translation>Essai de lecture d&apos;une source de données OGR invalide</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="975"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1010"/>
         <source>OGR error creating wkb for feature %1: %2</source>
         <translation>Erreur OGR lors la création WKB de l&apos;entité %1 : %2</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1024"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1059"/>
         <source>type %1 for attribute %2 not found</source>
         <translation>le type %1 pour l&apos;attribut %2 n&apos;a pas été trouvé</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1032"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1067"/>
         <source>OGR error creating feature %1: %2</source>
         <translation>Erreur OGR lors la création de l&apos;entité %1 : %2</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1100"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1135"/>
         <source>OGR error creating field %1: %2</source>
         <translation>Erreur OGR lors la création du champ %1 : %2</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1120"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1155"/>
         <source>OGR error deleting field %1: %2</source>
         <translation>Erreur OGR lors la suppression du champ %1 : %2</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1128"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1163"/>
         <source>Deleting fields is not supported prior to GDAL 1.9.0</source>
         <translation>La suppression de champs n&apos;est pas supportée avant GDAL 1.9.0 </translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1149"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1222"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1345"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1184"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1257"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1380"/>
         <source>OGR error on feature %1: id too large</source>
         <translation>L&apos;id de l&apos;entité %1 est trop large pour OGR</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1203"/>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1263"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1238"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1298"/>
         <source>OGR error setting feature %1: %2</source>
         <translation>Erreur OGR lors du paramètrage de l&apos;entité %1 : %2</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1229"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1264"/>
         <source>OGR error changing geometry: feature %1 not found</source>
         <translation>Erreur OGR lors du changement de géométrie : l&apos;entité %1 n&apos;a pas été trouvée</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1239"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1274"/>
         <source>OGR error creating geometry for feature %1: %2</source>
         <translation>Erreur OGR lors de la création de la géométrie de l&apos;entité %1 : %2</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1247"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1282"/>
         <source>OGR error in feature %1: geometry is null</source>
         <translation>Erreur OGR sur l&apos;entité %1 : la géométrie est inexistante (null)</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1254"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1289"/>
         <source>OGR error setting geometry of feature %1: %2</source>
         <translation>Erreur OGR lors du paramètrage de la géométrie de l&apos;entité %1 : %2</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1351"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1386"/>
         <source>OGR error deleting feature %1: %2</source>
         <translation>Erreur OGR lors la suppression de l&apos;entité %1 : %2</translation>
     </message>
@@ -28760,7 +29598,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">L&apos;écriture de l&apos;entité %1 a échoué</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1089"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1124"/>
         <source>type %1 for field %2 not found</source>
         <translation>le type %1 pour le champ %2 n&apos;a pas été trouvé</translation>
     </message>
@@ -28777,17 +29615,17 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">L&apos;id de l&apos;entité %1 est trop large pour OGR</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1157"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1192"/>
         <source>Feature %1 for attribute update not found.</source>
         <translation>L&apos;entité %1 pour la mise à jour de l&apos;attribut n&apos;a pas été trouvée.</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1170"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1205"/>
         <source>Field %1 of feature %2 doesn&apos;t exist.</source>
         <translation>Le champ %1 de l&apos;entité %2 n&apos;existe pas.</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1195"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1230"/>
         <source>Type %1 of attribute %2 of feature %3 unknown.</source>
         <translation>Le type %1 de l&apos;attribut %2 de l&apos;entité %3 est inconnu.</translation>
     </message>
@@ -28820,7 +29658,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">L&apos;id de l&apos;entité %1 est trop large pour OGR</translation>
     </message>
     <message>
-        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1459"/>
+        <location filename="../src/providers/ogr/qgsogrprovider.cpp" line="1494"/>
         <source>Shapefiles without attribute are considered read-only.</source>
         <translation>Les shapefiles sans attributs sont considérés comme étant en lecture seule.</translation>
     </message>
@@ -29028,172 +29866,230 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsOptions</name>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="411"/>
-        <location filename="../src/app/qgsoptions.cpp" line="426"/>
-        <location filename="../src/app/qgsoptions.cpp" line="787"/>
+        <location filename="../src/app/qgsoptions.cpp" line="468"/>
+        <location filename="../src/app/qgsoptions.cpp" line="483"/>
+        <location filename="../src/app/qgsoptions.cpp" line="884"/>
         <source>Semi transparent circle</source>
         <translation>Cercle semi-transparent</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="412"/>
-        <location filename="../src/app/qgsoptions.cpp" line="430"/>
-        <location filename="../src/app/qgsoptions.cpp" line="791"/>
+        <location filename="../src/app/qgsoptions.cpp" line="469"/>
+        <location filename="../src/app/qgsoptions.cpp" line="487"/>
+        <location filename="../src/app/qgsoptions.cpp" line="888"/>
         <source>Cross</source>
         <translation>Croix</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="361"/>
+        <location filename="../src/app/qgsoptions.cpp" line="414"/>
         <source>Detected active locale on your system: %1</source>
         <translation>Les paramètres de lieu (locales) suivants ont été trouvé sur votre système : %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="413"/>
-        <location filename="../src/app/qgsoptions.cpp" line="434"/>
-        <location filename="../src/app/qgsoptions.cpp" line="795"/>
+        <location filename="../src/app/qgsoptions.cpp" line="470"/>
+        <location filename="../src/app/qgsoptions.cpp" line="491"/>
+        <location filename="../src/app/qgsoptions.cpp" line="892"/>
         <source>None</source>
         <translation>Aucun(e)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="391"/>
-        <location filename="../src/app/qgsoptions.cpp" line="400"/>
+        <location filename="../src/app/qgsoptions.cpp" line="448"/>
+        <location filename="../src/app/qgsoptions.cpp" line="457"/>
         <source>map units</source>
         <translation>Identique à celle de la carte</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="75"/>
+        <location filename="../src/app/qgsoptions.cpp" line="79"/>
         <source>Current layer</source>
         <translation>Couche actuelle</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="76"/>
+        <location filename="../src/app/qgsoptions.cpp" line="80"/>
         <source>Top down, stop at first</source>
         <translation>De haut en bas, s&apos;arrêter au premier</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="77"/>
+        <location filename="../src/app/qgsoptions.cpp" line="81"/>
         <source>Top down</source>
         <translation>De haut en bas</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="180"/>
+        <location filename="../src/app/qgsoptions.cpp" line="184"/>
         <source>Show all features</source>
         <translation>Montrer toutes les entités</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="181"/>
+        <location filename="../src/app/qgsoptions.cpp" line="185"/>
         <source>Show selected features</source>
         <translation>Montrer que les entités sélectionnés</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="182"/>
+        <location filename="../src/app/qgsoptions.cpp" line="186"/>
         <source>Show features in current canvas</source>
         <translation>Montrer les entités dans le caneva actuel</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="193"/>
+        <location filename="../src/app/qgsoptions.cpp" line="197"/>
         <source>Always</source>
-        <translation type="unfinished"></translation>
+        <translation>Toujours</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="194"/>
+        <location filename="../src/app/qgsoptions.cpp" line="198"/>
         <source>If needed</source>
-        <translation type="unfinished"></translation>
+        <translation>Si besoin</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="195"/>
+        <location filename="../src/app/qgsoptions.cpp" line="199"/>
         <source>Never</source>
-        <translation type="unfinished"></translation>
+        <translation>Jamais</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="196"/>
+        <location filename="../src/app/qgsoptions.cpp" line="200"/>
         <source>Load all</source>
+        <translation>Tout charger</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgsoptions.cpp" line="205"/>
+        <source>Check file contents</source>
+        <translation>Vérifier le contenu du fichier</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgsoptions.cpp" line="206"/>
+        <source>Check extension</source>
+        <translation>Vérifier l&apos;extension</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgsoptions.cpp" line="211"/>
+        <source>No</source>
+        <translation>Non</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgsoptions.cpp" line="212"/>
+        <source>Passthru</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="381"/>
+        <location filename="../src/app/qgsoptions.cpp" line="213"/>
+        <source>Basic scan</source>
+        <translation>Scan basique</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgsoptions.cpp" line="214"/>
+        <source>Full scan</source>
+        <translation>Scan complet</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgsoptions.cpp" line="356"/>
+        <location filename="../src/app/qgsoptions.cpp" line="364"/>
+        <location filename="../src/app/qgsoptions.cpp" line="760"/>
+        <source>No Stretch</source>
+        <translation>Pas d&apos;étirement</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgsoptions.cpp" line="357"/>
+        <location filename="../src/app/qgsoptions.cpp" line="368"/>
+        <location filename="../src/app/qgsoptions.cpp" line="764"/>
+        <source>Stretch To MinMax</source>
+        <translation>Etirer jusqu&apos;au MinMax</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgsoptions.cpp" line="358"/>
+        <location filename="../src/app/qgsoptions.cpp" line="372"/>
+        <location filename="../src/app/qgsoptions.cpp" line="768"/>
+        <source>Stretch And Clip To MinMax</source>
+        <translation>Etirer et couper jusqu&apos;au MinMax</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgsoptions.cpp" line="359"/>
+        <location filename="../src/app/qgsoptions.cpp" line="376"/>
+        <location filename="../src/app/qgsoptions.cpp" line="772"/>
+        <source>Clip To MinMax</source>
+        <translation>Couper jusqu&apos;au MinMax</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgsoptions.cpp" line="438"/>
         <source>To vertex</source>
         <translation>Sur un sommet</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="382"/>
+        <location filename="../src/app/qgsoptions.cpp" line="439"/>
         <source>To segment</source>
         <translation>Sur un segment</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="383"/>
+        <location filename="../src/app/qgsoptions.cpp" line="440"/>
         <source>To vertex and segment</source>
         <translation>Sur un somment et un segment</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="395"/>
-        <location filename="../src/app/qgsoptions.cpp" line="404"/>
+        <location filename="../src/app/qgsoptions.cpp" line="452"/>
+        <location filename="../src/app/qgsoptions.cpp" line="461"/>
         <source>pixels</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="416"/>
+        <location filename="../src/app/qgsoptions.cpp" line="473"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Off</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="417"/>
+        <location filename="../src/app/qgsoptions.cpp" line="474"/>
         <source>QGIS</source>
         <translation>QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="420"/>
+        <location filename="../src/app/qgsoptions.cpp" line="477"/>
         <source>GEOS</source>
         <translation>GEOS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="442"/>
+        <location filename="../src/app/qgsoptions.cpp" line="499"/>
         <source>Round</source>
-        <translation type="unfinished">Rond</translation>
+        <translation>Rond</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="443"/>
+        <location filename="../src/app/qgsoptions.cpp" line="500"/>
         <source>Mitre</source>
-        <translation type="unfinished"></translation>
+        <translation>Angle droit</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="444"/>
+        <location filename="../src/app/qgsoptions.cpp" line="501"/>
         <source>Bevel</source>
-        <translation type="unfinished">Oblique</translation>
+        <translation>Oblique</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="455"/>
+        <location filename="../src/app/qgsoptions.cpp" line="512"/>
         <source>Central point (fastest)</source>
         <translation>Point central (plus rapide)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="456"/>
+        <location filename="../src/app/qgsoptions.cpp" line="513"/>
         <source>Chain (fast)</source>
         <translation>Chaîne (rapide)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="457"/>
+        <location filename="../src/app/qgsoptions.cpp" line="514"/>
         <source>Popmusic tabu chain (slow)</source>
         <translation>Chaîne popmusic tabu (lent)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="458"/>
+        <location filename="../src/app/qgsoptions.cpp" line="515"/>
         <source>Popmusic tabu (slow)</source>
         <translation>Popmusic tabu (lent)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="459"/>
+        <location filename="../src/app/qgsoptions.cpp" line="516"/>
         <source>Popmusic chain (very slow)</source>
         <translation>Chaîne popmusic (très lent)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="501"/>
+        <location filename="../src/app/qgsoptions.cpp" line="558"/>
         <source>Selection color</source>
         <translation>Couleur de la sélection</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsoptions.cpp" line="997"/>
-        <location filename="../src/app/qgsoptions.cpp" line="1024"/>
-        <location filename="../src/app/qgsoptions.cpp" line="1066"/>
+        <location filename="../src/app/qgsoptions.cpp" line="1094"/>
+        <location filename="../src/app/qgsoptions.cpp" line="1121"/>
+        <location filename="../src/app/qgsoptions.cpp" line="1163"/>
         <source>Choose a directory</source>
         <translation>Choisir un répertoire</translation>
     </message>
@@ -29206,12 +30102,12 @@ p, li { white-space: pre-wrap; }
         <translation>Cacher l&apos;écran de démarrage</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="778"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="832"/>
         <source>Map display will be updated (drawn) after this many features have been read from the data source</source>
         <translation>L&apos;afffichage de la carte sera mise à jour (dessinée) après que les données soient lues depuis la source</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="2079"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2206"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -29220,47 +30116,47 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Sélectionner le Système de Coordonnées de Référence (SCR) par défaut</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="803"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="857"/>
         <source>Make lines appear less jagged at the expense of some drawing performance</source>
         <translation>Les lignes semblent moins déchiquetées aux dépends d&apos;une certaine vitesse d&apos;exécution</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="750"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="804"/>
         <source>By default new la&amp;yers added to the map should be displayed</source>
         <translation>Par défaut les couches &amp;supplémentaires sont affichées</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="980"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1107"/>
         <source>Measure tool</source>
         <translation>Outil de mesure</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="810"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="864"/>
         <source>Fix problems with incorrectly filled polygons</source>
         <translation>Corriger les polygones remplis de manière erronée</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="944"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1071"/>
         <source>%</source>
         <translation>%</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1105"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1232"/>
         <source>Panning and zooming</source>
         <translation>Panoramique et zoom</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1115"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1242"/>
         <source>Zoom</source>
         <translation>Zoom</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1120"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1247"/>
         <source>Zoom and recenter</source>
         <translation>Zoom et recentrer</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1130"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1257"/>
         <source>Nothing</source>
         <translation>Rien</translation>
     </message>
@@ -29270,37 +30166,37 @@ p, li { white-space: pre-wrap; }
         <translation>Général</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1745"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1872"/>
         <source>Prompt for &amp;CRS</source>
         <translation>Demander le S&amp;CR</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1752"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1879"/>
         <source>Use &amp;project CRS</source>
         <translation>Utiliser le SCR du &amp;projet</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1759"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1886"/>
         <source>Use default CRS displa&amp;yed below</source>
         <translation>Utilis&amp;er le SCR par défaut affiché ci-dessous</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1808"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1935"/>
         <source>Locale</source>
         <translation>Langue</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1844"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1971"/>
         <source>Locale to use instead</source>
         <translation>Paramètres de lieu à utiliser</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1867"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1994"/>
         <source>Additional Info</source>
         <translation>Informations supplémentaires</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1873"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2000"/>
         <source>Detected active locale on your system:</source>
         <translation>Paramètres de lieu (locale) sur votre système : </translation>
     </message>
@@ -29309,27 +30205,27 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Sélectionner cette option désactivera l&apos;option atténuant le déchiquetage des lignes</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1285"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1412"/>
         <source>Rubberband</source>
         <translation>Contours d&apos;édition</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1298"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1425"/>
         <source>Line width in pixels</source>
         <translation>Largeur de ligne en pixels</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1331"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1458"/>
         <source>Snapping</source>
         <translation>Accrochage</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1125"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1252"/>
         <source>Zoom to mouse cursor</source>
         <translation>Zoomer sur le curseur de la souris</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1258"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1385"/>
         <source>Digitizing</source>
         <translation>Numérisation</translation>
     </message>
@@ -29460,7 +30356,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ui/qgsoptionsbase.ui" line="444"/>
         <source>Copy geometry in WKT representation from attribute table</source>
-        <translation type="unfinished"></translation>
+        <translation>Copier la représentation WKT de la géométrie depuis la table attributaire</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsoptionsbase.ui" line="459"/>
@@ -29475,111 +30371,121 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ui/qgsoptionsbase.ui" line="574"/>
         <source>Prompt for raster sublayers</source>
-        <translation type="unfinished"></translation>
+        <translation>Demander pour les sous-couches raster</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="620"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="610"/>
+        <source>Scan for valid items in the browser dock</source>
+        <translation>Rechercher les fichiers valides dans l&apos;explorateur</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="637"/>
+        <source>Scan for contents of compressed files (.zip) in browser dock</source>
+        <translation>Rechercher du contenu dans les fichiers compressés (*.zip)</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="674"/>
         <source>GDAL</source>
         <translation>GDAL</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="626"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="680"/>
         <source>GDAL Drivers</source>
         <translation>Pilotes GDAL</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="642"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="696"/>
         <source>In some cases more than one GDAL driver can be used to load the same raster format. Use the list below to specify which to use.</source>
         <translation>Dans certains cas, plus d&apos;un pilote GDAL peut être utilisé pour charger un même format. Utilisez la liste ci-dessous pour sélectionner lequel.</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="660"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="714"/>
         <source>Plugins</source>
         <translation>Extensions</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="744"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="798"/>
         <source>Rendering behavior</source>
         <translation>Comportement du rendu</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="771"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="825"/>
         <source>Number of features to draw before updating the display</source>
         <translation>Nombre d&apos;entités à dessiner avant d&apos;actualiser l&apos;affichage</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="757"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="811"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Use zero to prevent display updates until all features have been rendered</source>
         <translation>&lt;b&gt;Note :&lt;/b&gt; Utilisez le zéro pour empêcher l&apos;actualisation de l&apos;affichage avant que toutes les entités aient été rendues</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="764"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="818"/>
         <source>Use render caching where possible to speed up redraws</source>
         <translation>Utiliser le cache du rendu si possible pour accélerer l&apos;affichage</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="794"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="848"/>
         <source>Rendering quality</source>
         <translation>Qualité du rendu</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="836"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="890"/>
         <source>SVG paths</source>
         <translation>Chemins SVG</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="842"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="896"/>
         <source>Path(s) to search for Scalable Vector Graphic (SVG) symbols</source>
         <translation>Chemin(s) vers les symboles SVG</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1078"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1205"/>
         <source>Decimal places</source>
         <translation>Position des décimales</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1088"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1215"/>
         <source>Keep base unit</source>
         <translation>Garder l&apos;unité de base</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1667"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1794"/>
         <source>Default Coordinate Reference System for new projects</source>
         <translation>Système de coordonnées de référence par défaut pour les nouveauxprojets</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1683"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1810"/>
         <source>Enable &apos;on the &amp;fly&apos; reprojection by default</source>
         <translation>Activer la reprojection &apos;à la volée&apos; par défaut</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1690"/>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1773"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1817"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1900"/>
         <source>Select...</source>
         <translation>Sélection...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1710"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1837"/>
         <source>Always start new projects with this CRS</source>
         <translation>Toujours lancer ce SCR pour les nouveaux projets</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1729"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1856"/>
         <source>Coordinate Reference System for new layers</source>
         <translation>Système de Coordonnées de Référence pour les nouvelles couches</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1735"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1862"/>
         <source>When a new layer is created, or when a layer is loaded that has no Coordinate Reference System (CRS)</source>
         <translation>Quand une nouvelle couche est créée  ou quand une couche est chargée sans SCR</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="2122"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2249"/>
         <source>Timeout for network requests (ms)</source>
         <translation>Délai d&apos;abandon pour les requêtes réseaux (ms)</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="820"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="874"/>
         <source>Compatibility</source>
         <translation>Compatibilité</translation>
     </message>
@@ -29594,132 +30500,167 @@ p, li { white-space: pre-wrap; }
         <translation>Style &lt;i&gt;(redémarrage de QGIS nécessaire)&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="826"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="880"/>
         <source>Use new generation symbology for rendering</source>
         <translation>Utiliser la nouvelle génération de symbologie pour le rendu</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1050"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="936"/>
+        <source>Rasters</source>
+        <translation>Rasters</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="942"/>
+        <source>RGB band selection</source>
+        <translation>sélection bande RGB</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="949"/>
+        <source>Red band</source>
+        <translation>Bande rouge</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="959"/>
+        <source>Green band</source>
+        <translation>Bande verte</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="969"/>
+        <source>Blue band</source>
+        <translation>Bande bleue</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="979"/>
+        <source>Use standard deviation</source>
+        <translation>Utiliser l&apos;ecart-type</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="986"/>
+        <source>Contrast enhancement</source>
+        <translation>Amélioration de contraste</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1177"/>
         <source>Preferred angle units</source>
         <translation>Unités d&apos;angle préférées</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1057"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1184"/>
         <source>Degrees</source>
         <translation>Dégrés</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1064"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1191"/>
         <source>Radians</source>
         <translation>Radians</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1071"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1198"/>
         <source>Gon</source>
         <translation>Gon</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1138"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1265"/>
         <source>Zoom factor</source>
         <translation>Facteur de zoom</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1145"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1272"/>
         <source>Mouse wheel action</source>
         <translation>Actions de la molette souris</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1210"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1337"/>
         <source>Placement algorithm</source>
         <translation>Algorithme de placement</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1543"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1670"/>
         <source>Other settings</source>
         <translation>Autres paramètres</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1569"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1696"/>
         <source>Validate geometries</source>
         <translation>Valider les géométries</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1579"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1706"/>
         <source>Join style for curve offset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1589"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1716"/>
         <source>Quadrantsegments for curve offset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1599"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1726"/>
         <source>Miter limit for curve offset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="2018"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2145"/>
         <source>Exclude URLs (starting with)</source>
         <translation>Exclure les adresses (débutant par)</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="2063"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2190"/>
         <source>Cache settings</source>
         <translation>Paramètres du cache</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="2069"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2196"/>
         <source>Directory</source>
         <translation>Répertoire</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="2086"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2213"/>
         <source>Size</source>
         <translation>Taille</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="2096"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2223"/>
         <source>Clear</source>
         <translation>Effacer</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="2108"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2235"/>
         <source>WMS search address</source>
         <translation>Adresse de recherche WMS</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="970"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1097"/>
         <source>Open feature form, if a single feature is identified</source>
         <translation>Ouvrir le formulaire si une seule entité est identifiée</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="996"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1123"/>
         <source>Rubberband color</source>
         <translation>Couleur de la ligne d&apos;étirement</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="986"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1113"/>
         <source>Ellipsoid for distance calculations</source>
         <translation>Ellipsoïde pour des calculs de distance</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1029"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1156"/>
         <source>Preferred measurements units</source>
         <translation>Unités de mesure préférées</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1036"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1163"/>
         <source>Meters</source>
         <translation>Mètre</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1043"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1170"/>
         <source>Feet</source>
         <translation>Pied</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1308"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1435"/>
         <source>Line color</source>
         <translation>Couleur de ligne</translation>
     </message>
@@ -29737,77 +30678,77 @@ p, li { white-space: pre-wrap; }
         <translation>Représentation des valeurs NULL</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="666"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="720"/>
         <source>Plugin paths</source>
         <translation>Chemins vers l&apos;extension</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="672"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="726"/>
         <source>Path(s) to search for additional C++ plugins libraries</source>
         <translation>Chemin(s) vers des extensions C++ supplémentaires</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="717"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="771"/>
         <source>Rendering</source>
         <translation>Rendu</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="918"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1045"/>
         <source>Identify</source>
         <translation>Identifier</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="927"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1054"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Specify the search radius as a percentage of the map width</source>
         <translation>&lt;b&gt;Note :&lt;/b&gt; Spécifier le rayon de recherche comme un pourcentage de la largeur de la carte</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="937"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1064"/>
         <source>Search radius for identifying features and displaying map tips</source>
         <translation>Rayon de recherche pour identifier les entités et afficher les infobulles</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="963"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1090"/>
         <source>Mode</source>
         <translation>Mode</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1177"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1304"/>
         <source>Overlays</source>
         <translation>Revêtement</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1291"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1418"/>
         <source>Line width</source>
         <translation>Largeur de ligne </translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1337"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1464"/>
         <source>Default snap mode</source>
         <translation>Mode d&apos;accrochage par défaut</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1464"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1591"/>
         <source>Vertex markers</source>
         <translation>Marqueurs de sommet</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1470"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1597"/>
         <source>Show markers only for selected features</source>
         <translation>Montrer les symboles uniquement pour les entités sélectionnées</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1477"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1604"/>
         <source>Marker style</source>
         <translation>Style de marqueur</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1520"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1647"/>
         <source>Marker size</source>
         <translation>Taille du marqueur</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1559"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1686"/>
         <source>Reuse last entered attribute values</source>
         <translation>Réutiliser la dernière valeur attributaire saisie</translation>
     </message>
@@ -29828,48 +30769,48 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Sélection du SCR pour la reprojection à la volée</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1835"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1962"/>
         <source>Override system locale</source>
         <translation>Forcer la nationalité du système</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1854"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1981"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Enabling / changing overide on local requires an application restart</source>
         <translation>Note : l&apos;activation ou le changement de paramètre du lieu nécessite le redémarrage de l&apos;application</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1905"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2032"/>
         <source>Network</source>
         <translation>Réseau</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1932"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2059"/>
         <source>Use proxy for web access</source>
         <translation>Utiliser un proxy pour l&apos;accès internet</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1944"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2071"/>
         <source>Host</source>
         <translation>Hôte</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1954"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2081"/>
         <source>Port</source>
         <translation>Port</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1964"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2091"/>
         <source>User</source>
         <translation>Utilisateur</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1971"/>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1985"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2098"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2112"/>
         <source>Leave this blank if no proxy username / password are required</source>
         <translation>Laissez vide si il n&apos;y pas d&apos;identification / mot de passe requis</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1978"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2105"/>
         <source>Password</source>
         <translation>Mot de Passe</translation>
     </message>
@@ -29878,7 +30819,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Ouvrir la table d&apos;attributs dans une fenêtre mobile</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1634"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1761"/>
         <source>CRS</source>
         <translation>SCR</translation>
     </message>
@@ -29904,36 +30845,36 @@ p, li { white-space: pre-wrap; }
         <translation>Options</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1354"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1481"/>
         <source>Default snapping tolerance</source>
         <translation>Tolérance d&apos;accrochage</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1371"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1498"/>
         <source>Search radius for vertex edits</source>
         <translation>Rayon de recherche pour l&apos;édition des sommets</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1549"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1676"/>
         <source>Suppress attributes pop-up windows after each created feature</source>
         <translation>Supprimer les fenêtres d&apos;avertissements lors de la création de chaque entité</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1995"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2122"/>
         <source>Proxy type</source>
         <translation>Type de proxy</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="692"/>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="862"/>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="2034"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="746"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="916"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2161"/>
         <source>Add</source>
         <translation>Ajouter</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="699"/>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="869"/>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="2027"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="753"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="923"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="2154"/>
         <source>Remove</source>
         <translation>Supprimer</translation>
     </message>
@@ -29942,7 +30883,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Rendu et SVG</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="891"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1018"/>
         <source>Map tools</source>
         <translation>Outils cartographiques</translation>
     </message>
@@ -29951,19 +30892,19 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Revêtement</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1204"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1331"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1395"/>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1409"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1522"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1536"/>
         <source>map units</source>
         <translation>unités de carte</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1400"/>
-        <location filename="../src/ui/qgsoptionsbase.ui" line="1414"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1527"/>
+        <location filename="../src/ui/qgsoptionsbase.ui" line="1541"/>
         <source>pixels</source>
         <translation></translation>
     </message>
@@ -30025,54 +30966,69 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsPGConnectionItem</name>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="38"/>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="54"/>
         <source>Failed to retrieve layers</source>
         <translation>Impossible de retrouver les couches</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="44"/>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="60"/>
         <source>No layers found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas de couches trouvées</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="134"/>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="150"/>
         <source>Edit...</source>
         <translation>Editer...</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="138"/>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="154"/>
         <source>Delete</source>
         <translation>Effacer</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="179"/>
-        <source>%1: Not a vector layer!</source>
-        <translation type="unfinished">%1 : N&apos;est pas une couche vecteur !</translation>
-    </message>
-    <message>
         <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="195"/>
-        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="204"/>
+        <source>%1: Not a vector layer!</source>
+        <translation>%1 : N&apos;est pas une couche vecteur !</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="211"/>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="220"/>
         <source>%1: OK!</source>
-        <translation type="unfinished">%1: OK!</translation>
+        <translation>%1: OK!</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="215"/>
-        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="219"/>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="231"/>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="235"/>
         <source>Import to PostGIS database</source>
-        <translation type="unfinished"></translation>
+        <translation>Importer dans une base PostGIS</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="215"/>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="231"/>
         <source>Failed to import some layers!
 
 </source>
-        <translation type="unfinished">Échec du chargement des couches !
+        <translation>Échec du chargement des couches !
 </translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="219"/>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="235"/>
         <source>Import was successful.</source>
-        <translation type="unfinished">Importation réussie.</translation>
+        <translation>Importation réussie.</translation>
+    </message>
+</context>
+<context>
+    <name>QgsPGLayerItem</name>
+    <message>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="260"/>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="273"/>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="277"/>
+        <source>Delete layer</source>
+        <translation>Supprimer la couche</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="277"/>
+        <source>Layer deleted successfully.</source>
+        <translation>Couche supprimée.</translation>
     </message>
 </context>
 <context>
@@ -30082,20 +31038,20 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Nouveau...</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="347"/>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="389"/>
         <source>New Connection...</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle connexion</translation>
     </message>
 </context>
 <context>
     <name>QgsPGSchemaItem</name>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="281"/>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="323"/>
         <source>%1 as %2 in %3</source>
         <translation>%1 comme %2 dans %3</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="308"/>
+        <location filename="../src/providers/postgres/qgspostgresdataitems.cpp" line="350"/>
         <source>as geometryless table</source>
         <translation>en tant que table sans géométrie</translation>
     </message>
@@ -30134,17 +31090,17 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsPenCapStyleComboBox</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="93"/>
+        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="107"/>
         <source>Square</source>
         <translation>Carré</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="94"/>
+        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="108"/>
         <source>Flat</source>
         <translation>Plat</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="95"/>
+        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="109"/>
         <source>Round</source>
         <translation>Rond</translation>
     </message>
@@ -30152,17 +31108,17 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsPenJoinStyleComboBox</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="69"/>
+        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="83"/>
         <source>Bevel</source>
         <translation>Oblique</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="70"/>
+        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="84"/>
         <source>Miter</source>
         <translation>Angle droit</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="71"/>
+        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="85"/>
         <source>Round</source>
         <translation>Rond</translation>
     </message>
@@ -30170,32 +31126,32 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsPenStyleComboBox</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="16"/>
+        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="30"/>
         <source>Solid Line</source>
         <translation>Ligne continue</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="18"/>
+        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="32"/>
         <source>Dash Line</source>
         <translation>Ligne en tiret</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="19"/>
+        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="33"/>
         <source>Dot Line</source>
         <translation>Ligne en pointillé</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="20"/>
+        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="34"/>
         <source>Dash Dot Line</source>
         <translation>Ligne tiret-point</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="21"/>
+        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="35"/>
         <source>Dash Dot Dot Line</source>
         <translation>Ligne tiret-point-point</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="17"/>
+        <location filename="../src/gui/symbology-ng/qgspenstylecombobox.cpp" line="31"/>
         <source>No Pen</source>
         <translation>Pas de crayon</translation>
     </message>
@@ -30296,7 +31252,7 @@ Les fonctions de Géotraitement sont seulement disponibles pour des couches de P
         <location filename="../src/providers/postgres/qgspgnewconnection.cpp" line="100"/>
         <source>WARNING: You have opted to save your password. It will be stored in plain text in your project files and in your home directory on Unix-like systems, or in your user profile on Windows. If you do not want this to happen, please press the Cancel button.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>ATTENTION : Vous avez choisi de sauvegarder votre mot de passe. Il sera stocké &quot;en clair&quot; dans le fichier de votre projet, et dans votre dossier utilisateur sur un système Unix/Linux, ou dans votre profile utilisateur (Windows). Si vous ne voulez pas que ça arrive, appuyez sur le bouton Annuler.</translation>
     </message>
     <message>
         <location filename="../src/providers/postgres/qgspgnewconnection.cpp" line="111"/>
@@ -30792,20 +31748,21 @@ Veuillez vérifier si vous avez le droit d&apos;effectuer une commande SELECT su
         <translation>Détecter</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspgtablemodel.cpp" line="131"/>
-        <location filename="../src/providers/postgres/qgspgtablemodel.cpp" line="249"/>
+        <location filename="../src/providers/postgres/qgspgtablemodel.cpp" line="102"/>
+        <location filename="../src/providers/postgres/qgspgtablemodel.cpp" line="136"/>
+        <location filename="../src/providers/postgres/qgspgtablemodel.cpp" line="254"/>
         <source>Select...</source>
         <translation>Sélectionner</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspgtablemodel.cpp" line="115"/>
+        <location filename="../src/providers/postgres/qgspgtablemodel.cpp" line="120"/>
         <source>Disable &apos;Fast Access to Features at ID&apos; capability to force keeping the attribute table in memory (e.g. in case of expensive views).</source>
         <translation>Désactiver le paramètre &quot;Accès rapide aux entités via l&apos;ID&quot; pour forcer la conservation de la table attributaire en mémoire (utile pour les vues coûteuses).</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspgtablemodel.cpp" line="252"/>
+        <location filename="../src/providers/postgres/qgspgtablemodel.cpp" line="257"/>
         <source>Enter...</source>
-        <translation type="unfinished"></translation>
+        <translation>Saisir...</translation>
     </message>
 </context>
 <context>
@@ -31974,12 +32931,12 @@ Le message d&apos;erreur de la base de donnée est :
     <message>
         <location filename="../src/providers/postgres/qgspostgresconn.cpp" line="695"/>
         <source>Connection error: %1 returned %2 [%3]</source>
-        <translation type="unfinished"></translation>
+        <translation>Connexion erronée : %1 a retourné %2 [%3]</translation>
     </message>
     <message>
         <location filename="../src/providers/postgres/qgspostgresconn.cpp" line="718"/>
         <source>Erroneous query: %1 returned %2 [%3]</source>
-        <translation type="unfinished"></translation>
+        <translation>Requête erronée : %1 a retourné %2 [%3]</translation>
     </message>
     <message>
         <source>Errornous query: %1 returned %2 [%3]</source>
@@ -31996,7 +32953,8 @@ Erreur : pas de tampon de résultat</translation>
         <location filename="../src/providers/postgres/qgspostgresconn.cpp" line="735"/>
         <source>Not logged query failed: %1
 Error: no result buffer</source>
-        <translation type="unfinished"></translation>
+        <translation>Echec de la requête : %1
+Erreur : pas de tampon de résultat</translation>
     </message>
     <message>
         <location filename="../src/providers/postgres/qgspostgresconn.cpp" line="774"/>
@@ -32381,10 +33339,13 @@ Erreur : %2</translation>
         <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1312"/>
         <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1341"/>
         <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1418"/>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1438"/>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1444"/>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1499"/>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2627"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1443"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1448"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1453"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1458"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1463"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1518"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2646"/>
         <source>PostGIS</source>
         <translation>PostGIS</translation>
     </message>
@@ -32422,83 +33383,94 @@ Database error: %2</source>
     </message>
     <message>
         <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1144"/>
-        <source>Field %1 ignored, because of unsupported type %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1163"/>
-        <source>Field %1 ignored, because of unsupported type type %2</source>
-        <translation type="unfinished"></translation>
+        <source>Field %1 ignored, because of unsupported type %2</source>
+        <translation>Attribut %1 ignoré parce que le type %2 n&apos;est pas supporté</translation>
     </message>
     <message>
         <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1418"/>
         <source>The table has no column suitable for use as a key. Quantum GIS requires a primary key, a PostgreSQL oid column or a ctid for tables.</source>
+        <translation>La table ne dispose pas de colonne utilisable comme clé. QGis requiert une clé primaire, une colonne oid ou ctid pour les tables.</translation>
+    </message>
+    <message>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1443"/>
+        <source>Primary key field &apos;%1&apos; for view not unique.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1438"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1448"/>
+        <source>Type &apos;%1&apos; of primary key field &apos;%2&apos; for view invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1453"/>
+        <source>Key field &apos;%1&apos; for view not found.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1458"/>
         <source>No key field for view given.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas de clé mentionnée pour la vue.</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1444"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1463"/>
         <source>Unexpected relation type &apos;%1&apos;.</source>
         <translation>Type de relation inattendue &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1499"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="1518"/>
         <source>No key field for query given.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas de clé mentionnée pour la requête.</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2077"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2096"/>
         <source>PostGIS error while adding features: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur PostGIS lors de l&apos;ajout d&apos;entité : %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2123"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2142"/>
         <source>PostGIS error while deleting features: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur PostGIS lors de la suppression d&apos;entité : %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2186"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2205"/>
         <source>PostGIS error while adding attributes: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur PostGIS lors de l&apos;ajout d&apos;attribut : %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2233"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2252"/>
         <source>PostGIS error while deleting attributes: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur PostGIS lors de la suppression d&apos;attribut : %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2338"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2357"/>
         <source>PostGIS error while changing attributes: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur PostGIS lors de la modification d&apos;attribut : %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2419"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2438"/>
         <source>PostGIS error while changing geometry values: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur PostGIS lors de la modification de géométrie : %1</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2627"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2646"/>
         <source>result of extents query invalid: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2784"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2803"/>
         <source>Geometry type and srid for empty column %1 of %2 undefined.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2821"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2840"/>
         <source>Feature type or srid for %1 of %2 could not be determined or was not requested.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le type d&apos;entité ou le srid pour %1 de %2 n&apos;a pu être déterminé.</translation>
     </message>
     <message>
-        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2850"/>
+        <location filename="../src/providers/postgres/qgspostgresprovider.cpp" line="2869"/>
         <source>Editing and adding disabled for 2D+ layer (%1; %2)</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;édition et l&apos;ajout sont désactivés pour les couches ayant plus de 2 dimensions (%1; %2)</translation>
     </message>
     <message>
         <source>Connection to database failed</source>
@@ -32685,42 +33657,42 @@ SQL : %3</translation>
 <context>
     <name>QgsProject</name>
     <message>
-        <location filename="../src/core/qgsproject.cpp" line="799"/>
+        <location filename="../src/core/qgsproject.cpp" line="801"/>
         <source>Unable to open %1</source>
         <translation>Impossible d&apos;ouvrir %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsproject.cpp" line="812"/>
+        <location filename="../src/core/qgsproject.cpp" line="814"/>
         <source>Project File Read Error</source>
         <translation>Erreur de lecture du fichier de projet</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsproject.cpp" line="813"/>
+        <location filename="../src/core/qgsproject.cpp" line="815"/>
         <source>%1 at line %2 column %3</source>
         <translation>%1 à la ligne %2 de la colonne %3</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsproject.cpp" line="816"/>
+        <location filename="../src/core/qgsproject.cpp" line="818"/>
         <source>Project file read error: %1 at line %2 column %3</source>
         <translation>Erreur de lecture du fichier de projet : %1 à la ligne %2 et colonne %3</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsproject.cpp" line="823"/>
+        <location filename="../src/core/qgsproject.cpp" line="825"/>
         <source>%1 for file %2</source>
         <translation>%1 pour le fichier %2</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsproject.cpp" line="944"/>
+        <location filename="../src/core/qgsproject.cpp" line="946"/>
         <source>Unable to save to file %1</source>
         <translation>Impossible de sauvegarder le fichier %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsproject.cpp" line="953"/>
+        <location filename="../src/core/qgsproject.cpp" line="955"/>
         <source>%1 is not writable. Please adjust permissions (if possible) and try again.</source>
         <translation>%1 n&apos;est pas inscriptible. Veuillez ajuster vos autorisations et essayer de nouveau.</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsproject.cpp" line="1056"/>
+        <location filename="../src/core/qgsproject.cpp" line="1058"/>
         <source>Unable to save to file %1. Your project may be corrupted on disk. Try clearing some space on the volume and check file permissions before pressing save again.</source>
         <translation>Impossible d&apos;enregistrer le fichier %1. Votre projet est peut être corrompu sur votre disque. Essayez de libérer de l&apos;espace de stockage et vérifiez les permissions en écriture avant d&apos;essayez d&apos;enregistrer de nouveau.</translation>
     </message>
@@ -32728,17 +33700,17 @@ SQL : %3</translation>
 <context>
     <name>QgsProjectBadLayerGuiHandler</name>
     <message>
-        <location filename="../src/gui/qgsprojectbadlayerguihandler.cpp" line="31"/>
+        <location filename="../src/gui/qgsprojectbadlayerguihandler.cpp" line="46"/>
         <source>Ignore</source>
         <translation>Ignorer</translation>
     </message>
     <message>
-        <location filename="../src/gui/qgsprojectbadlayerguihandler.cpp" line="37"/>
+        <location filename="../src/gui/qgsprojectbadlayerguihandler.cpp" line="52"/>
         <source>QGIS Project Read Error</source>
         <translation>Erreur de lecture du Projet QGIS </translation>
     </message>
     <message>
-        <location filename="../src/gui/qgsprojectbadlayerguihandler.cpp" line="38"/>
+        <location filename="../src/gui/qgsprojectbadlayerguihandler.cpp" line="53"/>
         <source>Unable to open one or more project layers.
 Choose ignore to continue loading without the missing layers. Choose cancel to return to your pre-project load state. Choose OK to try to find the missing layers.</source>
         <translation>Impossible d&apos;ouvrir une ou plusieurs couches du projets.
@@ -32754,63 +33726,63 @@ Essayer de trouver les couches manquantes ?</translation>
 <context>
     <name>QgsProjectProperties</name>
     <message>
-        <location filename="../src/app/qgsprojectproperties.cpp" line="131"/>
+        <location filename="../src/app/qgsprojectproperties.cpp" line="132"/>
         <source>Layer</source>
         <translation>Couche</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsprojectproperties.cpp" line="132"/>
+        <location filename="../src/app/qgsprojectproperties.cpp" line="133"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsprojectproperties.cpp" line="133"/>
+        <location filename="../src/app/qgsprojectproperties.cpp" line="134"/>
         <source>Identifiable</source>
         <translation>Identifiant</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsprojectproperties.cpp" line="153"/>
+        <location filename="../src/app/qgsprojectproperties.cpp" line="154"/>
         <source>Vector</source>
         <translation>Vecteur</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsprojectproperties.cpp" line="161"/>
+        <location filename="../src/app/qgsprojectproperties.cpp" line="162"/>
         <source>WMS</source>
         <translation>WMS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsprojectproperties.cpp" line="165"/>
+        <location filename="../src/app/qgsprojectproperties.cpp" line="166"/>
         <source>Raster</source>
         <translation>Raster</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsprojectproperties.cpp" line="440"/>
-        <location filename="../src/app/qgsprojectproperties.cpp" line="603"/>
+        <location filename="../src/app/qgsprojectproperties.cpp" line="455"/>
+        <location filename="../src/app/qgsprojectproperties.cpp" line="638"/>
         <source>Coordinate System Restriction</source>
         <translation>Restriction du système de coordonnées </translation>
     </message>
     <message>
-        <location filename="../src/app/qgsprojectproperties.cpp" line="440"/>
+        <location filename="../src/app/qgsprojectproperties.cpp" line="455"/>
         <source>No coordinate systems selected. Disabling restriction.</source>
         <translation>Aucun système de coordonnées sélectionnés.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsprojectproperties.cpp" line="492"/>
+        <location filename="../src/app/qgsprojectproperties.cpp" line="526"/>
         <source>Selection color</source>
         <translation>Couleur de la sélection</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsprojectproperties.cpp" line="603"/>
+        <location filename="../src/app/qgsprojectproperties.cpp" line="638"/>
         <source>CRS %1 was already selected</source>
         <translation>SCR %1 déjà sélectionné</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsprojectproperties.cpp" line="623"/>
+        <location filename="../src/app/qgsprojectproperties.cpp" line="658"/>
         <source>Coordinate System Restrictions</source>
         <translation>Restrictions du système de coordonnées </translation>
     </message>
     <message>
-        <location filename="../src/app/qgsprojectproperties.cpp" line="624"/>
+        <location filename="../src/app/qgsprojectproperties.cpp" line="659"/>
         <source>The current selection of coordinate systems will be lost.
 Proceed?</source>
         <translation>La sélection courante de systèmes de coordonnées sera perdue. Continuer ?</translation>
@@ -32894,7 +33866,7 @@ Proceed?</source>
     <message>
         <location filename="../src/ui/qgsprojectpropertiesbase.ui" line="368"/>
         <source>OWS Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Serveur OWS</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsprojectpropertiesbase.ui" line="389"/>
@@ -32939,7 +33911,7 @@ Proceed?</source>
     <message>
         <location filename="../src/ui/qgsprojectpropertiesbase.ui" line="489"/>
         <source>WMS Capabilitities</source>
-        <translation type="unfinished"></translation>
+        <translation>Capacités WMS</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsprojectpropertiesbase.ui" line="495"/>
@@ -32997,14 +33969,24 @@ Proceed?</source>
         <translation>Ajouter une géométrie WKT à la réponse de l&apos;entité</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsprojectpropertiesbase.ui" line="647"/>
-        <source>WFS Capabilitities</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/ui/qgsprojectpropertiesbase.ui" line="649"/>
+        <source>Maximum width</source>
+        <translation>Largeur maximale</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsprojectpropertiesbase.ui" line="659"/>
+        <source>Maximum height</source>
+        <translation>Hauteur maximale</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgsprojectpropertiesbase.ui" line="671"/>
+        <source>WFS Capabilitities</source>
+        <translation>Capacités WFS</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgsprojectpropertiesbase.ui" line="683"/>
         <source>Published</source>
-        <translation type="unfinished"></translation>
+        <translation>Publié</translation>
     </message>
     <message>
         <source>Avoid intersections of new polygons...</source>
@@ -33017,7 +33999,7 @@ Proceed?</source>
     </message>
     <message>
         <location filename="../src/ui/qgsprojectpropertiesbase.ui" line="349"/>
-        <location filename="../src/ui/qgsprojectpropertiesbase.ui" line="654"/>
+        <location filename="../src/ui/qgsprojectpropertiesbase.ui" line="678"/>
         <source>Layer</source>
         <translation>Couche</translation>
     </message>
@@ -33191,6 +34173,11 @@ De ce fait le sélecteur de projection ne fonctionnera pas...</translation>
         <translation>Filtre</translation>
     </message>
     <message>
+        <location filename="../src/ui/qgsprojectionselectorbase.ui" line="51"/>
+        <source>Recently used coordinate reference systems</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/ui/qgsprojectionselectorbase.ui" line="96"/>
         <location filename="../src/ui/qgsprojectionselectorbase.ui" line="173"/>
         <source>Coordinate Reference System</source>
@@ -33216,9 +34203,8 @@ De ce fait le sélecteur de projection ne fonctionnera pas...</translation>
         <translation type="obsolete">Chercher pour</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsprojectionselectorbase.ui" line="51"/>
         <source>Recently used coordinate references systems</source>
-        <translation>Systèmes de coordonnées de références récémment utilisés</translation>
+        <translation type="obsolete">Systèmes de coordonnées de références récémment utilisés</translation>
     </message>
 </context>
 <context>
@@ -33266,20 +34252,20 @@ De ce fait le sélecteur de projection ne fonctionnera pas...</translation>
     <message>
         <location filename="../src/gui/qgsquerybuilder.cpp" line="169"/>
         <location filename="../src/gui/qgsquerybuilder.cpp" line="177"/>
-        <location filename="../src/gui/qgsquerybuilder.cpp" line="193"/>
+        <location filename="../src/gui/qgsquerybuilder.cpp" line="190"/>
         <source>Query Failed</source>
         <translation>La requête a échoué</translation>
     </message>
     <message>
         <location filename="../src/gui/qgsquerybuilder.cpp" line="170"/>
         <location filename="../src/gui/qgsquerybuilder.cpp" line="178"/>
-        <location filename="../src/gui/qgsquerybuilder.cpp" line="194"/>
+        <location filename="../src/gui/qgsquerybuilder.cpp" line="191"/>
         <source>An error occurred when executing the query.</source>
         <translation>Une erreur a été rencontrée lors de l&apos;exécution de la requête.</translation>
     </message>
     <message>
         <location filename="../src/gui/qgsquerybuilder.cpp" line="171"/>
-        <location filename="../src/gui/qgsquerybuilder.cpp" line="195"/>
+        <location filename="../src/gui/qgsquerybuilder.cpp" line="192"/>
         <source>
 The data provider said:
 %1</source>
@@ -33292,12 +34278,12 @@ Le prestataire de donné a dit :
         <translation type="obsolete">Une erreur a été rencontrée lors de l&apos;exécution de la requête</translation>
     </message>
     <message>
-        <location filename="../src/gui/qgsquerybuilder.cpp" line="200"/>
+        <location filename="../src/gui/qgsquerybuilder.cpp" line="197"/>
         <source>Error in Query</source>
         <translation>Erreur dans la requête</translation>
     </message>
     <message>
-        <location filename="../src/gui/qgsquerybuilder.cpp" line="200"/>
+        <location filename="../src/gui/qgsquerybuilder.cpp" line="197"/>
         <source>The subset string could not be set</source>
         <translation>Le sous-ensemble de la chaîne de caractère n&apos;a pu être utilisé</translation>
     </message>
@@ -33725,12 +34711,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsRasterDataProvider</name>
     <message>
-        <location filename="../src/core/qgsrasterdataprovider.cpp" line="162"/>
+        <location filename="../src/core/qgsrasterdataprovider.cpp" line="167"/>
         <source>Identify</source>
         <translation>Identifier</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsrasterdataprovider.cpp" line="167"/>
+        <location filename="../src/core/qgsrasterdataprovider.cpp" line="172"/>
         <source>Build Pyramids</source>
         <translation>Construire les aperçus (pyramides)</translation>
     </message>
@@ -33744,14 +34730,14 @@ p, li { white-space: pre-wrap; }
     <name>QgsRasterLayer</name>
     <message>
         <location filename="../src/core/raster/qgsrasterlayer.cpp" line="91"/>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1708"/>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2715"/>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2796"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1716"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2731"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2812"/>
         <source>Not Set</source>
         <translation>Non renseigné</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1720"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1728"/>
         <source>Driver:</source>
         <translation>Driver:</translation>
     </message>
@@ -33768,88 +34754,88 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Taille du Pixel:</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1792"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1800"/>
         <source>Pyramid overviews:</source>
         <translation>Vues d&apos;ensemble de pyramide:</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1804"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1812"/>
         <source>Layer Extent (layer original source projection): </source>
         <translation>Étendue de la couche (dans la projection originelle de la couche) : </translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1830"/>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="4514"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1838"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="4530"/>
         <source>Band</source>
         <translation>Bande</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1837"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1845"/>
         <source>Band No</source>
         <translation>Bande No</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1849"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1857"/>
         <source>No Stats</source>
         <translation>Pas de stats</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1852"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1860"/>
         <source>No stats collected yet</source>
         <translation>Pas de stats encore collectées</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1862"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1870"/>
         <source>Min Val</source>
         <translation>Valeur Min</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1870"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1878"/>
         <source>Max Val</source>
         <translation>Valeur Max</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1878"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1886"/>
         <source>Range</source>
         <translation>Plage</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1886"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1894"/>
         <source>Mean</source>
         <translation>Moyenne</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1894"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1902"/>
         <source>Sum of squares</source>
         <translation>Somme des carrés</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1902"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1910"/>
         <source>Standard Deviation</source>
         <translation>Ecart-type</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1910"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1918"/>
         <source>Sum of all cells</source>
         <translation>Somme de toutes les cellules</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1918"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1926"/>
         <source>Cell Count</source>
         <translation>Compte des Cellules</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2204"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2212"/>
         <source>Cannot instantiate the data provider</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;instancier le prestataire de données</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2264"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2272"/>
         <source>Data provider is invalid (layers: %1, styles: %2, formats: %3)</source>
-        <translation type="unfinished"></translation>
+        <translation>Le prestataire de données est invalide (couches %1, styles %2, formats : %3)</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1747"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1755"/>
         <source>Data Type:</source>
         <translation>Type de Donnée:</translation>
     </message>
@@ -33862,94 +34848,94 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Ce fichier raster n&apos;a pas de bandes, il ne peut être une couche raster valide.</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1754"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1762"/>
         <source>GDT_Byte - Eight bit unsigned integer</source>
         <translation>GDT_Byte - nombre entier non signé de huit bits</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1757"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1765"/>
         <source>GDT_UInt16 - Sixteen bit unsigned integer </source>
         <translation>GDT_UInt16 - nombre entier non signé de seize bits</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1760"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1768"/>
         <source>GDT_Int16 - Sixteen bit signed integer </source>
         <translation>GDT_Int16 - nombre entier signé de seize bits</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1763"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1771"/>
         <source>GDT_UInt32 - Thirty two bit unsigned integer </source>
         <translation>GDT_UInt32 - nombre entier non signé de trente  deux bits</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1766"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1774"/>
         <source>GDT_Int32 - Thirty two bit signed integer </source>
         <translation>GDT_UInt32 - nombre entier signé de trente  deux bits</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1769"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1777"/>
         <source>GDT_Float32 - Thirty two bit floating point </source>
         <translation>GDT_Float32 - nombre à virgule flottante de 32 bits</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1772"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1780"/>
         <source>GDT_Float64 - Sixty four bit floating point </source>
         <translation>GDT_Float64 - nombre à virgule flottante de 64 bits</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1775"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1783"/>
         <source>GDT_CInt16 - Complex Int16 </source>
         <translation>GDT_CInt16 - Nombre entier complexe de 16 bits</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1778"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1786"/>
         <source>GDT_CInt32 - Complex Int32 </source>
         <translation>GDT_CInt32 - Nombre entier complexe de 32 bits</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1781"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1789"/>
         <source>GDT_CFloat32 - Complex Float32 </source>
         <translation>GDT_CFloat32 - Nombre complexe à virgule flottante de 32 bits</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1784"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1792"/>
         <source>GDT_CFloat64 - Complex Float64 </source>
         <translation>GDT_CFloat64 - Nombre complexe à virgule flottante de 64 bits</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1787"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1795"/>
         <source>Could not determine raster data type.</source>
         <translation>Ne peut déterminer le type de donnée raster.</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2166"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2174"/>
         <source>Failed to load provider %1 (Reason: %2)</source>
         <translation>Échec du chargement du prestataire %1 (Raison : %2)</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="658"/>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="668"/>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2166"/>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2190"/>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2204"/>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2268"/>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="3637"/>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="4633"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="666"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="676"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2174"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2198"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2212"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2276"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="3653"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="4653"/>
         <source>Raster</source>
         <translation>Raster</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="658"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="666"/>
         <source>Could not reproject view extent: %1</source>
         <translation>Impossible de reprojeter l&apos;emrpise de la vue %1</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="668"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="676"/>
         <source>Could not reproject layer extent: %1</source>
         <translation>Impossible de reprojeter l&apos;emrpise de la couche %1</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2190"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="2198"/>
         <source>Cannot resolve the classFactory function</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33966,12 +34952,12 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Spécifier le SCR pour la couche %1</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="3637"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="3653"/>
         <source>&lt;maplayer&gt; not found.</source>
         <translation>&lt;maplayer&gt; non trouvée.</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="4633"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="4653"/>
         <source>GDAL data type %1 is not supported</source>
         <translation>Le type de données GDAL  %1 n&apos;est pas pris en charge</translation>
     </message>
@@ -33984,12 +34970,12 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Moyenne</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1797"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1805"/>
         <source>Layer Spatial Reference System: </source>
         <translation>Système spatial de référence de la couche:</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1814"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1822"/>
         <source>Project Spatial Reference System: </source>
         <translation>Système spatial de référence du projet: </translation>
     </message>
@@ -34006,12 +34992,12 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Description du jeu de données</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1732"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1740"/>
         <source>No Data Value</source>
         <translation>Aucune valeur de données </translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1741"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="1749"/>
         <source>NoDataValue not set</source>
         <translation>NoDataValue non renseigné</translation>
     </message>
@@ -34024,12 +35010,12 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">X: %1 Y: %2 Bandes: %3</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="174"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="182"/>
         <source>QgsRasterLayer created</source>
         <translation>QgsRasterLayer créée</translation>
     </message>
     <message>
-        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="385"/>
+        <location filename="../src/core/raster/qgsrasterlayer.cpp" line="393"/>
         <source>Retrieving stats for %1</source>
         <translation>Receuillement des statistiques pour %1</translation>
     </message>
@@ -34042,29 +35028,29 @@ p, li { white-space: pre-wrap; }
     <name>QgsRasterLayerProperties</name>
     <message>
         <location filename="../src/app/qgsrasterlayerproperties.cpp" line="113"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="617"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="999"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1017"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1046"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="616"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1000"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1018"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1047"/>
         <source>Grayscale</source>
         <translation>Dégradé de Gris</translation>
     </message>
     <message>
         <location filename="../src/app/qgsrasterlayerproperties.cpp" line="114"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="600"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1095"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1727"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2137"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2142"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="599"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1096"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1728"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2138"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2143"/>
         <source>Pseudocolor</source>
         <translation>Pseudo-Couleurs</translation>
     </message>
     <message>
         <location filename="../src/app/qgsrasterlayerproperties.cpp" line="115"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="604"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1099"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1727"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2142"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="603"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1100"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1728"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2143"/>
         <source>Freak Out</source>
         <translation>Couleurs farfelues</translation>
     </message>
@@ -34074,37 +35060,37 @@ p, li { white-space: pre-wrap; }
         <translation>Non renseigné</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="825"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="826"/>
         <source>Columns: </source>
         <translation>Colonnes :</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="826"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="827"/>
         <source>Rows: </source>
         <translation>Lignes :</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="831"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="832"/>
         <source>No-Data Value: </source>
         <translation>Valeur No-Data :</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="825"/>
         <location filename="../src/app/qgsrasterlayerproperties.cpp" line="826"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="831"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="827"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="832"/>
         <source>n/a</source>
         <translation>n/a</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1582"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1873"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2567"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1583"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1874"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2568"/>
         <source>Write access denied</source>
         <translation>Accès en écriture interdit</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1873"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2567"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1874"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2568"/>
         <source>Write access denied. Adjust the file permissions and try again.
 
 </source>
@@ -34113,78 +35099,74 @@ p, li { white-space: pre-wrap; }
 </translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1587"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1593"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1598"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1603"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1588"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1594"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1599"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1604"/>
         <source>Building pyramids failed.</source>
         <translation>La construction des pyramides a échoué.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1594"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1604"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1595"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1605"/>
         <source>Building pyramid overviews is not supported on this type of raster.</source>
         <translation>Les vues d&apos;ensemble des pyramides ne sont pas gérées sur ce type de raster.</translation>
     </message>
     <message>
         <location filename="../src/app/qgsrasterlayerproperties.cpp" line="119"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="727"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="746"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="762"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2236"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2770"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="728"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="747"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="763"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2237"/>
         <source>No Stretch</source>
         <translation>Pas d&apos;étirement</translation>
     </message>
     <message>
         <location filename="../src/app/qgsrasterlayerproperties.cpp" line="120"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="711"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="750"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1112"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2775"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="712"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="751"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1113"/>
         <source>Stretch To MinMax</source>
         <translation>Etirer jusqu&apos;au MinMax</translation>
     </message>
     <message>
         <location filename="../src/app/qgsrasterlayerproperties.cpp" line="121"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="715"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="754"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1116"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2780"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="716"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="755"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1117"/>
         <source>Stretch And Clip To MinMax</source>
         <translation>Etirer et couper jusqu&apos;au MinMax</translation>
     </message>
     <message>
         <location filename="../src/app/qgsrasterlayerproperties.cpp" line="122"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="719"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="758"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1120"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2785"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="720"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="759"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1121"/>
         <source>Clip To MinMax</source>
         <translation>Couper jusqu&apos;au MinMax</translation>
     </message>
     <message>
         <location filename="../src/app/qgsrasterlayerproperties.cpp" line="147"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="905"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1424"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2531"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2626"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="906"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1425"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2532"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2627"/>
         <source>Discrete</source>
         <translation>Discret</translation>
     </message>
     <message>
         <location filename="../src/app/qgsrasterlayerproperties.cpp" line="150"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2413"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2414"/>
         <source>Equal interval</source>
         <translation>Intervalles égaux</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2436"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2437"/>
         <source>Quantiles</source>
         <translation>Quantiles</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="261"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="260"/>
         <source>Description</source>
         <translation>Description</translation>
     </message>
@@ -34204,101 +35186,100 @@ p, li { white-space: pre-wrap; }
         <translation>Étiquette</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="262"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="261"/>
         <source>Large resolution raster layers can slow navigation in QGIS.</source>
         <translation>Des couches raster de haute résolution peuvent ralentir la navigation dans QGIS car leur taille empêche leur mise en mémoire complète.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="263"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="262"/>
         <source>By creating lower resolution copies of the data (pyramids) performance can be considerably improved as QGIS selects the most suitable resolution to use depending on the level of zoom.</source>
         <translation>La création de copies de résolution inférieure (que l&apos;on nomme pyramides) peut améliorer la perfomance d&apos;affichage car QGIS pourra toujours choisir la résolution la plus adaptée au niveau de zoom.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="264"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="263"/>
         <source>You must have write access in the directory where the original data is stored to build pyramids.</source>
         <translation>Vous devez avoir l&apos;accès en écriture dans le répertoire où se trouve la donnée originale pour pouvoir construire les pyramides.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="279"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="278"/>
         <source>Layer Properties - %1</source>
         <translation>Propriétés de la couche - %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="340"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1786"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1845"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="339"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1787"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1846"/>
         <source>Red</source>
         <translation>Rouge</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="341"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1787"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1845"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="340"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1788"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1846"/>
         <source>Green</source>
         <translation>Vert</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="342"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1788"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1845"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="341"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1789"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1846"/>
         <source>Blue</source>
         <translation>Blue</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="343"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="382"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1789"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1814"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1845"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1858"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1862"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="342"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="381"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1790"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1815"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1846"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1859"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1863"/>
         <source>Percent Transparent</source>
         <translation>Transparence (%)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="376"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1808"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1858"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="375"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1809"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1859"/>
         <source>Gray</source>
         <translation>Gris</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="380"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1812"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1862"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="379"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1813"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1863"/>
         <source>Indexed Value</source>
         <translation>Valeur indexée</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="416"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="415"/>
         <source>Note: Minimum Maximum values are estimates, user defined, or calculated from the current extent</source>
         <translation>Note : les valeurs Minimum et Maximun sont estimées, définies par l&apos;utilisateur ou calculées depuis l&apos;emprise actuelle</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="612"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="723"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1533"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1535"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1538"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1540"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1747"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2768"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="611"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="724"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1534"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1536"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1539"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1541"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1748"/>
         <source>User Defined</source>
         <translation>Défini par l&apos;utilisateur</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="841"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="842"/>
         <source>No-Data Value: Not Set</source>
         <translation>Valeur sans donnée : non renseignée</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1830"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2513"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1831"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2514"/>
         <source>Save file</source>
         <translation>Savegarder fichier</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2990"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2947"/>
         <source>Save layer properties as style file</source>
         <translation>Sauvegarder les propriétés de la couche comme fichier de style</translation>
     </message>
@@ -34307,40 +35288,40 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Fichier texte (*.txt)</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1842"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1843"/>
         <source>QGIS Generated Transparent Pixel Value Export File</source>
         <translation>Fichier d&apos;exportation de valeurs de pixels transparents généré par QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1952"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1953"/>
         <source>Band %1</source>
         <translation>Bande %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2025"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2026"/>
         <source>Choose a file name to save the map image as</source>
         <translation>Choisissez un nom de fichier et sauvegarder l&apos;image de la carte sous</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2038"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2595"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2039"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2596"/>
         <source>Open file</source>
         <translation>Ouvrir fichier</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2111"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2663"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2112"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2664"/>
         <source>Import Error</source>
         <translation>Erreur importation</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2319"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2329"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2320"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2330"/>
         <source>out of extent</source>
         <translation>En dehors de l&apos;emprise</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2663"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2664"/>
         <source>The following lines contained errors
 
 </source>
@@ -34349,27 +35330,27 @@ p, li { white-space: pre-wrap; }
 </translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2116"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2668"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2117"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2669"/>
         <source>Read access denied</source>
         <translation>Accès en lecture refusé</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2116"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2668"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2117"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2669"/>
         <source>Read access denied. Adjust the file permissions and try again.
 
 </source>
         <translation>Accès en lecture refusé. Ajustez les permissions sur les fichiers et recommencez.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2142"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2143"/>
         <source>Color Ramp</source>
         <translation>Palette de couleur</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2927"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2944"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2884"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2901"/>
         <source>Default Style</source>
         <translation>Style par défaut</translation>
     </message>
@@ -34383,143 +35364,142 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../src/app/qgsrasterlayerproperties.cpp" line="116"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="608"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1025"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1103"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1388"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1737"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="607"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1026"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1104"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1389"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1738"/>
         <source>Colormap</source>
         <translation>Palette de Couleur</translation>
     </message>
     <message>
         <location filename="../src/app/qgsrasterlayerproperties.cpp" line="148"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="901"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="923"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1420"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2527"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2578"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2622"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="902"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="924"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1421"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2528"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2579"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2623"/>
         <source>Linear</source>
         <translation>Linéaire</translation>
     </message>
     <message>
         <location filename="../src/app/qgsrasterlayerproperties.cpp" line="149"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="909"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2630"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="910"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2631"/>
         <source>Exact</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="265"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="264"/>
         <source>Please note that building internal pyramids may alter the original data file and once created they cannot be removed!</source>
         <translation>Veuillez noter que la construction interne de pyramides peut altérer l&apos;image d&apos;origine.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="266"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="265"/>
         <source>Please note that building internal pyramids could corrupt your image - always make a backup of your data first!</source>
         <translation>Ayez bien en tête que la création des pyramides peut corrompre vos images — faites toujours au préalable une sauvegarde de vos données !</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1588"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1589"/>
         <source>The file was not writable. Some formats do not support pyramid overviews. Consult the GDAL documentation if in doubt.</source>
         <translation>Le fichier n&apos;était pas inscriptible. Certains formats ne supportent pas les aperçus en pyramides. En cas de doute consultez la documentation de GDAL.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2506"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2507"/>
         <source>Custom color map entry</source>
         <translation>Entrée de palette de couleurs personnalisée</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2525"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2526"/>
         <source>QGIS Generated Color Map Export File</source>
         <translation>Fichier d&apos;exportation de palette de couleurs généré par QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2583"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2584"/>
         <source>Load Color Map</source>
         <translation>Charger une palette de Couleur</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2958"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2915"/>
         <source>Load layer properties from style file</source>
         <translation>Charger les propriétés des couches à partir d&apos;un fichier de style</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2960"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2992"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2917"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2949"/>
         <source>QGIS Layer Style File</source>
         <translation>Fichier de style de couche QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2976"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="3008"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2933"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2965"/>
         <source>Saved Style</source>
         <translation>Style enregistrée</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="420"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="419"/>
         <source>Note: Minimum Maximum values are actual values computed from the band(s)</source>
         <translation>Note : les valeurs Minimum et Maximun sont les valeurs réelles obtenues depuis les bandes</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="568"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="567"/>
         <source>&lt;h3&gt;Multiband Image Notes&lt;/h3&gt;&lt;p&gt;This is a multiband image. You can choose to render it as grayscale or color (RGB). For color images, you can associate bands to colors arbitarily. For example, if you have a seven band landsat image, you may choose to render it as:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Visible Blue (0.45 to 0.52 microns) - not mapped&lt;/li&gt;&lt;li&gt;Visible Green (0.52 to 0.60 microns) - not mapped&lt;/li&gt;&lt;/li&gt;Visible Red (0.63 to 0.69 microns) - mapped to red in image&lt;/li&gt;&lt;li&gt;Near Infrared (0.76 to 0.90 microns) - mapped to green in image&lt;/li&gt;&lt;li&gt;Mid Infrared (1.55 to 1.75 microns) - not mapped&lt;/li&gt;&lt;li&gt;Thermal Infrared (10.4 to 12.5 microns) - not mapped&lt;/li&gt;&lt;li&gt;Mid Infrared (2.08 to 2.35 microns) - mapped to blue in image&lt;/li&gt;&lt;/ul&gt;</source>
         <comment>COMMENTED OUT</comment>
         <translation>&lt;h3&gt;Notes sur l&apos;images multibande&lt;/h3&gt;&lt;p&gt;Ceci est une image multibande. Vous pouvez choisir le rendu entre le dégradé de gris et la couleur (RGB). pour les images en couleurs, vous pouvez associer les bandes avec les couleurs de manières arbitraires. Par exemple, si vous avez une image de sept bandes Landsat, vous pouvez choisir le rendu tel que:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Bleu Visible (0.45 to 0.52 microns) - non tracé&lt;/li&gt;&lt;li&gt;Vert Visible (0.52 to 0.60 microns) - non tracé&lt;/li&gt;&lt;/li&gt;Rouge Visible (0.63 to 0.69 microns) - tracé en rouge dans l&apos;image&lt;/li&gt;&lt;li&gt;Proche Infrarouge (0.76 to 0.90 microns) - tracé en vert dans l&apos;image&lt;/li&gt;&lt;li&gt;Infrarouge Moyen (1.55 to 1.75 microns) - non tracé&lt;/li&gt;&lt;li&gt;Infrarouge Thermique (10.4 to 12.5 microns) - non tracé&lt;/li&gt;&lt;li&gt;Infrarouge Moyen (2.08 to 2.35 microns) - tracé en bleu dans l&apos;image&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="575"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="574"/>
         <source>&lt;h3&gt;Paletted Image Notes&lt;/h3&gt; &lt;p&gt;This image uses a fixed color palette. You can remap these colors in different combinations e.g.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Red - blue in image&lt;/li&gt;&lt;li&gt;Green - blue in image&lt;/li&gt;&lt;li&gt;Blue - green in image&lt;/li&gt;&lt;/ul&gt;</source>
         <comment>COMMENTED OUT</comment>
         <translation>&lt;h3&gt;Notes sur l&apos;image décomposée&lt;/h3&gt; &lt;p&gt;Cette image utilise une palette de couleur fixée. Vous pouvez redéfinir ces couleurs dans différentes combinaisons e.g.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Rouge - bleue dans l&apos;image&lt;/li&gt;&lt;li&gt;Verte - bleue dans l&apos;image&lt;/li&gt;&lt;li&gt;Bleue - verte dans l&apos;image&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="582"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="581"/>
         <source>&lt;h3&gt;Grayscale Image Notes&lt;/h3&gt; &lt;p&gt;You can remap these grayscale colors to a pseudocolor image using an automatically generated color ramp.&lt;/p&gt;</source>
         <comment>COMMENTED OUT</comment>
         <translation>&lt;h3&gt;Notes sur l&apos;image en dégradé de gris&lt;/h3&gt; &lt;p&gt;Vous pouvez redéfinir ces couleurs en dégradé de gris dans une image en pseudo-couleurs en utilisant une palette de couleur automatiquement générée.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="734"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2763"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="735"/>
         <source>Default R:%1 G:%2 B:%3</source>
         <translation>Par défaut Rouge : %1, Vert : %2, Bleu : %3</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="819"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="820"/>
         <source>Columns: %1</source>
         <translation>Colonnes : %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="820"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="821"/>
         <source>Rows: %1</source>
         <translation>Lignes : %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="837"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="838"/>
         <source>No-Data Value: %1</source>
         <translation>Valeur No-Data : %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1583"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1584"/>
         <source>Write access denied. Adjust the file permissions and try again.</source>
         <translation>Accés interdit en écriture. Ajustez les permissions sur les fichiers et recommencez.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1599"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1600"/>
         <source>Building internal pyramid overviews is not supported on raster layers with JPEG compression and your current libtiff library.</source>
         <translation>La construction de pyramides internes pour l&apos;aperçu n&apos;est pas supportée par les couches raster compressées en JPEG et votre bibliothèque libtiff actuelle.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1830"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2038"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2513"/>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2595"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="1831"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2039"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2514"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2596"/>
         <source>Textfile</source>
         <translation>Fichier texte</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2111"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2112"/>
         <source>The following lines contained errors
 
 %1</source>
@@ -34528,7 +35508,7 @@ p, li { white-space: pre-wrap; }
 %1</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2583"/>
+        <location filename="../src/app/qgsrasterlayerproperties.cpp" line="2584"/>
         <source>The color map for band %1 failed to load</source>
         <translation>Le chargement de la carte de couleur pour la bande %1 a échoué</translation>
     </message>
@@ -34545,7 +35525,7 @@ p, li { white-space: pre-wrap; }
         <translation>Propriétés de la Couche Raster</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1491"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1430"/>
         <source>General</source>
         <translation>Général</translation>
     </message>
@@ -34554,42 +35534,97 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Convention des signes/symbologie</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1259"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1198"/>
         <source>&lt;p align=&quot;right&quot;&gt;Full&lt;/p&gt;</source>
         <translation>&lt;p align=&quot;right&quot;&gt;Rempli&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1213"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1152"/>
         <source>None</source>
         <translation>Aucun(e)</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1782"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1721"/>
         <source>Metadata</source>
         <translation>Métadonnées</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1854"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1793"/>
         <source>Pyramids</source>
         <translation>Pyramides</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1955"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1812"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Droid Sans&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border: none;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Droid Sans&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border: none;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1895"/>
         <source>Average</source>
         <translation>Moyenne</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1960"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1900"/>
         <source>Nearest Neighbour</source>
         <translation>Plus Proche Voisin</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1659"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1598"/>
         <source>Thumbnail</source>
         <translation>Miniature</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1980"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1920"/>
         <source>Histogram</source>
         <translation>Histogramme</translation>
     </message>
@@ -34606,17 +35641,17 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Rafraîchir</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="691"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="653"/>
         <source>Max</source>
         <translation>Max</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="653"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="615"/>
         <source>Min</source>
         <translation>Min</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1239"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1178"/>
         <source> 00%</source>
         <translation></translation>
     </message>
@@ -34626,44 +35661,42 @@ p, li { white-space: pre-wrap; }
         <translation>Afficher comme</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="531"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="552"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1089"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1103"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1117"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1281"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1380"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1397"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1411"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1425"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1452"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1466"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1028"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1042"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1056"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1220"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1319"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1336"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1350"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1364"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1391"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1405"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="952"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="891"/>
         <source>Colormap</source>
         <translation>Palette de Couleur</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1069"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1008"/>
         <source>Delete entry</source>
         <translation>Effacer entrée</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="994"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="933"/>
         <source>Classify</source>
         <translation>Classer</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1132"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1137"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1071"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1076"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1142"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1081"/>
         <source>2</source>
         <translation>2</translation>
     </message>
@@ -34703,66 +35736,62 @@ p, li { white-space: pre-wrap; }
         <translation>Bande bleue</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="546"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="549"/>
         <source>Save current RGB composition as default. This setting will be persistent between QGIS sessions.</source>
-        <translation>Enregistrer la composition RVB par défaut. Ce choix sera appliqué aux prochaines sessions de travail QGIS.</translation>
+        <translation type="obsolete">Enregistrer la composition RVB par défaut. Ce choix sera appliqué aux prochaines sessions de travail QGIS.</translation>
     </message>
     <message>
         <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="243"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="640"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="602"/>
         <source>Custom min / max values</source>
         <translation>Valeurs min / max personnalisées</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="256"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="267"/>
         <source>Red min</source>
         <translation>Rouge min</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="307"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="318"/>
         <source>Red max</source>
         <translation>Rouge max</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="345"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="356"/>
         <source>Green min</source>
         <translation>Vert min</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="383"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="394"/>
         <source>Green max</source>
         <translation>Vert max</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="421"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="432"/>
         <source>Blue min</source>
         <translation>Bleu min</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="459"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="470"/>
         <source>Blue max</source>
         <translation>Bleu max</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="525"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="528"/>
         <source>Save current standard deviation value as default. This setting will be persistent between QGIS sessions.</source>
-        <translation>Enregistrer la valeur de déviation standard par défaut. Ce choix sera appliqué aux prochaines sessions de travail QGIS.</translation>
+        <translation type="obsolete">Enregistrer la valeur de déviation standard par défaut. Ce choix sera appliqué aux prochaines sessions de travail QGIS.</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="582"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="544"/>
         <source>Single band properties</source>
         <translation>Propriétés bande unique</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="594"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="556"/>
         <source>Gray band</source>
         <translation>Bande grise</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="617"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1004"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="579"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="943"/>
         <source>Color map</source>
         <translation>Palette de Couleur</translation>
     </message>
@@ -34772,68 +35801,66 @@ p, li { white-space: pre-wrap; }
         <translation>Palette de couleur inversée</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="491"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="723"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="502"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="685"/>
         <source>Use standard deviation</source>
         <translation>Utiliser l&apos;ecart-type</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="777"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="739"/>
         <source>Load min / max values from band</source>
         <translation>Charger les valeurs min / max depuis la bande</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="795"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="757"/>
         <source>Estimate (faster)</source>
         <translation>Estimation (plus rapide)</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="815"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="777"/>
         <source>Actual (slower)</source>
         <translation>Réelle (plus lente)</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="835"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="797"/>
         <source>Current extent</source>
         <translation>Emprise actuelle</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="842"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="804"/>
         <source>Load</source>
         <translation>Charger</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="865"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="827"/>
         <source>Contrast enhancement</source>
         <translation>Amélioration de contraste</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="886"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="848"/>
         <source>Current</source>
         <translation>Actuel</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="909"/>
         <source>Save current contrast enhancement algorithm as default. This setting will be persistent between QGIS sessions.</source>
-        <translation>Enregistrer l&apos;algorithme d&apos;amélioration de constraste actuel par défaut. Ce choix sera appliqué aux prochaines sessions de travail QGIS.</translation>
+        <translation type="obsolete">Enregistrer l&apos;algorithme d&apos;amélioration de constraste actuel par défaut. Ce choix sera appliqué aux prochaines sessions de travail QGIS.</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="912"/>
         <source>Saves current contrast enhancement algorithm as a default. This setting will be persistent between QGIS sessions.</source>
-        <translation>Enregistrer l&apos;algorithme d&apos;amélioration de constraste actuel par défaut. Ce choix sera appliqué aux prochaines sessions de travail QGIS.</translation>
+        <translation type="obsolete">Enregistrer l&apos;algorithme d&apos;amélioration de constraste actuel par défaut. Ce choix sera appliqué aux prochaines sessions de travail QGIS.</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="926"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="865"/>
         <source>Default</source>
         <translation>Défaut</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="933"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="872"/>
         <source>TextLabel</source>
         <translation>Étiquette</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1278"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1217"/>
         <source>Reset to file defined null</source>
         <translation>Remettre la valeur NULL définie dans le fichier</translation>
     </message>
@@ -34878,22 +35905,22 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1996"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1936"/>
         <source>Save as image...</source>
         <translation>Sauvegarder comme image...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1158"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1097"/>
         <source>Transparency</source>
         <translation>Transparence</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1188"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1127"/>
         <source>Global transparency</source>
         <translation> Transparence globale</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1269"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1208"/>
         <source>No data value</source>
         <translation>Aucune valeur de données </translation>
     </message>
@@ -34902,133 +35929,133 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Retourner à aucune valeur de données </translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1295"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1234"/>
         <source>Custom transparency options</source>
         <translation>Options de transparence personnalisée</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1301"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1240"/>
         <source>Transparency band</source>
         <translation>Bande de transparence</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1327"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1266"/>
         <source>Transparent pixel list</source>
         <translation>Liste des pixels transparents</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1377"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1316"/>
         <source>Add values manually</source>
         <translation>Ajouter les valeurs manuellement</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1394"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1333"/>
         <source>Add Values from display</source>
         <translation>Ajouter les valeurs depuis l&apos;affichage</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1408"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1347"/>
         <source>Remove selected row</source>
         <translation>Effacer la cellule sélectionnée</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1422"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1361"/>
         <source>Default values</source>
         <translation>Valeurs par défaut</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1463"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1402"/>
         <source>Import from file</source>
         <translation>Importer depuis le fichier</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1449"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1388"/>
         <source>Export to file</source>
         <translation>Exporter vers le fichier</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="964"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="903"/>
         <source>Number of entries</source>
         <translation>Nombre d&apos;entrées</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1052"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="991"/>
         <source>Color interpolation</source>
         <translation>Interpolation des couleurs</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="984"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="923"/>
         <source>Classification mode</source>
         <translation>Mode de classification</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1567"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1506"/>
         <source>Scale dependent visibility</source>
         <translation>Echelle visible</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1582"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1521"/>
         <source>Maximum</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1592"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1531"/>
         <source>Minimum</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1507"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1446"/>
         <source>Layer source</source>
         <translation>Source de la couche</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="763"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="725"/>
         <source>Note</source>
         <translation>Note</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1497"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1436"/>
         <source>Display name</source>
         <translation>Nom affiché</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1532"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1471"/>
         <source>Columns</source>
         <translation>Colonnes</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1545"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1484"/>
         <source>Rows</source>
         <translation>Lignes</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1558"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1497"/>
         <source>No Data</source>
         <translation>Pas de donnée</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1617"/>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1620"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1556"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1559"/>
         <source>Specify the coordinate reference system of the layer&apos;s geometry.</source>
         <translation>Spécifier le système de coordonnées de référence de la géométrie de la couche.</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1623"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1562"/>
         <source>Specify...</source>
         <translation>Spécifier..</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1809"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1748"/>
         <source>Title</source>
         <translation>Titre</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1819"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1758"/>
         <source>Abstract</source>
         <translation>Résumé</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1860"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1799"/>
         <source>Pyramid resolutions</source>
         <translation>Résolutions de la pyramide</translation>
     </message>
@@ -35051,12 +36078,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1904"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1844"/>
         <source>Resampling method</source>
         <translation>Méthode de reéchantillonage</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1928"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1868"/>
         <source>Build pyramids</source>
         <translation>Construire les pyramides</translation>
     </message>
@@ -35081,106 +36108,77 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Permettre l&apos;approximation</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="2011"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1951"/>
         <source>Restore Default Style</source>
         <translation>Restaurer le style par défaut</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="2018"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1958"/>
         <source>Save As Default</source>
         <translation>Sauvegarder comme défaut</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="2025"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1965"/>
         <source>Load Style ...</source>
         <translation>Charger le style...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="2032"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1972"/>
         <source>Save Style ...</source>
         <translation>Sauvegarder le style...</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="563"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="252"/>
         <source>Default R:1 G:2 B:3</source>
         <translation>Par défaut Rouge : 1, Vert : 2, Bleu : 3</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1062"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1001"/>
         <source>Add entry</source>
         <translation>Ajouter une entrée</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1076"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1015"/>
         <source>Sort</source>
         <translation>Trier</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1086"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1025"/>
         <source>Load color map from band</source>
         <translation>Charger une palette de couleur depuis la bande</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1100"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1039"/>
         <source>Load color map from file</source>
         <translation>Charger une palette de couleur depuis le fichier</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1114"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1053"/>
         <source>Export color map to file</source>
         <translation>Exporter une palette de couleur vers le fichier</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="958"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="897"/>
         <source>Generate new color map</source>
         <translation>Générer une nouvelle palette de couleur</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1608"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1547"/>
         <source>Coordinate reference system</source>
         <translation>Système de coordonnées de référence (SCR)</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1696"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1635"/>
         <source>Legend</source>
         <translation>Légende</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1733"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1672"/>
         <source>Palette</source>
         <translation>Palette</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1873"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Droid Sans&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;
-&lt;tr&gt;
-&lt;td style=&quot;border: none;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Ubuntu&apos;;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1911"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1851"/>
         <source>Notes</source>
         <translation></translation>
     </message>
@@ -35205,7 +36203,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:9pt;&quot;&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1918"/>
+        <location filename="../src/ui/qgsrasterlayerpropertiesbase.ui" line="1858"/>
         <source>Build pyramids internally if possible</source>
         <translation>Construire les pyramides de manière interne si possible</translation>
     </message>
@@ -35229,63 +36227,63 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Courbure totale</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="201"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="215"/>
         <source>Export Frequency distribution as csv</source>
         <translation>Exporter la fréquence de distribution en csv</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="214"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="228"/>
         <source>Export Colors and elevations as xml</source>
         <translation>Exporter les couleurs et les élevations en xml</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="248"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="262"/>
         <source>Import Colors and elevations from xml</source>
         <translation>Omporter les couleurs et les élevations depuis un *.xml</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="257"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="271"/>
         <source>Error opening file</source>
         <translation>Erreur lors de l&apos;ouverture du fichier</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="257"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="271"/>
         <source>The relief color file could not be opened</source>
         <translation>Le fichier de couleur de relief n&apos;a pu être ouvert</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="264"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="278"/>
         <source>Error parsing xml</source>
         <translation>Erreur lors du parcours du fichier xml</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="264"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="278"/>
         <source>The xml file could not be loaded</source>
         <translation>Le fichier xml n&apos;a pu être chargé</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="287"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="301"/>
         <source>Enter result file</source>
         <translation>Saisir le fichier de résultat</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="366"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="380"/>
         <source>Enter lower elevation class bound</source>
         <translation>Saisissez la classe d&apos;élévation la plus basse</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="366"/>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="376"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="380"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="390"/>
         <source>Elevation</source>
         <translation>Élévation</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="376"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="390"/>
         <source>Enter upper elevation class bound</source>
         <translation>Saisissez la classe d&apos;élévation la plus haute</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="385"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisdialog.cpp" line="399"/>
         <source>Select color for relief class</source>
         <translation>Sélection de couleur pour la classe de relief</translation>
     </message>
@@ -35431,70 +36429,70 @@ p, li { white-space: pre-wrap; }
         <translation>Analyse de terrain</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="91"/>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="150"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="92"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="151"/>
         <source>Slope</source>
         <translation>Pente</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="92"/>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="169"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="93"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="170"/>
         <source>Aspect</source>
         <translation>Aspect</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="93"/>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="111"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="94"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="112"/>
         <source>Hillshade</source>
         <translation>Ombrage</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="94"/>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="130"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="95"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="131"/>
         <source>Relief</source>
         <translation>Relief</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="95"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="96"/>
         <source>Ruggedness index</source>
         <translation>Index de rugosité</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="117"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="118"/>
         <source>Calculating hillshade...</source>
         <translation>Calcul de l&apos;ombrage du relief</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="117"/>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="137"/>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="156"/>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="175"/>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="194"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="118"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="138"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="157"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="176"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="195"/>
         <source>Abort</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="137"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="138"/>
         <source>Calculating relief...</source>
         <translation>Calcul du relief...</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="156"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="157"/>
         <source>Calculating slope...</source>
         <translation>Calcul de la pente...</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="175"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="176"/>
         <source>Calculating aspect...</source>
         <translation>Calcul de l&apos;aspect...</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="188"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="189"/>
         <source>Ruggedness</source>
         <translation>Rugosité</translation>
     </message>
     <message>
-        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="194"/>
+        <location filename="../src/plugins/raster_terrain_analysis/qgsrasterterrainanalysisplugin.cpp" line="195"/>
         <source>Calculating ruggedness...</source>
         <translation>Calcul de la rugosité...</translation>
     </message>
@@ -35622,19 +36620,19 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsRendererV2DataDefinedMenus</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="165"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="179"/>
         <source>Rotation field</source>
         <translation>Champ de rotation</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="166"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="180"/>
         <source>Size scale field</source>
         <translation>Champ de proportion</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="177"/>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="216"/>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="236"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="191"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="230"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="250"/>
         <source>- no field -</source>
         <translation>- pas de champ -</translation>
     </message>
@@ -35642,12 +36640,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsRendererV2PropertiesDialog</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2propertiesdialog.cpp" line="194"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2propertiesdialog.cpp" line="207"/>
         <source>Symbology</source>
         <translation>Convention des signes</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2propertiesdialog.cpp" line="195"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2propertiesdialog.cpp" line="208"/>
         <source>Do you wish to use the original symbology implementation for this layer?</source>
         <translation>Souhaitez-vous utiliser l&apos;ancienne implémentation de la symbologie  pour cette couche ?</translation>
     </message>
@@ -35681,32 +36679,32 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsRendererV2Widget</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="16"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="30"/>
         <source>Change color</source>
         <translation>Modifier la couleur</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="17"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="31"/>
         <source>Change transparency</source>
         <translation>Modifier la transparence</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="18"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="32"/>
         <source>Change output unit</source>
         <translation>Modifier l&apos;unité de sortie</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="22"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="36"/>
         <source>Change width</source>
         <translation>Modifier la largeur</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="26"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="40"/>
         <source>Change size</source>
         <translation>Modifier la taille</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="65"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="79"/>
         <source>Transparency</source>
         <translation>Transparence</translation>
     </message>
@@ -35715,48 +36713,48 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Modifier la transparence du symbole</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="65"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="79"/>
         <source>Change symbol transparency [%]</source>
         <translation>Modifier la transparence du symbole [%]</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="87"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="101"/>
         <source>Symbol unit</source>
         <translation>Unité de symbole</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="87"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="101"/>
         <source>Select symbol unit</source>
         <translation>Sélectionner l&apos;unité de symbole</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="87"/>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="90"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="101"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="104"/>
         <source>Millimeter</source>
         <translation>Millimètre</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="87"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="101"/>
         <source>Map unit</source>
         <translation>Unité Identique à celle de la carte</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="110"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="124"/>
         <source>Width</source>
         <translation>Largeur</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="110"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="124"/>
         <source>Change symbol width</source>
         <translation>Modifier la largeur du symbole</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="131"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="145"/>
         <source>Size</source>
         <translation>Taille</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="131"/>
+        <location filename="../src/gui/symbology-ng/qgsrendererv2widget.cpp" line="145"/>
         <source>Change symbol size</source>
         <translation>Modifier la taille du symbole</translation>
     </message>
@@ -35865,7 +36863,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/ui/qgsrulebasedrendererv2widget.ui" line="71"/>
         <source>Refine current rules</source>
-        <translation type="unfinished"></translation>
+        <translation>Redéfinir les règles existantes</translation>
     </message>
     <message>
         <source>Increase priority</source>
@@ -35926,17 +36924,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/gui/symbology-ng/qgsrulebasedrendererv2widget.cpp" line="68"/>
         <source>Add scales to rule</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter des seuils à la régle</translation>
     </message>
     <message>
         <location filename="../src/gui/symbology-ng/qgsrulebasedrendererv2widget.cpp" line="69"/>
         <source>Add categories to rule</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter les catégories aux règles</translation>
     </message>
     <message>
         <location filename="../src/gui/symbology-ng/qgsrulebasedrendererv2widget.cpp" line="70"/>
         <source>Add ranges to rule</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter les intervalles aux règles</translation>
     </message>
     <message>
         <location filename="../src/gui/symbology-ng/qgsrulebasedrendererv2widget.cpp" line="229"/>
@@ -35957,7 +36955,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/gui/symbology-ng/qgsrulebasedrendererv2widget.cpp" line="292"/>
         <source>Parent rule %1 must have a symbol for this operation.</source>
-        <translation type="unfinished"></translation>
+        <translation>La règle parente %1 doit avoir un symbole pour cette opération.</translation>
     </message>
     <message>
         <location filename="../src/gui/symbology-ng/qgsrulebasedrendererv2widget.cpp" line="299"/>
@@ -36008,54 +37006,54 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsSLConnectionItem</name>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="99"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="113"/>
         <source>Database does not exist</source>
         <translation>La base de données n&apos;existe pas</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="100"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="114"/>
         <source>Failed to open database</source>
         <translation>Erreur durant l&apos;ouverture de la base de donnée</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="101"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="115"/>
         <source>Failed to check metadata</source>
         <translation>Impossible de vérifier les métadonnées</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="102"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="116"/>
         <source>Failed to get list of tables</source>
         <translation>Impossible d&apos;obtenir une liste des tables</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="103"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="117"/>
         <source>Unknown error</source>
         <translation>Erreur inconnue</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="142"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="156"/>
         <source>Delete</source>
         <translation>Effacer</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="179"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="193"/>
         <source>%1: Not a vector layer!</source>
         <translation>%1 : N&apos;est pas une couche vecteur !</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="195"/>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="204"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="209"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="218"/>
         <source>%1: OK!</source>
         <translation>%1: OK!</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="215"/>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="219"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="229"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="233"/>
         <source>Import to SpatiaLite database</source>
         <translation>Importer une bases de données SpatiaLite</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="215"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="229"/>
         <source>Failed to import some layers!
 
 </source>
@@ -36063,7 +37061,7 @@ p, li { white-space: pre-wrap; }
 </translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="219"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="233"/>
         <source>Import was successful.</source>
         <translation>Importation réussie.</translation>
     </message>
@@ -36071,14 +37069,14 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsSLLayerItem</name>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="27"/>
         <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="41"/>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="45"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="55"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="59"/>
         <source>Delete layer</source>
         <translation>Supprimer la couche</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="45"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="59"/>
         <source>Layer deleted successfully.</source>
         <translation>Couche supprimée.</translation>
     </message>
@@ -36090,22 +37088,22 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Nouveau...</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="256"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="270"/>
         <source>New Connection...</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle connexion</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="260"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="274"/>
         <source>Create database...</source>
         <translation>Créer une base de données...</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="294"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="308"/>
         <source>New SpatiaLite Database File</source>
         <translation>Nouvelle base de données SpatiaLite</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="296"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="310"/>
         <source>SpatiaLite</source>
         <translation>SpatiaLite</translation>
     </message>
@@ -36114,18 +37112,18 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">SpatiaLite (*.sqlite *.db )</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="303"/>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="314"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="317"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="328"/>
         <source>Create SpatiaLite database</source>
         <translation>Créer une nouvelle base SpatiaLite</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="303"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="317"/>
         <source>The database has been created</source>
         <translation>La base a été créée</translation>
     </message>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="314"/>
+        <location filename="../src/providers/spatialite/qgsspatialitedataitems.cpp" line="328"/>
         <source>Failed to create the database:
 </source>
         <translation>Erreur de création de la base de donnée :</translation>
@@ -36185,7 +37183,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QgsSVGFillSymbolLayerWidget</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgssymbollayerv2widget.cpp" line="841"/>
+        <location filename="../src/gui/symbology-ng/qgssymbollayerv2widget.cpp" line="856"/>
         <source>Select svg texture file</source>
         <translation>Sélection d&apos;un fichier de texture svg</translation>
     </message>
@@ -36515,8 +37513,8 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/app/nodetool/qgsselectedfeature.cpp" line="225"/>
         <source>Validation finished (%n error(s) found).</source>
         <comment>number of geometry errors</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Validation terminée (%, erreur(s) trouvée(s))</numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -36698,7 +37696,7 @@ M&apos;erreur était :
 <context>
     <name>QgsSingleSymbolRendererV2Widget</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgssinglesymbolrendererv2widget.cpp" line="52"/>
+        <location filename="../src/gui/symbology-ng/qgssinglesymbolrendererv2widget.cpp" line="66"/>
         <source>Symbol levels...</source>
         <translation>Niveaux de symbole</translation>
     </message>
@@ -36716,28 +37714,28 @@ M&apos;erreur était :
     </message>
     <message>
         <location filename="../src/app/qgssnappingdialog.cpp" line="143"/>
-        <location filename="../src/app/qgssnappingdialog.cpp" line="229"/>
+        <location filename="../src/app/qgssnappingdialog.cpp" line="237"/>
         <source>to vertex</source>
         <translation>sur un sommet</translation>
     </message>
     <message>
         <location filename="../src/app/qgssnappingdialog.cpp" line="147"/>
-        <location filename="../src/app/qgssnappingdialog.cpp" line="230"/>
+        <location filename="../src/app/qgssnappingdialog.cpp" line="238"/>
         <source>to segment</source>
         <translation>sur un segment</translation>
     </message>
     <message>
-        <location filename="../src/app/qgssnappingdialog.cpp" line="231"/>
+        <location filename="../src/app/qgssnappingdialog.cpp" line="239"/>
         <source>to vertex and segment</source>
         <translation>sur un sommet ou un segment</translation>
     </message>
     <message>
-        <location filename="../src/app/qgssnappingdialog.cpp" line="245"/>
+        <location filename="../src/app/qgssnappingdialog.cpp" line="253"/>
         <source>map units</source>
         <translation>unités de carte</translation>
     </message>
     <message>
-        <location filename="../src/app/qgssnappingdialog.cpp" line="246"/>
+        <location filename="../src/app/qgssnappingdialog.cpp" line="254"/>
         <source>pixels</source>
         <translation></translation>
     </message>
@@ -36792,9 +37790,9 @@ M&apos;erreur était :
 <context>
     <name>QgsSpatiaLiteConnection</name>
     <message>
-        <location filename="../src/providers/spatialite/qgsspatialiteconnection.cpp" line="186"/>
-        <location filename="../src/providers/spatialite/qgsspatialiteconnection.cpp" line="314"/>
-        <location filename="../src/providers/spatialite/qgsspatialiteconnection.cpp" line="517"/>
+        <location filename="../src/providers/spatialite/qgsspatialiteconnection.cpp" line="200"/>
+        <location filename="../src/providers/spatialite/qgsspatialiteconnection.cpp" line="328"/>
+        <location filename="../src/providers/spatialite/qgsspatialiteconnection.cpp" line="531"/>
         <source>unknown error cause</source>
         <translation>Une erreur inconnue est survenue</translation>
     </message>
@@ -37204,13 +38202,13 @@ SQL: %1</translation>
         <translation type="obsolete">-- fini à [%L1] (temps de progression %L2 minutes) --&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="321"/>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="347"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="322"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="348"/>
         <source>%1 of %2</source>
         <translation>%1 sur %2</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="322"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="323"/>
         <source>all = %1</source>
         <translation>tout = %1</translation>
     </message>
@@ -37259,74 +38257,74 @@ SQL: %1</translation>
         <translation>Désolé ! Seuls ces pilotes sont disponibles : OGR, POSTGRES et SPATIALITE.</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="346"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="347"/>
         <source>%1 of %2(selected features)</source>
         <translation>%1 sur %2 (entités sélectionnées)</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="502"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="503"/>
         <source>Create new selection</source>
         <translation>Créer une nouvelle sélection</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="510"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="511"/>
         <source>Add to current selection</source>
         <translation>Ajouter à la sélection actuelle</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="513"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="514"/>
         <source>Remove from current selection</source>
         <translation>Enlever de la sélection actuelle</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="522"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="523"/>
         <source>Result query</source>
         <translation>Résultat de la requête</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="524"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="525"/>
         <source>Invalid source</source>
         <translation>Source invalide</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="526"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="527"/>
         <source>Invalid reference</source>
         <translation>Référence invalide</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="637"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="638"/>
         <source>%1 of %2 selected by &quot;%3&quot;</source>
         <translation>%1 sur %2 sélectionné par &quot;%3&quot;</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="640"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="641"/>
         <source>user</source>
         <translation>utilisateur</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="692"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="693"/>
         <source>Map &quot;%1&quot; &quot;on the fly&quot; transformation.</source>
         <translation>Transformation de la carte &quot;%1&quot; à la volée.</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="692"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="693"/>
         <source>enable</source>
         <translation>activer</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="692"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="693"/>
         <source>disable</source>
         <translation>désactive</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="693"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="694"/>
         <source>Coordinate reference system(CRS) of
 &quot;%1&quot; is invalid(see CRS of provider).</source>
         <translation>Le système de coordonnée de référence (SCR) de
 &quot;%1&quot; est invalide.</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="694"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="695"/>
         <source>
 
 CRS of map is %1.
@@ -37337,53 +38335,53 @@ Le SCR de la carte est %1.
 %2.</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="697"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="698"/>
         <source>Zoom to feature</source>
         <translation>Zoom sur l&apos;entité</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="736"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="737"/>
         <source>Missing reference layer</source>
         <translation>Couche de référence manquante</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="736"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="737"/>
         <source>Select reference layer!</source>
         <translation>Sélectionnez une couche de référence !</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="741"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="742"/>
         <source>Missing target layer</source>
         <translation>Couche ciblée manquante</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="741"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="742"/>
         <source>Select target layer!</source>
         <translation>Sélectionnez une couche cible !</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="812"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="813"/>
         <source>Create new layer from items</source>
         <translation>Créer une nouvelle couche avec les objets</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="830"/>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="856"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="831"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="857"/>
         <source>The query from &quot;%1&quot; using &quot;%2&quot; in field not possible.</source>
         <translation>La requête depuis &quot;%1&quot; utilisant &quot;%2&quot; comme champ n&apos;est pas réalisable.</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="838"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="839"/>
         <source>Create new layer from selected</source>
         <translation>Créer une nouvelle couche depuis la sélection</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="945"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="946"/>
         <source>%1 of %2 identified</source>
         <translation>%1 sur %2 identifiés</translation>
     </message>
     <message>
-        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="1082"/>
+        <location filename="../src/plugins/spatialquery/qgsspatialquerydialog.cpp" line="1083"/>
         <source>DEBUG</source>
         <translation>DEBOGGAGE</translation>
     </message>
@@ -38477,100 +39475,100 @@ Voulez-vous l&apos;&apos;écraser ?</translation>
 <context>
     <name>QgsStyleV2ManagerDialog</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="108"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="122"/>
         <source>Marker symbol (%1)</source>
         <translation>Symbole marqueur (%1)</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="109"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="123"/>
         <source>Line symbol (%1)</source>
         <translation>Symbole de ligne (%1)</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="110"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="124"/>
         <source>Fill symbol (%1)</source>
         <translation>Symbole de remplissage (%1)</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="112"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="126"/>
         <source>Color ramp (%1)</source>
         <translation>Palette de couleur (%1)</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="257"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="271"/>
         <source>Symbol name</source>
         <translation>Nom du symbole</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="258"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="272"/>
         <source>Please enter name for new symbol:</source>
         <translation>Veuillez saisir un nom pour le nouveau symbole :</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="258"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="272"/>
         <source>new symbol</source>
         <translation>nouveau symbole</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="268"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="282"/>
         <source>Save symbol</source>
         <translation>Enregistrer le symbole</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="269"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="283"/>
         <source>Symbol with name &apos;%1&apos; already exists. Overwrite?</source>
         <translation>Le symbole avec le nom &apos;%1&apos; existe déjà. Voulez-vous l&apos;&apos;écraser ?</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="290"/>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="298"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="304"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="312"/>
         <source>Gradient</source>
         <translation>Dégradé</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="290"/>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="309"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="304"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="323"/>
         <source>Random</source>
         <translation>Aléatoire</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="290"/>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="320"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="304"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="334"/>
         <source>ColorBrewer</source>
         <translation>Mélangeur de couleur</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="292"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="306"/>
         <source>Color ramp type</source>
         <translation>Type de palette de couleur</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="293"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="307"/>
         <source>Please select color ramp type:</source>
         <translation>Veuillez sélectionner le type de palette de couleur :</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="337"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="351"/>
         <source>Color ramp name</source>
         <translation>Nom de la palette de couleur</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="338"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="352"/>
         <source>Please enter name for new color ramp:</source>
         <translation>Veuillez saisir le nom de la nouvelle palette de couleur :</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="338"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="352"/>
         <source>new color ramp</source>
         <translation>Nouvelle palette de couleur</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="532"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="546"/>
         <source>Load styles</source>
         <translation>Charger les styles</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="533"/>
+        <location filename="../src/gui/symbology-ng/qgsstylev2managerdialog.cpp" line="547"/>
         <source>XML files (*.xml *XML)</source>
         <translation>Fichiers XML (*.xml)</translation>
     </message>
@@ -38650,12 +39648,12 @@ Voulez-vous l&apos;&apos;écraser ?</translation>
 <context>
     <name>QgsSvgMarkerSymbolLayerV2Widget</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgssymbollayerv2widget.cpp" line="680"/>
+        <location filename="../src/gui/symbology-ng/qgssymbollayerv2widget.cpp" line="695"/>
         <source>Select SVG file</source>
         <translation>Sélectionnez un fichier SVG</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgssymbollayerv2widget.cpp" line="682"/>
+        <location filename="../src/gui/symbology-ng/qgssymbollayerv2widget.cpp" line="697"/>
         <source>SVG files</source>
         <translation>Fichier SVG</translation>
     </message>
@@ -38663,7 +39661,7 @@ Voulez-vous l&apos;&apos;écraser ?</translation>
 <context>
     <name>QgsSymbolLevelsV2Dialog</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgssymbollevelsv2dialog.cpp" line="82"/>
+        <location filename="../src/gui/symbology-ng/qgssymbollevelsv2dialog.cpp" line="102"/>
         <source>Layer %1</source>
         <translation>Couche %1</translation>
     </message>
@@ -38689,7 +39687,7 @@ Voulez-vous l&apos;&apos;écraser ?</translation>
 <context>
     <name>QgsSymbolV2PropertiesDialog</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgssymbolv2propertiesdialog.cpp" line="182"/>
+        <location filename="../src/gui/symbology-ng/qgssymbolv2propertiesdialog.cpp" line="196"/>
         <source>Outline: %1</source>
         <translation>Bordure : %1</translation>
     </message>
@@ -38697,32 +39695,32 @@ Voulez-vous l&apos;&apos;écraser ?</translation>
 <context>
     <name>QgsSymbolV2SelectorDialog</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgssymbolv2selectordialog.cpp" line="227"/>
+        <location filename="../src/gui/symbology-ng/qgssymbolv2selectordialog.cpp" line="241"/>
         <source>Symbol name</source>
         <translation>Nom du symbole</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgssymbolv2selectordialog.cpp" line="228"/>
+        <location filename="../src/gui/symbology-ng/qgssymbolv2selectordialog.cpp" line="242"/>
         <source>Please enter name for the symbol:</source>
         <translation>Veuillez saisir un nom pour ce symbole :</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgssymbolv2selectordialog.cpp" line="228"/>
+        <location filename="../src/gui/symbology-ng/qgssymbolv2selectordialog.cpp" line="242"/>
         <source>New symbol</source>
         <translation>Nouveau symbole</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgssymbolv2selectordialog.cpp" line="235"/>
+        <location filename="../src/gui/symbology-ng/qgssymbolv2selectordialog.cpp" line="249"/>
         <source>Save symbol</source>
         <translation>Enregistrer le symbole</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgssymbolv2selectordialog.cpp" line="236"/>
+        <location filename="../src/gui/symbology-ng/qgssymbolv2selectordialog.cpp" line="250"/>
         <source>Symbol with name &apos;%1&apos; already exists. Overwrite?</source>
         <translation>Le symbole avec le nom &apos;%1&apos; existe déjà. Voulez-vous l&apos;&apos;écraser ?</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgssymbolv2selectordialog.cpp" line="294"/>
+        <location filename="../src/gui/symbology-ng/qgssymbolv2selectordialog.cpp" line="308"/>
         <source>Transparency %1%</source>
         <translation>Transparence %1%</translation>
     </message>
@@ -38930,172 +39928,172 @@ Voulez-vous l&apos;&apos;écraser ?</translation>
 <context>
     <name>QgsTipFactory</name>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="35"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="29"/>
         <source>Quantum GIS is open source</source>
         <translation>Quantum GIS est open-source</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="36"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="30"/>
         <source>Quantum GIS is open source software. This means that the software source code can be freely viewed and modified. The GPL places a restriction that any modifications you make must be made available to the Quantum GIS project, and that you can not create a new version of Quantum GIS under a &apos;closed source&apos; license. Visit &lt;a href=&quot;http://qgis.org&quot;&gt; the QGIS home page (http://qgis.org)&lt;/a&gt; for more information.</source>
         <translation>QGIS est un logiciel Open Source. cela signifie que le code source peut être librement modifié. La license GPL impose que toutes les modifications que vous pourriez apporter à ce code soient disponibles aux utilisateurs et vous interdit de diffuser une version avec une licence propriétaire. Visitez le site &lt;a href=&quot;http://qgis.org&quot;&gt;qgis.org&lt;/a&gt; pour plus d&apos;informations.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="46"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="40"/>
         <source>QGIS Publications</source>
         <translation>Publications</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="47"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="41"/>
         <source>If you write a scientific paper or any other article that refers to QGIS we would love to include your work in the &lt;a href=&quot;http://www.qgis.org/en/community/qgis-case-studies.html&quot;&gt;case studies section&lt;/a&gt; of the Quantum GIS home page (http://http://www.qgis.org/en/community/qgis-case-studies.html).</source>
         <translation>Si vous rédigez une étude scientifique ou d&apos;autres articles faisant référence à QGIS, nous sommes disposés à inclure votre travail dans notre &lt;a href=&quot;http://www.qgis.org/en/community/qgis-case-studies.html&quot;&gt;section de cas d&apos;études&lt;/a&gt;  de notre site.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="53"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="47"/>
         <source>Become an QGIS translator</source>
         <translation>Devenir un traducteur de QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="54"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="48"/>
         <source>Would you like to see QGIS in your native language? We are looking for more translators and would appreciate your help! The translation process is fairly straight forward - instructions are available in the QGIS wiki &lt;a href=&quot;http://www.qgis.org/wiki/GUI_Translation&quot;&gt;translator&apos;s page (http://www.qgis.org/wiki/GUI_Translation).&lt;/a&gt;</source>
         <translation>Vous voulez utiliser QGIS dans votre langue maternelle ? Nous recherchons toujours des traducteurs et apprécierions votre aide ! Le processus est assez simple, des instructions sont disponible sur notre wiki  &lt;a href=&quot;http://www.qgis.org/wiki/GUI_Translation&quot;&gt;(page traduction)&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="62"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="56"/>
         <source>QGIS Mailing lists</source>
         <translation>Listes de discussion de QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="63"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="57"/>
         <source>If you need help using QGIS we have a &apos;users&apos;  mailing list where users help each other with issues related to using our sofware. We also have a &apos;developers&apos; mailing list. for those wanting help and to discuss things relating the the QGIS code base. Details on how to subscribe are in the &lt;a href=&quot;http://www.qgis.org/en/community/mailing-lists.html&quot;&gt;community section&lt;/a&gt; of the QGIS home page (http://www.qgis.org/en/community/mailing-lists.html).</source>
         <translation>Que vous voyez simple utilisateur ou développeur, la communauté de QGIS est prête à vous acceuillir sur ces listes de discussion. Référez-vous à la page des &lt;a href=&quot;http://www.qgis.org/en/community/mailing-lists.html&quot;&gt;listes&lt;/a&gt; pour connaître celle qui correspondrait le plus à vos attentes.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="71"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="65"/>
         <source>Is it &apos;QGIS&apos; or &apos;Quantum GIS&apos;?</source>
         <translation>On dit &apos;QGIS&apos; ou &apos;Quantum GIS&apos; ?</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="72"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="66"/>
         <source>Both are correct. For articles we suggest you write &apos;Quantum GIS (QGIS) is ....&apos; and then refer to it as QGIS thereafter.</source>
         <translation>Les deux sont corrects. Dans un article nous vous conseillons d&apos;écrire une première fois &apos;Quantum GIS (QGIS) est&apos; puis de vous référer à QGIS par la suite.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="76"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="70"/>
         <source>How do I refer to Quantum GIS?</source>
         <translation>Comment se référer à QGIS ?</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="77"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="71"/>
         <source>QGIS is spelled in all caps. We have various subprojects of the QGIS project and it will help to avoid confusion if you refer to each by its name:&lt;ul&gt;&lt;li&gt;QGIS Library - this is the C++ library that contains the core logic that is used to build the QGIS user interface and other applications.&lt;/li&gt;&lt;li&gt;QGIS Application - this is the desktop application that you know and love so much :-).&lt;/li&gt;&lt;li&gt;QGIS Mapserver - this is a server-side application based on the QGIS Library that will serve up your .qgs projects using the WMS protocol.&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>QGIS s&apos;écrit en lettres majuscule. Nous avons de nombreux sous-projets et cela permet d&apos;éviter les confusions lorsque vous vous référer à chacun par son nom :&lt;ul&gt;&lt;li&gt;QGIS Library - il s&apos;agit de la bibliothèque C++ qui contient les éléments principaux du logiciel et de son interface.&lt;/li&gt;&lt;li&gt;QGIS Application - il s&apos;agit de l&apos;application bureautique que vous connaissez et appréciez autant :-).&lt;/li&gt;&lt;li&gt;QGIS Server - il s&apos;agit du serveur cartographique basé sur QGIS qui permet de partager vos projets via le protocole WMS (à ne pas confondre avec UMN MapServer).&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="91"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="85"/>
         <source>Add the current date to a map layout</source>
         <translation>Ajouter la date à une carte</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="92"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="86"/>
         <source>You can add a current date variable to your map layout. Create a regular text label and add the string $CURRENT_DATE(yyyy-MM-dd) to the text box. See the &lt;a href=&quot;http://doc.qt.nokia.com/latest/qdate.html#toString&quot;&gt;QDate::toString format documentation&lt;/a&gt; for the possible date formats.</source>
         <translation>Vous pouvez ajouter la date sur votre carte en créant une étiquette de texte simple et ajoutant la variable $CURRENT_DATE(yyyy-MM-dd) dans le texte. Regardez la documentation de &lt;a href=&quot;http://doc.qt.nokia.com/latest/qdate.html#toString&quot;&gt;QDate::toString&lt;/a&gt;pour d&apos;autres formats.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="99"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="93"/>
         <source>Moving Elements and Maps in the Print Composer</source>
         <translation>Déplacer des éléments dans le composeur de carte</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="100"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="94"/>
         <source>In the print composer tool bar you can find two buttons for moving elements. The left one (a selection cursor with the hand symbol) selects and moves elements in the layout. After selecting the element with this tool you can also move them around with the arrow keys. For accurate positioning use the &lt;strong&gt;Position and Size&lt;/strong&gt; dialogue, which can be found in the tab &lt;strong&gt;Item &amp;rarr; General Options &amp;rarr; Position and Size&lt;/strong&gt;. For easier positioning you can also set specific anchor points of the element within this dialogue. The other move tool (the globe icon combined with the hand icon) allows one to move the map content within a map frame.</source>
         <translation>Dans le composeur d&apos;impression, vous trouverez deux boutons pour déplacer des éléments. Le bouton de gauche (un curseur de souris et une main) sélectionne et déplace les objets sur la page. Pour un positionnement plus précis, utilisez les options de &lt;strong&gt;Position et Taille&lt;/strong&gt; se trouvant dans l&apos;onglet &lt;strong&gt;Objet &amp;rarr; Options Globales&lt;/strong&gt;. L&apos;autre outil (un globe et une main) vous permet de déplacer le contenu de la carte.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="114"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="108"/>
         <source>Lock an element in the layout view</source>
         <translation>Verrouiller un objet dans le composeur</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="115"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="109"/>
         <source>By left clicking an element in the layout view you can select it, by right clicking an element you can lock it. A lock symbol will appear in the upper left corner of the selected element. This prevents the element from accidentally being moved with the mouse. While in a locked state, you cannot move an element with the mouse but you can still move it with the arrow keys or by absolutely positioning it by setting its &lt;strong&gt;Position and Size&lt;/strong&gt;.</source>
         <translation>En faisant un clic gauche sur un objet, vous pouvez le sélectionner; en faisant un clic droit, vous le verrouillez. Un symbole de verrou bleu apparaît dans le coin supérieur gauche de l&apos;objet. Cela empêche l&apos;élément d&apos;être accidentellement modifié par la souris (vous pouvez toujours le déplacer à l&apos;aide des touches clavier ou des options de l&apos;objet).</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="125"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="119"/>
         <source>Rotating a map and linking a north arrow</source>
         <translation>Faire tourner une carte et une flèche nord</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="126"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="120"/>
         <source>You can rotate a map by setting its rotation value in the &lt;strong&gt;Item tab &amp;rarr; Map&lt;/strong&gt; section. To place a north arrow in your layout you can use the &lt;strong&gt;Add Image&lt;/strong&gt; tool, the button with the little camera icon. QGIS comes with a selection of north arrows. After the placement of the north arrow in the layout you can link it with a specific map frame by activating the &lt;strong&gt;Sync with map&lt;/strong&gt; checkbox and selecting a map frame. Whenever you change the rotation value of a linked map, the north arrow will now automatically adjust its rotation.</source>
         <translation>Vous pouvez affecter un facteur de rotation dans la section &lt;strong&gt;Objet &amp;rarr; Carte&lt;/strong&gt;. Il est possible de coordonner la rotation de cette carte et celle d&apos;une flèche nord en activant la case &lt;strong&gt;Syncrhoniser avec la carte&lt;/strong&gt; et en choisissant la carte concernée. De cette façon, la flèche ajustera toujours sa position  lors d&apos;une rotation de la carte.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="138"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="132"/>
         <source>Numeric scale value in map layout linked to map frame</source>
         <translation>Valeur numérique de l&apos;échelle</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="139"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="133"/>
         <source>If you want to place a text label as a placeholder for the current scale, linked to a map frame, you need to place a scalebar and set the style to &apos;Numeric&apos;. You also need to select the map frame, if there is more than one.</source>
         <translation>Si vous voulez placer une étiquette de texte à une échelle liée à une cadre de carte, vous devez placer une barre d&apos;échelle et définir le style à &apos;Nymérique&apos;. Vous pouvez aussi sélectionner le cadre de la carte s&apos;il y en a plus d&apos;un.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="146"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="140"/>
         <source>Using the mouse scroll wheel</source>
         <translation>Utiliser la roulette de la souris</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="147"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="141"/>
         <source>You can use the scroll wheel on your mouse to zoom in, out and pan the map. Scroll forwards to zoom in, scroll backwards to zoom out and press and hold the scroll wheel down to pan the map. You can configure options for scroll wheel behaviour in the Options panel.</source>
         <translation>Vous pouvez utiliser la roulette de votre souris pour zoomer vers l&apos;avant et vers l&apos;arrière sur la carte. Pour vous rapprocher, faites rouler vers l&apos;avant et pour reculer, faites rouler vers l&apos;arrière. Appuyez sur la roulette pour vous déplacer sur la carte. Vous pouvez configurer ces comportements dans la fenêtre des Options.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="155"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="149"/>
         <source>Sometimes you have a very large dataset which takes ages to draw. You can press &apos;esc&apos; (the escape key), or click the small red &apos;X&apos; icon in the status bar to the bottom right of the window at any time to halt rendering. If you are going to be performing several actions (e.g. modifying symbology options) and wish to temporarily disable map rendering while you do so, you can uncheck the &apos;Render&apos; checkbox in the bottom right of the status bar. Don&apos;t forget to check it on again when you are ready to have the map draw itself again!</source>
         <translation>Si il vous arrive d&apos;avoir des données volumineuses prennant une éternité à s&apos;afficher, vous pouvez appuyez sur la touche Echap ou cliquer sur l&apos;icône &apos;X&apos; rouge située dans la barre de statut dans le coin inférieur droit pour arrêter le rendu. Pour effectuer des actions (p. ex. changer la symbologie) sans devoir attendre que l&apos;affichage s&apos;actualise, décochez la case &apos;Rendu&apos;. N&apos;oubliez pas de la recocher pour que la carte puisse être redessinée !</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="166"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="160"/>
         <source>Join intersected polylines when rendering</source>
         <translation>Joindre des lignes qui se croisent</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="167"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="161"/>
         <source>When applying layered styles to a polyline layer, you can join intersecting lines together simply by enabling symbol levels. The image below shows a before (left) and after (right) view of an intersection when symbol levels are enabled.</source>
         <translation>Lors de l&apos;application d&apos;un style à une couche de polylignes, vous pouvez joindre les lignes ensemble en appliquant les niveaux de symboles. L&apos;image suivante vous montre l&apos;affichage sans (à gauche) et avec (à droite).</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="175"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="169"/>
         <source>Auto-enable on the fly projection</source>
         <translation>Activer automatiquement la reprojection à la volée</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="176"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="170"/>
         <source>In the options dialog, under the CRS tab, you can set QGIS so that whenever you create a new project, &apos;on the fly projection&apos; is enabled automatically and a pre-selected Coordinate Reference System of your choice is used.</source>
         <translation>Dans la fenêtre des options (onglet SCR), vous pouvez demander à QGIS d&apos;activer la reprojection à la volée pour chaque nouveau projet et pré-sélectionner un système de coordonnées.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="183"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="177"/>
         <source>Sponsor QGIS</source>
         <translation>Parrainer QGIS</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="184"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="178"/>
         <source>If QGIS is saving you money or you like our work and have the financial ability to help, please consider sponsoring the development of Quantum GIS. We use money from sponsors to pay for travel and costs related to our bi-annual hackfests, and to generally support the goals of our project.  Please see the &lt;a href=&quot;http://qgis.org/en/sponsorship.html&quot;&gt;QGIS Sponsorship Web Page&lt;/a&gt; for more details.</source>
         <translation>Si QGIS vous permet d&apos;économiser de l&apos;agent ou que vous aimiez notre travail et ayez les moyens financiers d&apos;aider alors songez à parrainer le projet. Nous utiliserons ces ressources pour organiser nos rencontres biannuelles et améliorer le logiciel. Veuillez consulter la page de &lt;/span&gt;&lt;a href=&quot;http://qgis.org/fr/sponsorship.html&quot;&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;; text-decoration: underline; color:#0000ff;&quot;&gt; parrainage de QGIS&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Ubuntu&apos;;&quot;&gt; pour plus de détails.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="194"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="188"/>
         <source>Quantum GIS has Plugins!</source>
         <translation>Quantum GIS a des extensions !</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="195"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="189"/>
         <source>Quantum GIS has plugins that extend its functionality. QGIS ships with some core plugins you can explore from the Plugins-&gt;Manage Plugins menu. In addition there are over 150 Python plugins contributed by the user community that can be installed from the Plugins-&gt;Fetch Python Plugins menu. Don&apos;t miss out on all QGIS has to offer---check out the plugins and see what they can do for you.</source>
-        <translation type="unfinished"></translation>
+        <translation>Quantum Gis dispose d&apos;extensions qui étendent ses fonctionalités. QGis est livré avec certaines d&apos;entre elles, disponibles depuis le menu &quot;Extensions&gt;Gestionnaire d&apos;extensions&quot;. Par ailleurs, plus de 150 extensions python, développées par la communauté peuvent être installées depuis le menu &quot;Extensions&gt;Installateur d&apos;extensions python&quot;. Ne passez pas à coté de tout ce que QGis peut vous offrir. Jetez un oeil aux extensions et voyez ce qu&apos;elles peuvent faire pour vous.</translation>
     </message>
     <message>
-        <location filename="../src/app/qgstipfactory.cpp" line="154"/>
+        <location filename="../src/app/qgstipfactory.cpp" line="148"/>
         <source>Stopping rendering</source>
         <translation>Arrêter le rendu de l&apos;affichage</translation>
     </message>
@@ -39508,27 +40506,27 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
 <context>
     <name>QgsVectorFieldSymbolLayerWidget</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsvectorfieldsymbollayerwidget.cpp" line="145"/>
+        <location filename="../src/gui/symbology-ng/qgsvectorfieldsymbollayerwidget.cpp" line="159"/>
         <source>X attribute</source>
         <translation>Attribut X</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsvectorfieldsymbollayerwidget.cpp" line="146"/>
+        <location filename="../src/gui/symbology-ng/qgsvectorfieldsymbollayerwidget.cpp" line="160"/>
         <source>Y attribute</source>
         <translation>Attribut Y</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsvectorfieldsymbollayerwidget.cpp" line="158"/>
+        <location filename="../src/gui/symbology-ng/qgsvectorfieldsymbollayerwidget.cpp" line="172"/>
         <source>Length attribute</source>
         <translation>Attribut de longueur</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsvectorfieldsymbollayerwidget.cpp" line="159"/>
+        <location filename="../src/gui/symbology-ng/qgsvectorfieldsymbollayerwidget.cpp" line="173"/>
         <source>Angle attribute</source>
         <translation>Attribut d&apos;angle</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsvectorfieldsymbollayerwidget.cpp" line="171"/>
+        <location filename="../src/gui/symbology-ng/qgsvectorfieldsymbollayerwidget.cpp" line="185"/>
         <source>Height attribute</source>
         <translation>Attribut de hauteur</translation>
     </message>
@@ -39536,18 +40534,18 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
 <context>
     <name>QgsVectorGradientColorRampV2Dialog</name>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="151"/>
-        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="155"/>
-        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="194"/>
-        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="198"/>
+        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="165"/>
+        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="169"/>
+        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="208"/>
+        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="212"/>
         <source>Offset of the stop</source>
         <translation>Décalage de l&apos;arrêt</translation>
     </message>
     <message>
-        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="152"/>
-        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="156"/>
-        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="195"/>
-        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="199"/>
+        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="166"/>
+        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="170"/>
+        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="209"/>
+        <location filename="../src/gui/symbology-ng/qgsvectorgradientcolorrampv2dialog.cpp" line="213"/>
         <source>Please enter offset in percents (%) of the new stop</source>
         <translation>Saisir le décalage en pourcentage (%) du nouvel arrêt</translation>
     </message>
@@ -39609,47 +40607,47 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
 <context>
     <name>QgsVectorLayer</name>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3634"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3657"/>
         <source>ERROR: no provider</source>
         <translation>ERREUR: pas de prestataire</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3640"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3663"/>
         <source>ERROR: layer not editable</source>
         <translation>ERREUR : couche non éditable</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3732"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3755"/>
         <source>SUCCESS: attribute %1 was added.</source>
         <translation>SUCCES : attribut %1 a été ajouté .</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3739"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3762"/>
         <source>ERROR: attribute %1 not added</source>
         <translation>ERREUR :  attribut %1 non-ajouté</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="2969"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="2992"/>
         <source>No renderer object</source>
         <translation>Pas d&apos;objet rendu</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="2975"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="2998"/>
         <source>Classification field not found</source>
         <translation>Champ de classification non trouvé</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3214"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3237"/>
         <source>renderer failed to save</source>
         <translation>Le moteur de rendu n&apos;a pu sauvegarder</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3221"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3244"/>
         <source>no renderer</source>
         <translation>Pas de moteur de rendu</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3654"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3677"/>
         <source>SUCCESS: %n attribute(s) deleted.</source>
         <comment>deleted attributes count</comment>
         <translation>
@@ -39658,7 +40656,7 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3663"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3686"/>
         <source>ERROR: %n attribute(s) not deleted.</source>
         <comment>not deleted attributes count</comment>
         <translation>
@@ -39667,7 +40665,7 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3682"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3705"/>
         <source>SUCCESS: %n attribute(s) added.</source>
         <comment>added attributes count</comment>
         <translation>
@@ -39676,7 +40674,7 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3691"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3714"/>
         <source>ERROR: %n new attribute(s) not added</source>
         <comment>not added attributes count</comment>
         <translation>
@@ -39685,7 +40683,7 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3801"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3824"/>
         <source>SUCCESS: %n attribute value(s) changed.</source>
         <comment>changed attribute values count</comment>
         <translation>
@@ -39694,7 +40692,7 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3809"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3832"/>
         <source>ERROR: %n attribute value change(s) not applied.</source>
         <comment>not changed attribute values count</comment>
         <translation>
@@ -39703,7 +40701,7 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3850"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3873"/>
         <source>SUCCESS: %n feature(s) added.</source>
         <comment>added features count</comment>
         <translation>
@@ -39712,7 +40710,7 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3868"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3891"/>
         <source>ERROR: %n feature(s) not added.</source>
         <comment>not added features count</comment>
         <translation>
@@ -39721,16 +40719,16 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3874"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3897"/>
         <source>ERROR: %n feature(s) not added - provider doesn&apos;t support adding features.</source>
         <comment>not added features count</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Erreur : %n entité(s) non ajoutée(s) - le prestataire de données ne supporte pas l&apos;ajout d&apos;entités.</numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3887"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3910"/>
         <source>SUCCESS: %n geometries were changed.</source>
         <comment>changed geometries count</comment>
         <translation>
@@ -39739,7 +40737,7 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3895"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3918"/>
         <source>ERROR: %n geometries not changed.</source>
         <comment>not changed geometries count</comment>
         <translation>
@@ -39748,7 +40746,7 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3907"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3930"/>
         <source>SUCCESS: %n feature(s) deleted.</source>
         <comment>deleted features count</comment>
         <translation>
@@ -39757,7 +40755,7 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3920"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3943"/>
         <source>ERROR: %n feature(s) not deleted.</source>
         <comment>not deleted features count</comment>
         <translation>
@@ -39770,126 +40768,127 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         <translation type="obsolete">Spécifier le SCR pour la couche %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3929"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3952"/>
         <source>
   Provider errors:</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur du prestataire :</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="3933"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="3956"/>
         <source>Commit errors:
   %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreurs de commit:
+  %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5440"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5463"/>
         <source>General:</source>
         <translation>Général:</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5447"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5470"/>
         <source>Layer comment: %1</source>
         <translation>Commentaire de la couche : %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5453"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5476"/>
         <source>Storage type of this layer: %1</source>
         <translation> Type de stockage de cette couche : %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5458"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5481"/>
         <source>Source for this layer: %1</source>
         <translation>Source pour cette couche : %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5474"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5497"/>
         <source>Geometry type of the features in this layer: %1</source>
         <translation> Type de la géométrie des données dans cette couche : %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5481"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5504"/>
         <source>The number of features in this layer: %1</source>
         <translation>Le nombre de données dans cette couche : %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5485"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5508"/>
         <source>Editing capabilities of this layer: %1</source>
         <translation>Éditions possibles sur cette couche : %1</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5492"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5515"/>
         <source>Extents:</source>
         <translation>Emprise :</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5495"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5518"/>
         <source>In layer spatial reference system units : </source>
         <translation> Dans les unités spatiales du système de référence de la couche: </translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5544"/>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5563"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5567"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5586"/>
         <source>xMin,yMin %1,%2 : xMax,yMax %3,%4</source>
         <translation>xMin,yMin %1,%2 : xMax,yMax %3,%4</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5549"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5572"/>
         <source>unknown extent</source>
-        <translation type="unfinished"></translation>
+        <translation>Extent inconue</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5562"/>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5600"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5585"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5623"/>
         <source>In project spatial reference system units : </source>
         <translation> Dans les unités spatiales du système de référence du projet :</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5575"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5598"/>
         <source>Layer Spatial Reference System:</source>
         <translation>Système spatial de référence de la couche: </translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5587"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5610"/>
         <source>Project (Output) Spatial Reference System:</source>
         <translation>Système spatial de référence du projet (rendu): </translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5601"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5624"/>
         <source>(Invalid transformation of layer extents)</source>
         <translation>(Transformation invalide des étendues de couche)</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5611"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5634"/>
         <source>Attribute field info:</source>
         <translation>Information de champ d&apos;attribut: </translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5618"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5641"/>
         <source>Field</source>
         <translation>Champ</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5621"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5644"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5624"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5647"/>
         <source>Length</source>
         <translation>Longueur</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5627"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5650"/>
         <source>Precision</source>
         <translation>Précision</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="5630"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="5653"/>
         <source>Comment</source>
         <translation>Commentaire</translation>
     </message>
     <message>
-        <location filename="../src/core/qgsvectorlayer.cpp" line="2963"/>
+        <location filename="../src/core/qgsvectorlayer.cpp" line="2986"/>
         <source>Unknown renderer</source>
         <translation>Rendu inconnu</translation>
     </message>
@@ -40041,29 +41040,29 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
     <message>
         <location filename="../src/app/qgsvectorlayerproperties.cpp" line="953"/>
         <source>Load layer properties from style file</source>
-        <translation type="unfinished">Charger les propriétés des couches à partir d&apos;un fichier de style</translation>
+        <translation>Charger les propriétés des couches à partir d&apos;un fichier de style</translation>
     </message>
     <message>
         <location filename="../src/app/qgsvectorlayerproperties.cpp" line="954"/>
         <location filename="../src/app/qgsvectorlayerproperties.cpp" line="994"/>
         <source>QGIS Layer Style File</source>
-        <translation type="unfinished">Fichier de style de couche QGIS</translation>
+        <translation>Fichier de style de couche QGIS</translation>
     </message>
     <message>
         <location filename="../src/app/qgsvectorlayerproperties.cpp" line="954"/>
         <location filename="../src/app/qgsvectorlayerproperties.cpp" line="994"/>
         <source>SLD File</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier SLD</translation>
     </message>
     <message>
         <location filename="../src/app/qgsvectorlayerproperties.cpp" line="980"/>
         <source>Load Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Charger le style</translation>
     </message>
     <message>
         <location filename="../src/app/qgsvectorlayerproperties.cpp" line="993"/>
         <source>Save layer properties as style file</source>
-        <translation type="unfinished">Sauvegarder les propriétés de la couche comme fichier de style</translation>
+        <translation>Sauvegarder les propriétés de la couche comme fichier de style</translation>
     </message>
     <message>
         <location filename="../src/app/qgsvectorlayerproperties.cpp" line="1029"/>
@@ -40287,7 +41286,6 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         <translation>Couleur du crayon</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsvectorlayerproperties.cpp" line="1411"/>
         <location filename="../src/app/qgsvectorlayerproperties.cpp" line="1482"/>
         <source>MM</source>
         <translation>MM</translation>
@@ -40296,6 +41294,11 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         <location filename="../src/app/qgsvectorlayerproperties.cpp" line="1424"/>
         <source>AroundPoint</source>
         <translation>Autour du point</translation>
+    </message>
+    <message>
+        <location filename="../src/app/qgsvectorlayerproperties.cpp" line="1411"/>
+        <source>mm</source>
+        <translation>mm</translation>
     </message>
     <message>
         <location filename="../src/app/qgsvectorlayerproperties.cpp" line="1425"/>
@@ -40350,7 +41353,7 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
     <message>
         <location filename="../src/app/qgsvectorlayerproperties.cpp" line="1074"/>
         <source>UI file</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier UI</translation>
     </message>
     <message>
         <location filename="../src/app/qgsvectorlayerproperties.cpp" line="1207"/>
@@ -40901,22 +41904,22 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
 <context>
     <name>QgsWFSConnectionItem</name>
     <message>
-        <location filename="../src/providers/wfs/qgswfsdataitems.cpp" line="61"/>
+        <location filename="../src/providers/wfs/qgswfsdataitems.cpp" line="75"/>
         <source>Failed to retrieve layers</source>
         <translation>Impossible de retrouver les couches</translation>
     </message>
     <message>
-        <location filename="../src/providers/wfs/qgswfsdataitems.cpp" line="79"/>
+        <location filename="../src/providers/wfs/qgswfsdataitems.cpp" line="93"/>
         <source>Edit...</source>
         <translation>Editer...</translation>
     </message>
     <message>
-        <location filename="../src/providers/wfs/qgswfsdataitems.cpp" line="83"/>
+        <location filename="../src/providers/wfs/qgswfsdataitems.cpp" line="97"/>
         <source>Delete</source>
         <translation>Effacer</translation>
     </message>
     <message>
-        <location filename="../src/providers/wfs/qgswfsdataitems.cpp" line="93"/>
+        <location filename="../src/providers/wfs/qgswfsdataitems.cpp" line="107"/>
         <source>Modify WFS connection</source>
         <translation>Modifier une connexion WFS</translation>
     </message>
@@ -40976,12 +41979,12 @@ Les classes existantes doivent-elles être effacées avant la classification ?</
         <translation type="obsolete">Nouveau...</translation>
     </message>
     <message>
-        <location filename="../src/providers/wfs/qgswfsdataitems.cpp" line="142"/>
+        <location filename="../src/providers/wfs/qgswfsdataitems.cpp" line="156"/>
         <source>New Connection...</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle connexion</translation>
     </message>
     <message>
-        <location filename="../src/providers/wfs/qgswfsdataitems.cpp" line="164"/>
+        <location filename="../src/providers/wfs/qgswfsdataitems.cpp" line="178"/>
         <source>Create a new WFS connection</source>
         <translation>Créer une nouvelle connexion WFS</translation>
     </message>
@@ -41191,17 +42194,17 @@ en mémoire</translation>
 <context>
     <name>QgsWMSConnectionItem</name>
     <message>
-        <location filename="../src/providers/wms/qgswmsdataitems.cpp" line="36"/>
+        <location filename="../src/providers/wms/qgswmsdataitems.cpp" line="50"/>
         <source>Failed to retrieve layers</source>
         <translation>Impossible de retrouver les couches</translation>
     </message>
     <message>
-        <location filename="../src/providers/wms/qgswmsdataitems.cpp" line="74"/>
+        <location filename="../src/providers/wms/qgswmsdataitems.cpp" line="88"/>
         <source>Edit...</source>
         <translation>Editer...</translation>
     </message>
     <message>
-        <location filename="../src/providers/wms/qgswmsdataitems.cpp" line="78"/>
+        <location filename="../src/providers/wms/qgswmsdataitems.cpp" line="92"/>
         <source>Delete</source>
         <translation>Effacer</translation>
     </message>
@@ -41213,9 +42216,9 @@ en mémoire</translation>
         <translation type="obsolete">Nouveau...</translation>
     </message>
     <message>
-        <location filename="../src/providers/wms/qgswmsdataitems.cpp" line="219"/>
+        <location filename="../src/providers/wms/qgswmsdataitems.cpp" line="233"/>
         <source>New Connection...</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle connexion</translation>
     </message>
 </context>
 <context>
@@ -41531,7 +42534,7 @@ Il s&apos;agit peut-être d&apos;une erreur de configuration du serveur. Voulez-
     <message>
         <location filename="../src/ui/qgswmssourceselectbase.ui" line="262"/>
         <source>Feature limit for GetFeatureInfo</source>
-        <translation type="unfinished"></translation>
+        <translation>Limite d&apos;entité de GetFeatureInfo</translation>
     </message>
     <message>
         <location filename="../src/ui/qgswmssourceselectbase.ui" line="279"/>
@@ -41760,19 +42763,19 @@ Il s&apos;agit peut-être d&apos;une erreur de configuration du serveur. Voulez-
         <translation>WMS Version</translation>
     </message>
     <message>
-        <location filename="../src/providers/wms/qgswmsprovider.cpp" line="3059"/>
+        <location filename="../src/providers/wms/qgswmsprovider.cpp" line="3065"/>
         <source>Map getfeatureinfo error %1: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de GetFeatureInfo %1 : %2</translation>
     </message>
     <message>
-        <location filename="../src/providers/wms/qgswmsprovider.cpp" line="3069"/>
+        <location filename="../src/providers/wms/qgswmsprovider.cpp" line="3075"/>
         <source>ERROR: GetFeatureInfo failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur, la requête GetFeatureInfo a échoué</translation>
     </message>
     <message>
-        <location filename="../src/providers/wms/qgswmsprovider.cpp" line="3070"/>
+        <location filename="../src/providers/wms/qgswmsprovider.cpp" line="3076"/>
         <source>Map getfeatureinfo error: %1 [%2]</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de GetFeatureInfo %1 [%2]</translation>
     </message>
     <message>
         <location filename="../src/providers/wms/qgswmsprovider.cpp" line="2436"/>
@@ -42088,7 +43091,7 @@ La réponse est :
         <location filename="../src/providers/wms/qgswmsprovider.cpp" line="2208"/>
         <location filename="../src/providers/wms/qgswmsprovider.cpp" line="2288"/>
         <location filename="../src/providers/wms/qgswmsprovider.cpp" line="2291"/>
-        <location filename="../src/providers/wms/qgswmsprovider.cpp" line="3070"/>
+        <location filename="../src/providers/wms/qgswmsprovider.cpp" line="3076"/>
         <source>WMS</source>
         <translation>WMS</translation>
     </message>
@@ -42158,7 +43161,7 @@ La réponse est :
     <message>
         <location filename="../src/providers/wms/qgswmsprovider.cpp" line="2285"/>
         <source>mismatch layers=%1, styles=%2 and crs=%3.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> </translation>
     </message>
     <message>
         <location filename="../src/providers/wms/qgswmsprovider.cpp" line="2291"/>
@@ -42220,17 +43223,17 @@ La réponse est :
         <translation>Erreurs</translation>
     </message>
     <message>
-        <location filename="../src/providers/wms/qgswmsprovider.cpp" line="2993"/>
+        <location filename="../src/providers/wms/qgswmsprovider.cpp" line="2999"/>
         <source>Layer cannot be queried in plain text.</source>
         <translation>La couche ne peut pas être interrogée en texte simple.</translation>
     </message>
     <message>
-        <location filename="../src/providers/wms/qgswmsprovider.cpp" line="2999"/>
+        <location filename="../src/providers/wms/qgswmsprovider.cpp" line="3005"/>
         <source>Layer cannot be queried.</source>
         <translation>La couche ne peut pas être interrogée.</translation>
     </message>
     <message>
-        <location filename="../src/providers/wms/qgswmsprovider.cpp" line="3043"/>
+        <location filename="../src/providers/wms/qgswmsprovider.cpp" line="3049"/>
         <source>identify request redirected.</source>
         <translation>requête d&apos;identification redirigée.</translation>
     </message>
@@ -42298,19 +43301,19 @@ URL Éprouvé : %1</translation>
         <translation type="obsolete">Statistiques de zone</translation>
     </message>
     <message>
-        <location filename="../src/plugins/zonal_statistics/qgszonalstatisticsplugin.cpp" line="43"/>
-        <location filename="../src/plugins/zonal_statistics/qgszonalstatisticsplugin.cpp" line="46"/>
-        <location filename="../src/plugins/zonal_statistics/qgszonalstatisticsplugin.cpp" line="52"/>
+        <location filename="../src/plugins/zonal_statistics/qgszonalstatisticsplugin.cpp" line="44"/>
+        <location filename="../src/plugins/zonal_statistics/qgszonalstatisticsplugin.cpp" line="47"/>
+        <location filename="../src/plugins/zonal_statistics/qgszonalstatisticsplugin.cpp" line="53"/>
         <source>&amp;Zonal statistics</source>
         <translation>Statistiques de &amp;zone</translation>
     </message>
     <message>
-        <location filename="../src/plugins/zonal_statistics/qgszonalstatisticsplugin.cpp" line="72"/>
+        <location filename="../src/plugins/zonal_statistics/qgszonalstatisticsplugin.cpp" line="73"/>
         <source>Calculating zonal statistics...</source>
         <translation>Calculer les statistiques de zone</translation>
     </message>
     <message>
-        <location filename="../src/plugins/zonal_statistics/qgszonalstatisticsplugin.cpp" line="72"/>
+        <location filename="../src/plugins/zonal_statistics/qgszonalstatisticsplugin.cpp" line="73"/>
         <source>Abort...</source>
         <translation>Annuler...</translation>
     </message>
@@ -42654,21 +43657,24 @@ URL Éprouvé : %1</translation>
 <context>
     <name>RoadGraphPlugin</name>
     <message>
-        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="104"/>
         <source>Road graph settings</source>
-        <translation>Paramètres de l&apos;extension de graphes routiers</translation>
+        <translation type="obsolete">Paramètres de l&apos;extension de graphes routiers</translation>
     </message>
     <message>
         <source>Show road&apos;s direction</source>
         <translation type="obsolete">Montrer l&apos;itinéraire de la route</translation>
     </message>
     <message>
-        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="105"/>
         <source>About</source>
-        <translation>À propos</translation>
+        <translation type="obsolete">À propos</translation>
     </message>
     <message>
-        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="108"/>
+        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="104"/>
+        <source>Settings</source>
+        <translation>Réglages</translation>
+    </message>
+    <message>
+        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="107"/>
         <source>Road graph plugin settings</source>
         <translation>Paramètres de l&apos;extension de graphes routiers</translation>
     </message>
@@ -42677,42 +43683,34 @@ URL Éprouvé : %1</translation>
         <translation type="obsolete">Visonner les itinéraires</translation>
     </message>
     <message>
-        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="109"/>
         <source>About Road graph plugin</source>
-        <translation>A propos de l&apos;extension</translation>
+        <translation type="obsolete">A propos de l&apos;extension</translation>
     </message>
     <message>
-        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="117"/>
-        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="118"/>
-        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="133"/>
-        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="134"/>
+        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="114"/>
+        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="129"/>
         <source>Road graph</source>
         <translation>Graphes Routiers</translation>
     </message>
     <message>
-        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="193"/>
         <source>About RoadGraph</source>
-        <translation>A propos</translation>
+        <translation type="obsolete">A propos</translation>
     </message>
     <message>
-        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="201"/>
         <source>Find shortest path on road&apos;s graph</source>
-        <translation>Trouver le chemin le plus court dans un graphe routier</translation>
+        <translation type="obsolete">Trouver le chemin le plus court dans un graphe routier</translation>
     </message>
     <message>
-        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="202"/>
         <source>&lt;b&gt;Developers:&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Développeurs:&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Développeurs:&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="204"/>
         <source>&lt;b&gt;Homepage:&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Page d&apos;acceuil :&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Page d&apos;acceuil :&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../src/plugins/roadgraph/roadgraphplugin.cpp" line="232"/>
         <source>Close</source>
-        <translation>Fermer</translation>
+        <translation type="obsolete">Fermer</translation>
     </message>
 </context>
 <context>
@@ -42945,68 +43943,56 @@ Description : %2</translation>
 <context>
     <name>SaQueryBuilder</name>
     <message>
-        <location filename="../src/plugins/sqlanywhere/saquerybuilder.cpp" line="47"/>
         <source>&amp;Test</source>
-        <translation>&amp;Tester</translation>
+        <translation type="obsolete">&amp;Tester</translation>
     </message>
     <message>
-        <location filename="../src/plugins/sqlanywhere/saquerybuilder.cpp" line="51"/>
         <source>&amp;Clear</source>
-        <translation>&amp;Effacer</translation>
+        <translation type="obsolete">&amp;Effacer</translation>
     </message>
     <message>
-        <location filename="../src/plugins/sqlanywhere/saquerybuilder.cpp" line="117"/>
         <source>Invalid Query</source>
-        <translation>Requête Invalide</translation>
+        <translation type="obsolete">Requête Invalide</translation>
     </message>
     <message>
-        <location filename="../src/plugins/sqlanywhere/saquerybuilder.cpp" line="117"/>
         <source>Setting the query failed</source>
-        <translation>Établir la requête à échoué</translation>
+        <translation type="obsolete">Établir la requête à échoué</translation>
     </message>
     <message>
-        <location filename="../src/plugins/sqlanywhere/saquerybuilder.cpp" line="174"/>
         <source>No Query</source>
-        <translation>Pas de requête</translation>
+        <translation type="obsolete">Pas de requête</translation>
     </message>
     <message>
-        <location filename="../src/plugins/sqlanywhere/saquerybuilder.cpp" line="175"/>
         <source>You must create a query before you can test it</source>
-        <translation>Vous devez créer une requête avant de la tester</translation>
+        <translation type="obsolete">Vous devez créer une requête avant de la tester</translation>
     </message>
     <message>
-        <location filename="../src/plugins/sqlanywhere/saquerybuilder.cpp" line="180"/>
         <source>Query Result</source>
-        <translation>Résultat de requête</translation>
+        <translation type="obsolete">Résultat de requête</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/plugins/sqlanywhere/saquerybuilder.cpp" line="181"/>
         <source>The where clause returned %n row(s).</source>
         <comment>returned test rows</comment>
-        <translation>
+        <translation type="obsolete">
             <numerusform>La clause where a retournée %n ligne.</numerusform>
             <numerusform>La clause where a retournée %n lignes.</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../src/plugins/sqlanywhere/saquerybuilder.cpp" line="186"/>
         <source>Query Failed</source>
-        <translation>La requête a échoué</translation>
+        <translation type="obsolete">La requête a échoué</translation>
     </message>
     <message>
-        <location filename="../src/plugins/sqlanywhere/saquerybuilder.cpp" line="187"/>
         <source>An error occurred when executing the query</source>
-        <translation>Une erreur a été rencontrée lors de l&apos;exécution de la requête</translation>
+        <translation type="obsolete">Une erreur a été rencontrée lors de l&apos;exécution de la requête</translation>
     </message>
     <message>
-        <location filename="../src/plugins/sqlanywhere/saquerybuilder.cpp" line="205"/>
         <source>Error in Query</source>
-        <translation>Erreur dans la requête</translation>
+        <translation type="obsolete">Erreur dans la requête</translation>
     </message>
     <message>
-        <location filename="../src/plugins/sqlanywhere/saquerybuilder.cpp" line="205"/>
         <source>The subset string could not be set</source>
-        <translation>Le sous-ensemble de la chaîne de caractère n&apos;a pu être utilisé</translation>
+        <translation type="obsolete">Le sous-ensemble de la chaîne de caractère n&apos;a pu être utilisé</translation>
     </message>
 </context>
 <context>
@@ -43338,12 +44324,12 @@ Description : %3</translation>
         <translation type="obsolete">&amp;SQL Anywhere</translation>
     </message>
     <message>
-        <location filename="../src/plugins/sqlanywhere/sqlanywhere.cpp" line="160"/>
+        <location filename="../src/plugins/sqlanywhere/sqlanywhere.cpp" line="162"/>
         <source>Invalid Layer</source>
         <translation>Couche non valide</translation>
     </message>
     <message>
-        <location filename="../src/plugins/sqlanywhere/sqlanywhere.cpp" line="160"/>
+        <location filename="../src/plugins/sqlanywhere/sqlanywhere.cpp" line="162"/>
         <source>%1 is an invalid layer and cannot be loaded.</source>
         <translation>%1 est une couche non valide et ne peut être chargée.</translation>
     </message>
@@ -43351,17 +44337,17 @@ Description : %3</translation>
 <context>
     <name>UndoWidget</name>
     <message>
-        <location filename="../src/app/qgsundowidget.cpp" line="160"/>
+        <location filename="../src/app/qgsundowidget.cpp" line="174"/>
         <source>Undo/Redo</source>
         <translation>Annuler/Refaire</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsundowidget.cpp" line="161"/>
+        <location filename="../src/app/qgsundowidget.cpp" line="175"/>
         <source>Undo</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location filename="../src/app/qgsundowidget.cpp" line="162"/>
+        <location filename="../src/app/qgsundowidget.cpp" line="176"/>
         <source>Redo</source>
         <translation>Refaire</translation>
     </message>
@@ -43789,17 +44775,17 @@ Description : %3</translation>
     <message>
         <location filename="../src/ui/symbollayer/widget_svgfill.ui" line="53"/>
         <source>Color</source>
-        <translation type="unfinished">Couleur</translation>
+        <translation>Couleur</translation>
     </message>
     <message>
         <location filename="../src/ui/symbollayer/widget_svgfill.ui" line="67"/>
         <source>Border color</source>
-        <translation type="unfinished">Couleur de la bordure</translation>
+        <translation>Couleur de la bordure</translation>
     </message>
     <message>
         <location filename="../src/ui/symbollayer/widget_svgfill.ui" line="81"/>
         <source>Border width</source>
-        <translation type="unfinished">Largeur de bordure</translation>
+        <translation>Largeur de la bordure</translation>
     </message>
     <message>
         <location filename="../src/ui/symbollayer/widget_svgfill.ui" line="95"/>
@@ -46035,7 +47021,7 @@ L&apos;extension ne sera pas activée.</translation>
     <message>
         <location filename="../src/plugins/grass/grasslabels-i18n.cpp" line="168"/>
         <source>Elevation raster for height extraction (optional)</source>
-        <translation type="unfinished"></translation>
+        <translation>Raster d&apos;élévation pour extraction de la hauteur (optionel)</translation>
     </message>
     <message>
         <location filename="../src/plugins/grass/grasslabels-i18n.cpp" line="169"/>
@@ -46250,12 +47236,12 @@ L&apos;extension ne sera pas activée.</translation>
     <message>
         <location filename="../src/plugins/grass/grasslabels-i18n.cpp" line="203"/>
         <source>Extrudes flat vector object to 3D with fixed height</source>
-        <translation type="unfinished"></translation>
+        <translation>Extrude les objets vecteurs plats en 3D avec une hauteur fixe</translation>
     </message>
     <message>
         <location filename="../src/plugins/grass/grasslabels-i18n.cpp" line="204"/>
         <source>Extrudes flat vector object to 3D with height based on attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Extrude les objets vecteurs plats en 3D avec une hauteur basée sur un attribut</translation>
     </message>
     <message>
         <location filename="../src/plugins/grass/grasslabels-i18n.cpp" line="205"/>
@@ -46372,7 +47358,7 @@ L&apos;extension ne sera pas activée.</translation>
     <message>
         <location filename="../src/plugins/grass/grasslabels-i18n.cpp" line="226"/>
         <source>Generates area statistics for rasters</source>
-        <translation type="unfinished"></translation>
+        <translation>Génère des statistiques de surface pour des rasters</translation>
     </message>
     <message>
         <location filename="../src/plugins/grass/grasslabels-i18n.cpp" line="227"/>
@@ -46456,7 +47442,7 @@ L&apos;extension ne sera pas activée.</translation>
     <message>
         <location filename="../src/plugins/grass/grasslabels-i18n.cpp" line="242"/>
         <source>Import OGR vector and create a fitted location</source>
-        <translation type="unfinished"></translation>
+        <translation>Importe une couche vecteur OGR et crée le secteur approprié </translation>
     </message>
     <message>
         <location filename="../src/plugins/grass/grasslabels-i18n.cpp" line="243"/>
@@ -47082,7 +48068,7 @@ L&apos;extension ne sera pas activée.</translation>
     <message>
         <location filename="../src/plugins/grass/grasslabels-i18n.cpp" line="281"/>
         <source>Loaded layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Couche chargée</translation>
     </message>
     <message>
         <location filename="../src/plugins/grass/grasslabels-i18n.cpp" line="360"/>
