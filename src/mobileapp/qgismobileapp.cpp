@@ -17,8 +17,6 @@
 
 #include <qgismobileapp.h>
 #include <QApplication>
-#include <QDeclarativeView>
-#include <QDeclarativeEngine>
 
 #include <QSettings>
 #include <QMessageBox>
@@ -37,57 +35,69 @@
 #include <qgsmapcanvas.h>
 #include <qgslogger.h>
 
-#include <QVBoxLayout>
+// QML includes
+#include <QtDeclarative> // for qmlRegisterType
+#include <QDeclarativeView>
+#include <QDeclarativeEngine>
 
-QgisMobileapp::QgisMobileapp( QgsApplication *app, QWidget *parent, Qt::WFlags flags )
-    : QMainWindow( parent, flags )
+// Custom QML types
+#include <qgsmapcanvasproxy.h>
+#include <qgslayerlistmodel.h>
+
+QgisMobileapp::QgisMobileapp( QgsApplication *app )
 {
+  Q_UNUSED(app);
 
-  QGraphicsScene scene;
-  QGraphicsView view(&scene);
+  // Register QML custom types
+  // TODO create a QDeclarativeExtensionPlugin and move this to it.
+  qmlRegisterType<QgsMapCanvasProxy>("org.qgis", 1, 0, "MapCanvas");
+  qmlRegisterType<QgsLayerListModel>("org.qgis", 1, 0, "LayerListModel");
 
-  // Create the Map Canvas
-  mapCanvas = new QgsMapCanvas();
-  mapCanvas->setObjectName(QString::fromUtf8("mapCanvas"));
-  mapCanvas->enableAntiAliasing(true);
-  mapCanvas->setCanvasColor( Qt::white );
+  // Load QML main window
+  mView.setSource(QUrl("qrc:/qml/qgsmobileapp.qml"));
+  mView.setResizeMode(QDeclarativeView::SizeRootObjectToView);
+  //mView.setGeometry(0, 0, QApplication::desktop()->width(), QApplication::desktop()->height());
+  mView.setGeometry(0, 0, 480, 762);
 
-  addLayer();
+  // Setup signals
+  QObject *object = (QObject*)mView.rootObject();
+  QObject::connect(object, SIGNAL(loadlayer()), this, SLOT(addVectorLayer()));
+  QObject::connect(mView.engine(), SIGNAL(quit()), this, SLOT(quit()));
 
-  mapCanvas->freeze(false);
-  mapCanvas->setVisible(true);
+  // Get map canvas from QML
+  QgsMapCanvasProxy *mapCanvasProxy = object->findChild<QgsMapCanvasProxy *>("theMapCanvas");
+  if (mapCanvasProxy == 0)
+  {
+    qDebug() << "Map canvas don't returned from QML";
+    abort();
+  }
 
-  mView = new QDeclarativeView();
-  mView->setSource(QUrl("qrc:/qml/qgsmobileapp.qml"));
-  mView->setResizeMode(QDeclarativeView::SizeRootObjectToView);
+  // Setup map canvas
+  mMapCanvas = mapCanvasProxy->mapCanvas();
+  mMapCanvas->freeze(false);
+  mMapCanvas->setVisible(true);
 
-  QObject::connect((QObject*)mView->engine(), SIGNAL(quit()), app, SLOT(quit()));
+  // Show main window
+  mView.show();
 
-  mView->setGeometry(100,100, 800, 480);
-  mView->show();
-  //mapCanvas->scene()->addWidget(&mView);
-
-  scene.addWidget(mapCanvas);
-  scene.addWidget(mView);
-  view.show();
+  return;
 }
 
 QgisMobileapp::~QgisMobileapp()
 {
-
+  // delete map layer registry and provider registry
+  QgsApplication::exitQgis();
 }
 
-void QgisMobileapp::addLayer()
+void QgisMobileapp::addVectorLayer()
 {
-  QString myLayerPath         =  QFileDialog::getOpenFileName( this, tr( "Load SHP" ), ".", tr( "SHP files (*.shp *.SHP)" ) );
-//  QString myLayerPath         =  "/home/marco/GIS/swiss_grenzen/G3B09.shp";
+  QString myLayerPath         = QFileDialog::getOpenFileName( (QWidget *)&mView, tr( "Load SHP" ), ".", tr( "SHP files (*.shp *.SHP)" ) );
   QString myLayerBaseName     = "test";
   QString myProviderName      = "ogr";
 
   QgsVectorLayer * mypLayer = new QgsVectorLayer(myLayerPath, myLayerBaseName, myProviderName);
-  QgsSingleSymbolRenderer *mypRenderer = new QgsSingleSymbolRenderer(mypLayer->geometryType());
-  QList<QgsMapCanvasLayer> myLayerSet;
-  mypLayer->setRenderer(mypRenderer);
+  //QgsSingleSymbolRenderer *mypRenderer = new QgsSingleSymbolRenderer(mypLayer->geometryType());
+  //mypLayer->setRenderer(mypRenderer);
 
   if (mypLayer->isValid())
   {
@@ -99,12 +109,34 @@ void QgisMobileapp::addLayer()
     return;
   }
   // Add the Vector Layer to the Layer Registry
-  QgsMapLayerRegistry::instance()->addMapLayer(mypLayer, TRUE);
+  QList<QgsMapLayer *> layers;
+  layers.append(mypLayer);
+  QgsMapLayerRegistry::instance()->addMapLayers(layers, true);
 
-  // Add the Layer to the Layer Set
-  myLayerSet.append(QgsMapCanvasLayer(mypLayer));
+  mLayerSet << mypLayer;
+
+  updateCanvasLayerSet();
+
   // set the canvas to the extent of our layer
-  mapCanvas->setExtent(mypLayer->extent());
-  // Set the Map Canvas Layer Set
-  mapCanvas->setLayerSet(myLayerSet);
+  // TODO do this only if it's the first layer
+  mMapCanvas->setExtent(mypLayer->extent());
+}
+
+void QgisMobileapp::updateCanvasLayerSet()
+{
+  QList<QgsMapCanvasLayer> canvasLayerSet;
+
+  for( int i = 0; i < mLayerSet.size(); i++)
+  {
+    canvasLayerSet << QgsMapCanvasLayer( mLayerSet.at(i) );
+  }
+
+  mMapCanvas->setLayerSet(canvasLayerSet);
+
+  mMapCanvas->update();
+}
+
+void QgisMobileapp::quit()
+{
+  QgsApplication::quit();
 }

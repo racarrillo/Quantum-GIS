@@ -18,22 +18,29 @@
 #ifndef QGISMOBILEAPP_H
 #define QGISMOBILEAPP_H
 
-#include <QMainWindow>
 #include <qgsapplication.h>
 #include <qgsmapcanvas.h>
+#include <qgsmapcanvasproxy.h>
 #include <QDeclarativeView>
 
-class QgisMobileapp : public QMainWindow
+class QgisMobileapp : public QObject
 {
   Q_OBJECT
 public:
-  QgisMobileapp( QgsApplication *app, QWidget *parent = 0, Qt::WFlags flags = 0 );
+  QgisMobileapp( QgsApplication *app );
   ~QgisMobileapp();
-  void addLayer();
+
+public slots:
+  void addVectorLayer();
+  void quit();
 
 private:
-  QDeclarativeView *mView;
-  QgsMapCanvas *mapCanvas;
+  void updateCanvasLayerSet();
+
+  QDeclarativeView mView;
+  QgsMapCanvas *mMapCanvas;
+  QgsMapCanvasProxy *mMapCanvasProxy;
+  QList<QgsMapLayer *> mLayerSet;
 };
 
 #endif // QGISMOBILEAPP_H

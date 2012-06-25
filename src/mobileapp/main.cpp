@@ -21,7 +21,6 @@
 #include <QLocale>
 #include <QSettings>
 #include <QTranslator>
-#include <QMainWindow>
 #include <QLabel>
 #include <QDialog>
 #include <QApplication>
@@ -30,8 +29,6 @@
 #include "qgsconfig.h"
 #include <qmainwindow.h>
 #include <QApplication>
-#include <QDeclarativeView>
-#include <QDeclarativeEngine>
 
 int main( int argc, char ** argv )
 {
