@@ -105,7 +105,11 @@ QgsProviderRegistry::QgsProviderRegistry( QString pluginPath )
     {
       fi = it.next();
 
+    #ifdef ANDROID
+      QLibrary *myLib = new QLibrary( fi.absoluteFilePath() );
+    #else
       QLibrary *myLib = new QLibrary( fi.filePath() );
+    #endif
 
       bool loaded = myLib->load();
       //we will build up a debug message and print on one line to avoid terminal spam
