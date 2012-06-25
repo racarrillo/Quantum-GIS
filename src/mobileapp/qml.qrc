@@ -1,6 +1,13 @@
 <RCC>
     <qresource prefix="/qml">
         <file alias="qgsmobileapp.qml">qml/qgismobileapp.qml</file>
+        <file alias="ToolBar.qml">qml/ToolBar.qml</file>
+        <file alias="ToolButton.qml">qml/ToolButton.qml</file>
+        <file alias="ToolBarLayout.qml">qml/ToolBarLayout.qml</file>
+        <file alias="Page.qml">qml/Page.qml</file>
+        <file alias="Window.qml">qml/Window.qml</file>
+        <file alias="LayersPage.qml">qml/LayersPage.qml</file>
+        <file alias="WelcomePage.qml">qml/WelcomePage.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="icon">images/qgis-icon.png</file>
