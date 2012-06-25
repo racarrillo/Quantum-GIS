@@ -2,6 +2,8 @@ SET(QGIS_MOBILEAPP_NAME ${QGIS_APP_NAME}_mobile)
 SET(QGIS_MOBILEAPP_SRCS
   main.cpp
   qgismobileapp.cpp
+  qgsmapcanvasproxy.cpp
+  qgslayerlistmodel.cpp
 #  qgismobileappinterface.cpp
 #  qgsabout.cpp
 #  qgssponsors.cpp
@@ -153,6 +155,8 @@ ENDIF (ANDROID)
 
 SET (QGIS_MOBILEAPP_MOC_HDRS
   qgismobileapp.h
+  qgsmapcanvasproxy.h
+  qgslayerlistmodel.h
 #  qgismobileappinterface.h
 #  qgsabout.h
 #  qgsaddattrdialog.h
