@@ -19,90 +19,9 @@ Window {
         console.log('key released')
     }
 
-    WelcomePage {
-        id: welcome
-        visible: true
-        anchors.centerIn: parent
-    }
-
-    Page {
-        id: canvas
-        visible: false
-        anchors.fill: parent
-
-        MapCanvas {
-            id: theMapCanvas
-            objectName: 'theMapCanvas' // the name is important
-            size.width: parent.width
-            size.height: parent.height
-        }
-    }
-
-    LayersPage {
-        id: layers
-        visible: false
-        anchors.fill: parent
-
-        Component {
-            id: layerDelegate
-            Rectangle {
-                color: "black"
-                border { color: "white"; width: 2 }
-                width: parent.width
-                height: layerDescription.height + ( (layerOptions.visible) ? layerOptions.height : 0 )
-
-                Rectangle {
-                    id: layerDescription
-                    width: parent.width
-                    color: "black"
-                    height: 50
-
-                    Text {
-                        color: "red"; font.pointSize: 16; text: name
-                    }
-
-                    MouseArea {
-                        anchors.fill: parent;
-                        onClicked: {
-                            layerOptions.visible = !layerOptions.visible
-                        }
-                    }
-                }
-
-                Row {
-                    id: layerOptions
-                    width: parent.width
-                    anchors.top: layerDescription.bottom
-                    visible: false
-
-                    spacing: 2
-                    Rectangle {
-                        width: 50; height: 50;
-                        color: "red"
-                    }
-                    Rectangle {
-                        width: 50; height: 50;
-                        color: "blue"
-                    }
-                    Rectangle {
-                        width: 50; height: 50;
-                        color: "green"
-                    }
-                }
-            }
-
-        }
-
-        ListView {
-            anchors.fill: parent
-            model: LayerListModel { mapCanvas: theMapCanvas }
-            delegate: layerDelegate
-        }
-    }
-
     ToolBar {
+        id: mainbar
 
-        // FIX positiong on bottom is not working
         anchors {
             top: parent.top
             left: parent.left
@@ -112,37 +31,82 @@ Window {
         ToolBarLayout {
 
             ToolButton {
+                text: 'Q'
+                onClicked: mainmenu.visible = !mainmenu.visible
+            }
+
+            ToolButton {
                 text: 'Home'
-                onClicked: activePage(welcome)
+                onClicked: activePage(welcomePage)
             }
 
             ToolButton {
-                text: 'Layers'
-                onClicked: activePage(layers)
-            }
-
-            ToolButton {
-                text: 'Add'
-                onClicked: mainwindow.loadlayer()
+                text: 'Legend'
+                onClicked: activePage(layersPage)
             }
 
             ToolButton {
                 text: 'Map'
-                onClicked: activePage(canvas)
+                onClicked: activePage(mapPage)
             }
 
-            ToolButton {
-                text: 'Quit'
-                onClicked: Qt.quit()
-            }
+        }
+    }
+
+    WelcomePage {
+        id: welcomePage
+        visible: true
+        anchors {
+            top: mainbar.bottom
+            left: mainwindow.left
+            right: mainwindow.right
+            bottom: mainwindow.bottom
+        }
+    }
+
+    MapPage {
+        id: mapPage
+        visible: false
+        anchors {
+            top: mainbar.bottom
+            left: mainwindow.left
+            right: mainwindow.right
+            bottom: mainwindow.bottom
+        }
+    }
+
+    LayersPage {
+        id: layersPage
+        visible: false
+        anchors {
+            top: mainbar.bottom
+            left: mainwindow.left
+            right: mainwindow.right
+            bottom: mainwindow.bottom
+        }
+
+        canvas: mapPage.mapCanvas // Important!
+
+        onAddVectorLayer: loadlayer()
+    }
+
+    MainMenu {
+        id: mainmenu
+        visible: false
+
+        onQuit: Qt.quit()
+
+        anchors {
+            top: mainbar.bottom
+            left: mainwindow.left
         }
     }
 
     // TODO implement PageStack to manage pages?
     function activePage(page) {
-        welcome.visible = false;
-        canvas.visible = false;
-        layers.visible = false;
+        welcomePage.visible = false;
+        mapPage.visible = false;
+        layersPage.visible = false;
 
         page.visible = true;
     }

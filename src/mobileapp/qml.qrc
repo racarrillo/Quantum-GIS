@@ -8,6 +8,8 @@
         <file alias="Window.qml">qml/Window.qml</file>
         <file alias="LayersPage.qml">qml/LayersPage.qml</file>
         <file alias="WelcomePage.qml">qml/WelcomePage.qml</file>
+        <file alias="MapPage.qml">qml/MapPage.qml</file>
+        <file alias="MainMenu.qml">qml/MainMenu.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="icon">images/qgis-icon.png</file>
