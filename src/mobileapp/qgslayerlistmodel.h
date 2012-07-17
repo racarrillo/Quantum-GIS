@@ -15,8 +15,9 @@ class QgsLayerListModel : public QAbstractListModel
 public:
     enum LayerRoles {
         UnknownLayerRole = Qt::UserRole + 1,
-        NameRole,
-        VisibilityRole
+        Name,
+        Visible,
+        Editable
     };
 
     explicit QgsLayerListModel(QObject *parent = 0);
@@ -37,13 +38,16 @@ public:
     void updateCanvasLayerSet();
 
 signals:
-    
+    void startEditingLayer(QgsMapLayer *);
+
 public slots:
     void notifyLayerChange();
     //void removeLayers( QStringList theLayers );
     void removeAll();
     void addLayers( QList<QgsMapLayer *> );
     void removeLayer( int index );
+
+    void setCurrentLayer( int row );
 
 private:
     QList<QgsMapCanvasLayer *> mLayerSet;

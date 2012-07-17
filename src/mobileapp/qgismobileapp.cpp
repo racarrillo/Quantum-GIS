@@ -29,6 +29,7 @@
 
 #include <qgsapplication.h>
 #include <qgsproviderregistry.h>
+#include <qgsvectordataprovider.h>
 #include <qgssinglesymbolrenderer.h>
 #include <qgsmaplayerregistry.h>
 #include <qgsvectorlayer.h>
@@ -59,7 +60,7 @@
 //#include "qgsmaptoolformannotation.h"
 //#include "qgsmaptoolidentify.h"
 //#include "qgsmaptoolmeasureangle.h"
-//#include "qgsmaptoolmovefeature.h"
+#include "qgsmaptoolmovefeature.h"
 //#include "qgsmaptoolmovevertex.h"
 //#include "qgsmaptooloffsetcurve.h"
 #include "qgsmaptoolpan.h"
@@ -98,12 +99,8 @@ QgisMobileapp::QgisMobileapp( QgsApplication *app )
   //mView.setGeometry(0, 0, QApplication::desktop()->width(), QApplication::desktop()->height());
   mView.setGeometry(0, 0, 480, 762);
 
-  // Setup signals
-  QObject *object = (QObject*)mView.rootObject();
-  QObject::connect(object, SIGNAL(loadlayer()), this, SLOT(addVectorLayer()));
-  QObject::connect(mView.engine(), SIGNAL(quit()), this, SLOT(quit()));
-
   // Get map canvas from QML
+  QObject *object = (QObject*)mView.rootObject();
   QgsMapCanvasProxy *mapCanvasProxy = object->findChild<QgsMapCanvasProxy *>("theMapCanvas");
   if (mapCanvasProxy == 0)
   {
@@ -116,9 +113,11 @@ QgisMobileapp::QgisMobileapp( QgsApplication *app )
   mMapCanvas->freeze(false);
   mMapCanvas->setVisible(true);
 
+  createActions();
   createCanvasTools();
+  initLegend();
 
-  mMapCanvas->setMapTool(mMapTools.mTouch);
+  mMapCanvas->setMapTool(mMapTools.mMoveFeature);
 
   QObject::connect( mMapCanvas, SIGNAL( keyPressed(QKeyEvent*) ), this, SLOT( test() ) );
 
@@ -159,6 +158,14 @@ void QgisMobileapp::addVectorLayer()
   QgsMapLayerRegistry::instance()->addMapLayers(layers, true);
 }
 
+void QgisMobileapp::createActions()
+{
+  QObject *object = (QObject*)mView.rootObject();
+  QObject::connect(object, SIGNAL(loadlayer()), this, SLOT(addVectorLayer()));
+  QObject::connect(mView.engine(), SIGNAL(quit()), this, SLOT(quit()));
+
+}
+
 void QgisMobileapp::createCanvasTools()
 {
   // create tools
@@ -175,7 +182,7 @@ void QgisMobileapp::createCanvasTools()
 //  mMapTools.mFormAnnotation = new QgsMapToolFormAnnotation( mMapCanvas );
 //  mMapTools.mAnnotation = new QgsMapToolAnnotation( mMapCanvas );
 //  mMapTools.mAddFeature = new QgsMapToolAddFeature( mMapCanvas );
-//  mMapTools.mMoveFeature = new QgsMapToolMoveFeature( mMapCanvas );
+  mMapTools.mMoveFeature = new QgsMapToolMoveFeature( mMapCanvas );
 //  mMapTools.mReshapeFeatures = new QgsMapToolReshape( mMapCanvas );
 //  mMapTools.mReshapeFeatures->setAction( mActionReshapeFeatures );
 //  mMapTools.mSplitFeatures = new QgsMapToolSplitFeatures( mMapCanvas );
@@ -214,6 +221,19 @@ void QgisMobileapp::createCanvasTools()
 //#ifdef HAVE_TOUCH
 //  mNonEditMapTool = mMapTools.mTouch;
 //#endif
+}
+
+void QgisMobileapp::initLegend()
+{
+  QObject *object = (QObject*)mView.rootObject();
+  QgsLayerListModel *layerList = object->findChild<QgsLayerListModel *>("theLegend");
+  if (layerList == 0)
+  {
+    qDebug() << "Layer list don't returned from QML";
+    abort();
+  }
+
+  connect(layerList, SIGNAL(startEditingLayer(QgsMapLayer*)), this, SLOT(toggleEditing(QgsMapLayer*)));
 }
 
 void QgisMobileapp::zoomIn()
@@ -270,6 +290,100 @@ void QgisMobileapp::select()
 void QgisMobileapp::test()
 {
   qDebug("test message");
+}
+
+bool QgisMobileapp::toggleEditing( QgsMapLayer *layer, bool allowCancel )
+{
+  QgsVectorLayer *vlayer = qobject_cast<QgsVectorLayer *>( layer );
+  if ( !vlayer )
+  {
+    return false;
+  }
+
+  bool res = true;
+
+  if ( !vlayer->isEditable() && !vlayer->isReadOnly() )
+  {
+    if ( !( vlayer->dataProvider()->capabilities() & QgsVectorDataProvider::EditingCapabilities ) )
+    {
+      QMessageBox::information( 0, tr( "Start editing failed" ), tr( "Provider cannot be opened for editing" ) );
+      return false;
+    }
+
+    vlayer->startEditing();
+
+    QSettings settings;
+    QString markerType = settings.value( "/qgis/digitizing/marker_style", "Cross" ).toString();
+    bool markSelectedOnly = settings.value( "/qgis/digitizing/marker_only_for_selected", false ).toBool();
+
+    // redraw only if markers will be drawn
+    if (( !markSelectedOnly || vlayer->selectedFeatureCount() > 0 ) &&
+        ( markerType == "Cross" || markerType == "SemiTransparentCircle" ) )
+    {
+      vlayer->triggerRepaint();
+    }
+  }
+  else if ( vlayer->isModified() )
+  {
+    QMessageBox::StandardButtons buttons = QMessageBox::Save | QMessageBox::Discard;
+    if ( allowCancel )
+      buttons |= QMessageBox::Cancel;
+
+    switch ( QMessageBox::information( 0,
+                                       tr( "Stop editing" ),
+                                       tr( "Do you want to save the changes to layer %1?" ).arg( vlayer->name() ),
+                                       buttons ) )
+    {
+      case QMessageBox::Cancel:
+        res = false;
+        break;
+
+      case QMessageBox::Save:
+        if ( !vlayer->commitChanges() )
+        {
+          QMessageBox::information( 0,
+                                    tr( "Error" ),
+                                    tr( "Could not commit changes to layer %1\n\nErrors: %2\n" )
+                                    .arg( vlayer->name() )
+                                    .arg( vlayer->commitErrors().join( "\n  " ) ) );
+          // Leave the in-memory editing state alone,
+          // to give the user a chance to enter different values
+          // and try the commit again later
+          res = false;
+        }
+
+        vlayer->triggerRepaint();
+        break;
+
+      case QMessageBox::Discard:
+        if ( !vlayer->rollBack() )
+        {
+          QMessageBox::information( 0, tr( "Error" ), tr( "Problems during roll back" ) );
+          res = false;
+        }
+
+        vlayer->triggerRepaint();
+        break;
+
+      default:
+        break;
+    }
+  }
+  else //layer not modified
+  {
+    vlayer->rollBack();
+    res = true;
+    vlayer->triggerRepaint();
+  }
+
+  #if 0
+  if ( layer == activeLayer() )
+  {
+    activateDeactivateLayerRelatedActions( layer );
+  }
+  #endif
+
+  return res;
 }
 
 void QgisMobileapp::quit()

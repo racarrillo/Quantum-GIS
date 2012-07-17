@@ -52,13 +52,13 @@ SET(QGIS_MOBILEAPP_SRCS
 #  qgsmaptooldeletering.cpp
 #  qgsmaptooldeletepart.cpp
 #  qgsmaptooldeletevertex.cpp
-#  qgsmaptooledit.cpp
+  qgsmaptooledit.cpp
 #  qgsmaptoolfeatureaction.cpp
 #  qgsmaptoolformannotation.cpp
 #  qgsmaptoolidentify.cpp
 #  qgsmaptoollabel.cpp
 #  qgsmaptoolmeasureangle.cpp
-#  qgsmaptoolmovefeature.cpp
+  qgsmaptoolmovefeature.cpp
 #  qgsmaptoolmovelabel.cpp
 #  qgsmaptoolmovevertex.cpp
 #  qgsmaptooloffsetcurve.cpp
@@ -204,7 +204,7 @@ SET (QGIS_MOBILEAPP_MOC_HDRS
 #  qgsmaptoolfeatureaction.h
 #  qgsmaptoolidentify.h
 #  qgsmaptoolmeasureangle.h
-#  qgsmaptoolmovefeature.h
+  qgsmaptoolmovefeature.h
 #  qgsmaptoolmovelabel.h
 #  qgsmaptoolmovevertex.h
 #  qgsmaptooloffsetcurve.h

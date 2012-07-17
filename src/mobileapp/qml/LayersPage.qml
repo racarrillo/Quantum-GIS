@@ -1,8 +1,9 @@
 import QtQuick 1.1
+import Qt.labs.gestures 1.0
 import org.qgis 1.0
 
 Page {
-    id: layers
+    id: root
 
     property MapCanvas canvas: null
 
@@ -25,8 +26,8 @@ Page {
             Rectangle {
                 id: layerDescription
                 width: parent.width
-                color: "black"
-                height: 50
+                color: "black"  // TODO stylish
+                height: 50  // TODO stylish
 
                 Text {
                     color: "red"; font.pointSize: 16; text: name
@@ -36,6 +37,7 @@ Page {
                     anchors.fill: parent;
                     onClicked: {
                         layerOptions.visible = !layerOptions.visible
+                        layerlistmodel.setCurrentLayer(index)
                     }
                 }
             }
@@ -43,7 +45,10 @@ Page {
             Row {
                 id: layerOptions
                 width: parent.width
-                anchors.top: layerDescription.bottom
+                anchors {
+                    top: layerDescription.bottom
+                    right: parent.right
+                }
                 visible: false
                 spacing: 2
 
@@ -54,7 +59,19 @@ Page {
                     MouseArea {
                         anchors.fill: parent
                         onClicked: {
-                            layerlistmodel.setData(index, "visibility", ! visibility);
+                            layerlistmodel.setData(index, "visible", ! visibility);
+                        }
+                    }
+                }
+
+                Rectangle {
+                    width: 50; height: 50;
+                    color: (editable) ? "red" : "blue"
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            layerlistmodel.setData(index, "editable", ! editable);
                         }
                     }
                 }
@@ -69,13 +86,13 @@ Page {
                         }
                     }
                 }
-            }
+            } // Row: layerOptions
         }
-
-    }
+    } // Component: layerdelegate
 
     LayerListModel {
         id: layerlistmodel
+        objectName: 'theLegend'
     }
 
     ListView {

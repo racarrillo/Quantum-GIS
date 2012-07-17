@@ -41,12 +41,14 @@ public:
 
 public slots:
     void addVectorLayer();
+    bool toggleEditing(QgsMapLayer *layer, bool allowCancel = true);
     void quit();
     void test();
 
 private:
-    void updateCanvasLayerSet();
+    void createActions();
     void createCanvasTools();
+    void initLegend();
 
     QDeclarativeView mView;
     QgsMapCanvas *mMapCanvas;

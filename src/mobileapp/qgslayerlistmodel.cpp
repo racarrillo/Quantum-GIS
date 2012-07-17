@@ -1,17 +1,22 @@
 #include "qgslayerlistmodel.h"
 
+#include "qgismobileapp.h"
+
 #include <qgsmapcanvasproxy.h>
 #include <qgsmaplayer.h>
 #include <qgsmaprenderer.h>
 #include <qgsmaplayerregistry.h>
+
+
 
 QgsLayerListModel::QgsLayerListModel(QObject *parent) :
     QAbstractListModel(parent)
 {
     // roles are accessed like properties on QML delegates
     QHash<int, QByteArray> roles;
-    roles[NameRole] = "name";
-    roles[VisibilityRole] = "visibility";
+    roles[Name] = "name";
+    roles[Visible] = "visibility";
+    roles[Editable] = "editable";
     setRoleNames(roles);
 
     // connect map layer registry signal to legend
@@ -50,13 +55,15 @@ QVariant QgsLayerListModel::data(const QModelIndex &index, int role) const
     // TODO Is model index row equal to layer set row?
     QgsMapCanvasLayer *canvasLayer = mLayerSet.at(index.row());
 
-    if (role == NameRole) {
+    if (role == Name) {
         return canvasLayer->layer()->name();
-    } else if (role == VisibilityRole)
+    } else if (role == Visible)
     {
         return canvasLayer->isVisible();
-    } else
+    } else if (role == Editable)
     {
+        return canvasLayer->layer()->isEditable();
+    } else {
         return QVariant();
     }
 }
@@ -64,6 +71,8 @@ QVariant QgsLayerListModel::data(const QModelIndex &index, int role) const
 
 bool QgsLayerListModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
+  qDebug("setting model data");
+
    if (!index.isValid())
         return false;
 
@@ -73,14 +82,19 @@ bool QgsLayerListModel::setData(const QModelIndex &index, const QVariant &value,
     //QgsMapLayer *layer = mapCanvas->layers().at(index.row());
     QgsMapCanvasLayer *canvasLayer = mLayerSet.at(index.row());
 
-    if (role == NameRole) {
+    if (role == Name) {
         canvasLayer->layer()->setLayerName(value.toString());
         emit dataChanged(index, index);
         return true;
-    } else if (role == VisibilityRole)
+    } else if (role == Visible)
     {
         canvasLayer->setVisible(value.toBool());
         updateCanvasLayerSet();
+        emit dataChanged(index, index);
+        return true;
+    } else if (role == Editable)
+    {
+        emit startEditingLayer(canvasLayer->layer());
         emit dataChanged(index, index);
         return true;
     } else {
@@ -100,10 +114,13 @@ void QgsLayerListModel::setData(int row, const QString &field, QVariant value)
 
     if (field == "name")
     {
-        role = NameRole;
-    } else if (field == "visibility")
+        role = Name;
+    } else if (field == "visible")
     {
-        role = VisibilityRole;
+        role = Visible;
+    } else if (field == "editable")
+    {
+        role = Editable;
     }
 
     setData(index(row), value, role);
@@ -220,4 +237,23 @@ void QgsLayerListModel::updateCanvasLayerSet()
   mMapCanvasProxy->mapCanvas()->setLayerSet(canvasLayerSet);
 
   mMapCanvasProxy->mapCanvas()->update();
+}
+
+void QgsLayerListModel::setCurrentLayer(int row)
+{
+  if (row < 0 || row >= mLayerSet.size())
+  {
+    return;
+  }
+
+  QgsMapLayer *layer = mLayerSet.at(row)->layer();
+
+  if ( !layer )
+  {
+    return;
+  }
+
+  mMapCanvasProxy->mapCanvas()->setCurrentLayer(layer);
+
+  qDebug() << "current layer:" << layer->name();
 }
