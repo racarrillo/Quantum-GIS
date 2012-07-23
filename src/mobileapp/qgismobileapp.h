@@ -32,12 +32,18 @@
 #include <QGestureEvent>
 #include <QTapAndHoldGesture>
 
+class QgsLayerListModel;
+
 class QgisMobileapp : public QObject
 {
     Q_OBJECT
 public:
     QgisMobileapp( QgsApplication *app );
     ~QgisMobileapp();
+
+    static QgisMobileapp *instance() { return smInstance; }
+
+    QgsLayerListModel *legend();
 
 public slots:
     void addVectorLayer();
@@ -52,7 +58,9 @@ private:
 
     QDeclarativeView mView;
     QgsMapCanvas *mMapCanvas;
+    QgsLayerListModel *mLayerList;
     QgsMapCanvasProxy *mMapCanvasProxy;
+    static QgisMobileapp *smInstance;
 
     //! Set map tool to Zoom out
     void zoomOut();

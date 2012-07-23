@@ -39,6 +39,7 @@ public:
 
 signals:
     void startEditingLayer(QgsMapLayer *);
+    void currentLayerChanged( QgsMapLayer *);
 
 public slots:
     void notifyLayerChange();

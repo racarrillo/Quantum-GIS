@@ -255,5 +255,7 @@ void QgsLayerListModel::setCurrentLayer(int row)
 
   mMapCanvasProxy->mapCanvas()->setCurrentLayer(layer);
 
+  emit currentLayerChanged( layer );
+
   qDebug() << "current layer:" << layer->name();
 }

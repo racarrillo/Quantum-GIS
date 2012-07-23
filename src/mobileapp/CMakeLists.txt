@@ -11,7 +11,7 @@ SET(QGIS_MOBILEAPP_SRCS
 #  qgsaddjoindialog.cpp
 #  qgsannotationwidget.cpp
 #  qgsattributeactiondialog.cpp
-#  qgsattributedialog.cpp
+  qgsattributedialog.cpp
 #  qgsattributetypedialog.cpp
 #  qgsattributetypeloaddialog.cpp
 #  qgsattributetabledialog.cpp
@@ -35,19 +35,19 @@ SET(QGIS_MOBILEAPP_SRCS
 #  qgsfieldcalculator.cpp
 #  qgsgraduatedsymboldialog.cpp
 #  qgsidentifyresults.cpp
-#  qgsfeatureaction.cpp
+  qgsfeatureaction.cpp
 #  qgslabeldialog.cpp
 #  qgslabelpropertydialog.cpp
 #  qgslabelengineconfigdialog.cpp
 #  qgslabelinggui.cpp
 #  qgslabelpreview.cpp
 
-#  qgsmaptooladdfeature.cpp
+  qgsmaptooladdfeature.cpp
 #  qgsmaptooladdvertex.cpp
 #  qgsmaptooladdpart.cpp
 #  qgsmaptooladdring.cpp
 #  qgsmaptoolannotation.cpp
-#  qgsmaptoolcapture.cpp
+  qgsmaptoolcapture.cpp
 #  qgsmaptoolchangelabelproperties.cpp
 #  qgsmaptooldeletering.cpp
 #  qgsmaptooldeletepart.cpp
@@ -103,7 +103,7 @@ SET(QGIS_MOBILEAPP_SRCS
 #  qgstipfactory.cpp
 #  qgsuniquevaluedialog.cpp
 #  qgsvectorlayerproperties.cpp
-#  qgshighlight.cpp
+  qgshighlight.cpp
 #  qgshandlebadlayers.cpp
 
 #  composer/qgsattributeselectiondialog.cpp
@@ -163,7 +163,7 @@ SET (QGIS_MOBILEAPP_MOC_HDRS
 #  qgsaddjoindialog.h
 #  qgsannotationwidget.h
 #  qgsattributeactiondialog.h
-#  qgsattributedialog.h
+  qgsattributedialog.h
 #  qgsattributetypedialog.h
 #  qgsattributetypeloaddialog.h
 #  qgsattributetabledialog.h
@@ -182,7 +182,7 @@ SET (QGIS_MOBILEAPP_MOC_HDRS
 #  qgsdelattrdialog.h
 #  qgsdisplayangle.h
 #  qgsembedlayerdialog.h
-#  qgsfeatureaction.h
+  qgsfeatureaction.h
 #  qgsfieldcalculator.h
 #  qgsformannotationdialog.h
 #  qgsgraduatedsymboldialog.h
@@ -192,8 +192,8 @@ SET (QGIS_MOBILEAPP_MOC_HDRS
 #  qgslabelinggui.h
 #  qgslabelpropertydialog.h
 
-#  qgsmaptooladdfeature.h
-#  qgsmaptoolcapture.h
+  qgsmaptooladdfeature.h
+  qgsmaptoolcapture.h
 #  qgsmaptooladdpart.h
 #  qgsmaptooladdring.h
 #  qgsmaptooladdvertex.h
@@ -394,6 +394,7 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}
   ${CMAKE_CURRENT_SOURCE_DIR}/../core
   ${CMAKE_CURRENT_SOURCE_DIR}/../core/raster
   ${CMAKE_CURRENT_SOURCE_DIR}/../core/renderer
+  ${CMAKE_CURRENT_SOURCE_DIR}/../core/symbology
   ${CMAKE_CURRENT_SOURCE_DIR}/../gui
   ${CMAKE_CURRENT_SOURCE_DIR}/../gui/attributetable
   ${CMAKE_CURRENT_BINARY_DIR}/../ui
@@ -438,7 +439,7 @@ TARGET_LINK_LIBRARIES(${QGIS_MOBILEAPP_NAME}
   ${QT_QTDECLARATIVE_LIBRARY}
 #  ${QWT_LIBRARY}
   ${QT_QTSQL_LIBRARY}
-#  ${QT_QTUITOOLS_LIBRARY}
+  ${QT_QTUITOOLS_LIBRARY}
 #  ${QT_QTWEBKIT_LIBRARY}
 #  #should only be needed for win
 #  ${QT_QTMAIN_LIBRARY}

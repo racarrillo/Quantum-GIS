@@ -48,7 +48,7 @@
 //
 // Map tools
 //
-//#include "../app/qgsmaptooladdfeature.h"
+#include "qgsmaptooladdfeature.h"
 //#include <qgsmaptooladdpart.h>
 //#include <qgsmaptooladdring.h>
 //#include <qgsmaptooladdvertex.h>
@@ -88,6 +88,11 @@ QgisMobileapp::QgisMobileapp( QgsApplication *app )
 {
   Q_UNUSED(app);
 
+  if ( smInstance )
+    return;
+
+  smInstance = this;
+
   // Register QML custom types
   // TODO create a QDeclarativeExtensionPlugin and move this to it.
   qmlRegisterType<QgsMapCanvasProxy>("org.qgis", 1, 0, "MapCanvas");
@@ -113,11 +118,11 @@ QgisMobileapp::QgisMobileapp( QgsApplication *app )
   mMapCanvas->freeze(false);
   mMapCanvas->setVisible(true);
 
+  initLegend();
   createActions();
   createCanvasTools();
-  initLegend();
 
-  mMapCanvas->setMapTool(mMapTools.mMoveFeature);
+  mMapCanvas->setMapTool(mMapTools.mAddFeature);
 
   QObject::connect( mMapCanvas, SIGNAL( keyPressed(QKeyEvent*) ), this, SLOT( test() ) );
 
@@ -132,6 +137,8 @@ QgisMobileapp::~QgisMobileapp()
   // delete map layer registry and provider registry
   QgsApplication::exitQgis();
 }
+
+QgisMobileapp *QgisMobileapp::smInstance = 0;
 
 void QgisMobileapp::addVectorLayer()
 {
@@ -181,7 +188,7 @@ void QgisMobileapp::createCanvasTools()
 //  mMapTools.mTextAnnotation = new QgsMapToolTextAnnotation( mMapCanvas );
 //  mMapTools.mFormAnnotation = new QgsMapToolFormAnnotation( mMapCanvas );
 //  mMapTools.mAnnotation = new QgsMapToolAnnotation( mMapCanvas );
-//  mMapTools.mAddFeature = new QgsMapToolAddFeature( mMapCanvas );
+  mMapTools.mAddFeature = new QgsMapToolAddFeature( mMapCanvas );
   mMapTools.mMoveFeature = new QgsMapToolMoveFeature( mMapCanvas );
 //  mMapTools.mReshapeFeatures = new QgsMapToolReshape( mMapCanvas );
 //  mMapTools.mReshapeFeatures->setAction( mActionReshapeFeatures );
@@ -226,14 +233,14 @@ void QgisMobileapp::createCanvasTools()
 void QgisMobileapp::initLegend()
 {
   QObject *object = (QObject*)mView.rootObject();
-  QgsLayerListModel *layerList = object->findChild<QgsLayerListModel *>("theLegend");
-  if (layerList == 0)
+  mLayerList = object->findChild<QgsLayerListModel *>("theLegend");
+  if (mLayerList == 0)
   {
     qDebug() << "Layer list don't returned from QML";
     abort();
   }
 
-  connect(layerList, SIGNAL(startEditingLayer(QgsMapLayer*)), this, SLOT(toggleEditing(QgsMapLayer*)));
+  connect(mLayerList, SIGNAL(startEditingLayer(QgsMapLayer*)), this, SLOT(toggleEditing(QgsMapLayer*)));
 }
 
 void QgisMobileapp::zoomIn()
@@ -389,4 +396,9 @@ bool QgisMobileapp::toggleEditing( QgsMapLayer *layer, bool allowCancel )
 void QgisMobileapp::quit()
 {
   QgsApplication::quit();
+}
+
+
+QgsLayerListModel *QgisMobileapp::legend() {
+  return mLayerList;
 }
