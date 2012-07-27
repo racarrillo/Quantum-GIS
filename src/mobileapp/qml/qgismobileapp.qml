@@ -7,6 +7,10 @@ Window {
 
     signal loadlayer()
 
+    // Map tools
+    signal addFeature()
+    signal moveFeature()
+
     onRotationChanged: {
         console.log('rotation changed!')
     }
@@ -66,6 +70,9 @@ Window {
 
     MapPage {
         id: mapPage
+
+        objectName: 'theMapPage'
+
         visible: false
         anchors {
             top: mainbar.bottom
@@ -73,6 +80,9 @@ Window {
             right: mainwindow.right
             bottom: mainwindow.bottom
         }
+
+        //onAddFeature: addFeature()
+        //onMoveFeature: moveFeature()
     }
 
     LayersPage {

@@ -10,9 +10,9 @@ Rectangle {
     ListModel {
         id: menumodel
 
-        ListElement { text: 'About'; action: "about" }
-        ListElement { text: '...'; action: "" }
-        ListElement { text: 'Quit'; action: "quit" }
+        ListElement { title: "About"; action: "about" }
+        ListElement { title: "..."; action: "" }
+        ListElement { title: "Quit"; action: "quit" }
     }
 
     Component {
@@ -20,9 +20,11 @@ Rectangle {
 
         Rectangle {
 
+            border { color: "black"; width: 1 }
+
             height: 50; width: parent.width // TODO styling
 
-            Text { text: text }
+            Text { text: title }
 
             MouseArea {
                 anchors.fill: parent

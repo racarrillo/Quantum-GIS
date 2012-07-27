@@ -122,9 +122,8 @@ QgisMobileapp::QgisMobileapp( QgsApplication *app )
   createActions();
   createCanvasTools();
 
-  mMapCanvas->setMapTool(mMapTools.mAddFeature);
+  mMapCanvas->setMapTool(mMapTools.mTouch);
 
-  QObject::connect( mMapCanvas, SIGNAL( keyPressed(QKeyEvent*) ), this, SLOT( test() ) );
 
   // Show main window
   mView.show();
@@ -134,6 +133,13 @@ QgisMobileapp::QgisMobileapp( QgsApplication *app )
 
 QgisMobileapp::~QgisMobileapp()
 {
+    delete mMapTools.mZoomIn;
+    delete mMapTools.mZoomOut;
+    delete mMapTools.mPan;
+    delete mMapTools.mTouch;
+    delete mMapTools.mAddFeature;
+    delete mMapTools.mMoveFeature;
+
   // delete map layer registry and provider registry
   QgsApplication::exitQgis();
 }
@@ -171,6 +177,11 @@ void QgisMobileapp::createActions()
   QObject::connect(object, SIGNAL(loadlayer()), this, SLOT(addVectorLayer()));
   QObject::connect(mView.engine(), SIGNAL(quit()), this, SLOT(quit()));
 
+  // Map tools
+  object = object->findChild<QObject *>("theMapPage");
+  QObject::connect( object, SIGNAL( addFeature() ), this, SLOT( addFeature()) );
+  QObject::connect( object, SIGNAL( moveFeature() ), this, SLOT( moveFeature() ) );
+  QObject::connect( object, SIGNAL( touch() ), this, SLOT( touch() ) );
 }
 
 void QgisMobileapp::createCanvasTools()
@@ -243,6 +254,24 @@ void QgisMobileapp::initLegend()
   connect(mLayerList, SIGNAL(startEditingLayer(QgsMapLayer*)), this, SLOT(toggleEditing(QgsMapLayer*)));
 }
 
+void QgisMobileapp::addFeature()
+{
+  if ( mMapCanvas && mMapCanvas->isDrawing() )
+  {
+    return;
+  }
+  mMapCanvas->setMapTool( mMapTools.mAddFeature );
+
+  QgsDebugMsg( "Setting map tool to add feature" );
+}
+
+void QgisMobileapp::moveFeature()
+{
+  mMapCanvas->setMapTool( mMapTools.mMoveFeature );
+
+  QgsDebugMsg( "Setting map tool to move feature" );
+}
+
 void QgisMobileapp::zoomIn()
 {
   QgsDebugMsg( "Setting map tool to zoomIn" );
@@ -278,15 +307,6 @@ void QgisMobileapp::touch()
 void QgisMobileapp::zoomFull()
 {
   mMapCanvas->zoomToFullExtent();
-}
-
-void QgisMobileapp::addFeature()
-{
-  if ( mMapCanvas && mMapCanvas->isDrawing() )
-  {
-    return;
-  }
-  mMapCanvas->setMapTool( mMapTools.mAddFeature );
 }
 
 void QgisMobileapp::select()

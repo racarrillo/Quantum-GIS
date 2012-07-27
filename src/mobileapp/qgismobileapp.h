@@ -51,6 +51,26 @@ public slots:
     void quit();
     void test();
 
+    //! activates the add feature tool
+    void addFeature();
+    //! activates the move feature tool
+    void moveFeature();
+    //! activates the offset curve tool
+    //! Set map tool to Zoom out
+    void zoomOut();
+    //! Set map tool to Zoom in
+    void zoomIn();
+    //! Set map tool to pan
+    void pan();
+    //! Set map tool to touch
+    void touch();
+    //! Identify feature(s) on the currently selected layer
+
+    void zoomToSelected();
+    void panToSelected();
+    void zoomFull();
+    void select();
+
 private:
     void createActions();
     void createCanvasTools();
@@ -62,30 +82,6 @@ private:
     QgsMapCanvasProxy *mMapCanvasProxy;
     static QgisMobileapp *smInstance;
 
-    //! Set map tool to Zoom out
-    void zoomOut();
-    //! Set map tool to Zoom in
-    void zoomIn();
-    //! Set map tool to pan
-    void pan();
-    //! Set map tool to touch
-    void touch();
-    //! Identify feature(s) on the currently selected layer
-    void identify();
-    //! Measure distance
-    void measure();
-    //! Measure area
-    void measureArea();
-    //! Measure angle
-    void measureAngle();
-
-    void zoomToSelected();
-    void panToSelected();
-    void zoomFull();
-    void zoomToPrevious();
-    void zoomToNext();
-    void addFeature();
-    void select();
 
     class Tools
     {
