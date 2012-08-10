@@ -156,11 +156,18 @@ void QgisMobileapp::addVectorLayer()
 
 void QgisMobileapp::createActions()
 {
-  QObject *object = (QObject*)mView.rootObject();
-  QObject::connect(object, SIGNAL(loadlayer()), this, SLOT(addVectorLayer()));
+
   QObject::connect(mView.engine(), SIGNAL(quit()), this, SLOT(quit()));
 
+  QObject *object;
+
+  // Add layers
+  object = (QObject*)mView.rootObject();
+  object = object->findChild<QObject *>("theAddLayerDialog");
+  QObject::connect(object, SIGNAL(addVectorLayer()), this, SLOT(addVectorLayer()));
+
   // Map tools
+  object = (QObject*)mView.rootObject();
   object = object->findChild<QObject *>("theMapPage");
   QObject::connect( object, SIGNAL( addFeature() ), this, SLOT( addFeature()) );
   QObject::connect( object, SIGNAL( moveFeature() ), this, SLOT( moveFeature() ) );

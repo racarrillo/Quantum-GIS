@@ -13,6 +13,8 @@
         <file alias="Dialog.qml">qml/Dialog.qml</file>
         <file alias="DialogTitle.qml">qml/DialogTitle.qml</file>
         <file alias="OkCancelButtons.qml">qml/OkCancelButtons.qml</file>
+        <file alias="AddLayer.qml">qml/AddLayer.qml</file>
+        <file alias="NewLayer.qml">qml/NewLayer.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="icon">images/qgis-icon.png</file>

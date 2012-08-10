@@ -5,8 +5,6 @@ Window {
     id: mainwindow
     anchors.fill: parent; color: "black"
 
-    signal loadlayer()
-
     ToolBar {
         id: mainbar
 
@@ -82,8 +80,20 @@ Window {
         }
 
         canvas: mapPage.mapCanvas // Important!
+    }
 
-        onAddVectorLayer: loadlayer()
+    AddLayer {
+        id: addlayerdialog
+        objectName: "theAddLayerDialog"
+        anchors.fill: parent
+        visible: false
+    }
+
+    NewLayer {
+        id: newlayerdialog
+        objectName: "theNewLayerDialog"
+        anchors.fill: parent
+        visible: false
     }
 
     MainMenu {

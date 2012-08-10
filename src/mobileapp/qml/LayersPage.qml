@@ -6,10 +6,6 @@ Page {
 
     property MapCanvas canvas: null
 
-    signal addVectorLayer()
-    signal newVectorLayer()
-    signal addRasterLayer()
-
     onCanvasChanged: {
         layerlistmodel.mapCanvas = canvas
     }
@@ -115,22 +111,21 @@ Page {
             anchors.centerIn: parent
 
             ToolButton {
-                text: 'Add VLayer'
+                text: 'Add'
                 height: 48*dp; width: 48*dp
-                onClicked: addVectorLayer()
+                onClicked: {
+                    addlayerdialog.visible = true
+                }
             }
 
             ToolButton {
-                text: 'New VLayer'
+                text: 'New'
                 height: 48*dp; width: 48*dp
-                onClicked: newVectorLayer()
-            }
-
-            ToolButton {
-                text: 'Add RLayer'
-                height: 48*dp; width: 48*dp
-                onClicked: addRasterLayer()
+                onClicked: {
+                    newlayerdialog.visible = true
+                }
             }
         }
     }
+
 }
