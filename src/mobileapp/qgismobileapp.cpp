@@ -93,10 +93,7 @@ QgisMobileapp::QgisMobileapp( QgsApplication *app )
 
   smInstance = this;
 
-  // Register QML custom types
-  // TODO create a QDeclarativeExtensionPlugin and move this to it.
-  qmlRegisterType<QgsMapCanvasProxy>("org.qgis", 1, 0, "MapCanvas");
-  qmlRegisterType<QgsLayerListModel>("org.qgis", 1, 0, "LayerListModel");
+  initDeclarative();
 
   // Load QML main window
   mView.setSource(QUrl("qrc:/qml/qgsmobileapp.qml"));
@@ -142,6 +139,21 @@ QgisMobileapp::~QgisMobileapp()
 
   // delete map layer registry and provider registry
   QgsApplication::exitQgis();
+}
+
+void QgisMobileapp::initDeclarative()
+{
+  // Register QML custom types
+  // TODO create a QDeclarativeExtensionPlugin and move this to it.
+  qmlRegisterType<QgsMapCanvasProxy>("org.qgis", 1, 0, "MapCanvas");
+  qmlRegisterType<QgsLayerListModel>("org.qgis", 1, 0, "LayerListModel");
+
+  int dpiX = QApplication::desktop()->physicalDpiX();
+  int dpiY = QApplication::desktop()->physicalDpiY();
+  int dpi = dpiX < dpiY ? dpiX : dpiY; // In case of asymetrical DPI. Improbable
+  float dp = dpi * 0.00768443;
+
+  mView.rootContext()->setContextProperty("dp", dp);
 }
 
 QgisMobileapp *QgisMobileapp::smInstance = 0;

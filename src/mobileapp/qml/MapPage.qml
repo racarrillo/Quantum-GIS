@@ -57,6 +57,7 @@ Page {
 
             ToolButton {
                 id: addFeatureButton
+                height: 48*dp; width: 48*dp;
                 text: 'Add'
                 onClicked: {
                     if (tools.activeTool != null) {
@@ -72,6 +73,7 @@ Page {
 
             ToolButton {
                 id: moveFeatureButton
+                height: 48*dp; width: 48*dp;
                 text: 'Move'
                 onClicked: {
                     if (tools.activeTool != null) {

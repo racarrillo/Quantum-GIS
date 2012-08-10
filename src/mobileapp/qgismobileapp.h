@@ -72,6 +72,7 @@ public slots:
     void select();
 
 private:
+    void initDeclarative();
     void createActions();
     void createCanvasTools();
     void initLegend();

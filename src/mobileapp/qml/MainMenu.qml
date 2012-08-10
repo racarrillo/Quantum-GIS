@@ -22,9 +22,9 @@ Rectangle {
 
             border { color: "black"; width: 1 }
 
-            height: 50; width: parent.width // TODO styling
+            height: 48*dp; width: parent.width
 
-            Text { text: title }
+            Text { text: title; font.pixelSize: 16*dp }
 
             MouseArea {
                 anchors.fill: parent

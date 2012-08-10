@@ -32,25 +32,30 @@ Window {
             right: parent.right
         }
 
-        ToolBarLayout {
+        ToolButton {
+            text: 'Q'
+            height: 48*dp; width: 48*dp
+            onClicked: mainmenu.visible = !mainmenu.visible
+        }
 
-            ToolButton {
-                text: 'Q'
-                onClicked: mainmenu.visible = !mainmenu.visible
-            }
+        ToolBarLayout {
+            anchors.centerIn: parent
 
             ToolButton {
                 text: 'Home'
+                height: 40*dp; width: 72*dp
                 onClicked: activePage(welcomePage)
             }
 
             ToolButton {
                 text: 'Legend'
+                height: 40*dp; width: 72*dp
                 onClicked: activePage(layersPage)
             }
 
             ToolButton {
                 text: 'Map'
+                height: 40*dp; width: 72*dp
                 onClicked: activePage(mapPage)
             }
 

@@ -27,10 +27,13 @@ Page {
                 id: layerDescription
                 width: parent.width
                 color: "black"  // TODO stylish
-                height: 50  // TODO stylish
+                height: 48*dp
 
                 Text {
-                    color: "red"; font.pointSize: 16; text: name
+                    color: "red";
+                    anchors.verticalCenter: parent.verticalCenter
+                    font.pixelSize: 32*dp;
+                    text: name
                 }
 
                 MouseArea {
@@ -50,10 +53,10 @@ Page {
                     right: parent.right
                 }
                 visible: false
-                spacing: 2
+                spacing: 8*dp
 
                 Rectangle {
-                    width: 50; height: 50;
+                    width: 32*dp; height: 32*dp;
                     color: (visibility) ? "red" : "blue"
 
                     MouseArea {
@@ -65,7 +68,7 @@ Page {
                 }
 
                 Rectangle {
-                    width: 50; height: 50;
+                    width: 32*dp; height: 32*dp;
                     color: (editable) ? "red" : "blue"
 
                     MouseArea {
@@ -77,7 +80,7 @@ Page {
                 }
 
                 Rectangle {
-                    width: 50; height: 50;
+                    width: 32*dp; height: 32*dp;
                     color: "green"
                     MouseArea {
                         anchors.fill: parent
@@ -110,19 +113,23 @@ Page {
         }
 
         ToolBarLayout {
+            anchors.centerIn: parent
 
             ToolButton {
                 text: 'Add VLayer'
+                height: 48*dp; width: 48*dp
                 onClicked: addVectorLayer()
             }
 
             ToolButton {
                 text: 'New VLayer'
+                height: 48*dp; width: 48*dp
                 onClicked: newVectorLayer()
             }
 
             ToolButton {
                 text: 'Add RLayer'
+                height: 48*dp; width: 48*dp
                 onClicked: addRasterLayer()
             }
         }

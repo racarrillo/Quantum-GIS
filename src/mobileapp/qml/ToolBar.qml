@@ -5,7 +5,7 @@ Rectangle {
     property Item tools: null
 
     color: 'black'  // TODO styling
-    height: 80  // TODO styling
+    height: 48*dp
 
     onToolsChanged: {
         tools.parent = root
