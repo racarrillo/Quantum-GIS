@@ -49,41 +49,11 @@
 // Map tools
 //
 #include "qgsmaptooladdfeature.h"
-//#include <qgsmaptooladdpart.h>
-//#include <qgsmaptooladdring.h>
-//#include <qgsmaptooladdvertex.h>
-//#include <qgsmaptoolannotation.h>
-//#include "qgsmaptooldeletering.h"
-//#include "qgsmaptooldeletepart.h"
-//#include "qgsmaptooldeletevertex.h"
-//#include "qgsmaptoolfeatureaction.h"
-//#include "qgsmaptoolformannotation.h"
-//#include "qgsmaptoolidentify.h"
-//#include "qgsmaptoolmeasureangle.h"
 #include "qgsmaptoolmovefeature.h"
 #include "qgsmaptooldeletefeature.h"
-//#include "qgsmaptoolmovevertex.h"
-//#include "qgsmaptooloffsetcurve.h"
 #include "qgsmaptoolpan.h"
-//#include "qgsmaptoolselect.h"
-//#include "qgsmaptoolselectrectangle.h"
-//#include "qgsmaptoolselectfreehand.h"
-//#include "qgsmaptoolselectpolygon.h"
-//#include "qgsmaptoolselectradius.h"
-//#include "qgsmaptoolreshape.h"
-//#include "qgsmaptoolrotatepointsymbols.h"
-//#include "qgsmaptoolsplitfeatures.h"
-//#include "qgsmaptooltextannotation.h"
-//#include "qgsmaptoolvertexedit.h"
 #include "qgsmaptoolzoom.h"
-//#include "qgsmaptoolsimplify.h"
-//#include "qgsmeasuretool.h"
-//#include "qgsmaptoolmovelabel.h"
-//#include "qgsmaptoolrotatelabel.h"
-//#include "qgsmaptoolchangelabelproperties.h"
-
 #include "qgsmaptooltouch.h"
-
 
 QgisMobileapp::QgisMobileapp( QgsApplication *app )
 {
@@ -131,12 +101,12 @@ QgisMobileapp::QgisMobileapp( QgsApplication *app )
 
 QgisMobileapp::~QgisMobileapp()
 {
-    delete mMapTools.mZoomIn;
-    delete mMapTools.mZoomOut;
-    delete mMapTools.mPan;
-    delete mMapTools.mTouch;
-    delete mMapTools.mAddFeature;
-    delete mMapTools.mMoveFeature;
+  delete mMapTools.mZoomIn;
+  delete mMapTools.mZoomOut;
+  delete mMapTools.mPan;
+  delete mMapTools.mTouch;
+  delete mMapTools.mAddFeature;
+  delete mMapTools.mMoveFeature;
 
   // delete map layer registry and provider registry
   QgsApplication::exitQgis();
@@ -205,55 +175,9 @@ void QgisMobileapp::createCanvasTools()
   mMapTools.mZoomOut = new QgsMapToolZoom( mMapCanvas, true /* zoomOut */ );
   mMapTools.mPan = new QgsMapToolPan( mMapCanvas );
   mMapTools.mTouch = new QgsMapToolTouch( mMapCanvas );
-//  mMapTools.mIdentify = new QgsMapToolIdentify( mMapCanvas );
-//  mMapTools.mFeatureAction = new QgsMapToolFeatureAction( mMapCanvas );
-//  mMapTools.mMeasureDist = new QgsMeasureTool( mMapCanvas, false /* area */ );
-//  mMapTools.mMeasureArea = new QgsMeasureTool( mMapCanvas, true /* area */ );
-//  mMapTools.mMeasureAngle = new QgsMapToolMeasureAngle( mMapCanvas );
-//  mMapTools.mTextAnnotation = new QgsMapToolTextAnnotation( mMapCanvas );
-//  mMapTools.mFormAnnotation = new QgsMapToolFormAnnotation( mMapCanvas );
-//  mMapTools.mAnnotation = new QgsMapToolAnnotation( mMapCanvas );
   mMapTools.mAddFeature = new QgsMapToolAddFeature( mMapCanvas );
   mMapTools.mMoveFeature = new QgsMapToolMoveFeature( mMapCanvas );
   mMapTools.mDeleteFeature = new QgsMapToolDeleteFeature( mMapCanvas );
-//  mMapTools.mReshapeFeatures = new QgsMapToolReshape( mMapCanvas );
-//  mMapTools.mReshapeFeatures->setAction( mActionReshapeFeatures );
-//  mMapTools.mSplitFeatures = new QgsMapToolSplitFeatures( mMapCanvas );
-//  mMapTools.mSplitFeatures->setAction( mActionSplitFeatures );
-//  mMapTools.mSelect = new QgsMapToolSelect( mMapCanvas );
-//  mMapTools.mSelect->setAction( mActionSelect );
-//  mMapTools.mSelectRectangle = new QgsMapToolSelectRectangle( mMapCanvas );
-//  mMapTools.mSelectRectangle->setAction( mActionSelectRectangle );
-//  mMapTools.mSelectPolygon = new QgsMapToolSelectPolygon( mMapCanvas );
-//  mMapTools.mSelectPolygon->setAction( mActionSelectPolygon );
-//  mMapTools.mSelectFreehand = new QgsMapToolSelectFreehand( mMapCanvas );
-//  mMapTools.mSelectFreehand->setAction( mActionSelectFreehand );
-//  mMapTools.mSelectRadius = new QgsMapToolSelectRadius( mMapCanvas );
-//  mMapTools.mSelectRadius->setAction( mActionSelectRadius );
-//  mMapTools.mAddRing = new QgsMapToolAddRing( mMapCanvas );
-//  mMapTools.mAddRing->setAction( mActionAddRing );
-//  mMapTools.mAddPart = new QgsMapToolAddPart( mMapCanvas );
-//  mMapTools.mSimplifyFeature = new QgsMapToolSimplify( mMapCanvas );
-//  mMapTools.mSimplifyFeature->setAction( mActionSimplifyFeature );
-//  mMapTools.mDeleteRing = new QgsMapToolDeleteRing( mMapCanvas );
-//  mMapTools.mDeleteRing->setAction( mActionDeleteRing );
-//  mMapTools.mDeletePart = new QgsMapToolDeletePart( mMapCanvas );
-//  mMapTools.mDeletePart->setAction( mActionDeletePart );
-//  mMapTools.mNodeTool = new QgsMapToolNodeTool( mMapCanvas );
-//  mMapTools.mNodeTool->setAction( mActionNodeTool );
-//  mMapTools.mRotatePointSymbolsTool = new QgsMapToolRotatePointSymbols( mMapCanvas );
-//  mMapTools.mRotatePointSymbolsTool->setAction( mActionRotatePointSymbols );
-//  mMapTools.mMoveLabel = new QgsMapToolMoveLabel( mMapCanvas );
-//  mMapTools.mMoveLabel->setAction( mActionMoveLabel );
-//  mMapTools.mRotateLabel = new QgsMapToolRotateLabel( mMapCanvas );
-//  mMapTools.mRotateLabel->setAction( mActionRotateLabel );
-//  mMapTools.mChangeLabelProperties = new QgsMapToolChangeLabelProperties( mMapCanvas );
-//  mMapTools.mChangeLabelProperties->setAction( mActionChangeLabelProperties );
-  //ensure that non edit tool is initialised or we will get crashes in some situations
-//  mNonEditMapTool = mMapTools.mPan;
-//#ifdef HAVE_TOUCH
-//  mNonEditMapTool = mMapTools.mTouch;
-//#endif
 }
 
 void QgisMobileapp::initLegend()
@@ -306,16 +230,6 @@ void QgisMobileapp::zoomOut()
   mMapCanvas->setMapTool( mMapTools.mZoomOut );
 }
 
-void QgisMobileapp::zoomToSelected()
-{
-  mMapCanvas->zoomToSelected();
-}
-
-void QgisMobileapp::panToSelected()
-{
-  mMapCanvas->panToSelected();
-}
-
 void QgisMobileapp::pan()
 {
   mMapCanvas->setMapTool( mMapTools.mPan );
@@ -329,16 +243,6 @@ void QgisMobileapp::touch()
 void QgisMobileapp::zoomFull()
 {
   mMapCanvas->zoomToFullExtent();
-}
-
-void QgisMobileapp::select()
-{
-  mMapCanvas->setMapTool( mMapTools.mSelect );
-}
-
-void QgisMobileapp::test()
-{
-  qDebug("test message");
 }
 
 bool QgisMobileapp::toggleEditing( QgsMapLayer *layer, bool allowCancel )
@@ -439,7 +343,6 @@ void QgisMobileapp::quit()
 {
   QgsApplication::quit();
 }
-
 
 QgsLayerListModel *QgisMobileapp::legend() {
   return mLayerList;

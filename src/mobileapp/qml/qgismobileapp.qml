@@ -7,22 +7,6 @@ Window {
 
     signal loadlayer()
 
-    // Map tools
-    signal addFeature()
-    signal moveFeature()
-
-    onRotationChanged: {
-        console.log('rotation changed!')
-    }
-
-    Keys.onPressed: {
-        console.log('key pressed')
-    }
-
-    Keys.onReleased: {
-        console.log('key released')
-    }
-
     ToolBar {
         id: mainbar
 
@@ -85,9 +69,6 @@ Window {
             right: mainwindow.right
             bottom: mainwindow.bottom
         }
-
-        //onAddFeature: addFeature()
-        //onMoveFeature: moveFeature()
     }
 
     LayersPage {

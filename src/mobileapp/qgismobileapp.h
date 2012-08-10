@@ -49,7 +49,6 @@ public slots:
     void addVectorLayer();
     bool toggleEditing(QgsMapLayer *layer, bool allowCancel = true);
     void quit();
-    void test();
 
     //! activates the add feature tool
     void addFeature();
@@ -57,7 +56,6 @@ public slots:
     void moveFeature();
     //! activates the delete feature tool
     void deleteFeature();
-    //! activates the offset curve tool
     //! Set map tool to Zoom out
     void zoomOut();
     //! Set map tool to Zoom in
@@ -68,10 +66,7 @@ public slots:
     void touch();
     //! Identify feature(s) on the currently selected layer
 
-    void zoomToSelected();
-    void panToSelected();
     void zoomFull();
-    void select();
 
 private:
     void initDeclarative();
@@ -93,38 +88,9 @@ private:
         QgsMapTool* mZoomOut;
         QgsMapTool* mPan;
         QgsMapTool* mTouch;
-        QgsMapTool* mIdentify;
-        QgsMapTool* mFeatureAction;
-        QgsMapTool* mMeasureDist;
-        QgsMapTool* mMeasureArea;
-        QgsMapTool* mMeasureAngle;
         QgsMapTool* mAddFeature;
         QgsMapTool* mMoveFeature;
         QgsMapTool* mDeleteFeature;
-        QgsMapTool* mOffsetCurve;
-        QgsMapTool* mReshapeFeatures;
-        QgsMapTool* mSplitFeatures;
-        QgsMapTool* mSelect;
-        QgsMapTool* mSelectRectangle;
-        QgsMapTool* mSelectPolygon;
-        QgsMapTool* mSelectFreehand;
-        QgsMapTool* mSelectRadius;
-        QgsMapTool* mVertexAdd;
-        QgsMapTool* mVertexMove;
-        QgsMapTool* mVertexDelete;
-        QgsMapTool* mAddRing;
-        QgsMapTool* mAddPart;
-        QgsMapTool* mSimplifyFeature;
-        QgsMapTool* mDeleteRing;
-        QgsMapTool* mDeletePart;
-        QgsMapTool* mNodeTool;
-        QgsMapTool* mRotatePointSymbolsTool;
-        QgsMapTool* mAnnotation;
-        QgsMapTool* mFormAnnotation;
-        QgsMapTool* mTextAnnotation;
-        QgsMapTool* mMoveLabel;
-        QgsMapTool* mRotateLabel;
-        QgsMapTool* mChangeLabelProperties;
     } mMapTools;
 
     bool gestureEvent( QGestureEvent *event );

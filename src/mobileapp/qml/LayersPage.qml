@@ -1,5 +1,4 @@
 import QtQuick 1.1
-import Qt.labs.gestures 1.0
 import org.qgis 1.0
 
 Page {

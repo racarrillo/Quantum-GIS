@@ -18,15 +18,6 @@ Page {
         size.height: parent.height
     }
 
-    /*
-    ToolBar {
-        width: parent.width
-        height: 50
-
-        anchors.bottom: canvas.bottom
-    }
-    */
-
     ToolBar {
         id: tools
 
