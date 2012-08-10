@@ -55,6 +55,8 @@ public slots:
     void addFeature();
     //! activates the move feature tool
     void moveFeature();
+    //! activates the delete feature tool
+    void deleteFeature();
     //! activates the offset curve tool
     //! Set map tool to Zoom out
     void zoomOut();
@@ -98,6 +100,7 @@ private:
         QgsMapTool* mMeasureAngle;
         QgsMapTool* mAddFeature;
         QgsMapTool* mMoveFeature;
+        QgsMapTool* mDeleteFeature;
         QgsMapTool* mOffsetCurve;
         QgsMapTool* mReshapeFeatures;
         QgsMapTool* mSplitFeatures;

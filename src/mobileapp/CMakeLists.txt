@@ -59,6 +59,7 @@ SET(QGIS_MOBILEAPP_SRCS
 #  qgsmaptoollabel.cpp
 #  qgsmaptoolmeasureangle.cpp
   qgsmaptoolmovefeature.cpp
+  qgsmaptooldeletefeature.cpp
 #  qgsmaptoolmovelabel.cpp
 #  qgsmaptoolmovevertex.cpp
 #  qgsmaptooloffsetcurve.cpp
@@ -205,6 +206,7 @@ SET (QGIS_MOBILEAPP_MOC_HDRS
 #  qgsmaptoolidentify.h
 #  qgsmaptoolmeasureangle.h
   qgsmaptoolmovefeature.h
+  qgsmaptooldeletefeature.h
 #  qgsmaptoolmovelabel.h
 #  qgsmaptoolmovevertex.h
 #  qgsmaptooloffsetcurve.h

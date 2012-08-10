@@ -61,6 +61,7 @@
 //#include "qgsmaptoolidentify.h"
 //#include "qgsmaptoolmeasureangle.h"
 #include "qgsmaptoolmovefeature.h"
+#include "qgsmaptooldeletefeature.h"
 //#include "qgsmaptoolmovevertex.h"
 //#include "qgsmaptooloffsetcurve.h"
 #include "qgsmaptoolpan.h"
@@ -193,6 +194,7 @@ void QgisMobileapp::createActions()
   object = object->findChild<QObject *>("theMapPage");
   QObject::connect( object, SIGNAL( addFeature() ), this, SLOT( addFeature()) );
   QObject::connect( object, SIGNAL( moveFeature() ), this, SLOT( moveFeature() ) );
+  QObject::connect( object, SIGNAL( deleteFeature() ), this, SLOT( deleteFeature() ) );
   QObject::connect( object, SIGNAL( touch() ), this, SLOT( touch() ) );
 }
 
@@ -213,6 +215,7 @@ void QgisMobileapp::createCanvasTools()
 //  mMapTools.mAnnotation = new QgsMapToolAnnotation( mMapCanvas );
   mMapTools.mAddFeature = new QgsMapToolAddFeature( mMapCanvas );
   mMapTools.mMoveFeature = new QgsMapToolMoveFeature( mMapCanvas );
+  mMapTools.mDeleteFeature = new QgsMapToolDeleteFeature( mMapCanvas );
 //  mMapTools.mReshapeFeatures = new QgsMapToolReshape( mMapCanvas );
 //  mMapTools.mReshapeFeatures->setAction( mActionReshapeFeatures );
 //  mMapTools.mSplitFeatures = new QgsMapToolSplitFeatures( mMapCanvas );
@@ -282,6 +285,13 @@ void QgisMobileapp::moveFeature()
   mMapCanvas->setMapTool( mMapTools.mMoveFeature );
 
   QgsDebugMsg( "Setting map tool to move feature" );
+}
+
+void QgisMobileapp::deleteFeature()
+{
+  mMapCanvas->setMapTool( mMapTools.mDeleteFeature );
+
+  QgsDebugMsg( "Setting map tool to delete feature" );
 }
 
 void QgisMobileapp::zoomIn()

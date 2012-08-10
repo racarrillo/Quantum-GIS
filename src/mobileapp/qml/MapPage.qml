@@ -8,6 +8,7 @@ Page {
 
     signal addFeature();
     signal moveFeature();
+    signal deleteFeature();
     signal touch();
 
     MapCanvas {
@@ -86,6 +87,23 @@ Page {
                     moveFeature()
                 }
             }
-        }
-    }
+
+            ToolButton {
+                id: deleteFeatureButton
+                height: 48*dp; width: 48*dp;
+                text: 'Delete'
+                onClicked: {
+                    if (tools.activeTool != null) {
+                        if (tools.activeTool == deleteFeatureButton) {
+                            tools.disableTool(deleteFeatureButton);
+                            return;
+                        }
+                    }
+                    tools.enableTool(deleteFeatureButton);
+                    deleteFeature()
+                }
+            }
+
+        } // ToolBarLayout
+    } // ToolBar
 }
