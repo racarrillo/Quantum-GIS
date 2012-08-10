@@ -10,6 +10,9 @@
         <file alias="WelcomePage.qml">qml/WelcomePage.qml</file>
         <file alias="MapPage.qml">qml/MapPage.qml</file>
         <file alias="MainMenu.qml">qml/MainMenu.qml</file>
+        <file alias="Dialog.qml">qml/Dialog.qml</file>
+        <file alias="DialogTitle.qml">qml/DialogTitle.qml</file>
+        <file alias="OkCancelButtons.qml">qml/OkCancelButtons.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="icon">images/qgis-icon.png</file>
