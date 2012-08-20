@@ -32,10 +32,7 @@
 
 int main( int argc, char ** argv )
 {
-  QSettings settings;
-
   QgsApplication app( argc, argv, true );
-  app.setThemeName( settings.value( "/Themes", "default" ).toString() );
 
   // load providers
 #if defined(Q_WS_WIN)
@@ -50,6 +47,10 @@ int main( int argc, char ** argv )
   QCoreApplication::setOrganizationName( "QuantumGIS" );
   QCoreApplication::setOrganizationDomain( "qgis.org" );
   QCoreApplication::setApplicationName( "QGIS" );
+
+  QSettings settings;
+
+  app.setThemeName( settings.value( "/Themes", "default" ).toString() );
 
 #if 0
   QString myTranslationCode = "";
