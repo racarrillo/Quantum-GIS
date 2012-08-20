@@ -15,8 +15,24 @@
         <file alias="OkCancelButtons.qml">qml/OkCancelButtons.qml</file>
         <file alias="AddLayer.qml">qml/AddLayer.qml</file>
         <file alias="NewLayer.qml">qml/NewLayer.qml</file>
+        <file alias="HoloDark.qml">qml/HoloDark.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="icon">images/qgis-icon.png</file>
+    </qresource>
+    <qresource prefix="/themes/holodark">
+        <file alias="add.png">themes/holodark/add.png</file>
+        <file alias="remove.png">themes/holodark/remove.png</file>
+        <file alias="previous.png">themes/holodark/previous.png</file>
+        <file alias="undo.png">themes/holodark/undo.png</file>
+        <file alias="location.png">themes/holodark/location.png</file>
+        <file alias="location-add.png">themes/holodark/location-add.png</file>
+        <file alias="new.png">themes/holodark/new.png</file>
+        <file alias="layers.png">themes/holodark/layers.png</file>
+        <file alias="move.png">themes/holodark/move.png</file>
+        <file alias="checkbox-normal-checked.png">themes/holodark/checkbox-normal-checked.png</file>
+        <file alias="checkbox-normal-unchecked.png">themes/holodark/checkbox-normal-unchecked.png</file>
+        <file alias="checkbox-disabled-checked.png">themes/holodark/checkbox-disabled-checked.png</file>
+        <file alias="checkbox-disabled-unchecked.png">themes/holodark/checkbox-disabled-unchecked.png</file>
     </qresource>
 </RCC>
