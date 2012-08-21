@@ -26,9 +26,11 @@
         <file alias="OpaqueBackground.qml">qml/OpaqueBackground.qml</file>
         <file alias="Spinner.qml">qml/Spinner.qml</file>
         <file alias="TextField.qml">qml/TextField.qml</file>
+        <file alias="BusyIndicator.qml">qml/BusyIndicator.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="icon">images/qgis-icon.png</file>
+        <file alias="loading.gif">images/loading.gif</file>
     </qresource>
     <qresource prefix="/themes/holodark">
         <file alias="add.png">themes/holodark/add.png</file>
