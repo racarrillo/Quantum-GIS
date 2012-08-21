@@ -56,6 +56,7 @@
 #include "qgsmaptooltouch.h"
 
 #include "qgsnewspatialitelayerdialog.h"
+#include "qgsgpstool.h"
 
 QgisMobileapp::QgisMobileapp( QgsApplication *app )
 {
@@ -89,6 +90,7 @@ QgisMobileapp::QgisMobileapp( QgsApplication *app )
   mMapCanvas->setVisible(true);
 
   mNewSpatialiteLayer = new QgsNewSpatialiteLayerDialog(&mView);
+  mGpsTool = new QgsGPSTool(&mView, mMapCanvas);
 
   initLegend();
   createActions();
@@ -113,6 +115,7 @@ QgisMobileapp::~QgisMobileapp()
   delete mMapTools.mMoveFeature;
 
   delete mNewSpatialiteLayer;
+  delete mGpsTools;
 
   // delete map layer registry and provider registry
   QgsApplication::exitQgis();
@@ -179,6 +182,12 @@ void QgisMobileapp::createActions()
   QObject::connect( object, SIGNAL( moveFeature() ), this, SLOT( moveFeature() ) );
   QObject::connect( object, SIGNAL( deleteFeature() ), this, SLOT( deleteFeature() ) );
   QObject::connect( object, SIGNAL( touch() ), this, SLOT( touch() ) );
+
+  // Gps
+  QObject::connect( object, SIGNAL( gpsConnect() ), mGpsTool, SLOT( connectGps() ) );
+  QObject::connect( object, SIGNAL( gpsDisconnect() ), mGpsTool, SLOT( disconnectGps() ) );
+  QObject::connect( object, SIGNAL( gpsAddVertex() ), mGpsTool, SLOT( addVertex() ) );
+  QObject::connect( object, SIGNAL( gpsCloseFeature() ), mGpsTool, SLOT( closeFeature() ) );
 }
 
 void QgisMobileapp::createCanvasTools()

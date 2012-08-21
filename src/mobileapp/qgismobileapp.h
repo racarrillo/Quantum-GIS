@@ -34,6 +34,7 @@
 
 class QgsLayerListModel;
 class QgsNewSpatialiteLayerDialog;
+class QgsGPSTool;
 
 class QgisMobileapp : public QObject
 {
@@ -95,6 +96,7 @@ private:
     } mMapTools;
 
     QgsNewSpatialiteLayerDialog *mNewSpatialiteLayer;
+    QgsGPSTool *mGpsTool;
 
     bool gestureEvent( QGestureEvent *event );
     void tapAndHoldTriggered( QTapAndHoldGesture *gesture );

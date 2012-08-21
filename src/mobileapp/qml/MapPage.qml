@@ -21,11 +21,21 @@ Page {
 
     property MapCanvas mapCanvas: theMapCanvas
     property bool editing: false
+    property bool gpsConnected: false
 
     signal addFeature();
     signal moveFeature();
     signal deleteFeature();
     signal touch();
+    signal gpsConnect();
+    signal gpsDisconnect();
+    signal gpsAddVertex();
+    signal gpsCloseFeature();
+    signal gpsConnected();
+    signal gpsDisconnected();
+
+    onGpsConnect: canvas.gpsConnected = true
+    onGpsDisconnect: canvas.gpsConnected = false
 
     Item {
         width: parent.width
@@ -65,6 +75,15 @@ Page {
             iconWidth: visual.actionBarHeight
 
             onClicked: mainmenu.visible = true
+        }
+
+        ActionButton {
+            id: gpsbutton
+            icon: visual.locationIcon
+            anchors.right: layersbutton.left
+
+            onClicked: gpsConnect()
+            onPressAndHold: gpsDisconnect()
         }
 
         ActionButton {
@@ -157,6 +176,30 @@ Page {
                     deleteFeature()
                 }
             }
+
+            ActionButton {
+                id: addGpsVertextButton
+                icon: visual.locationAddIcon
+                width: editTools.width / 4
+
+                onClicked: {
+                    if ( canvas.gpsConnected ) {
+                        gpsAddVertex()
+                    } else {
+                        mainwindow.displayToast("GPS connection not started")
+                    }
+                }
+
+                onPressAndHold: {
+                    if ( canvas.gpsConnected ) {
+                       gpsCloseFeature()
+                    } else {
+                        mainwindow.displayToast("GPS connection not started")
+                    }
+                }
+            }
+
+
         } // Row
     } // ActionBar
 }

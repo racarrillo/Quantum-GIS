@@ -31,6 +31,7 @@
     <qresource prefix="/images">
         <file alias="icon">images/qgis-icon.png</file>
         <file alias="loading.gif">images/loading.gif</file>
+        <file alias="gpsarrow.svg">images/gpsarrow2.svg</file>
     </qresource>
     <qresource prefix="/themes/holodark">
         <file alias="add.png">themes/holodark/add.png</file>

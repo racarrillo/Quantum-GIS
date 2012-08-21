@@ -142,8 +142,8 @@ SET(QGIS_MOBILEAPP_SRCS
 #  ogr/qgsogrsublayersdialog.cpp
 #  ogr/qgsvectorlayersaveasdialog.cpp
 
-#  gps/qgsgpsinformationwidget.cpp
-#  gps/qgsgpsmarker.cpp
+  qgsgpstool.cpp
+  qgsgpsmarker.cpp
 )
 
 IF (ANDROID)
@@ -271,7 +271,7 @@ SET (QGIS_MOBILEAPP_MOC_HDRS
 #  ogr/qgsogrsublayersdialog.h
 #  ogr/qgsvectorlayersaveasdialog.h
 
-#  gps/qgsgpsinformationwidget.h
+  qgsgpstool.h
   )
 
 #IF(WITH_INTERNAL_QWTPOLAR)
@@ -394,6 +394,8 @@ QT4_WRAP_CPP(QGIS_MOBILEAPP_MOC_SRCS ${QGIS_MOBILEAPP_MOC_HDRS})
 
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}
   ${CMAKE_CURRENT_SOURCE_DIR}/../core
+  ${CMAKE_CURRENT_SOURCE_DIR}/../core/gps
+  ${CMAKE_CURRENT_SOURCE_DIR}/../core/gps/qextserialport
   ${CMAKE_CURRENT_SOURCE_DIR}/../core/raster
   ${CMAKE_CURRENT_SOURCE_DIR}/../core/renderer
   ${CMAKE_CURRENT_SOURCE_DIR}/../core/symbology
