@@ -22,6 +22,7 @@ Dialog {
 
     signal addVectorLayer()
     signal addSpatialiteLayer()
+    signal addRasterLayer()
 
     ListView {
         anchors.fill: parent
@@ -30,6 +31,7 @@ Dialog {
         model: ListModel {
             ListElement { title: "Vector layer"; index: 0 }
             ListElement { title: "Spatialite"; index: 1 }
+            ListElement { title: "Raster layer" }
         }
 
         delegate: MenuElement {

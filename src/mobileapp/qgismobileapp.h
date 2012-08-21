@@ -35,6 +35,7 @@
 class QgsLayerListModel;
 class QgsNewSpatialiteLayerDialog;
 class QgsGPSTool;
+class QgsRasterLayer;
 
 class QgisMobileapp : public QObject
 {
@@ -49,6 +50,8 @@ public:
 
 public slots:
     void addVectorLayer();
+    void addRasterLayer();
+    bool shouldAskUserForGDALSublayers( QgsRasterLayer *layer);
     bool toggleEditing(QgsMapLayer *layer, bool allowCancel = true);
     void quit();
 

@@ -33,6 +33,7 @@
 #include <qgssinglesymbolrenderer.h>
 #include <qgsmaplayerregistry.h>
 #include <qgsvectorlayer.h>
+#include <qgsrasterlayer.h>
 #include <qgsmapcanvas.h>
 #include <qgslogger.h>
 
@@ -161,6 +162,95 @@ void QgisMobileapp::addVectorLayer()
   QList<QgsMapLayer *> layers;
   layers.append(mypLayer);
   QgsMapLayerRegistry::instance()->addMapLayers(layers, true);
+}
+
+void QgisMobileapp::addRasterLayer()
+{
+
+
+  QString myLayerPath = QFileDialog::getOpenFileName( (QWidget *)&mView );
+
+  if ( mMapCanvas && mMapCanvas->isDrawing() )
+  {
+    return;
+  }
+
+  if ( myLayerPath == "" )
+  {
+    // no files selected
+    mMapCanvas->freeze( false );
+    return;
+  }
+
+  mMapCanvas->freeze( true );
+
+
+  QString errMsg;
+
+  if ( QgsRasterLayer::isValidRasterFileName( myLayerPath, errMsg ) )
+  {
+    QFileInfo myFileInfo(myLayerPath);
+    //extract basename
+    QString myBaseNameQString = myFileInfo.completeBaseName();
+
+    // create the layer
+    QgsRasterLayer *layer = new QgsRasterLayer( myLayerPath, myBaseNameQString );
+
+    if ( shouldAskUserForGDALSublayers( layer ) )
+    {
+      // TODO support for sublayer
+      delete layer;
+      return;
+    }
+    else
+    {
+      // Add raster layer
+      if ( layer->isValid() )
+      {
+        qDebug() << "Raster layer is valid";
+      }
+      else
+      {
+        qDebug() << "Raster layer is NOT valid";
+        delete layer;
+        return;
+
+      }
+
+      // register this layer with the central layers registry
+      QList<QgsMapLayer *> myList;
+      myList << layer;
+      QgsMapLayerRegistry::instance()->addMapLayers( myList );
+    }
+  }
+  else
+  {
+      QString msg = tr( "%1 is not a supported raster data source" ).arg( myLayerPath );
+
+      if ( errMsg.size() > 0 )
+        msg += "\n" + errMsg;
+
+      QMessageBox::critical( 0, tr( "Unsupported Data Source" ), msg );
+  }
+
+  mMapCanvas->freeze( false );
+  mMapCanvas->refresh();
+}
+
+// should the GDAL sublayers dialog should be presented to the user?
+bool QgisMobileapp::shouldAskUserForGDALSublayers( QgsRasterLayer *layer )
+{
+    // return false if layer is empty or raster has no sublayers
+    if ( !layer || layer->providerType() != "gdal" || layer->subLayers().size() < 1 )
+        return false;
+
+    QSettings settings;
+    int promptLayers = settings.value( "/qgis/promptForRasterSublayers", 1 ).toInt();
+    // 0 = always -> always ask (if there are existing sublayers)
+    // 1 = if needed -> ask if layer has no bands, but has sublayers
+    // 2 = never
+
+  return promptLayers == 0 || ( promptLayers == 1 && layer->bandCount() == 0 );
 }
 
 void QgisMobileapp::createActions()
