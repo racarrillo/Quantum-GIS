@@ -11,7 +11,7 @@
         <file alias="AddLayer.qml">qml/AddLayer.qml</file>
         <file alias="NewLayer.qml">qml/NewLayer.qml</file>
         <file alias="HoloDark.qml">qml/HoloDark.qml</file>
-	<file alias="ActionBar.qml">qml/ActionBar.qml</file>
+        <file alias="ActionBar.qml">qml/ActionBar.qml</file>
         <file alias="ActionButton.qml">qml/ActionButton.qml</file>
         <file alias="Button.qml">qml/Button.qml</file>
         <file alias="Checkbox.qml">qml/Checkbox.qml</file>
@@ -25,7 +25,9 @@
         <file alias="NewSpatialiteLayer.qml">qml/NewSpatialiteLayer.qml</file>
         <file alias="NewSpatialiteLayerDB.qml">qml/NewSpatialiteLayerDB.qml</file>
         <file alias="NewSpatialiteLayerAttributes.qml">qml/NewSpatialiteLayerAttributes.qml</file>
-        <file alias="NewSpatialiteLayerNewAttr.qml">qml/NewSpatialiteLayerNewAttr.qml</file>    </qresource>
+        <file alias="NewSpatialiteLayerNewAttr.qml">qml/NewSpatialiteLayerNewAttr.qml</file>
+        <file alias="LayerProperties.qml">qml/LayerProperties.qml</file>
+    </qresource>
     <qresource prefix="/images">
         <file alias="icon">images/qgis-icon.png</file>
         <file alias="loading.gif">images/loading.gif</file>
