@@ -116,7 +116,7 @@ QgisMobileapp::~QgisMobileapp()
   delete mMapTools.mMoveFeature;
 
   delete mNewSpatialiteLayer;
-  delete mGpsTools;
+  delete mGpsTool;
 
   // delete map layer registry and provider registry
   QgsApplication::exitQgis();
@@ -151,11 +151,12 @@ void QgisMobileapp::addVectorLayer()
 
   if (mypLayer->isValid())
   {
-    qDebug("Layer is valid");
+    qDebug("Vector layer is valid");
   }
   else
   {
-    qDebug("Layer is NOT valid");
+    qDebug("Vector layer is NOT valid");
+    delete mypLayer;
     return;
   }
   // Add the Vector Layer to the Layer Registry
@@ -264,10 +265,11 @@ void QgisMobileapp::createActions()
   object = (QObject*)mView.rootObject();
   object = object->findChild<QObject *>("theAddLayerDialog");
   QObject::connect(object, SIGNAL(addVectorLayer()), this, SLOT(addVectorLayer()));
+  QObject::connect(object, SIGNAL(addRasterLayer()), this, SLOT(addRasterLayer()));
 
-  // Map tools
   object = (QObject*)mView.rootObject();
   object = object->findChild<QObject *>("theMapPage");
+  // Map tools
   QObject::connect( object, SIGNAL( addFeature() ), this, SLOT( addFeature()) );
   QObject::connect( object, SIGNAL( moveFeature() ), this, SLOT( moveFeature() ) );
   QObject::connect( object, SIGNAL( deleteFeature() ), this, SLOT( deleteFeature() ) );

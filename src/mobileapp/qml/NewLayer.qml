@@ -27,8 +27,7 @@ Dialog {
         clip: true
 
         model: ListModel {
-            ListElement { title: "Shapefile"; index: 0 }
-            ListElement { title: "Spatialite"; index: 1 }
+            ListElement { title: "Spatialite" }
         }
 
         delegate: MenuElement {
@@ -44,7 +43,7 @@ Dialog {
             onClicked: {
                 dialog.visible = false;
                 switch (index) {
-                case 1:
+                case 0:
                     newspatialitelayer.visible = true;
                     break;
                 }

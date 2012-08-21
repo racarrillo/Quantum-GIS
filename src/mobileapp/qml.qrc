@@ -1,22 +1,17 @@
 <RCC>
     <qresource prefix="/qml">
         <file alias="qgsmobileapp.qml">qml/qgismobileapp.qml</file>
-        <file alias="ToolBar.qml">qml/ToolBar.qml</file>
-        <file alias="ToolButton.qml">qml/ToolButton.qml</file>
-        <file alias="ToolBarLayout.qml">qml/ToolBarLayout.qml</file>
         <file alias="Page.qml">qml/Page.qml</file>
         <file alias="Window.qml">qml/Window.qml</file>
         <file alias="LayersPage.qml">qml/LayersPage.qml</file>
-        <file alias="WelcomePage.qml">qml/WelcomePage.qml</file>
         <file alias="MapPage.qml">qml/MapPage.qml</file>
-        <file alias="MainMenu.qml">qml/MainMenu.qml</file>
         <file alias="Dialog.qml">qml/Dialog.qml</file>
         <file alias="DialogTitle.qml">qml/DialogTitle.qml</file>
         <file alias="OkCancelButtons.qml">qml/OkCancelButtons.qml</file>
         <file alias="AddLayer.qml">qml/AddLayer.qml</file>
         <file alias="NewLayer.qml">qml/NewLayer.qml</file>
         <file alias="HoloDark.qml">qml/HoloDark.qml</file>
-		<file alias="ActionBar.qml">qml/ActionBar.qml</file>
+	<file alias="ActionBar.qml">qml/ActionBar.qml</file>
         <file alias="ActionButton.qml">qml/ActionButton.qml</file>
         <file alias="Button.qml">qml/Button.qml</file>
         <file alias="Checkbox.qml">qml/Checkbox.qml</file>
@@ -27,7 +22,10 @@
         <file alias="Spinner.qml">qml/Spinner.qml</file>
         <file alias="TextField.qml">qml/TextField.qml</file>
         <file alias="BusyIndicator.qml">qml/BusyIndicator.qml</file>
-    </qresource>
+        <file alias="NewSpatialiteLayer.qml">qml/NewSpatialiteLayer.qml</file>
+        <file alias="NewSpatialiteLayerDB.qml">qml/NewSpatialiteLayerDB.qml</file>
+        <file alias="NewSpatialiteLayerAttributes.qml">qml/NewSpatialiteLayerAttributes.qml</file>
+        <file alias="NewSpatialiteLayerNewAttr.qml">qml/NewSpatialiteLayerNewAttr.qml</file>    </qresource>
     <qresource prefix="/images">
         <file alias="icon">images/qgis-icon.png</file>
         <file alias="loading.gif">images/loading.gif</file>

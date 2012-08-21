@@ -1,3 +1,18 @@
+/***************************************************************************
+    qgslayerlistmodel.h  -  Model data for store the loaded layers
+     --------------------------------------
+    Date                 : 22-Jun-2012
+    Copyright            : (C) 2012 by Ramon Carrillo
+    Email                : racarrillo91 at gmail.com
+ ***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
+
 #include "qgslayerlistmodel.h"
 
 #include "qgismobileapp.h"
@@ -6,8 +21,6 @@
 #include <qgsmaplayer.h>
 #include <qgsmaprenderer.h>
 #include <qgsmaplayerregistry.h>
-
-
 
 QgsLayerListModel::QgsLayerListModel(QObject *parent) :
     QAbstractListModel(parent)
@@ -28,24 +41,17 @@ QgsLayerListModel::QgsLayerListModel(QObject *parent) :
     connect( QgsMapLayerRegistry::instance(),
              SIGNAL( layersAdded( QList<QgsMapLayer*> ) ),
              this, SLOT( addLayers( QList<QgsMapLayer *> ) ) );
-
-//    connect( mMapCanvas, SIGNAL( layersChanged() ),
-//             this, SLOT( refreshCheckStates() ) );
 }
 
 int QgsLayerListModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
 
-    qDebug("list model row count: %d", mLayerSet.size());
-
     return mLayerSet.size();
 }
 
 QVariant QgsLayerListModel::data(const QModelIndex &index, int role) const
 {
-    qDebug("accesing model data");
-
     if (!index.isValid())
         return QVariant();
 
@@ -71,15 +77,12 @@ QVariant QgsLayerListModel::data(const QModelIndex &index, int role) const
 
 bool QgsLayerListModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-  qDebug("setting model data");
-
    if (!index.isValid())
         return false;
 
     if ( index.row() < 0 || index.row() >= mLayerSet.size() )
         return false;
 
-    //QgsMapLayer *layer = mapCanvas->layers().at(index.row());
     QgsMapCanvasLayer *canvasLayer = mLayerSet.at(index.row());
 
     if (role == Name) {
@@ -133,25 +136,7 @@ QgsMapCanvasProxy *QgsLayerListModel::mapCanvas() const
 
 void QgsLayerListModel::setMapCanvas(QgsMapCanvasProxy *m)
 {
-    qDebug("setting map canvas to model");
-
     mMapCanvasProxy = m;
-
-//    connect( mMapCanvasProxy->mapCanvas(), SIGNAL(layersChanged()), this, SLOT(notifyLayerChange()) );
-}
-
-void QgsLayerListModel::notifyLayerChange()
-{
-    qDebug("map canvas' layer set have changed");
-
-    // if layers have been added
-    // TODO use layercount to know how many layers were added
-    beginInsertRows(QModelIndex(), rowCount() - 1, rowCount() - 1);
-    endInsertRows();
-
-    // emit changes for all the elements of the list
-    int layerCount = mMapCanvasProxy->mapCanvas()->layerCount();
-    emit dataChanged( index(0, 0, QModelIndex()), index(layerCount - 1, 0, QModelIndex()) );
 }
 
 #if 0

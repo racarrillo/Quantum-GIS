@@ -21,7 +21,6 @@ Dialog {
     okbutton: false
 
     signal addVectorLayer()
-    signal addSpatialiteLayer()
     signal addRasterLayer()
 
     ListView {
@@ -29,8 +28,7 @@ Dialog {
         clip: true
 
         model: ListModel {
-            ListElement { title: "Vector layer"; index: 0 }
-            ListElement { title: "Spatialite"; index: 1 }
+            ListElement { title: "Vector layer" }
             ListElement { title: "Raster layer" }
         }
 

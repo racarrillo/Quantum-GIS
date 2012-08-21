@@ -1,5 +1,5 @@
 /***************************************************************************
-    ActionBar.qml  -  Action bar based on Android design guidelines
+    LayersPage.qml  -  Displays the loaded layers and its properties
      --------------------------------------
     Date                 : 24-Jul-2012
     Copyright            : (C) 2012 by Ramon Carrillo
