@@ -1,3 +1,18 @@
+/***************************************************************************
+    qgismobile.app.qml  -  Main window
+     --------------------------------------
+    Date                 : 20-May-2012
+    Copyright            : (C) 2012 by Ramon Carrillo
+    Email                : racarrillo91 at gmail.com
+/***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
+
 import QtQuick 1.1
 import org.qgis 1.0
 
@@ -5,79 +20,22 @@ Window {
     id: mainwindow
     anchors.fill: parent; color: "black"
 
-    ToolBar {
-        id: mainbar
-
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-        }
-
-        ToolButton {
-            text: 'Q'
-            height: 48*dp; width: 48*dp
-            onClicked: mainmenu.visible = !mainmenu.visible
-        }
-
-        ToolBarLayout {
-            anchors.centerIn: parent
-
-            ToolButton {
-                text: 'Home'
-                height: 40*dp; width: 72*dp
-                onClicked: activePage(welcomePage)
-            }
-
-            ToolButton {
-                text: 'Legend'
-                height: 40*dp; width: 72*dp
-                onClicked: activePage(layersPage)
-            }
-
-            ToolButton {
-                text: 'Map'
-                height: 40*dp; width: 72*dp
-                onClicked: activePage(mapPage)
-            }
-
-        }
-    }
-
-    WelcomePage {
-        id: welcomePage
-        visible: true
-        anchors {
-            top: mainbar.bottom
-            left: mainwindow.left
-            right: mainwindow.right
-            bottom: mainwindow.bottom
-        }
-    }
-
     MapPage {
         id: mapPage
 
         objectName: 'theMapPage'
 
-        visible: false
-        anchors {
-            top: mainbar.bottom
-            left: mainwindow.left
-            right: mainwindow.right
-            bottom: mainwindow.bottom
-        }
+        // Visible by default
+        visible: true
+
+        anchors.fill: parent
     }
 
     LayersPage {
         id: layersPage
         visible: false
-        anchors {
-            top: mainbar.bottom
-            left: mainwindow.left
-            right: mainwindow.right
-            bottom: mainwindow.bottom
-        }
+
+        anchors.fill: parent
 
         canvas: mapPage.mapCanvas // Important!
     }
@@ -96,21 +54,42 @@ Window {
         visible: false
     }
 
-    MainMenu {
+    Item {
         id: mainmenu
+
+        anchors.fill: parent
         visible: false
 
-        onQuit: Qt.quit()
+        OpaqueBackground {}
 
-        anchors {
-            top: mainbar.bottom
-            left: mainwindow.left
+        Menu {
+            anchors.centerIn: parent
+
+            model: ["Settings", "About", "Quit"]
+
+            onValueChanged: {
+                switch( index ) {
+                case 0:
+                    console.log("settings")
+                    break;
+                case 1:
+                    console.log("about");
+                    break;
+                case 2:
+                    Qt.quit()
+                    break;
+                }
+            }
         }
+    } // mainmenu
+
+    // The style
+    HoloDark {
+        id: visual
     }
 
     // TODO implement PageStack to manage pages?
     function activePage(page) {
-        welcomePage.visible = false;
         mapPage.visible = false;
         layersPage.visible = false;
 

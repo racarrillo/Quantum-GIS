@@ -1,3 +1,18 @@
+/***************************************************************************
+    ActionBar.qml  -  Action bar based on Android design guidelines
+     --------------------------------------
+    Date                 : 24-Jul-2012
+    Copyright            : (C) 2012 by Ramon Carrillo
+    Email                : racarrillo91 at gmail.com
+/***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
+
 import QtQuick 1.1
 import org.qgis 1.0
 
@@ -10,83 +25,95 @@ Page {
         layerlistmodel.mapCanvas = canvas
     }
 
-    Component {
-        id: layerDelegate
-        Rectangle {
-            color: "black"
-            border { color: "white"; width: 2 }
-            width: parent.width
-            height: layerDescription.height + ( (layerOptions.visible) ? layerOptions.height : 0 )
+    GradientBackground {}
 
-            Rectangle {
-                id: layerDescription
-                width: parent.width
-                color: "black"  // TODO stylish
-                height: 48*dp
+    ActionBar {
+        id: actionBar
 
-                Text {
-                    color: "red";
-                    anchors.verticalCenter: parent.verticalCenter
-                    font.pixelSize: 32*dp;
-                    text: name
-                }
+        anchors.top: parent.top
 
-                MouseArea {
-                    anchors.fill: parent;
-                    onClicked: {
-                        layerOptions.visible = !layerOptions.visible
-                        layerlistmodel.setCurrentLayer(index)
-                    }
+        Row {
+            anchors.left: parent.left
+
+            ActionButton {
+                id: backbutton
+                icon: visual.previousIcon
+                onClicked:  {
+                  mapPage.visible = true
+                  root.visible = false
                 }
             }
 
-            Row {
-                id: layerOptions
-                width: parent.width
-                anchors {
-                    top: layerDescription.bottom
-                    right: parent.right
+            Item {
+                height: parent.height
+                width: title.width
+
+                Text {
+                    id: title
+
+                    text: "Layers"
+                    anchors.centerIn: parent
+                    color: visual.actionBarForeground
                 }
-                visible: false
-                spacing: 8*dp
-
-                Rectangle {
-                    width: 32*dp; height: 32*dp;
-                    color: (visibility) ? "red" : "blue"
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            layerlistmodel.setData(index, "visible", ! visibility);
-                        }
-                    }
-                }
-
-                Rectangle {
-                    width: 32*dp; height: 32*dp;
-                    color: (editable) ? "red" : "blue"
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            layerlistmodel.setData(index, "editable", ! editable);
-                        }
-                    }
-                }
-
-                Rectangle {
-                    width: 32*dp; height: 32*dp;
-                    color: "green"
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            layerlistmodel.removeLayer(index);
-                        }
-                    }
-                }
-            } // Row: layerOptions
+            }
         }
-    } // Component: layerdelegate
+
+        Row {
+            anchors.right: parent.right
+
+            ActionButton {
+                id: addbutton
+                icon: visual.addIcon
+                onClicked: addlayerdialog.visible = true
+            }
+
+            ActionButton {
+                id: newbutton
+                icon: visual.newIcon
+                onClicked: newlayerdialog.visible = true
+            }
+        }
+    }
+
+    Component {
+        id: layerDelegate
+
+        MenuElement {
+            width: parent.width - 32*dp
+            x: 16*dp
+
+            Text {
+                color: visual.menuForeground
+                anchors.verticalCenter: parent.verticalCenter
+                text: name
+            }
+
+            ActionButton {
+                anchors.right: parent.right
+                icon: visual.removeIcon
+
+                onClicked: {
+                    layerlistmodel.removeLayer(index)
+                }
+            }
+
+            onClicked: {
+                layerProperties.layerIndex = index
+                layerProperties.layerName = name
+                layerProperties.layerVisible = visibility
+                layerProperties.layerEditable = editable
+
+                layerProperties.visible = true
+            }
+
+            onPressAndHold: {
+                if ( editable ) {
+                    layerlistmodel.setCurrentLayer(index)
+                    mapPage.editing = true
+                }
+            }
+        }
+    } // layerdelegate
 
     LayerListModel {
         id: layerlistmodel
@@ -94,38 +121,28 @@ Page {
     }
 
     ListView {
-        anchors.fill: parent
+        width: parent.width
+
+        anchors {
+            top: actionBar.bottom
+            bottom: parent.bottom
+        }
         model: layerlistmodel
         delegate: layerDelegate
     }
 
-    ToolBar {
+    LayerProperties {
+        id: layerProperties
+        anchors.fill: parent
 
-        anchors {
-            bottom: parent.bottom
-            left: parent.left
-            right: parent.right
+        visible: false
+
+        onLayerVisibleChanged: {
+            layerlistmodel.setData(layerIndex, "visible", layerVisible);
         }
 
-        ToolBarLayout {
-            anchors.centerIn: parent
-
-            ToolButton {
-                text: 'Add'
-                height: 48*dp; width: 48*dp
-                onClicked: {
-                    addlayerdialog.visible = true
-                }
-            }
-
-            ToolButton {
-                text: 'New'
-                height: 48*dp; width: 48*dp
-                onClicked: {
-                    newlayerdialog.visible = true
-                }
-            }
+        onLayerEditableChanged: {
+            layerlistmodel.setData(layerIndex, "editable", layerEditable);
         }
     }
-
 }

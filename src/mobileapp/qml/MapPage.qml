@@ -1,3 +1,18 @@
+/***************************************************************************
+    ActionBar.qml  -  Action bar based on Android design guidelines
+     --------------------------------------
+    Date                 : 24-Jul-2012
+    Copyright            : (C) 2012 by Ramon Carrillo
+    Email                : racarrillo91 at gmail.com
+/***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
+
 import QtQuick 1.1
 import org.qgis 1.0
 
@@ -5,23 +20,73 @@ Page {
     id: canvas
 
     property MapCanvas mapCanvas: theMapCanvas
+    property bool editing: false
 
     signal addFeature();
     signal moveFeature();
     signal deleteFeature();
     signal touch();
 
-    MapCanvas {
-        id: theMapCanvas
-        objectName: 'theMapCanvas' // the name is important
-        size.width: parent.width
-        size.height: parent.height
+    Item {
+        width: parent.width
+        anchors.top: actionBar.bottom
+        anchors.bottom: editTools.visible ? editTools.top : parent.bottom
+
+        MapCanvas {
+            id: theMapCanvas
+            objectName: 'theMapCanvas' // the name is important
+            size.width: parent.width; size.height: parent.height
+
+            onRenderStarted: {
+                busyindicator.visible = true;
+            }
+
+            onRenderCompleted: {
+                busyindicator.visible = false;
+            }
+       }
     }
 
-    ToolBar {
-        id: tools
+    AnimatedImage {
+        id: busyindicator
 
-        property ToolButton activeTool: null
+        anchors.centerIn: parent
+        source: "/images/loading.gif"
+    }
+
+    ActionBar {
+        id: actionBar
+
+        anchors.top: parent.top
+
+        ActionButton {
+            icon: "/images/icon"
+            iconHeight: visual.actionBarHeight
+            iconWidth: visual.actionBarHeight
+
+            onClicked: mainmenu.visible = true
+        }
+
+        ActionButton {
+            id: layersbutton
+            icon: visual.layersIcon
+            anchors.right: parent.right
+
+            onClicked: {
+                layersPage.visible = true
+                canvas.visible = false
+            }
+        }
+    }
+
+    ActionBar {
+        id: editTools
+        visible: canvas.editing
+
+        property ActionButton activeTool: null
+
+        color: visual.menuBackground
+        anchors.bottom: parent.bottom
 
         onActiveToolChanged: {
             if (activeTool == null) {
@@ -30,71 +95,68 @@ Page {
         }
 
         function enableTool(toolButton) {
+            if (activeTool != null) {
+                activeTool.deactivate()
+            }
             activeTool = toolButton;
-            toolButton.color = "red";
+            toolButton.activate();
         }
 
         function disableTool(toolButton) {
             activeTool = null;
-            toolButton.color = "#271d1d";
+            toolButton.deactivate();
         }
 
-        anchors {
-            bottom: parent.bottom
-            left: parent.left
-            right: parent.right
-        }
+        Row {
+            anchors.centerIn: parent
 
-        ToolBarLayout {
-
-            ToolButton {
+            ActionButton {
                 id: addFeatureButton
-                height: 48*dp; width: 48*dp;
-                text: 'Add'
+                icon: visual.addIcon
+                width: editTools.width / 4
                 onClicked: {
-                    if (tools.activeTool != null) {
-                        if (tools.activeTool == addFeatureButton) {
-                            tools.disableTool(addFeatureButton)
+                    if (editTools.activeTool != null) {
+                        if (editTools.activeTool == addFeatureButton) {
+                            editTools.disableTool(addFeatureButton)
                             return;
                         }
                     }
-                    tools.enableTool(addFeatureButton);
+                    editTools.enableTool(addFeatureButton);
                     addFeature()
                 }
             }
 
-            ToolButton {
+            ActionButton {
                 id: moveFeatureButton
-                height: 48*dp; width: 48*dp;
-                text: 'Move'
+                icon: visual.moveIcon
+                width: editTools.width / 4
                 onClicked: {
-                    if (tools.activeTool != null) {
-                        if (tools.activeTool == moveFeatureButton) {
-                            tools.disableTool(moveFeatureButton);
+                    if (editTools.activeTool != null) {
+                        if (editTools.activeTool == moveFeatureButton) {
+                            editTools.disableTool(moveFeatureButton);
                             return;
                         }
                     }
-                    tools.enableTool(moveFeatureButton);
+                    editTools.enableTool(moveFeatureButton);
                     moveFeature()
                 }
             }
 
-            ToolButton {
+            ActionButton {
                 id: deleteFeatureButton
-                height: 48*dp; width: 48*dp;
-                text: 'Delete'
+                icon: visual.removeIcon
+                width: editTools.width / 4
                 onClicked: {
-                    if (tools.activeTool != null) {
-                        if (tools.activeTool == deleteFeatureButton) {
-                            tools.disableTool(deleteFeatureButton);
+                    if (editTools.activeTool != null) {
+                        if (editTools.activeTool == deleteFeatureButton) {
+                            editTools.disableTool(deleteFeatureButton);
                             return;
                         }
                     }
-                    tools.enableTool(deleteFeatureButton);
+                    editTools.enableTool(deleteFeatureButton);
                     deleteFeature()
                 }
             }
-
-        } // ToolBarLayout
-    } // ToolBar
+        } // Row
+    } // ActionBar
 }
