@@ -1,50 +1,57 @@
+/***************************************************************************
+    Dialog.qml  -  Dialog based on Android design guidelines
+     --------------------------------------
+    Date                 : 30-Jul-2012
+    Copyright            : (C) 2012 by Ramon Carrillo
+    Email                : racarrillo91 at gmail.com
+/***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
+
 import QtQuick 1.1
 
 Item {
     id: dialog
 
+    // The child elements added will be put in the 'content' element
     default property alias content: content.children
-    property string title
+    property alias title: dialogtitle.text
     property alias okbutton: buttons.okbutton
     property alias cancelbutton: buttons.cancelbutton
 
     signal ok()
     signal cancel()
 
-    Rectangle {
-        anchors.fill: parent
-        color: "black"
-        opacity: 0.5
-
-        MouseArea {
-            anchors.fill: parent
-
-            onClicked: { /* disable events on the background */ }
-        }
-    }
+    OpaqueBackground { id: background  }
 
     Rectangle {
-        anchors.centerIn: parent
-        height: 384*dp
-        width: 256*dp
-        color: "#f5f5f5"
+        anchors.centerIn: background
+        height: mainwindow.height - 32*dp;
+        width: mainwindow.width - 32*dp;
+        color: visual.dialogBackground
 
         DialogTitle {
             id: dialogtitle
-            visible: title === "" ? false : true
-            z: 1
         }
 
         Item {
             id: content
-            width: parent.width
+            width: parent.width - 32*dp
+            anchors.horizontalCenter: parent.horizontalCenter
             anchors.top: dialogtitle.bottom
             anchors.bottom: buttons.top
+
+            clip: true
         }
 
         OkCancelButtons {
             id: buttons
-            z: 1
+            anchors.bottom: parent.bottom
 
             onOk: dialog.ok()
             onCancel: dialog.cancel()

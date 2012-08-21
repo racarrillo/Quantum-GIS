@@ -1,7 +1,7 @@
 /***************************************************************************
-    DialogTitle.qml  -  Title for dialogs
+    ActionBar.qml  -  Action bar based on Android design guidelines
      --------------------------------------
-    Date                 : 30-Jul-2012
+    Date                 : 08-Jul-2012
     Copyright            : (C) 2012 by Ramon Carrillo
     Email                : racarrillo91 at gmail.com
 /***************************************************************************
@@ -15,25 +15,9 @@
 
 import QtQuick 1.1
 
-Item {
-    property alias text: title.text
+Rectangle {
+    color: visual.actionBarBackground
 
-    height: 48*dp
     width: parent.width
-    anchors.top: parent.top
-
-    Text {
-        id: title
-        color: visual.dialogHeaderForeground
-        font.pixelSize: visual.mediumFontSize
-        anchors.verticalCenter: parent.verticalCenter
-        x: 16*dp
-    }
-
-    Rectangle {
-        width: parent.width
-        height: 2*dp
-        anchors.bottom: parent.bottom
-        color: visual.dialogHeaderBorder
-    }
+    height: visual.actionBarHeight;
 }

@@ -1,7 +1,7 @@
 /***************************************************************************
-    DialogTitle.qml  -  Title for dialogs
+    Button.qml  -  Button based on Android design guidelines
      --------------------------------------
-    Date                 : 30-Jul-2012
+    Date                 : 21-Jul-2012
     Copyright            : (C) 2012 by Ramon Carrillo
     Email                : racarrillo91 at gmail.com
 /***************************************************************************
@@ -15,25 +15,36 @@
 
 import QtQuick 1.1
 
-Item {
-    property alias text: title.text
+Rectangle {
+    id: button
 
-    height: 48*dp
-    width: parent.width
-    anchors.top: parent.top
+    property alias text: label.text
+
+    signal clicked()
+    signal pressAndHold()
+
+    color: visual.buttonBackground
+    height: visual.buttonHeight
+    width: visual.buttonWidth
 
     Text {
-        id: title
-        color: visual.dialogHeaderForeground
-        font.pixelSize: visual.mediumFontSize
-        anchors.verticalCenter: parent.verticalCenter
-        x: 16*dp
+        id: label
+        anchors.centerIn: parent
+        font.pixelSize: visual.buttonFontSize
+        color: visual.buttonForeground
     }
 
-    Rectangle {
-        width: parent.width
-        height: 2*dp
-        anchors.bottom: parent.bottom
-        color: visual.dialogHeaderBorder
+    MouseArea {
+        anchors.fill: parent
+        onClicked: button.clicked()
+        onPressAndHold: button.pressAndHold()
+    }
+
+    function activate() {
+        container.color = visual.highlighted
+    }
+
+    function deactivate() {
+        container.color = visual.buttonBackground
     }
 }

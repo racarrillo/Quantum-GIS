@@ -1,7 +1,7 @@
 /***************************************************************************
-    DialogTitle.qml  -  Title for dialogs
+    MenuElement.qml  - For use in lists
      --------------------------------------
-    Date                 : 30-Jul-2012
+    Date                 : 31-Jul-2012
     Copyright            : (C) 2012 by Ramon Carrillo
     Email                : racarrillo91 at gmail.com
 /***************************************************************************
@@ -15,25 +15,34 @@
 
 import QtQuick 1.1
 
-Item {
-    property alias text: title.text
+Rectangle {
+    id: container
 
-    height: 48*dp
+    signal clicked()
+    signal pressAndHold()
+
+    height: visual.menuElementHeight
     width: parent.width
-    anchors.top: parent.top
-
-    Text {
-        id: title
-        color: visual.dialogHeaderForeground
-        font.pixelSize: visual.mediumFontSize
-        anchors.verticalCenter: parent.verticalCenter
-        x: 16*dp
-    }
+    color: "transparent"
 
     Rectangle {
-        width: parent.width
-        height: 2*dp
         anchors.bottom: parent.bottom
-        color: visual.dialogHeaderBorder
+        color: visual.menuSeparator
+        height: 2*dp
+        width: parent.width
+    }
+
+    MouseArea {
+        anchors.fill: parent
+
+        onClicked: container.clicked()
+        onPressAndHold: container.pressAndHold()
+
+        // Visual feedback
+        onPressed: {
+            container.color = visual.highlighted
+        }
+        onReleased: container.color = "transparent"
+        onExited: container.color = "transparent"
     }
 }

@@ -1,7 +1,7 @@
 /***************************************************************************
-    DialogTitle.qml  -  Title for dialogs
+    GrandientBackground.qml  -  Grandient that disable mouse events
      --------------------------------------
-    Date                 : 30-Jul-2012
+    Date                 : 10-Jul-2012
     Copyright            : (C) 2012 by Ramon Carrillo
     Email                : racarrillo91 at gmail.com
 /***************************************************************************
@@ -15,25 +15,17 @@
 
 import QtQuick 1.1
 
-Item {
-    property alias text: title.text
+Rectangle {
+    anchors.fill: parent
 
-    height: 48*dp
-    width: parent.width
-    anchors.top: parent.top
-
-    Text {
-        id: title
-        color: visual.dialogHeaderForeground
-        font.pixelSize: visual.mediumFontSize
-        anchors.verticalCenter: parent.verticalCenter
-        x: 16*dp
+    gradient: Gradient {
+        GradientStop { position: 0.0; color: visual.screenBackgroundGradStart }
+        GradientStop { position: 1.0; color: visual.screenBackgroundGradEnd }
     }
 
-    Rectangle {
-        width: parent.width
-        height: 2*dp
-        anchors.bottom: parent.bottom
-        color: visual.dialogHeaderBorder
+    MouseArea {
+        anchors.fill: parent
+
+        onClicked: { /* disable events on background */ }
     }
 }

@@ -1,7 +1,7 @@
 /***************************************************************************
-    DialogTitle.qml  -  Title for dialogs
+    OpaqueBackground.qml  -  Transparent background
      --------------------------------------
-    Date                 : 30-Jul-2012
+    Date                 : 10-Jul-2012
     Copyright            : (C) 2012 by Ramon Carrillo
     Email                : racarrillo91 at gmail.com
 /***************************************************************************
@@ -15,25 +15,19 @@
 
 import QtQuick 1.1
 
-Item {
-    property alias text: title.text
+Rectangle {
+    height: mainwindow.height
+    width: mainwindow.width
+    x: 0; y: 0
+    color: "black"
+    opacity: 0.5
 
-    height: 48*dp
-    width: parent.width
-    anchors.top: parent.top
+    MouseArea {
+        anchors.fill: parent
 
-    Text {
-        id: title
-        color: visual.dialogHeaderForeground
-        font.pixelSize: visual.mediumFontSize
-        anchors.verticalCenter: parent.verticalCenter
-        x: 16*dp
-    }
-
-    Rectangle {
-        width: parent.width
-        height: 2*dp
-        anchors.bottom: parent.bottom
-        color: visual.dialogHeaderBorder
+        // Hide the parent when the background is touched
+        onClicked: {
+            parent.parent.visible = false
+        }
     }
 }
