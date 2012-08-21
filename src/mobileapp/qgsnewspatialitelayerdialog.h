@@ -1,12 +1,10 @@
 /***************************************************************************
-                         QgsNewSpatialiteLayerDialog.h  -  description
-                             -------------------
-    begin                : 2010-03-19
-    copyright            : (C) 2010 by Gary Sherman
-    email                : gsherman@mrcc.com
- ***************************************************************************/
-
-/***************************************************************************
+    qgsnewspatialitelayerdialog.cpp  -  New Spatialite Layer
+     --------------------------------------
+    Date                 : 25-Jul-2012
+    Copyright            : (C) 2012 by Ramon Carrillo
+    Email                : racarrillo91 at gmail.com
+ ***************************************************************************
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -14,14 +12,16 @@
  *   (at your option) any later version.                                   *
  *                                                                         *
  ***************************************************************************/
+
 #ifndef QGSNEWSPATIALITELAYERDIALOG_H
 #define QGSNEWSPATIALITELAYERDIALOG_H
 
-#include "ui_qgsnewspatialitelayerdialogbase.h"
 #include "qgisgui.h"
 #include "qgscontexthelp.h"
 
 #include "qgis.h"
+
+#include <QDeclarativeView>
 
 extern "C"
 {
@@ -29,42 +29,53 @@ extern "C"
 #include <spatialite.h>
 }
 
-class QgsNewSpatialiteLayerDialog: public QDialog, private Ui::QgsNewSpatialiteLayerDialogBase
+#include <QVariant>
+
+class QDeclarativeView;
+
+class QgsNewSpatialiteLayerDialog: public QObject
 {
     Q_OBJECT
 
   public:
-    QgsNewSpatialiteLayerDialog( QWidget *parent = 0, Qt::WFlags fl = QgisGui::ModalDialogFlags );
+    QgsNewSpatialiteLayerDialog(QDeclarativeView *view);
     ~QgsNewSpatialiteLayerDialog();
 
-  protected slots:
-    void on_mAddAttributeButton_clicked();
-    void on_mRemoveAttributeButton_clicked();
-    void on_mTypeBox_currentIndexChanged( int index );
-    void on_pbnFindSRID_clicked();
-    void on_leLayerName_textChanged( QString text );
-    void on_toolButtonNewDatabase_clicked();
-    void nameChanged( QString );
-    void selectionChanged();
-
-    void on_buttonBox_helpRequested() { QgsContextHelp::run( metaObject()->className() ); }
-    void on_buttonBox_accepted();
-    void on_buttonBox_rejected();
-
-  private:
-    /**Returns the selected geometry type*/
-    QString selectedType() const;
-
+  public slots:
     /** Create a new database */
     bool createDb();
 
-    bool apply();
+    /** Create the layer  */
+    void apply();
+
+    void setDatabase(QString database);
+    void setLayerName(QString layerName);
+    void setType(QString type);
+    void setPrimaryKey(bool primaryKey);
+    void setGeometryColumn(QString geometryColumn);
+    void setAttributes(QVariant attributes);
+
+  private:
 
     static QString quotedIdentifier( QString id );
     static QString quotedValue( QString value );
 
-    QPushButton *mOkButton;
+    /**
+     * Export the connections to QML.
+     *  This should be called each time the connections list changes
+     */
+    void updateConnections();
+
+    QDeclarativeView *mView;
+
+    // Fields
+    QString mDatabase;
+    QString mLayerName;
+    QString mType;
+    bool mPrimaryKey;
     int mCrsId;
+    QString mGeometryColumn;
+    QVariantList mAttributes;
 };
 
 #endif // QGSNEWVECTORLAYERDIALOG_H

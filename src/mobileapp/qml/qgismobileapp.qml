@@ -54,6 +54,13 @@ Window {
         visible: false
     }
 
+    NewSpatialiteLayer {
+        id: newspatialitelayer
+        objectName: "theNewSpatialiteLayerDialog"
+        anchors.fill: parent
+        visible: false
+    }
+
     Item {
         id: mainmenu
 

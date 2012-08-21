@@ -55,6 +55,8 @@
 #include "qgsmaptoolzoom.h"
 #include "qgsmaptooltouch.h"
 
+#include "qgsnewspatialitelayerdialog.h"
+
 QgisMobileapp::QgisMobileapp( QgsApplication *app )
 {
   Q_UNUSED(app);
@@ -86,6 +88,8 @@ QgisMobileapp::QgisMobileapp( QgsApplication *app )
   mMapCanvas->freeze(false);
   mMapCanvas->setVisible(true);
 
+  mNewSpatialiteLayer = new QgsNewSpatialiteLayerDialog(&mView);
+
   initLegend();
   createActions();
   createCanvasTools();
@@ -107,6 +111,8 @@ QgisMobileapp::~QgisMobileapp()
   delete mMapTools.mTouch;
   delete mMapTools.mAddFeature;
   delete mMapTools.mMoveFeature;
+
+  delete mNewSpatialiteLayer;
 
   // delete map layer registry and provider registry
   QgsApplication::exitQgis();

@@ -33,6 +33,7 @@
 #include <QTapAndHoldGesture>
 
 class QgsLayerListModel;
+class QgsNewSpatialiteLayerDialog;
 
 class QgisMobileapp : public QObject
 {
@@ -92,6 +93,8 @@ private:
         QgsMapTool* mMoveFeature;
         QgsMapTool* mDeleteFeature;
     } mMapTools;
+
+    QgsNewSpatialiteLayerDialog *mNewSpatialiteLayer;
 
     bool gestureEvent( QGestureEvent *event );
     void tapAndHoldTriggered( QTapAndHoldGesture *gesture );
